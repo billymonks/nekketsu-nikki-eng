@@ -1,3 +1,13 @@
+# Large disc files (not tracked in git)
 /extracted-disc/*
 /original-disc/*
 /translated-disc/*
+/extracted-afs/*
+/modified-disc-files/*
+/modified-afs-contents/*
+
+# Tools are downloaded separately
+/tools/*
+
+# Keep directory structure
+!/**/.gitkeep
