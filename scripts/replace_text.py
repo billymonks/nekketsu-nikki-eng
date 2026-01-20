@@ -14,7 +14,7 @@ EXTRACTED_DIR = PROJECT_DIR / "extracted-afs"
 MODIFIED_DIR = PROJECT_DIR / "modified-disc-files"
 
 
-def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict):
+def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict, pad_to_length=True):
     """
     Replace text in a binary file using Shift-JIS encoding
     
@@ -22,6 +22,7 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
         input_file: Source file path
         output_file: Destination file path
         replacements: Dict of {japanese_text: english_text}
+        pad_to_length: If True, pad English text with spaces to match Japanese length
     """
     # Read original file
     with open(input_file, 'rb') as f:
@@ -35,16 +36,20 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
         en_bytes = en_text.encode('shift_jis')
         
         if jp_bytes in modified:
-            # Check length - warn if English is longer
-            if len(en_bytes) > len(jp_bytes):
-                print(f"WARNING: English text is {len(en_bytes) - len(jp_bytes)} bytes longer!")
-                print(f"  JP ({len(jp_bytes)} bytes): {jp_text}")
-                print(f"  EN ({len(en_bytes)} bytes): {en_text}")
-                print("  This may cause issues if the game has fixed-size text buffers.")
+            # Pad or truncate to match original length
+            if pad_to_length:
+                if len(en_bytes) < len(jp_bytes):
+                    # Pad with spaces to match length
+                    padding = len(jp_bytes) - len(en_bytes)
+                    en_bytes = en_bytes + b' ' * padding
+                    print(f"Padded with {padding} spaces")
+                elif len(en_bytes) > len(jp_bytes):
+                    print(f"WARNING: English is {len(en_bytes) - len(jp_bytes)} bytes LONGER - truncating!")
+                    en_bytes = en_bytes[:len(jp_bytes)]
             
             # Replace
             modified = modified.replace(jp_bytes, en_bytes)
-            print(f"Replaced: {jp_text[:30]}... -> {en_text[:30]}...")
+            print(f"Replaced ({len(jp_bytes)}→{len(en_bytes)} bytes): {jp_text[:30]}...")
         else:
             print(f"NOT FOUND: {jp_text[:50]}...")
     
@@ -59,19 +64,49 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
 
 
 def main():
-    # IMPORTANT: Line break format discovered!
-    # The game requires a 2-byte character before / to trigger line breaks.
-    # Use Japanese comma: 、/ (0x81-41-2F in Shift-JIS)
-    # 
-    # Format: "Line 1 text、/Line 2 text、/Line 3 text!"
+    # IMPORTANT DISCOVERIES:
+    # 1. Line breaks: Use Japanese comma before / → 、/ (0x81-41-2F)
+    # 2. Color codes: !c02=green, !c04=orange, !c07=white, etc.
+    # 3. File format: MUST maintain exact byte length or file corrupts!
+    #    - Pad shorter English with spaces
+    #    - Keep color codes if possible
     
     replacements = {
+        # Intro dialog (this one has same-ish length so it works)
         "学園祭に参加するには、/いろいろ登録することがあるの。/まずは、プレイ人数を選択してね！":
-        "To join the festival、/there's stuff to register、/Now, select player count!"
+        "To join the festival、/there's stuff to register、/Now, select player count!",
+        
+        # Player selection - ! must be at EVEN byte position!
+        # Use fullwidth space (2 bytes) to maintain even alignment with nice spacing
+        "!c02人間１人!c07　＋　!c04ＣＰＵ１体!c07の対戦よ！":
+        "!c021 Human !c07　＋　!c041 CPU !c07 battle!",
+        
+        "!c02人間１人!c07　＋　!c04ＣＰＵ２体!c07の対戦よ！":
+        "!c021 Human !c07　＋　!c042 CPUs!c07 battle!",
+        
+        "!c02人間１人!c07　＋　!c04ＣＰＵ３体!c07の対戦よ！":
+        "!c021 Human !c07　＋　!c043 CPUs!c07 battle!",
+        
+        "!c03人間２人!c07の対戦よ！":
+        "!c032 Humans!c07 battle!",
+        
+        "!c03人間２人!c07　＋　!c04ＣＰＵ１体!c07の対戦よ！":
+        "!c032 Humans!c07　＋　!c041 CPU !c07 battle!",
+        
+        "!c03人間２人!c07　＋　!c04ＣＰＵ２体!c07の対戦よ！":
+        "!c032 Humans!c07　＋　!c042 CPUs!c07 battle!",
+        
+        "!c01人間３人!c07の対戦よ！":
+        "!c013 Humans!c07 battle!",
+        
+        "!c01人間３人!c07　＋　!c04ＣＰＵ１体!c07の対戦よ！":
+        "!c013 Humans!c07　＋　!c041 CPU !c07 battle!",
+        
+        "!c05人間４人!c07の対戦よ！":
+        "!c054 Humans!c07 battle!",
     }
     
     # Source and destination files
-    # We modify files in-place in the modified-afs-contents folder
     MODIFIED_AFS_DIR = PROJECT_DIR / "modified-afs-contents"
     target_file = MODIFIED_AFS_DIR / "MGDATA" / "00000062"
     
@@ -83,9 +118,8 @@ def main():
     replace_text_in_file(target_file, target_file, replacements)
     
     print("\nDone! To test:")
-    print("1. Copy the modified file back to the AFS archive")
-    print("2. Rebuild the disc with buildgdi.exe")
-    print("3. Test in emulator")
+    print("1. Run scripts\\rebuild.bat")
+    print("2. Test translated-disc\\disc.gdi in emulator")
 
 
 if __name__ == '__main__':
