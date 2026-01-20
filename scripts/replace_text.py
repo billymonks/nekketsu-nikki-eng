@@ -99,8 +99,42 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
     return replaced_count
 
 
+def copy_original_files():
+    """Copy original files from extracted-afs to modified-afs-contents for modification."""
+    import shutil
+    
+    files_to_copy = [
+        ("MGDATA", "00000062"),
+        ("MGDATA", "00000063"),
+    ]
+    
+    for archive, file_num in files_to_copy:
+        src = EXTRACTED_DIR / archive / file_num
+        dst = MODIFIED_AFS_DIR / archive / file_num
+        
+        if src.exists():
+            dst.parent.mkdir(parents=True, exist_ok=True)
+            shutil.copy2(src, dst)
+            print(f"Copied {archive}/{file_num} to modified-afs-contents/")
+        else:
+            print(f"WARNING: Source file not found: {src}")
+    
+    # Also copy the metadata JSON
+    json_src = EXTRACTED_DIR / "MGDATA.json"
+    json_dst = MODIFIED_AFS_DIR / "MGDATA.json"
+    if json_src.exists():
+        shutil.copy2(json_src, json_dst)
+        print("Copied MGDATA.json")
+
+
 def process_mgdata():
     """Process MGDATA files 00000062 and 00000063 (female & male protagonist scripts)"""
+    
+    # First, copy fresh originals
+    print("\n" + "=" * 60)
+    print("Copying original files from extracted-afs/")
+    print("=" * 60)
+    copy_original_files()
     
     # Load shared translations first
     shared_translations = {}
