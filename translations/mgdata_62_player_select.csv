@@ -1,0 +1,10 @@
+japanese,english,context,notes
+"!c02人間１人!c07　＋　!c04ＣＰＵ１体!c07の対戦よ！","!c021 Human !c07　＋　!c041 CPU !c07 battle!",1P + 1CPU,"!c02=green !c04=orange !c07=white. ! must be at EVEN byte position"
+"!c02人間１人!c07　＋　!c04ＣＰＵ２体!c07の対戦よ！","!c021 Human !c07　＋　!c042 CPUs!c07 battle!",1P + 2CPU,
+"!c02人間１人!c07　＋　!c04ＣＰＵ３体!c07の対戦よ！","!c021 Human !c07　＋　!c043 CPUs!c07 battle!",1P + 3CPU,
+"!c03人間２人!c07の対戦よ！","!c032 Humans!c07 battle!",2P only,"!c03=blue"
+"!c03人間２人!c07　＋　!c04ＣＰＵ１体!c07の対戦よ！","!c032 Humans!c07　＋　!c041 CPU !c07 battle!",2P + 1CPU,
+"!c03人間２人!c07　＋　!c04ＣＰＵ２体!c07の対戦よ！","!c032 Humans!c07　＋　!c042 CPUs!c07 battle!",2P + 2CPU,
+"!c01人間３人!c07の対戦よ！","!c013 Humans!c07 battle!",3P only,"!c01=pink"
+"!c01人間３人!c07　＋　!c04ＣＰＵ１体!c07の対戦よ！","!c013 Humans!c07　＋　!c041 CPU !c07 battle!",3P + 1CPU,
+"!c05人間４人!c07の対戦よ！","!c054 Humans!c07 battle!",4P only,"!c05=pink"
