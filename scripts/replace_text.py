@@ -99,26 +99,55 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
     return replaced_count
 
 
-def process_mgdata_62():
-    """Process MGDATA file 00000062 (female protagonist scripts)"""
-    print("\n" + "=" * 60)
-    print("Processing MGDATA/00000062")
-    print("=" * 60)
+def process_mgdata():
+    """Process MGDATA files 00000062 and 00000063 (female & male protagonist scripts)"""
     
-    # Load translations from all relevant CSVs
-    translations = {}
-    for csv_file in TRANSLATIONS_DIR.glob("mgdata_62_*.csv"):
-        translations.update(load_translations_from_csv(csv_file))
+    # Load shared translations first
+    shared_translations = {}
+    shared_file = TRANSLATIONS_DIR / "mgdata_62_63.csv"
+    if shared_file.exists():
+        shared_translations.update(load_translations_from_csv(shared_file))
     
-    if not translations:
+    # Load file-specific translations (these override shared)
+    translations_62 = {}
+    only_62_file = TRANSLATIONS_DIR / "mgdata_62_only.csv"
+    if only_62_file.exists():
+        translations_62.update(load_translations_from_csv(only_62_file))
+    
+    translations_63 = {}
+    only_63_file = TRANSLATIONS_DIR / "mgdata_63_only.csv"
+    if only_63_file.exists():
+        translations_63.update(load_translations_from_csv(only_63_file))
+    
+    if not shared_translations and not translations_62 and not translations_63:
         print("No translations found!")
         return 0
     
-    target_file = MODIFIED_AFS_DIR / "MGDATA" / "00000062"
-    count = replace_text_in_file(target_file, target_file, translations)
+    total = 0
     
-    print(f"\nReplaced {count} strings in {target_file.name}")
-    return count
+    # Process file 62 (female protagonist) - shared + 62-specific
+    print("\n" + "=" * 60)
+    print("Processing MGDATA/00000062 (female protagonist)")
+    print("=" * 60)
+    target_62 = MODIFIED_AFS_DIR / "MGDATA" / "00000062"
+    if target_62.exists():
+        trans_62 = {**shared_translations, **translations_62}  # 62-specific overrides shared
+        count = replace_text_in_file(target_62, target_62, trans_62)
+        print(f"\nReplaced {count} strings in {target_62.name}")
+        total += count
+    
+    # Process file 63 (male protagonist) - shared + 63-specific
+    print("\n" + "=" * 60)
+    print("Processing MGDATA/00000063 (male protagonist)")
+    print("=" * 60)
+    target_63 = MODIFIED_AFS_DIR / "MGDATA" / "00000063"
+    if target_63.exists():
+        trans_63 = {**shared_translations, **translations_63}  # 63-specific overrides shared
+        count = replace_text_in_file(target_63, target_63, trans_63)
+        print(f"\nReplaced {count} strings in {target_63.name}")
+        total += count
+    
+    return total
 
 
 def main():
@@ -157,7 +186,7 @@ def main():
     
     # Process files
     total = 0
-    total += process_mgdata_62()
+    total += process_mgdata()
     
     print("\n" + "=" * 60)
     print(f"Total replacements: {total}")
