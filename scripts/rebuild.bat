@@ -11,4 +11,3 @@ tools\buildgdi.exe -rebuild -gdi original-disc\disc.gdi -data modified-disc-file
 
 echo.
 echo === Done! Test: translated-disc\disc.gdi ===
-pause

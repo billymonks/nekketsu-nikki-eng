@@ -1,11 +1,16 @@
 """
 Auto-fix byte alignment issues in translations.
-- Format codes (! followed by alphanumeric) and line breaks (/) must be at even byte positions.
-- Literal ! at even byte positions will be misread as codes, so replace with fullwidth ！
-- Fullwidth characters (！ … ？ etc) are 2 bytes and must start on even byte positions.
-- Also fixes backslash issues (displays as ¥ in Shift-JIS).
-- Replaces ... with … only when it saves bytes (at even position).
-- Removes double spaces and other byte-wasting patterns.
+
+KEY INSIGHT: The game treats each line (split by /) independently for byte counting.
+After a / line break, byte counting restarts at 0 for that line segment.
+
+Rules:
+- / line breaks must be at even byte positions in the OVERALL string
+- ! format codes must be at even byte positions WITHIN THEIR LINE SEGMENT
+- Literal ! at even positions (within line) will be misread as codes -> use fullwidth ！
+- Fullwidth characters are 2 bytes and should start on even positions within their line
+- Backslashes display as ¥ in Shift-JIS -> remove them
+- ... can be replaced with … (saves 1 byte) when at even position
 """
 import csv
 import io
@@ -24,19 +29,45 @@ def get_byte_position(text: str, char_index: int) -> int:
             pos += 2
     return pos
 
-def find_first_problem(text: str) -> int | None:
-    """Find the character index of the first misaligned ! code or / line break."""
+def get_byte_position_in_line(text: str, char_index: int) -> int:
+    """
+    Get byte position within the current line segment (after last /).
+    The game resets byte counting to 0 after each / line break.
+    """
+    # Find the start of the current line (after the last /)
+    line_start = 0
+    for i in range(char_index):
+        if text[i] == '/':
+            line_start = i + 1
+    
+    # Calculate byte position from line start to char_index
+    pos = 0
+    for i in range(line_start, char_index):
+        if ord(text[i]) < 128:
+            pos += 1
+        else:
+            pos += 2
+    return pos
+
+def find_first_problem(text: str) -> tuple[int, str] | None:
+    """
+    Find the character index of the first alignment problem.
+    Returns (index, problem_type) or None.
+    
+    - / line breaks: must be at even position in OVERALL string
+    - ! format codes: must be at even position WITHIN THEIR LINE
+    """
     for i, char in enumerate(text):
-        # Check ! format codes (must be followed by alphanumeric)
-        if char == '!' and i + 1 < len(text) and text[i + 1].isalnum():
+        # Check / line breaks - uses overall byte position
+        if char == '/':
             byte_pos = get_byte_position(text, i)
             if byte_pos % 2 != 0:
-                return i
-        # Check / line breaks
-        elif char == '/':
-            byte_pos = get_byte_position(text, i)
+                return (i, 'slash')
+        # Check ! format codes - uses per-line byte position
+        elif char == '!' and i + 1 < len(text) and text[i + 1].isalnum():
+            byte_pos = get_byte_position_in_line(text, i)
             if byte_pos % 2 != 0:
-                return i
+                return (i, 'format_code')
     return None
 
 def fix_backslashes(text: str) -> str:
@@ -52,6 +83,8 @@ def fix_ellipsis(text: str) -> str:
     Replace ... (3 bytes) with … (2 bytes) only when it saves bytes.
     If … would end up at an odd byte position (needing a space = 3 bytes total),
     keep ... instead since it's the same length but cleaner.
+    
+    Uses per-line byte position since game resets counting after each /.
     """
     if '...' not in text and '…' not in text:
         return text
@@ -64,10 +97,11 @@ def fix_ellipsis(text: str) -> str:
     i = 0
     while i < len(text):
         if text[i:i+3] == '...':
-            # Check byte position at this point
-            byte_pos = get_byte_position(''.join(result), len(result))
+            # Check byte position WITHIN LINE at this point
+            current_text = ''.join(result)
+            byte_pos = get_byte_position_in_line(current_text + '...', len(current_text))
             if byte_pos % 2 == 0:
-                # Even position - use … (saves 1 byte)
+                # Even position in line - use … (saves 1 byte)
                 result.append('…')
             else:
                 # Odd position - keep ... (same as " …" but cleaner)
@@ -97,8 +131,10 @@ def fix_double_spaces(text: str) -> str:
 def fix_unnecessary_spaces_before_slash(text: str) -> str:
     """
     Remove unnecessary spaces before / line breaks.
-    If / is at an even position, and there's a space before it,
-    removing the space keeps / at an even position (shifted by 1 or 2 bytes).
+    If / is at an even OVERALL position, and there's a space before it,
+    removing the space might keep / at an even position (if shifted by 2 bytes).
+    
+    Note: / must be at even OVERALL byte position (not per-line).
     """
     if '/' not in text:
         return text
@@ -124,41 +160,97 @@ def fix_unnecessary_spaces_before_slash(text: str) -> str:
     return ''.join(result)
 
 
-def fix_literal_exclamations(text: str) -> str:
+def fix_fullwidth_punctuation(text: str) -> str:
     """
-    Replace literal ! at even byte positions with fullwidth ！.
-    Literal ! at even positions gets interpreted as format codes by the game.
-    Only affects ! NOT followed by alphanumeric (those are real format codes).
+    Replace fullwidth punctuation with ASCII equivalents to avoid byte alignment issues.
+    
+    Fullwidth chars (2 bytes) at odd OVERALL positions cause corruption.
+    ASCII chars (1 byte) work at any position.
+    
+    Special case for !:
+    - Literal ! at EVEN per-line position → misread as format code → keep as ！
+    - Literal ! at ODD per-line position → safe to use ASCII !
+    - ！ at ODD overall position → corrupted → convert to ! (which is safe)
+    - ！ at EVEN overall position → keep as ！ (correct)
     """
-    if '!' not in text:
+    # First pass: convert fullwidth punctuation (except ！) to ASCII
+    # These are safe as ASCII at any position
+    replacements = {
+        '、': ',',   # fullwidth comma
+        '。': '.',   # fullwidth period  
+        '？': '?',   # fullwidth question mark
+        '：': ':',   # fullwidth colon
+        '；': ';',   # fullwidth semicolon
+        '（': '(',   # fullwidth open paren
+        '）': ')',   # fullwidth close paren
+        '「': '"',   # Japanese open quote
+        '」': '"',   # Japanese close quote
+        '『': '"',   # Japanese double open quote
+        '』': '"',   # Japanese double close quote
+        '～': '~',   # fullwidth tilde
+        '・': '-',   # middle dot to hyphen
+    }
+    
+    for fw, ascii_char in replacements.items():
+        text = text.replace(fw, ascii_char)
+    
+    # Second pass: handle ！ specially
+    # ！ at odd OVERALL position → convert to ! (safe)
+    # ！ at even OVERALL position → keep as ！ (correct)
+    # ! at even PER-LINE position (not format code) → misread as format code → use ！
+    # ! at odd PER-LINE position (not format code) → safe as ASCII !
+    
+    if '！' not in text and '!' not in text:
         return text
     
     result = list(text)
     i = 0
     while i < len(result):
         char = result[i]
-        if char == '!':
-            # Check if this is a format code (followed by alphanumeric)
+        
+        if char == '！':
+            # Fullwidth exclamation - check OVERALL position
+            byte_pos = get_byte_position(''.join(result), i)
+            if byte_pos % 2 != 0:
+                # Odd overall position - fullwidth will corrupt, use ASCII
+                result[i] = '!'
+            # Even overall position - keep as fullwidth (safe)
+        
+        elif char == '!':
+            # ASCII exclamation - check if it's a format code
             is_format_code = (i + 1 < len(result) and result[i + 1].isalnum())
             if not is_format_code:
-                # This is a literal ! - check byte position
-                byte_pos = get_byte_position(''.join(result), i)
+                # Literal ! - check PER-LINE position (format code detection is per-line)
+                byte_pos = get_byte_position_in_line(''.join(result), i)
                 if byte_pos % 2 == 0:
-                    # Even position - game will misread as code, use fullwidth
-                    result[i] = '！'
+                    # Even per-line position - will be misread as format code
+                    # But we can only use ！ if OVERALL position is even
+                    overall_pos = get_byte_position(''.join(result), i)
+                    if overall_pos % 2 == 0:
+                        result[i] = '！'
+                    # If overall is odd, we have a conflict - keep as ! and hope for best
+                # Odd per-line position - keep as ASCII (safe)
+        
         i += 1
     
     return ''.join(result)
 
 def fix_alignment(text: str, max_iterations: int = 500) -> str:
-    """Fix all byte alignment issues for ! codes and / line breaks."""
+    """
+    Fix all byte alignment issues for ! codes and / line breaks.
+    
+    - / line breaks: adjusted based on overall byte position
+    - ! format codes: adjusted based on per-line byte position
+    """
     if '!' not in text and '/' not in text:
         return text
     
     for _ in range(max_iterations):
-        problem_index = find_first_problem(text)
-        if problem_index is None:
+        problem = find_first_problem(text)
+        if problem is None:
             break  # All fixed!
+        
+        problem_index, problem_type = problem
         
         # Check if character IMMEDIATELY before the problem is a space
         if problem_index > 0:
@@ -178,12 +270,12 @@ def fix_alignment(text: str, max_iterations: int = 500) -> str:
     return text
 
 def fix_csv(csv_path: Path) -> dict:
-    """Fix alignment, backslash, ellipsis, and spacing issues in a CSV file. Returns dict of fix counts."""
+    """Fix alignment, backslash, ellipsis, punctuation and spacing issues in a CSV file. Returns dict of fix counts."""
     with open(csv_path, 'r', encoding='utf-8') as f:
         content = f.read().replace('\x00', '')
     
     rows = list(csv.DictReader(io.StringIO(content)))
-    fixes = {'alignment': 0, 'backslash': 0, 'ellipsis': 0, 'spacing': 0}
+    fixes = {'alignment': 0, 'backslash': 0, 'ellipsis': 0, 'spacing': 0, 'punctuation': 0}
     
     for row in rows:
         english = row.get('english', '')
@@ -202,25 +294,31 @@ def fix_csv(csv_path: Path) -> dict:
             fixes['spacing'] += 1
             english = fixed
         
-        # 3. Fix ellipsis - use … only when at even position
+        # 3. Fix fullwidth punctuation (convert to ASCII where safe)
+        fixed = fix_fullwidth_punctuation(english)
+        if fixed != english:
+            fixes['punctuation'] += 1
+            english = fixed
+        
+        # 4. Fix ellipsis - use … only when at even position
         fixed = fix_ellipsis(english)
         if fixed != english:
             fixes['ellipsis'] += 1
             english = fixed
         
-        # 4. Fix alignment for format codes and line breaks
+        # 5. Fix alignment for format codes and line breaks
         fixed = fix_alignment(english)
         if fixed != english:
             fixes['alignment'] += 1
             english = fixed
         
-        # 5. Fix literal ! at even positions (would be misread as codes)
-        fixed = fix_literal_exclamations(english)
+        # 6. Re-check fullwidth punctuation after alignment changes
+        fixed = fix_fullwidth_punctuation(english)
         if fixed != english:
-            fixes['alignment'] += 1
+            fixes['punctuation'] += 1
             english = fixed
         
-        # 6. Remove unnecessary spaces before / (saves bytes while keeping alignment)
+        # 7. Remove unnecessary spaces before / (saves bytes while keeping alignment)
         fixed = fix_unnecessary_spaces_before_slash(english)
         if fixed != english:
             fixes['spacing'] += 1
@@ -242,7 +340,7 @@ def fix_csv(csv_path: Path) -> dict:
 def fix_batch_dir(batch_dir: Path):
     """Fix all batch CSV files."""
     batch_files = sorted(batch_dir.glob("*_batch_*.csv"))
-    totals = {'alignment': 0, 'backslash': 0, 'ellipsis': 0, 'spacing': 0}
+    totals = {'alignment': 0, 'backslash': 0, 'ellipsis': 0, 'spacing': 0, 'punctuation': 0}
     
     for batch_file in batch_files:
         fixes = fix_csv(batch_file)

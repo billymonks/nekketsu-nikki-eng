@@ -1,7 +1,12 @@
 """
 Validate translations for byte alignment issues.
-The ! character in formatting codes (!cXX, !pXXXX, !eXX, !0, !1, etc.)
-must land on an EVEN byte position for the game's parser to work.
+
+KEY INSIGHT: The game treats each line (split by /) independently for byte counting.
+After a / line break, byte counting restarts at 0 for that line segment.
+
+Rules:
+- / line breaks must be at even byte positions in the OVERALL string
+- ! format codes must be at even byte positions WITHIN THEIR LINE SEGMENT
 """
 import csv
 import io
@@ -22,6 +27,20 @@ def get_byte_length(text: str) -> int:
                 length += 2  # Japanese/fullwidth = 2 bytes
         return length
 
+def get_byte_position_in_line(text: str, char_index: int) -> int:
+    """
+    Get byte position within the current line segment (after last /).
+    The game resets byte counting to 0 after each / line break.
+    """
+    # Find the start of the current line (after the last /)
+    line_start = 0
+    for i in range(char_index):
+        if text[i] == '/':
+            line_start = i + 1
+    
+    # Calculate byte position from line start to char_index
+    return get_byte_length(text[line_start:char_index])
+
 def find_format_codes(text: str) -> list:
     """Find all ! format codes and their positions."""
     # Match !cXX, !pXXXX, !eXX, !0, !1, !a, !h, etc.
@@ -36,19 +55,38 @@ def find_format_codes(text: str) -> list:
     return codes
 
 def check_byte_alignment(text: str) -> list:
-    """Check if all ! codes are on even byte positions."""
+    """
+    Check byte alignment for:
+    - / line breaks: must be at even OVERALL byte position
+    - ! format codes: must be at even byte position WITHIN THEIR LINE
+    """
     issues = []
-    codes = find_format_codes(text)
     
+    # Check / line breaks (overall position)
+    for i, char in enumerate(text):
+        if char == '/':
+            byte_pos = get_byte_length(text[:i])
+            if byte_pos % 2 != 0:
+                issues.append({
+                    'code': '/',
+                    'byte_pos': byte_pos,
+                    'position_type': 'overall',
+                    'text_before': text[max(0,i-20):i]
+                })
+    
+    # Check ! format codes (per-line position)
+    codes = find_format_codes(text)
     for code_info in codes:
-        text_before = code_info['text_before']
-        byte_pos = get_byte_length(text_before)
+        char_pos = code_info['char_pos']
+        # Use per-line byte position
+        byte_pos = get_byte_position_in_line(text, char_pos)
         
         if byte_pos % 2 != 0:
             issues.append({
                 'code': code_info['code'],
                 'byte_pos': byte_pos,
-                'text_before': text_before[-20:] if len(text_before) > 20 else text_before
+                'position_type': 'in-line',
+                'text_before': code_info['text_before'][-20:] if len(code_info['text_before']) > 20 else code_info['text_before']
             })
     
     return issues
@@ -95,7 +133,8 @@ def validate_batch_dir(batch_dir: Path):
                 print(f"  JP: {issue['japanese']}...")
                 print(f"  EN: {issue['english']}...")
                 for prob in issue['issues']:
-                    print(f"  ❌ '{prob['code']}' at byte {prob['byte_pos']} (ODD)")
+                    pos_type = prob.get('position_type', 'overall')
+                    print(f"  ❌ '{prob['code']}' at byte {prob['byte_pos']} ({pos_type}) - ODD")
                     print(f"     ...after: '{prob['text_before']}'")
             total_issues += len(issues)
     
@@ -115,6 +154,7 @@ if __name__ == "__main__":
         exit(1)
     
     print("Validating byte alignment in translations...")
-    print("(! codes must be at EVEN byte positions)\n")
+    print("(/ must be at EVEN overall position)")
+    print("(! codes must be at EVEN position within their line)\n")
     
     validate_batch_dir(batch_dir)

@@ -2,6 +2,15 @@
 
 Technical reference for in-game text formatting codes.
 
+## Critical: Per-Line Byte Counting
+
+**The game treats each line (split by `/`) independently for byte counting.**
+
+After a `/` line break, byte counting **restarts at 0** for that line segment. This means:
+
+- `/` line breaks must be at an **even OVERALL byte position**
+- `!` format codes must be at an **even byte position WITHIN THEIR LINE**
+
 ## Line Breaks
 
 Use `/` (forward slash) to create line breaks.
@@ -11,7 +20,7 @@ Japanese: 君を待っていたのです。
 English:  I've been waiting /for you.
 ```
 
-**Important**: Like the `!` format codes, the `/` must be at an **even byte position** for the game to recognize it as a line break. Use spaces or fullwidth characters to adjust alignment if needed.
+**Important**: The `/` must be at an **even byte position** in the overall string. After the `/`, byte counting resets to 0 for the next line segment.
 
 ## Player Name Placeholder
 
