@@ -1,7 +1,2 @@
 "japanese","english","context","notes","jp_bytes","en_bytes","overflow"
-"!c04「根性ＵＰ」マスバトル！!c07/パラメータの１つが!c03根性!c07に決定された！","!c04'GUTS UP' Mass Battle!!c07 /A stat was set to !c03GUTS!c07!","Portrait: !pffff!e00","","77","59","0"
-"!c04『パートナー』!c07/使うと同じエリアにいるジャスキャラを/!c05パートナー!c07にできます","!c04'Partner'!c07 /Make a Justice char in /this area your !c05Partner!c07","Portrait: !pffff!e00","","88","63","0"
-"!c04『ワープ　部室棟』!c07/使うと指定したプレイヤーやジャスキャラを/!c01部室棟エリア!c07のどこかに移動させます","!c04'Warp Club Bldg'!c07 /Moves target player or char /to !c01Club Building!c07 area","Portrait: !pffff!e00","","110","79","0"
-"!c04『イチバチ』!c07のカード効果が切れた/ルーレットが普通の状態に戻った","!c04'All-or-Nothing'!c07 effect ended /Roulette back to normal","Portrait: !pffff!e00","","71","55","0"
-"!c04『イチバチ』!c07に変更します","Change to !c04'All-or-Nothing'!c07","Color-coded menu/UI text","","32","28","0"
-"!c04『一方通行』!c07のカード効果が切れた/マスの一方通行が解除された","!c04'One-Way'!c07 effect ended /One-way restriction lifted","Portrait: !pffff!e00","","67","53","0"
+"!c04『イチバチ』!c07に変更します","Change to !c04'All-or-Nothing'!c07","Color-coded menu/UI text","","32","34","2"
