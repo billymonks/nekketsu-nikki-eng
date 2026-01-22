@@ -6,6 +6,10 @@ echo === Rebuilding MGDATA.AFS ===
 tools\AFSPacker.exe -c modified-afs-contents\MGDATA modified-disc-files\MGDATA.AFS
 
 echo.
+echo === Rebuilding WMENU.AFS ===
+tools\AFSPacker.exe -c modified-afs-contents\WMENU modified-disc-files\WMENU.AFS
+
+echo.
 echo === Rebuilding GDI ===
 tools\buildgdi.exe -rebuild -gdi original-disc\disc.gdi -data modified-disc-files -output translated-disc
 
