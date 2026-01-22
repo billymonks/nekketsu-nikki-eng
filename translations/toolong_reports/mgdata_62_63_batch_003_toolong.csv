@@ -1,4 +1,4 @@
 "japanese","english","context","notes","jp_bytes","en_bytes","overflow"
-"!0！/おせェぞ！","!0! /You're late !","Portrait: !p1000!e00","","15","18","3"
-"!c01不機嫌!c07になった！","Became  !c01unhappy !c07!","Color-coded menu/UI text","","24","25","1"
-"!c01不良!c07/「ク、クソォッ！/　覚えてやがれッッ！」","!c01Thug!c07  /""D-Damn it!  /You'll pay for this ! !""","Portrait: !pffff!e00","","52","53","1"
+"!0！/おせェぞ！","!0! /You're late!","Portrait: !p1000!e00","","15","13","-2"
+"!c01不機嫌!c07になった！","Became  !c01unhappy!c07!","Color-coded menu/UI text","","24","22","-2"
+"!c01不良!c07/「ク、クソォッ！/　覚えてやがれッッ！」","!c01Thug!c07  /""D-Damn it!  /You'll pay!!""","Portrait: !pffff!e00","","52","50","-2"
