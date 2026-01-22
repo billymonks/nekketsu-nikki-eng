@@ -19,24 +19,23 @@ This is a high school fighting game with comedic and dramatic elements. The tone
 
 ## Honorifics
 
-**Decision**: [Decide whether to keep or localize honorifics]
+**Decision**: Keep Japanese honorifics
 
-Options:
-- Keep Japanese honorifics (-san, -kun, -chan, -sensei)
-- Localize to English equivalents
-- Mix (keep -sensei, drop others)
+- Keep `-san`, `-kun`, `-chan`, `-senpai`, `-sensei`
+- These are integral to character relationships and personality
+- Exception: "Chairperson" or "Rep" for 委員長 (Iinchou) depending on space
 
-Current approach: TBD
+Current approach: **Keep honorifics**
 
 ## Name Order
 
-**Decision**: [Decide name order]
+**Decision**: Western order for character names, Japanese honorifics attached
 
-Options:
-- Japanese order (Family Given): Ichimonji Batsu
-- Western order (Given Family): Batsu Ichimonji
+- Batsu Ichimonji → "Batsu" or "Batsu-kun"
+- Hinata Wakaba → "Hinata" or "Hinata-san"
+- Teachers: Use given name + sensei (e.g., "Hayato-sensei", "Kyoko-sensei")
 
-Current approach: TBD
+Current approach: **Western order (Given Family)**
 
 ## Punctuation
 
@@ -54,6 +53,30 @@ Current approach: TBD
 | やった | Yes! / I did it! / Alright! | |
 | まさか | No way / It can't be | |
 
+## Conciseness Techniques
+
+When translations exceed byte limits, use these strategies:
+
+| Technique | Example |
+|-----------|---------|
+| Contractions | "I will" → "I'll", "do not" → "don't" |
+| Shorter synonyms | "because" → "since", "understand" → "get" |
+| Remove redundancy | "in order to" → "to" |
+| Abbreviate | "Two-Platoon technique" → "Two-Platoon" |
+| Shorten phrases | "What are you doing?" → "What're you doing?" |
+| Use context | "Eiyu-sensei, what are you holding?" → "Eiyu-sensei, what's that?" |
+| Truncate names | "Discipline Committee room" → "Discipline Room" |
+
+### Common Shortenings
+
+| Long | Short | Saves |
+|------|-------|-------|
+| Chairperson | Rep | 7 bytes |
+| Justice characters | Jus chars | 9 bytes |
+| Student Council Room | Council Room | 8 bytes |
+| Career Guidance Room | Career Guidance | 5 bytes |
+| Two-Platoon technique | Two-Platoon | 10 bytes |
+
 ## Things to Avoid
 
 - ❌ Overly formal language for casual characters
@@ -61,12 +84,15 @@ Current approach: TBD
 - ❌ Inconsistent terminology
 - ❌ Losing character voice
 - ❌ Translations that are much longer than originals
+- ❌ Cutting meaning to save bytes (find better phrasing instead)
 
 ## Review Checklist
 
 Before finalizing a batch:
 - [ ] Character voices are consistent
 - [ ] Terminology matches `terminology.md`
-- [ ] Formatting codes are correct
+- [ ] Formatting codes are correct (`!cXX`, `!pXXXX!eYY`, `!0`, `/`)
 - [ ] Line breaks are appropriate
 - [ ] No obvious typos or errors
+- [ ] `en_bytes` ≤ `jp_bytes` (run `check_lengths.py`)
+- [ ] Color code `!` or `/` characters land on even byte positions

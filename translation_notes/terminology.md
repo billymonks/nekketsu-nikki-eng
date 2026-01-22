@@ -90,20 +90,64 @@ Consistent translations for game-specific terms.
 | いいえ | No | |
 | 勝利 (しょうり) | Victory/Wins | |
 | 勝ち (かち) | win | |
+| 登録 | Register | For data entry |
+| 提出 | Submit | For forms |
 
-## Schools
+## Combat & Skills
+
+| Japanese | English | Notes |
+|----------|---------|-------|
+| ツープラトン技 | Two-Platoon | Tag team technique |
+| 必殺技 | Special move | |
+| 覚えた | Learned/Got | "Got [skill]!" for brevity |
+| 気合 | Spirit/Fighting spirit | |
+| 熱血 | Hot-blooded | Passionate |
+
+## Schools & Locations
 
 | Japanese | English | Notes |
 |----------|---------|-------|
 | 太陽学園 | Taiyo High | Main school |
 | 五輪高校 | Gorin High | Sports school |
+| 五輪大学 | Gorin (University) | Gorin's university |
 | 暗黒高校 | Darkside High | |
 | パシフィック | Pacific High | |
 | 正義学園 | Justice High | |
-| 生徒会室 | Student Council Room | |
+| 聖純女学院 | Seijun / Seijun Girls' Academy | Women's school |
+| 生徒会室 | Student Council Room / Council Room | Short form when needed |
+| 風紀委員会室 | Discipline Committee room / Discipline Room | |
+| 進路指導室 | Career Guidance Room / Career Guidance | |
+| 購買部 | School store / Store | |
+| 保健室 | Nurse's office | |
+| 部室棟 | Club building | |
+| 化学部部室 | Chemistry Club | |
+| 家庭科室 | Home ec room | |
+
+## Events & Activities
+
+| Japanese | English | Notes |
+|----------|---------|-------|
+| 学園祭 | Festival / School festival | |
+| キャンプファイアー | Campfire | |
+| 金魚すくい | Goldfish scooping | Festival game |
+| 射的 | Target shooting | Festival game |
+| お化け屋敷 | Haunted house | |
+| 屋台 | Food stall | |
+
+## Common Phrases
+
+| Japanese | English | Notes |
+|----------|---------|-------|
+| 委員長 | Chairperson / Rep | "Rep" when space-limited |
+| 先輩 | Senpai | Keep Japanese |
+| 後輩 | Junior / Underclassman | |
+| 甲子園 | Koshien | Famous baseball tournament |
+| 総番長 | Boss | School delinquent leader |
 
 ---
 
 ## Notes
 
 Add new terms as they appear during translation. Keep this list updated for consistency across all batch files.
+
+When multiple translations exist (e.g., "Chairperson / Rep"), use the shorter form when byte limits require it.

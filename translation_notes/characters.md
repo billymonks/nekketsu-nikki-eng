@@ -38,17 +38,17 @@ Notes on character names, personalities, and speech patterns for consistent tran
 
 ## Supporting Characters
 
-### Hideo Shimazu (島津 英雄)
+### Shoma Sawamura (沢村 将馬)
 - **Portrait Code**: `!p0600`
-- **Personality**: Helpful, dependable
-- **Speech Style**: Casual, friendly
-- **Notes**: Offers to get things for player
+- **Personality**: Baseball-focused, competitive
+- **Speech Style**: Casual, energetic
+- **Notes**: Has an older brother who's a star pitcher
 
-### Kyoko Minazuki (水無月 響子)
+### Zaki (ザキ)
 - **Portrait Code**: `!p0700`
-- **Personality**: Professional, focused
-- **Speech Style**: Polite but businesslike
-- **Notes**: Has work commitments
+- **Personality**: Tough, protective
+- **Speech Style**: Casual, can be gruff
+- **Notes**: Attends Seijun Girls' Academy
 
 ### Roberto Miura (ロベルト・ミウラ)
 - **Portrait Code**: `!p0800`
@@ -58,9 +58,9 @@ Notes on character names, personalities, and speech patterns for consistent tran
 
 ### Chairperson (委員長 / Iinchou)
 - **Portrait Code**: `!p0900`
-- **Personality**: Formal, principled
+- **Personality**: Formal, principled, dedicated
 - **Speech Style**: Very formal, polite
-- **Notes**: Expressions: !p0902, !p0903
+- **Notes**: Expressions: !p0901 (determined), !p0902, !p0903 (frustrated). Can be called "Rep" when space-limited.
 
 ### Gan Isurugi (石動 巌)
 - **Portrait Code**: `!p1000`
@@ -74,29 +74,29 @@ Notes on character names, personalities, and speech patterns for consistent tran
 - **Speech Style**: Feminine, casual
 - **Notes**: Expression !p1102 - cheerful
 
-### Shoma Sawamura (沢村 将馬)
+### Iwa / Gan Isurugi (石動 巌)
 - **Portrait Code**: `!p1200`
-- **Personality**: Old-fashioned, earnest
-- **Speech Style**: Archaic (uses ワシ, のう)
-- **Notes**: !p1201 (excited), !p1202 (very excited)
+- **Personality**: Simple, straightforward, loves food
+- **Speech Style**: Simple, direct
+- **Notes**: Often called "Iwa" by friends
 
-### Hayato Nekketsu (熱血 隼人)
+### Eiyu Shimazu (島津 英雄)
 - **Portrait Code**: `!p1300`
-- **Personality**: Mature, responsible (teacher?)
-- **Speech Style**: Formal, gentle
-- **Notes**: Getting married soon. !p1301 expression
+- **Personality**: Traditional martial artist, teacher
+- **Speech Style**: Formal, polite
+- **Notes**: Japanese/National Language teacher. Practices Shimazu-style karate. Does ink painting.
 
-### School Nurse (保健室の先生)
+### Kyoko Minazuki (水無月 響子)
 - **Portrait Code**: `!p1400`
-- **Personality**: Caring, wise about relationships
-- **Speech Style**: Warm, maternal
-- **Notes**: Gives advice about love. Uses クン for male students, さん for female. !p1402, !p1403 expressions
+- **Personality**: Strict disciplinarian, teacher
+- **Speech Style**: Formal, authoritative
+- **Notes**: Wears glasses. Known for "Ultimate Correction" technique.
 
 ### Eiji Yamada (山田 栄治)
 - **Portrait Code**: `!p1500`
 - **Personality**: Polite underclassman
 - **Speech Style**: Respectful, uses 先輩
-- **Notes**: Calls player senpai
+- **Notes**: Refers to his sister. Calls player senpai.
 
 ### Raizo Imawano (忌野 雷蔵)
 - **Portrait Code**: `!p1600`
@@ -106,21 +106,21 @@ Notes on character names, personalities, and speech patterns for consistent tran
 
 ### Ran Hibiki (響 蘭)
 - **Portrait Code**: `!p1800`
-- **Personality**: Observant, curious
-- **Speech Style**: Feminine, chatty
-- **Notes**: Comments on others' skills. !p1801, !p1802 expressions
+- **Personality**: Observant, curious, tutorial guide
+- **Speech Style**: Feminine, explanatory
+- **Notes**: Explains game mechanics. !p1801, !p1802, !p1803 expressions
 
 ### Hyo Imawano (忌野 兵)
 - **Portrait Code**: `!p1900`
-- **Personality**: Mysterious, brooding
-- **Speech Style**: Formal, reserved
-- **Notes**: Has things to think about. !p1901 expression
+- **Personality**: Honorable, serious, warrior
+- **Speech Style**: Formal, measured
+- **Notes**: Seeking to settle things his own way. !p1901, !p1903 expressions
 
 ### Daigo Kazama (風間 大悟)
 - **Portrait Code**: `!p2000`
-- **Personality**: Tough, doesn't want followers
-- **Speech Style**: Rough, dismissive
-- **Notes**: Doesn't want to be anyone's goal. !p2002 expression
+- **Personality**: Tough, independent, former boss
+- **Speech Style**: Rough, direct
+- **Notes**: Known as "Boss" (総番長). !p2002, !p2003 expressions
 
 ### Akira Kazama (風間 アキラ)
 - **Portrait Code**: `!p2100`
@@ -142,46 +142,89 @@ Notes on character names, personalities, and speech patterns for consistent tran
 
 ### Yurika Kirishima (霧島 ユリカ)
 - **Portrait Code**: `!p2500`
-- **Personality**: Polite, formal
-- **Speech Style**: Very respectful
-- **Notes**: References "Kuro" (九郎). !p2503 expression
+- **Personality**: Polite, mysterious, musical
+- **Speech Style**: Very respectful, formal
+- **Notes**: Kuro's sister. Born into the Kirishima family, a special lineage with missions. Plays instruments. !p2501, !p2503 expressions
+
+### Sado-sensei (佐渡先生)
+- **Portrait Code**: `!p2600`
+- **Personality**: Practical, runs the school store
+- **Speech Style**: Businesslike
+- **Notes**: Works at the school store (購買部)
+
+### Hayato Nekketsu (熱血 隼人)
+- **Portrait Code**: `!p2800`
+- **Personality**: Hot-blooded, passionate teacher
+- **Speech Style**: Energetic, encouraging
+- **Notes**: Career Guidance teacher. Known for being hot-blooded.
 
 ### Nagare Namikawa (並川 流)
 - **Portrait Code**: `!p2900`
-- **Personality**: 
-- **Speech Style**: 
-- **Notes**: !p2903 expression - knows Roberto
+- **Personality**: Swimmer, cool demeanor
+- **Speech Style**: Calm
+- **Notes**: Swim club. !p2903 expression
+
+### Kuro Kirishima (霧島 九郎)
+- **Portrait Code**: `!p3000` (presumed)
+- **Personality**: Mysterious
+- **Speech Style**: Reserved
+- **Notes**: Yurika's brother. Part of the Kirishima family missions.
+
+### Kozue (こずえ先輩)
+- **Portrait Code**: `!p3100`
+- **Personality**: Artistic, friendly
+- **Speech Style**: Casual, warm
+- **Notes**: Art club. Works on festival decorations.
+
+### Hail (雹)
+- **Portrait Code**: `!p3200` (presumed)
+- **Personality**: Stoic, carries a sword
+- **Speech Style**: Formal, brief
+- **Notes**: Student council president. Always has his sword.
+
+### Chemistry Club Member
+- **Portrait Code**: `!p3400`
+- **Personality**: Eccentric scientist
+- **Speech Style**: Clinical, enthusiastic about experiments
+- **Notes**: Offers "human experiments" at the Chemistry Club
 
 ---
 
 ## Portrait Code Reference
 
-| Code | Character |
-|------|-----------|
-| `!p0100` | Batsu |
-| `!p0200` | Hinata |
-| `!p0300` | Kyosuke |
-| `!p0400` | Roy |
-| `!p0500` | Tiffany |
-| `!p0600` | Hideo |
-| `!p0700` | Kyoko |
-| `!p0800` | Roberto |
-| `!p0900` | Chairperson |
-| `!p1000` | Gan |
-| `!p1100` | Natsu |
-| `!p1200` | Shoma |
-| `!p1300` | Hayato (Teacher?) |
-| `!p1400` | School Nurse |
-| `!p1500` | Eiji |
-| `!p1600` | Raizo |
-| `!p1800` | Ran |
-| `!p1900` | Hyo |
-| `!p2000` | Daigo |
-| `!p2100` | Akira |
-| `!p2300` | Edge |
-| `!p2400` | Momo |
-| `!p2500` | Yurika |
-| `!p2900` | Nagare |
-| `!pffff` | System (no portrait) |
+| Code | Character | Notes |
+|------|-----------|-------|
+| `!p0000` | Player character | Generic/narrator |
+| `!p0100` | Batsu | Main protagonist option |
+| `!p0200` | Hinata | !p0201-!p0203 expressions |
+| `!p0300` | Kyosuke | !p0302, !p0303 expressions |
+| `!p0400` | Roy | Baseball strategy talk |
+| `!p0500` | Tiffany | Volleyball, !p0501-!p0503 |
+| `!p0600` | Shoma | Baseball player |
+| `!p0700` | Zaki | Seijun student |
+| `!p0800` | Roberto | Brazilian-Japanese, soccer |
+| `!p0900` | Chairperson | !p0901-!p0903 expressions |
+| `!p1000` | Gan | Energetic |
+| `!p1100` | Natsu | Thoughtful, !p1102 |
+| `!p1200` | Iwa | Simple, loves food |
+| `!p1300` | Eiyu (Teacher) | Martial arts teacher |
+| `!p1400` | Kyoko (Teacher) | Strict, glasses |
+| `!p1500` | Eiji | Polite underclassman, !p1502-!p1503 |
+| `!p1600` | Raizo | Intimidating, !p1601-!p1603 |
+| `!p1800` | Ran | Tutorial guide, !p1801-!p1803 |
+| `!p1900` | Hyo | Warrior, !p1901-!p1903 |
+| `!p2000` | Daigo | Boss, !p2002-!p2003 |
+| `!p2100` | Akira | !p2101-!p2103 |
+| `!p2200` | Swimmer (male) | !p2201 |
+| `!p2300` | Edge | Street-smart, !p2303 |
+| `!p2400` | Momo | Energetic kouhai, !p2401-!p2403 |
+| `!p2500` | Yurika | Kirishima sister, !p2501-!p2503 |
+| `!p2600` | Sado-sensei | School store |
+| `!p2700` | Unknown | !p2701 |
+| `!p2800` | Hayato (Teacher) | Career Guidance, hot-blooded |
+| `!p2900` | Nagare | Swimmer, !p2903 |
+| `!p3100` | Kozue | Art club |
+| `!p3400` | Chemistry Club | Experiments |
+| `!pffff` | System | No portrait shown |
 
 Add more as discovered during translation.

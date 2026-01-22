@@ -2,22 +2,16 @@
 
 Track completion status of translation batches.
 
-## Batch Status
+## Byte-Limit Compliance
 
-| Batch | Status | Translator | Notes |
-|-------|--------|------------|-------|
-| batch_001 | ⬜ Not Started | | |
-| batch_002 | ⬜ Not Started | | |
-| batch_003 | ⬜ Not Started | | |
-| batch_004 | ⬜ Not Started | | |
-| batch_005 | ⬜ Not Started | | |
-| batch_006 | ⬜ Not Started | | |
-| batch_007 | ⬜ Not Started | | |
-| batch_008 | ⬜ Not Started | | |
-| batch_009 | ⬜ Not Started | | |
-| batch_010 | ⬜ Not Started | | |
-| ... | | | |
-| batch_072 | ⬜ Not Started | | (51 strings) |
+All 72 batches have been reviewed for byte-limit compliance. Translations that exceeded `jp_bytes` have been shortened to fit within limits while preserving meaning.
+
+| Task | Status | Notes |
+|------|--------|-------|
+| Initial translation | ✅ Complete | All 7,151 strings translated |
+| Byte-limit fixes | ✅ Complete | toolong_reports processed |
+| Character voice review | 🔵 Review Needed | Verify personality consistency |
+| In-game testing | ⬜ Not Started | Test color codes & line breaks |
 
 ## Status Legend
 
@@ -31,17 +25,20 @@ Track completion status of translation batches.
 
 - **Total Batches**: 72
 - **Total Strings**: 7,151
-- **Completed**: 0
-- **In Progress**: 0
-- **Progress**: 0%
+- **Translated**: 7,151
+- **Byte-limit compliant**: 7,151
+- **Progress**: 100% (pending review)
 
 ## Additional Files
 
 | File | Status | Notes |
 |------|--------|-------|
-| mgdata_62_only.csv | ⬜ Not Started | 2 unique female protagonist lines |
-| mgdata_63_only.csv | ⬜ Not Started | 9 unique male protagonist lines |
+| mgdata_62_only.csv | 🟢 Complete | 2 unique female protagonist lines |
+| mgdata_63_only.csv | 🟢 Complete | 9 unique male protagonist lines |
+| toolong_reports/ | ✅ Verified | All overflow issues resolved |
 
 ## Notes
 
-Update this file as batches are completed. Run `merge_batches.py` to see current translation percentage.
+- Run `check_lengths.py` to verify byte compliance
+- Run `merge_batches.py` to see current translation percentage
+- Translations may need in-game testing to verify color code alignment
