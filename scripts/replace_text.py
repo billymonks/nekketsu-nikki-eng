@@ -1,17 +1,23 @@
 #!/usr/bin/env python3
 """
 Text Replacement Script for Nekketsu Nikki Translation
-Reads translations from CSV files and applies them to game script files
+Reads translations from CSV files and applies them to game script files.
+
+Handles:
+- MGDATA files (00000062, 00000063) - main game dialogue
+- 1ST_READ.BIN - menu labels and UI text
 """
 
 import csv
-import os
+import shutil
 from pathlib import Path
 
 # Paths
 PROJECT_DIR = Path(__file__).parent.parent
-EXTRACTED_DIR = PROJECT_DIR / "extracted-afs"
+EXTRACTED_AFS_DIR = PROJECT_DIR / "extracted-afs"
+EXTRACTED_DISC_DIR = PROJECT_DIR / "extracted-disc"
 MODIFIED_AFS_DIR = PROJECT_DIR / "modified-afs-contents"
+MODIFIED_DISC_DIR = PROJECT_DIR / "modified-disc-files"
 TRANSLATIONS_DIR = PROJECT_DIR / "translations"
 
 
@@ -107,15 +113,13 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
 
 def copy_original_files():
     """Copy original files from extracted-afs to modified-afs-contents for modification."""
-    import shutil
-    
     files_to_copy = [
         ("MGDATA", "00000062"),
         ("MGDATA", "00000063"),
     ]
     
     for archive, file_num in files_to_copy:
-        src = EXTRACTED_DIR / archive / file_num
+        src = EXTRACTED_AFS_DIR / archive / file_num
         dst = MODIFIED_AFS_DIR / archive / file_num
         
         if src.exists():
@@ -126,7 +130,7 @@ def copy_original_files():
             print(f"WARNING: Source file not found: {src}")
     
     # Also copy the metadata JSON
-    json_src = EXTRACTED_DIR / "MGDATA.json"
+    json_src = EXTRACTED_AFS_DIR / "MGDATA.json"
     json_dst = MODIFIED_AFS_DIR / "MGDATA.json"
     if json_src.exists():
         shutil.copy2(json_src, json_dst)
@@ -190,6 +194,46 @@ def process_mgdata():
     return total
 
 
+def process_1st_read():
+    """Process 1ST_READ.BIN (main executable with menu/UI text)"""
+    
+    input_file = EXTRACTED_DISC_DIR / "1ST_READ.BIN"
+    output_file = MODIFIED_DISC_DIR / "1ST_READ.BIN"
+    csv_file = TRANSLATIONS_DIR / "1st_read_menu.csv"
+    
+    print("\n" + "=" * 60)
+    print("Processing 1ST_READ.BIN (menu/UI text)")
+    print("=" * 60)
+    
+    if not input_file.exists():
+        print(f"WARNING: Input file not found: {input_file}")
+        print("Skipping 1ST_READ.BIN processing.")
+        return 0
+    
+    if not csv_file.exists():
+        print(f"WARNING: Translation file not found: {csv_file}")
+        print("Skipping 1ST_READ.BIN processing.")
+        return 0
+    
+    # Copy original file first
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copy2(input_file, output_file)
+    print(f"Copied 1ST_READ.BIN to modified-disc-files/")
+    
+    # Load translations
+    translations = load_translations_from_csv(csv_file)
+    
+    if not translations:
+        print("No translations loaded for 1ST_READ.BIN")
+        return 0
+    
+    # Apply translations
+    count = replace_text_in_file(output_file, output_file, translations)
+    print(f"\nReplaced {count} strings in 1ST_READ.BIN")
+    
+    return count
+
+
 def main():
     """
     Translation Format Reference:
@@ -217,6 +261,7 @@ def main():
     print("=" * 60)
     print(f"Translations folder: {TRANSLATIONS_DIR}")
     print(f"Modified AFS folder: {MODIFIED_AFS_DIR}")
+    print(f"Modified disc folder: {MODIFIED_DISC_DIR}")
     
     # List available translation files
     csv_files = list(TRANSLATIONS_DIR.glob("*.csv"))
@@ -227,6 +272,7 @@ def main():
     # Process files
     total = 0
     total += process_mgdata()
+    total += process_1st_read()
     
     print("\n" + "=" * 60)
     print(f"Total replacements: {total}")

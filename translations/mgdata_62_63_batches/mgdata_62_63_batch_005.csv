@@ -32,6 +32,8 @@
 "!c03人間２人!c07　＋　!c04ＣＰＵ１体!c07の対戦よ！","!c032 Humans!c07 ＋ !c041 CPU !c07 battle!","2P + 1CPU",""
 "!c03人間２人!c07　＋　!c04ＣＰＵ２体!c07の対戦よ！","!c032 Humans!c07 ＋ !c042 CPUs!c07 battle!","2P + 2CPU",""
 "!c03人間２人!c07の対戦よ！","!c032 Humans!c07 battle!","2P only","!c03=blue"
+"!c01人間３人!c07の対戦よ！","!c013 Humans!c07 battle!","3P only","!c01=pink"
+"!c01人間３人!c07　＋　!c04ＣＰＵ１体!c07の対戦よ！","!c013 Humans!c07 ＋ !c041 CPU !c07 battle!","3P + 1CPU",""
 "!c03体力!c07がレベルアップ！","!c03HP!c07 Level Up!","Color-coded menu/UI text",""
 "!c03体力!c07がレベルダウン！","!c03HP!c07 Level Down!","Color-coded menu/UI text",""
 "!c03体力!c07が１０上がった！","!c03HP!c07 increased by 10!","Color-coded menu/UI text",""
