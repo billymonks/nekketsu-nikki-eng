@@ -1,3 +1,5 @@
 "japanese","english","context","notes","jp_bytes","en_bytes","overflow"
-"!c04カード!c07をあげよう！/頑張りたまえ！","Here's a !c04card!c07! /Good luck!","Color-coded menu/UI text","","41","32","0"
-"!c04ＨＰ!c07も多めに減るけど……。","!c04HP!c07 drops a lot too...","Color-coded menu/UI text","","34","26","0"
+"!c04ＨＰ!c07が!1回復した！","!c04HP!c07 restored by　!1！","Color-coded menu/UI text","","26","28","2"
+"!c05パートナー!c07にするには、/同じマスに止まった時に/!c05パートナー!c07イベントが発生するか……、","To make them your !c05Partner !c07, /land on their space for　/a　!c05Partner !c07 event to occur...","Portrait: !p1800!e00","","98","100","2"
+"!c05パートナー!c07になってくれたり、/届け物を依頼されることもあるわ。","They might become your　!c05Partner !c07　/or ask you to deliver items.","Color-coded menu/UI text","","69","71","2"
+"!c04部室棟エリア!c07。/各クラブの部室があるわ。化学部では/人体実験が行われてるって噂も……。","!c04Club Building !c07. /Each club has a room. Rumor　/says the chem club does experiments...","Color-coded menu/UI text","","92","93","1"
