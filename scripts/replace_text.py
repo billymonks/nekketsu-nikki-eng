@@ -240,8 +240,8 @@ def main():
     =============================
     
     LINE BREAKS:
-        Use 、/ (Japanese comma + slash) for line breaks
-        Example: "Line 1、/Line 2、/Line 3"
+        Use / for line breaks (must be at EVEN byte position)
+        Example: "Line 1 /Line 2 /Line 3"
     
     COLOR CODES:
         !c01 = pink/magenta

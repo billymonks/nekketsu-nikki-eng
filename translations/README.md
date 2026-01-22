@@ -22,9 +22,9 @@ Example: `mgdata_62_player_select.csv` = MGDATA archive, file 00000062, player s
 ## Formatting Rules
 
 ### Line Breaks
-Use Japanese comma + slash for line breaks:
+Use `/` for line breaks (must be at **even byte position**, like `!` codes):
 ```
-Line 1、/Line 2、/Line 3
+Line 1 /Line 2 /Line 3
 ```
 
 ### Color Codes

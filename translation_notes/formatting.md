@@ -4,14 +4,14 @@ Technical reference for in-game text formatting codes.
 
 ## Line Breaks
 
-Use `、/` (Japanese comma + forward slash) to create line breaks.
+Use `/` (forward slash) to create line breaks.
 
 ```
 Japanese: 君を待っていたのです。
-English:  I've been waiting、/for you.
+English:  I've been waiting /for you.
 ```
 
-**Important**: The `、` (fullwidth comma, Shift-JIS `81-41`) is required before `/` for the game to recognize it as a line break.
+**Important**: Like the `!` format codes, the `/` must be at an **even byte position** for the game to recognize it as a line break. Use spaces or fullwidth characters to adjust alignment if needed.
 
 ## Player Name Placeholder
 
