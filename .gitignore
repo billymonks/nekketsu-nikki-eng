@@ -1,8 +1,11 @@
 # Large disc files (not tracked in git)
 /extracted-disc/*
+/extracted-english-disc/*
+/english-disc/*
 /original-disc/*
 /translated-disc/*
 /extracted-afs/*
+/extracted-english-afs/*
 /modified-disc-files/*
 /modified-afs-contents/*
 

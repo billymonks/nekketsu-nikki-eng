@@ -195,23 +195,23 @@ def process_mgdata():
 
 
 def process_1st_read():
-    """Process 1ST_READ.BIN (main executable with menu/UI text)"""
+    """Process 1ST_READ.BIN (main executable with menu/UI text and move names)"""
     
     input_file = EXTRACTED_DISC_DIR / "1ST_READ.BIN"
     output_file = MODIFIED_DISC_DIR / "1ST_READ.BIN"
-    csv_file = TRANSLATIONS_DIR / "1st_read_menu.csv"
+    
+    # CSV files for 1ST_READ.BIN translations
+    csv_files = [
+        TRANSLATIONS_DIR / "1st_read_menu.csv",   # Menu labels, stats, schools
+        TRANSLATIONS_DIR / "1st_read_moves.csv",  # Move names and UI text
+    ]
     
     print("\n" + "=" * 60)
-    print("Processing 1ST_READ.BIN (menu/UI text)")
+    print("Processing 1ST_READ.BIN (menu/UI text + move names)")
     print("=" * 60)
     
     if not input_file.exists():
         print(f"WARNING: Input file not found: {input_file}")
-        print("Skipping 1ST_READ.BIN processing.")
-        return 0
-    
-    if not csv_file.exists():
-        print(f"WARNING: Translation file not found: {csv_file}")
         print("Skipping 1ST_READ.BIN processing.")
         return 0
     
@@ -220,8 +220,14 @@ def process_1st_read():
     shutil.copy2(input_file, output_file)
     print(f"Copied 1ST_READ.BIN to modified-disc-files/")
     
-    # Load translations
-    translations = load_translations_from_csv(csv_file)
+    # Load translations from all CSV files
+    translations = {}
+    for csv_file in csv_files:
+        if csv_file.exists():
+            file_translations = load_translations_from_csv(csv_file)
+            translations.update(file_translations)
+        else:
+            print(f"WARNING: Translation file not found: {csv_file}")
     
     if not translations:
         print("No translations loaded for 1ST_READ.BIN")
