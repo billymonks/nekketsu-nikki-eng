@@ -54,20 +54,23 @@ def find_first_problem(text: str) -> tuple[int, str] | None:
     Find the character index of the first alignment problem.
     Returns (index, problem_type) or None.
     
-    - / line breaks: must be at even position in OVERALL string
-    - ! format codes: must be at even position WITHIN THEIR LINE
+    Rules:
+    - / line breaks: must be at even OVERALL position
+    - ! format codes: must be at even PER-LINE position  
+    - Literal ! (at end of line/string): must be at even PER-LINE position
     """
     for i, char in enumerate(text):
-        # Check / line breaks - uses overall byte position
+        # Check / line breaks - must be at even OVERALL position
         if char == '/':
             byte_pos = get_byte_position(text, i)
             if byte_pos % 2 != 0:
                 return (i, 'slash')
-        # Check ! format codes - uses per-line byte position
-        elif char == '!' and i + 1 < len(text) and text[i + 1].isalnum():
+        # Check all ! - must be at even PER-LINE position
+        elif char == '!':
             byte_pos = get_byte_position_in_line(text, i)
             if byte_pos % 2 != 0:
-                return (i, 'format_code')
+                is_format_code = (i + 1 < len(text) and text[i + 1].isalnum())
+                return (i, 'format_code' if is_format_code else 'literal_excl')
     return None
 
 def fix_backslashes(text: str) -> str:
@@ -128,13 +131,13 @@ def fix_double_spaces(text: str) -> str:
     return text
 
 
-def fix_unnecessary_spaces_before_slash(text: str) -> str:
+def fix_spaces_around_slash(text: str) -> str:
     """
-    Remove unnecessary spaces before / line breaks.
-    If / is at an even OVERALL position, and there's a space before it,
-    removing the space might keep / at an even position (if shifted by 2 bytes).
+    Ensure proper spacing before / for reliable line break rendering.
     
-    Note: / must be at even OVERALL byte position (not per-line).
+    Testing shows that / works more reliably when preceded by a space.
+    This adds spaces before / to ensure / lands on an even overall position.
+    Uses only halfwidth spaces to avoid 2-byte chars at odd positions.
     """
     if '/' not in text:
         return text
@@ -143,18 +146,11 @@ def fix_unnecessary_spaces_before_slash(text: str) -> str:
     i = 0
     while i < len(result):
         if result[i] == '/':
-            # Check if there's a space immediately before
-            if i > 0 and result[i-1] in (' ', '　'):
-                # Calculate current byte position of /
-                current_byte_pos = get_byte_position(''.join(result), i)
-                # Calculate byte position if we remove the space
-                space_bytes = 1 if result[i-1] == ' ' else 2
-                new_byte_pos = current_byte_pos - space_bytes
-                
-                # Only remove if / stays at even position
-                if new_byte_pos % 2 == 0:
-                    result.pop(i-1)
-                    i -= 1  # Adjust index after removal
+            current_byte_pos = get_byte_position(''.join(result), i)
+            if current_byte_pos % 2 != 0:
+                # Currently at odd position - add one space to make it even
+                result.insert(i, ' ')
+                i += 1  # Skip the space we just inserted
         i += 1
     
     return ''.join(result)
@@ -164,18 +160,14 @@ def fix_fullwidth_punctuation(text: str) -> str:
     """
     Replace fullwidth punctuation with ASCII equivalents to avoid byte alignment issues.
     
-    Fullwidth chars (2 bytes) at odd OVERALL positions cause corruption.
-    ASCII chars (1 byte) work at any position.
-    
-    Special case for !:
-    - Literal ! at EVEN per-line position → misread as format code → keep as ！
-    - Literal ! at ODD per-line position → safe to use ASCII !
-    - ！ at ODD overall position → corrupted → convert to ! (which is safe)
-    - ！ at EVEN overall position → keep as ！ (correct)
+    SIMPLIFIED RULE: Always use ASCII punctuation.
+    - Fullwidth chars at wrong positions cause corruption (或 etc)
+    - ASCII ! is only a problem when followed by alphanumeric (format code)
+    - At end of string/line or before non-alphanumeric, ASCII ! is safe
     """
-    # First pass: convert fullwidth punctuation (except ！) to ASCII
-    # These are safe as ASCII at any position
+    # Convert ALL fullwidth punctuation to ASCII
     replacements = {
+        '！': '!',   # fullwidth exclamation
         '、': ',',   # fullwidth comma
         '。': '.',   # fullwidth period  
         '？': '?',   # fullwidth question mark
@@ -194,46 +186,15 @@ def fix_fullwidth_punctuation(text: str) -> str:
     for fw, ascii_char in replacements.items():
         text = text.replace(fw, ascii_char)
     
-    # Second pass: handle ！ specially
-    # ！ at odd OVERALL position → convert to ! (safe)
-    # ！ at even OVERALL position → keep as ！ (correct)
-    # ! at even PER-LINE position (not format code) → misread as format code → use ！
-    # ! at odd PER-LINE position (not format code) → safe as ASCII !
-    
-    if '！' not in text and '!' not in text:
-        return text
-    
-    result = list(text)
-    i = 0
-    while i < len(result):
-        char = result[i]
-        
-        if char == '！':
-            # Fullwidth exclamation - check OVERALL position
-            byte_pos = get_byte_position(''.join(result), i)
-            if byte_pos % 2 != 0:
-                # Odd overall position - fullwidth will corrupt, use ASCII
-                result[i] = '!'
-            # Even overall position - keep as fullwidth (safe)
-        
-        elif char == '!':
-            # ASCII exclamation - check if it's a format code
-            is_format_code = (i + 1 < len(result) and result[i + 1].isalnum())
-            if not is_format_code:
-                # Literal ! - check PER-LINE position (format code detection is per-line)
-                byte_pos = get_byte_position_in_line(''.join(result), i)
-                if byte_pos % 2 == 0:
-                    # Even per-line position - will be misread as format code
-                    # But we can only use ！ if OVERALL position is even
-                    overall_pos = get_byte_position(''.join(result), i)
-                    if overall_pos % 2 == 0:
-                        result[i] = '！'
-                    # If overall is odd, we have a conflict - keep as ! and hope for best
-                # Odd per-line position - keep as ASCII (safe)
-        
-        i += 1
-    
-    return ''.join(result)
+    return text
+
+def fix_fullwidth_spaces(text: str) -> str:
+    """
+    Replace fullwidth spaces with double halfwidth spaces.
+    Fullwidth spaces (2 bytes) at odd positions cause corruption.
+    Double halfwidth spaces (2 bytes) work at any position.
+    """
+    return text.replace('　', '  ')
 
 def fix_alignment(text: str, max_iterations: int = 500) -> str:
     """
@@ -241,6 +202,8 @@ def fix_alignment(text: str, max_iterations: int = 500) -> str:
     
     - / line breaks: adjusted based on overall byte position
     - ! format codes: adjusted based on per-line byte position
+    
+    Uses only halfwidth spaces to avoid 2-byte chars at odd positions.
     """
     if '!' not in text and '/' not in text:
         return text
@@ -256,11 +219,11 @@ def fix_alignment(text: str, max_iterations: int = 500) -> str:
         if problem_index > 0:
             prev_char = text[problem_index - 1]
             if prev_char == ' ':
-                # Swap halfwidth to fullwidth (adds 1 byte)
-                text = text[:problem_index-1] + '　' + text[problem_index:]
+                # Add another halfwidth space (2 spaces = 2 bytes, keeps alignment)
+                text = text[:problem_index] + ' ' + text[problem_index:]
                 continue
             elif prev_char == '　':
-                # Swap fullwidth to halfwidth (removes 1 byte)
+                # Replace fullwidth with halfwidth (removes 1 byte)
                 text = text[:problem_index-1] + ' ' + text[problem_index:]
                 continue
         
@@ -300,6 +263,12 @@ def fix_csv(csv_path: Path) -> dict:
             fixes['punctuation'] += 1
             english = fixed
         
+        # 3b. Fix fullwidth spaces (convert to double halfwidth)
+        fixed = fix_fullwidth_spaces(english)
+        if fixed != english:
+            fixes['spacing'] += 1
+            english = fixed
+        
         # 4. Fix ellipsis - use … only when at even position
         fixed = fix_ellipsis(english)
         if fixed != english:
@@ -318,8 +287,8 @@ def fix_csv(csv_path: Path) -> dict:
             fixes['punctuation'] += 1
             english = fixed
         
-        # 7. Remove unnecessary spaces before / (saves bytes while keeping alignment)
-        fixed = fix_unnecessary_spaces_before_slash(english)
+        # 7. Ensure proper spacing before / for reliable line breaks
+        fixed = fix_spaces_around_slash(english)
         if fixed != english:
             fixes['spacing'] += 1
         
