@@ -65,6 +65,9 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
     """
     Replace text in a binary file using Shift-JIS encoding.
     Pads English text with spaces to match Japanese byte length.
+    
+    IMPORTANT: Replacements are sorted by length (longest first) to prevent
+    shorter substrings from corrupting longer strings during replacement.
     """
     with open(input_file, 'rb') as f:
         data = f.read()
@@ -72,7 +75,10 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
     modified = data
     replaced_count = 0
     
-    for jp_text, en_text in replacements.items():
+    # Sort by Japanese text length (longest first) to prevent substring corruption
+    sorted_replacements = sorted(replacements.items(), key=lambda x: len(x[0]), reverse=True)
+    
+    for jp_text, en_text in sorted_replacements:
         jp_bytes = jp_text.encode('shift_jis')
         en_bytes = en_text.encode('shift_jis')
         
