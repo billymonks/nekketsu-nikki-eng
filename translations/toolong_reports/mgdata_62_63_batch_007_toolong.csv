@@ -1,5 +1,2 @@
 "japanese","english","context","notes","jp_bytes","en_bytes","overflow"
-"!c05パートナー!c07になってくれたり、/届け物を依頼されることもあるわ。","They might become your  !c05Partner !c07  /or ask you to deliver.","Color-coded menu/UI text","","69","67","-2"
-"!c04部室棟エリア!c07。/各クラブの部室があるわ。化学部では/人体実験が行われてるって噂も……。","!c04Club Building !c07. /Each club has a room. Rumor  /says the chem club experiments...","Color-coded menu/UI text","","92","90","-2"
-"!c04ＨＰ!c07が!1回復した！","!c04HP!c07 restored by !1!","Color-coded menu/UI text","","26","24","-2"
-"!c05パートナー!c07にするには、/同じマスに止まった時に/!c05パートナー!c07イベントが発生するか……、","To make them your !c05Partner !c07, /land on their space for  /a !c05Partner !c07 event...","Portrait: !p1800!e00","","98","96","-2"
+"!c04ＨＰ!c07が!1回復した！","!c04HP!c07 restored by  !1!","Color-coded menu/UI text","","26","27","1"
