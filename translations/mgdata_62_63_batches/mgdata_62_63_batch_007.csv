@@ -77,7 +77,7 @@
 "!c04機嫌!c07を悪くしますか？","Make  !c04mood!c07 worse?","Color-coded menu/UI text",""
 "!c04機嫌!c07を直しますか？","Fix !c04mood!c07?","Color-coded menu/UI text",""
 "!c04部室棟エリア!c07。/各クラブの部室があるわ。化学部では/人体実験が行われてるって噂も……。","!c04Club Building !c07. /Each club has a room. Rumor  /says the chem club experiments…","Color-coded menu/UI text",""
-"!c04ＨＰ!c07が!1回復した！","!c04HP!c07 restored by  !1!","Color-coded menu/UI text",""
+"!c04ＨＰ!c07が!1回復した！","!c04HP!c07 +!1!","Color-coded menu/UI text",""
 "!c04ＨＰ!c07が!1回復！","!c04HP!c07 +!1!","Color-coded menu/UI text",""
 "!c04ＨＰ!c07が!1増えた！","!c04HP!c07 +!1!","Color-coded menu/UI text",""
 "!c04ＨＰ!c07が!1減った！","!c04HP!c07 -!1!","Color-coded menu/UI text",""
