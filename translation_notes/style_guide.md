@@ -62,7 +62,6 @@ When translations exceed byte limits, use these strategies:
 | Contractions | "I will" → "I'll", "do not" → "don't" |
 | Shorter synonyms | "because" → "since", "understand" → "get" |
 | Remove redundancy | "in order to" → "to" |
-| Abbreviate | "Two-Platoon technique" → "Two-Platoon" |
 | Shorten phrases | "What are you doing?" → "What're you doing?" |
 | Use context | "Eiyu-sensei, what are you holding?" → "Eiyu-sensei, what's that?" |
 | Truncate names | "Discipline Committee room" → "Discipline Room" |
@@ -75,7 +74,6 @@ When translations exceed byte limits, use these strategies:
 | Justice characters | Jus chars | 9 bytes |
 | Student Council Room | Council Room | 8 bytes |
 | Career Guidance Room | Career Guidance | 5 bytes |
-| Two-Platoon technique | Two-Platoon | 10 bytes |
 
 ## Things to Avoid
 

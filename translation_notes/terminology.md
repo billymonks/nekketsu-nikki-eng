@@ -144,6 +144,21 @@ Consistent translations for game-specific terms.
 | 甲子園 | Koshien | Famous baseball tournament |
 | 総番長 | Boss | School delinquent leader |
 
+## Items / Terms
+
+| Japanese | English | Notes |
+|----------|---------|-------|
+| ラムネ | Soda | Shortened from Ramune for character space |
+| バトル | Battle | |
+
+## Special Moves
+| Japanese | English | Notes |
+|----------|---------|-------|
+| イチバチ | Long Shot | Shortened from All-or-nothing for character space |
+| Ｗパワーバスター | W Power Buster |  |
+| プラトン技を | Tag-team move | Shortened from Two-Platoon technique |
+
+
 ---
 
 ## Notes

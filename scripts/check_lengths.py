@@ -89,6 +89,32 @@ def write_issues_csv(batch_path: Path, issues: list, output_dir: Path):
     return output_path
 
 
+def cleanup_empty_reports(output_dir: Path) -> int:
+    """Remove toolong report files that only have a header (no issues left)."""
+    removed = 0
+    
+    if not output_dir.exists():
+        return 0
+    
+    for report_file in output_dir.glob("*_toolong.csv"):
+        try:
+            with open(report_file, 'r', encoding='utf-8') as f:
+                content = f.read().strip()
+            
+            # Count non-empty lines
+            lines = [line for line in content.split('\n') if line.strip()]
+            
+            # If only header line (or empty), delete the file
+            if len(lines) <= 1:
+                report_file.unlink()
+                print(f"  Removed empty report: {report_file.name}")
+                removed += 1
+        except Exception as e:
+            print(f"  Warning: Could not process {report_file.name}: {e}")
+    
+    return removed
+
+
 def check_batch_dir(batch_dir: Path, output_dir: Path):
     """Check all batch CSV files and output issues to separate files."""
     batch_files = sorted(batch_dir.glob("*_batch_*.csv"))
@@ -98,6 +124,12 @@ def check_batch_dir(batch_dir: Path, output_dir: Path):
     # Ensure output directory exists
     output_dir.mkdir(parents=True, exist_ok=True)
     
+    # First, clean up any empty reports from previous runs
+    removed = cleanup_empty_reports(output_dir)
+    if removed > 0:
+        print(f"Cleaned up {removed} empty report(s)")
+        print("-" * 40)
+    
     for batch_file in batch_files:
         issues = check_csv(batch_file)
         
@@ -106,6 +138,13 @@ def check_batch_dir(batch_dir: Path, output_dir: Path):
             print(f"  {batch_file.name}: {len(issues)} issues -> {output_path.name}")
             total_issues += len(issues)
             files_with_issues += 1
+        else:
+            # If no issues, remove any existing toolong report for this batch
+            report_name = batch_file.stem + "_toolong.csv"
+            report_path = output_dir / report_name
+            if report_path.exists():
+                report_path.unlink()
+                print(f"  {batch_file.name}: All fixed! Removed {report_name}")
     
     return total_issues, files_with_issues
 
