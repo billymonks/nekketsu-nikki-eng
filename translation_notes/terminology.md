@@ -14,7 +14,7 @@ Consistent translations for game-specific terms.
 | 知力 (ちりょく) | INT | Intelligence |
 | パラメータ | stats | General stats |
 | 機嫌 (きげん) | mood | Character's mood |
-| 不機嫌 | bad mood | Negative mood state |
+| 不機嫌 | moody | Negative mood state |
 | 友好度 (ゆうこうど) | Friendship | Friendship level |
 
 ## School Subjects
@@ -183,6 +183,7 @@ Consistent translations for game-specific terms.
 | イチバチ | Long Shot | Shortened from All-or-nothing for character space |
 | Ｗパワーバスター | W Power Buster |  |
 | プラトン技を | Tag-team move | Shortened from Two-Platoon technique |
+| 残酷斬 | Cruel Slash | |
 
 
 ---
