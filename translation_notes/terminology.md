@@ -150,6 +150,32 @@ Consistent translations for game-specific terms.
 |----------|---------|-------|
 | ラムネ | Soda | Shortened from Ramune for character space |
 | バトル | Battle | |
+| 調査書 | Report | |
+| 進路調査書 | Career Survey | |
+| 謎のゴミ袋 | Mysterious Trash Bag | |
+| 醍醐のお弁当 | Daigo's Lunch | |
+| 響子のペンダント | Kyoko's Pendant | |
+| 骨格標本 | Skeleton Model | |
+| 魅惑のバッグ | Alluring Bag | |
+| 漢のガクラン | Manly Gakuran | |
+| 派手なハンカチ | Flashy Handkerchief | |
+| 水泳ビデオ | Swimming Video | |
+| 未返却の本 | Unreturned Books | |
+| 手作りクッキー | Homemade Cookies | |
+| 忌野家秘術巻物 | Imawano Scroll | |
+| 差し入れの氷柱 | Gift Icicles | |
+| 岩の絵画 | Rock Painting | |
+| 密書 | Secret Letter | |
+| 委員長のレポート | Chairperson's Report | |
+| ロイの腕時計 | Roy's Watch | |
+| バレーボールマシュマロ | Volleyball Marshmallows | |
+| バット３本 | 3 Bats | |
+| サッカーボール | Soccer Ball | |
+| ケーキ皿 | Cake Plates | |
+| カメラバッグ | Camera Bag | |
+| アキラへのチョーカー | Choker for Akira | |
+| 忌野一族 | Imano clan | |
+
 
 ## Special Moves
 | Japanese | English | Notes |
