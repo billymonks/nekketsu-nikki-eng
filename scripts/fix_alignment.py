@@ -201,7 +201,8 @@ def process_text(text: str) -> str:
     """Apply all fixes in order."""
     text = cleanup(text)
     text = fix_ellipsis(text)
-    text = fix_all_left_to_right(text)  # Single pass: /, format codes, and ! 
+    text = fix_long_lines(text)          # Move words to next line if too long
+    text = fix_all_left_to_right(text)   # Fix alignment last (after line lengths fixed)
     return text
 
 
@@ -231,6 +232,87 @@ def get_display_length(text: str) -> int:
             length += 1 if ord(text[i]) < 128 else 2
             i += 1
     return length
+
+
+def fix_long_lines(text: str, max_bytes: int = 39) -> str:
+    """
+    Fix overly long lines by adjusting / positions or inserting new /.
+    
+    - Non-last line too long: Move / left to shorten
+    - Last line too long: Try moving / right, else insert new /
+    - No / available: Insert new /
+    """
+    max_iterations = 50
+    
+    for _ in range(max_iterations):
+        segments = text.split('/')
+        
+        # Find first problem
+        problem_idx = None
+        for idx, segment in enumerate(segments):
+            if get_display_length(segment.rstrip(' ')) > max_bytes:
+                problem_idx = idx
+                break
+        
+        if problem_idx is None:
+            break  # No problems
+        
+        fixed = False
+        problem_segment = segments[problem_idx]
+        
+        # Case: Last line too long
+        if problem_idx == len(segments) - 1 and len(segments) > 1:
+            first_space = problem_segment.find(' ')
+            if first_space > 0:
+                # Check if moving / right would make previous line too long
+                prev_segment = segments[-2]
+                word_to_move = problem_segment[:first_space]
+                new_prev_len = get_display_length((prev_segment + ' ' + word_to_move).rstrip(' '))
+                
+                if new_prev_len <= max_bytes:
+                    # Safe to move / right
+                    new_prev = prev_segment + ' ' + word_to_move
+                    new_last = problem_segment[first_space + 1:]
+                    segments[-2] = new_prev
+                    segments[-1] = new_last
+                    text = '/'.join(segments)
+                    fixed = True
+                else:
+                    # Can't move / right, insert new / in last line instead
+                    last_space = problem_segment.rfind(' ')
+                    if last_space > 0:
+                        new_current = problem_segment[:last_space]
+                        new_next = problem_segment[last_space + 1:]
+                        segments = segments[:-1] + [new_current, new_next]
+                        text = '/'.join(segments)
+                        fixed = True
+        
+        # Case: Non-last line too long - move / LEFT
+        elif problem_idx < len(segments) - 1:
+            last_space = problem_segment.rfind(' ')
+            if last_space > 0:
+                new_current = problem_segment[:last_space]
+                new_next = problem_segment[last_space + 1:] + ' ' + segments[problem_idx + 1]
+                
+                parts = segments[:problem_idx] + [new_current, new_next] + segments[problem_idx + 2:]
+                text = '/'.join(parts)
+                fixed = True
+        
+        # Case: Still not fixed - insert new /
+        if not fixed:
+            last_space = problem_segment.rfind(' ')
+            if last_space > 0:
+                new_current = problem_segment[:last_space]
+                new_next = problem_segment[last_space + 1:]
+                
+                parts = segments[:problem_idx] + [new_current, new_next] + segments[problem_idx + 1:]
+                text = '/'.join(parts)
+                fixed = True
+        
+        if not fixed:
+            break  # Can't fix
+    
+    return text
 
 
 def find_long_lines(text: str, max_bytes: int = 39) -> list[tuple[int, str, int]]:

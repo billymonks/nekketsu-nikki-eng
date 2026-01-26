@@ -4,7 +4,7 @@
 "!0君！","!0！","Portrait: !p1300!e00",""
 "!0番にセーブします。/　　　　　　　　よろしいですか？/　　　　　　はい：Ａ　　いいえ：Ｂ","Save to slot!0. /Is this okay? /Yes: A No: B","Portrait: !pffff!e00",""
 "!0番に上書きしてもよろしいですか？/　　　　　　はい：Ａ　　いいえ：Ｂ","Overwrite slot!0? /Yes: A No: B","Portrait: !pffff!e00",""
-"!0番のＥＤＩＴキャラを消します。/　　　　　　　　よろしいですか？/　　　　　　はい：Ａ　　いいえ：Ｂ","Delete EDIT character in slot !0. /Is this okay? /Yes: A No: B","Portrait: !pffff!e00",""
+"!0番のＥＤＩＴキャラを消します。/　　　　　　　　よろしいですか？/　　　　　　はい：Ａ　　いいえ：Ｂ","Delete EDIT character in slot/!0. Is this okay? /Yes: A No: B","Portrait: !pffff!e00",""
 "!0！/いいところに来たのう！","!0！/Perfect timing！","Portrait: !p1200!e00",""
 "!0！/おせェぞ！","!0！ Finally!","Portrait: !p1000!e00",""
 "!0！/おつかれさま！","!0！/Good work！","Portrait: !p0500!e00",""
