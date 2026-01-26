@@ -1,164 +1,152 @@
 """
-Validate and minimally fix byte alignment issues in translations.
+Fix byte alignment in translations for Shift-JIS game text.
 
-KEY INSIGHT: The game treats each line (split by /) independently for byte counting.
-After a / line break, byte counting restarts at 0 for that line segment.
+KEY DISCOVERY: Spaces reset the byte count for alignment purposes!
 
-Rules (based on testing):
-- / line breaks must be at EVEN byte positions in the OVERALL string
-  BUT also must NOT be at multiples of 20 (positions 20, 40, 60... don't work)
-- ! format codes (like !0, !p1800) must be at EVEN byte positions WITHIN THEIR LINE SEGMENT
-- Literal ! at EVEN position may be parsed as format code (user must handle manually)
-- Fullwidth characters are 2 bytes and should start on even positions within their line
-- Backslashes display as ¥ in Shift-JIS -> remove them
-- Use … instead of ... to save 1 byte (when at even position)
-
-IMPORTANT: This script tries to MINIMIZE byte usage, not add padding spaces.
+Rules (from testing):
+- Byte position resets after each SPACE (not just /)
+- / line breaks: must be at EVEN position from last space/start
+- ! format codes: must be at EVEN position from last space/start  
+- Literal !: must be at ODD position to display (can't fix with spaces)
+- Fullwidth chars: must start at EVEN position from last space/start
+- ... → … saves 1 byte when at even position
 """
 import csv
 import io
 from pathlib import Path
 
-def get_byte_position(text: str, char_index: int) -> int:
-    """Get the byte position of a character index in Shift-JIS."""
-    pos = 0
-    for i, char in enumerate(text):
-        if i == char_index:
-            return pos
-        if ord(char) < 128:
-            pos += 1
-        else:
-            pos += 2
-    return pos
 
-def get_byte_position_in_line(text: str, char_index: int) -> int:
+FORMAT_CODE_PATTERNS = {
+    '0': 2, '1': 2, '2': 2, '3': 2, '4': 2,
+    '5': 2, '6': 2, '7': 2, '8': 2, '9': 2,
+    'a': 2, 'b': 2,
+    'c': 4, 'p': 6, 'e': 4,
+}
+
+
+def get_format_code_length(text: str, pos: int) -> int:
+    """Return character length of format code at pos, or 0 if not a format code."""
+    if pos >= len(text) or text[pos] != '!' or pos + 1 >= len(text):
+        return 0
+    return FORMAT_CODE_PATTERNS.get(text[pos + 1], 0)
+
+
+def get_position_for_format_code(text: str, char_index: int) -> int:
     """
-    Get byte position within the current line segment (after last /).
-    The game resets byte counting to 0 after each / line break.
+    Get byte position for format code alignment.
+    Format codes count as 1 byte.
+    Resets on space or /.
     """
-    # Find the start of the current line (after the last /)
-    line_start = 0
+    segment_start = 0
     for i in range(char_index):
-        if text[i] == '/':
-            line_start = i + 1
+        if text[i] in ' /':
+            segment_start = i + 1
     
-    # Calculate byte position from line start to char_index
-    pos = 0
-    for i in range(line_start, char_index):
-        if ord(text[i]) < 128:
-            pos += 1
+    pos, i = 0, segment_start
+    while i < char_index and i < len(text):
+        fc_len = get_format_code_length(text, i)
+        if fc_len > 0:
+            pos += 1  # Format codes = 1 byte for format code alignment
+            i += fc_len
         else:
-            pos += 2
+            pos += 1 if ord(text[i]) < 128 else 2
+            i += 1
     return pos
 
-def find_first_problem(text: str) -> tuple[int, str] | None:
-    """
-    Find the character index of the first alignment problem that CAN be auto-fixed.
-    Returns (index, problem_type) or None.
-    
-    Only flags issues we can fix without adding bytes:
-    - ! format codes at ODD position: add 1 space (necessary for functionality)
-    - / at ODD position: add 1 space (necessary for functionality)
-    
-    Does NOT flag (user must handle manually):
-    - / at multiples of 20 (would require adding 2 spaces)
-    - Literal ! issues (would require adding bytes)
-    """
-    for i, char in enumerate(text):
-        # Check / line breaks - must be at even OVERALL position
-        # Note: We don't auto-fix multiples of 20 (would waste 2 bytes)
-        if char == '/':
-            byte_pos = get_byte_position(text, i)
-            if byte_pos % 2 != 0:
-                return (i, 'slash_odd')
-        # Check ! format codes only - must be at EVEN PER-LINE position
-        elif char == '!':
-            is_format_code = (i + 1 < len(text) and text[i + 1].isalnum())
-            if is_format_code:
-                byte_pos = get_byte_position_in_line(text, i)
-                if byte_pos % 2 != 0:
-                    return (i, 'format_code')
-    return None
 
-def fix_backslashes(text: str) -> str:
+def get_position_for_slash(text: str, char_index: int) -> int:
     """
-    Fix backslash characters that display as ¥ in Shift-JIS.
-    Simply remove all backslashes - they're artifacts from escaping.
+    Get byte position for / alignment.
+    Format codes count as their FULL character length (not 1 byte).
+    Resets on space or /.
     """
-    return text.replace('\\', '')
+    segment_start = 0
+    for i in range(char_index):
+        if text[i] in ' /':
+            segment_start = i + 1
+    
+    pos, i = 0, segment_start
+    while i < char_index and i < len(text):
+        # For / alignment, count all characters by their actual byte size
+        pos += 1 if ord(text[i]) < 128 else 2
+        i += 1
+    return pos
 
 
-def cleanup_spaces(text: str) -> str:
+def fix_all_left_to_right(text: str) -> str:
     """
-    Remove unnecessary spaces that waste bytes.
-    This cleans up damage from previous script runs.
-    
-    - Double spaces → single space
-    - Space before / → remove (fix_alignment will add back if needed)
-    - Space before ! (not format code) → remove
-    - Trailing spaces → remove
+    Process text left to right, fixing issues as we encounter them.
+    Each fix is applied immediately, affecting all subsequent positions.
     """
-    # Remove double/triple/etc spaces
-    while '  ' in text:
-        text = text.replace('  ', ' ')
-    
-    # Remove space before /
-    text = text.replace(' /', '/')
-    
-    # Remove space before literal ! (not format codes)
-    # We need to be careful not to break " !0" type patterns
     result = []
     i = 0
+    
     while i < len(text):
-        if text[i] == ' ' and i + 1 < len(text) and text[i + 1] == '!':
-            # Check if the ! is a format code (followed by alphanumeric)
-            is_format_code = (i + 2 < len(text) and text[i + 2].isalnum())
-            if is_format_code:
-                # Keep the space - it's before a format code
+        char = text[i]
+        current = ''.join(result)
+        
+        if char == '/':
+            # Check / alignment (format codes count as full length)
+            pos = get_position_for_slash(current, len(current))
+            if pos % 2 != 0:
+                # ODD position - add space before /
                 result.append(' ')
-            # else: skip the space (before literal !)
+            result.append('/')
             i += 1
+            
+        elif char == '!':
+            fc_len = get_format_code_length(text, i)
+            if fc_len > 0:
+                # Format code - check alignment (format codes count as 1 byte)
+                pos = get_position_for_format_code(current, len(current))
+                if pos % 2 != 0:
+                    # ODD position - add space before format code
+                    result.append(' ')
+                result.append(text[i:i + fc_len])
+                i += fc_len
+            else:
+                # Literal ! - check if it will render
+                pos = get_position_for_slash(current, len(current))
+                if pos % 2 == 0:
+                    # EVEN position - won't render, use fullwidth
+                    result.append('！')
+                else:
+                    # ODD position - will render
+                    result.append('!')
+                i += 1
         else:
-            result.append(text[i])
+            result.append(char)
             i += 1
-    text = ''.join(result)
     
-    # Remove trailing spaces
+    return ''.join(result)
+
+
+def cleanup(text: str) -> str:
+    """Remove unnecessary characters."""
+    text = text.replace('\\', '')
+    while '  ' in text:
+        text = text.replace('  ', ' ')
+    # Remove spaces around / - fix_alignment will add back if needed
+    text = text.replace(' /', '/')
+    text = text.replace('/ ', '/')
     text = text.rstrip(' ')
-    
     return text
 
 
-
-
 def fix_ellipsis(text: str) -> str:
-    """
-    Replace ... (3 bytes) with … (2 bytes) only when it saves bytes.
-    If … would end up at an odd byte position (needing a space = 3 bytes total),
-    keep ... instead since it's the same length but cleaner.
-    
-    Uses per-line byte position since game resets counting after each /.
-    """
+    """Replace ... with … when it saves bytes (at even position)."""
     if '...' not in text and '…' not in text:
         return text
     
-    # First, normalize all ellipses to ... so we can re-evaluate
     text = text.replace('…', '...')
     
-    # Now find each ... and decide whether to use … or keep ...
     result = []
     i = 0
     while i < len(text):
         if text[i:i+3] == '...':
-            # Check byte position WITHIN LINE at this point
-            current_text = ''.join(result)
-            byte_pos = get_byte_position_in_line(current_text + '...', len(current_text))
-            if byte_pos % 2 == 0:
-                # Even position in line - use … (saves 1 byte)
-                result.append('…')
-            else:
-                # Odd position - keep ... (same as " …" but cleaner)
-                result.append('...')
+            current = ''.join(result)
+            byte_pos = get_position_for_slash(current, len(current))
+            result.append('…' if byte_pos % 2 == 0 else '...')
             i += 3
         else:
             result.append(text[i])
@@ -167,66 +155,72 @@ def fix_ellipsis(text: str) -> str:
     return ''.join(result)
 
 
-def fix_alignment(text: str, max_iterations: int = 500) -> str:
-    """
-    Fix byte alignment for ! format codes and / line breaks.
-    Only adds a single space when necessary to shift from odd to even position.
-    
-    - / line breaks: must be at EVEN overall byte position
-    - ! format codes: must be at EVEN per-line byte position
-    """
-    if '!' not in text and '/' not in text:
-        return text
-    
-    for _ in range(max_iterations):
-        problem = find_first_problem(text)
+def fix_alignment(text: str, max_iter: int = 100) -> str:
+    """Add spaces to fix / and format code alignment."""
+    for _ in range(max_iter):
+        problem = find_alignment_problem(text)
         if problem is None:
             break
-        
-        problem_index, problem_type = problem
-        
-        # Add 1 space to shift from odd to even position
-        text = text[:problem_index] + ' ' + text[problem_index:]
-    
+        # Adding a space resets the count, so this shifts the problem char
+        text = text[:problem] + ' ' + text[problem:]
     return text
 
+
+def fix_literal_exclamations(text: str) -> str:
+    """
+    Convert literal ! at EVEN position to fullwidth ！.
+    - Literal ! at EVEN position = dropped (bad)
+    - Fullwidth ！ at EVEN position = renders (good)
+    """
+    result = []
+    i = 0
+    while i < len(text):
+        fc_len = get_format_code_length(text, i)
+        if fc_len > 0:
+            # Format code - keep as-is
+            result.append(text[i:i + fc_len])
+            i += fc_len
+        elif text[i] == '!':
+            # Literal ! - check position (use full char counting)
+            current = ''.join(result)
+            pos = get_position_for_slash(current, len(current))
+            if pos % 2 == 0:
+                # EVEN position - won't render, use fullwidth
+                result.append('！')
+            else:
+                # ODD position - will render, keep as-is
+                result.append('!')
+            i += 1
+        else:
+            result.append(text[i])
+            i += 1
+    return ''.join(result)
+
+
+def process_text(text: str) -> str:
+    """Apply all fixes in order."""
+    text = cleanup(text)
+    text = fix_ellipsis(text)
+    text = fix_all_left_to_right(text)  # Single pass: /, format codes, and ! 
+    return text
+
+
 def fix_csv(csv_path: Path) -> dict:
-    """Fix alignment issues in a CSV file. Prioritizes saving bytes. Returns dict of fix counts."""
+    """Fix a CSV file. Returns counts of changes."""
     with open(csv_path, 'r', encoding='utf-8') as f:
         content = f.read().replace('\x00', '')
     
     rows = list(csv.DictReader(io.StringIO(content)))
-    fixes = {'cleanup': 0, 'alignment': 0, 'backslash': 0, 'ellipsis': 0}
+    changes = 0
     
     for row in rows:
-        english = row.get('english', '')
-        if not english:
+        original = row.get('english', '')
+        if not original:
             continue
-        
-        # 1. Remove backslashes (saves bytes, fixes display)
-        fixed = fix_backslashes(english)
-        if fixed != english:
-            fixes['backslash'] += 1
-            english = fixed
-        
-        # 2. Cleanup: remove double spaces, space before /, space before literal !
-        fixed = cleanup_spaces(english)
-        if fixed != english:
-            fixes['cleanup'] += 1
-            english = fixed
-        
-        # 3. Use … instead of ... to save 1 byte (when at even position)
-        fixed = fix_ellipsis(english)
-        if fixed != english:
-            fixes['ellipsis'] += 1
-            english = fixed
-        
-        # 4. Fix alignment for format codes and / (only adds spaces when necessary)
-        fixed = fix_alignment(english)
-        if fixed != english:
-            fixes['alignment'] += 1
-        
-        row['english'] = fixed
+        fixed = process_text(original)
+        if fixed != original:
+            changes += 1
+            row['english'] = fixed
     
     with open(csv_path, 'w', encoding='utf-8', newline='') as f:
         writer = csv.DictWriter(
@@ -238,23 +232,22 @@ def fix_csv(csv_path: Path) -> dict:
         writer.writeheader()
         writer.writerows(rows)
     
-    return fixes
+    return {'changes': changes}
+
 
 def fix_batch_dir(batch_dir: Path):
     """Fix all batch CSV files."""
     batch_files = sorted(batch_dir.glob("*_batch_*.csv"))
-    totals = {'cleanup': 0, 'alignment': 0, 'backslash': 0, 'ellipsis': 0}
+    total = 0
     
     for batch_file in batch_files:
-        fixes = fix_csv(batch_file)
-        if any(fixes.values()):
-            parts = [f"{v} {k}" for k, v in fixes.items() if v > 0]
-            print(f"  {batch_file.name}: {', '.join(parts)}")
-            for k, v in fixes.items():
-                totals[k] += v
+        result = fix_csv(batch_file)
+        if result['changes']:
+            print(f"  {batch_file.name}: {result['changes']} changes")
+            total += result['changes']
     
-    parts = [f"{v} {k}" for k, v in totals.items() if v > 0]
-    print(f"\nTotal: {', '.join(parts) if parts else 'no fixes needed'}")
+    print(f"\nTotal: {total} changes" if total else "\nNo changes needed")
+
 
 if __name__ == "__main__":
     project_dir = Path(__file__).parent.parent
@@ -264,7 +257,7 @@ if __name__ == "__main__":
         print(f"ERROR: Batch directory not found: {batch_dir}")
         exit(1)
     
-    print("Fixing byte alignment...")
+    print("Fixing alignment...")
     fix_batch_dir(batch_dir)
     
     print("\nValidating...")
