@@ -205,6 +205,50 @@ def process_text(text: str) -> str:
     return text
 
 
+def get_display_length(text: str) -> int:
+    """
+    Calculate display length of a line segment.
+    - !c## (colors) = 0 bytes (don't display)
+    - !p#### (portraits) = 0 bytes
+    - !e## (expressions) = 0 bytes
+    - !a, !b (buttons) = 0 bytes? or some length - assuming 0 for now
+    - !0-!9 (player names) = 10 bytes (max name length)
+    - Other chars = 1 byte (ASCII) or 2 bytes (fullwidth)
+    """
+    length = 0
+    i = 0
+    while i < len(text):
+        fc_len = get_format_code_length(text, i)
+        if fc_len > 0:
+            # Check which type of format code
+            next_char = text[i + 1] if i + 1 < len(text) else ''
+            if next_char.isdigit():
+                # !0-!9 player names = 10 bytes max
+                length += 10
+            # !c, !p, !e, !a, !b = 0 display bytes
+            i += fc_len
+        else:
+            length += 1 if ord(text[i]) < 128 else 2
+            i += 1
+    return length
+
+
+def find_long_lines(text: str, max_bytes: int = 39) -> list[tuple[int, str, int]]:
+    """
+    Find line segments that exceed max_bytes.
+    Returns list of (line_number, segment_text, byte_count).
+    Trailing spaces are ignored (whitespace extending out of window is fine).
+    """
+    problems = []
+    segments = text.split('/')
+    for idx, segment in enumerate(segments):
+        # Strip trailing spaces - they don't matter if they extend past window
+        display_len = get_display_length(segment.rstrip(' '))
+        if display_len > max_bytes:
+            problems.append((idx + 1, segment, display_len))
+    return problems
+
+
 def fix_csv(csv_path: Path) -> dict:
     """Fix a CSV file. Returns counts of changes."""
     with open(csv_path, 'r', encoding='utf-8') as f:
@@ -249,7 +293,52 @@ def fix_batch_dir(batch_dir: Path):
     print(f"\nTotal: {total} changes" if total else "\nNo changes needed")
 
 
+def report_long_lines(csv_path: Path) -> list[dict]:
+    """Find all lines that are too long in a CSV file."""
+    with open(csv_path, 'r', encoding='utf-8') as f:
+        content = f.read().replace('\x00', '')
+    
+    rows = list(csv.DictReader(io.StringIO(content)))
+    issues = []
+    
+    for row_idx, row in enumerate(rows, start=2):  # +2 for header and 1-based
+        english = row.get('english', '')
+        if not english:
+            continue
+        
+        problems = find_long_lines(english)
+        for line_num, segment, byte_count in problems:
+            issues.append({
+                'row': row_idx,
+                'line': line_num,
+                'bytes': byte_count,
+                'text': segment[:50] + ('...' if len(segment) > 50 else ''),
+                'full_text': english
+            })
+    
+    return issues
+
+
+def report_long_lines_batch(batch_dir: Path):
+    """Report all too-long lines in batch CSV files."""
+    batch_files = sorted(batch_dir.glob("*_batch_*.csv"))
+    total_issues = 0
+    
+    for batch_file in batch_files:
+        issues = report_long_lines(batch_file)
+        if issues:
+            print(f"\n{batch_file.name}:")
+            for issue in issues:
+                print(f"  Row {issue['row']}, Line {issue['line']}: {issue['bytes']} bytes")
+                print(f"    {issue['text']}")
+            total_issues += len(issues)
+    
+    print(f"\nTotal: {total_issues} lines over 39 bytes")
+
+
 if __name__ == "__main__":
+    import sys
+    
     project_dir = Path(__file__).parent.parent
     batch_dir = project_dir / "translations" / "mgdata_62_63_batches"
     
@@ -257,9 +346,14 @@ if __name__ == "__main__":
         print(f"ERROR: Batch directory not found: {batch_dir}")
         exit(1)
     
-    print("Fixing alignment...")
-    fix_batch_dir(batch_dir)
-    
-    print("\nValidating...")
-    from validate_translations import validate_batch_dir
-    validate_batch_dir(batch_dir)
+    # Check for --check-length flag
+    if len(sys.argv) > 1 and sys.argv[1] == '--check-length':
+        print("Checking for lines over 39 bytes...")
+        report_long_lines_batch(batch_dir)
+    else:
+        print("Fixing alignment...")
+        fix_batch_dir(batch_dir)
+        
+        print("\nValidating...")
+        from validate_translations import validate_batch_dir
+        validate_batch_dir(batch_dir)
