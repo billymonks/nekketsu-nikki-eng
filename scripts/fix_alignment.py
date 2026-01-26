@@ -100,10 +100,22 @@ def fix_all_left_to_right(text: str) -> str:
                 # Format code - check alignment (format codes count as 1 byte)
                 pos = get_position_for_format_code(current, len(current))
                 if pos % 2 != 0:
-                    # ODD position - add space before format code
-                    result.append(' ')
-                result.append(text[i:i + fc_len])
-                i += fc_len
+                    # ODD position - need to shift by 1
+                    # Check if there's a space AFTER the format code we can move
+                    after_pos = i + fc_len
+                    if after_pos < len(text) and text[after_pos] == ' ':
+                        # Move space from after to before (avoids visual double space)
+                        result.append(' ')
+                        result.append(text[i:i + fc_len])
+                        i = after_pos + 1  # Skip the space after
+                    else:
+                        # No space after, just add one before
+                        result.append(' ')
+                        result.append(text[i:i + fc_len])
+                        i += fc_len
+                else:
+                    result.append(text[i:i + fc_len])
+                    i += fc_len
             else:
                 # Literal ! - check if it will render
                 pos = get_position_for_slash(current, len(current))
@@ -197,12 +209,44 @@ def fix_literal_exclamations(text: str) -> str:
     return ''.join(result)
 
 
+def fix_format_code_spaces(text: str) -> str:
+    """
+    Remove space BEFORE format code if there's also space AFTER.
+    "word !c07 word" renders as "word  word" (bad)
+    "word!c07 word" renders as "word word" (good)
+    """
+    result = []
+    i = 0
+    while i < len(text):
+        fc_len = get_format_code_length(text, i)
+        if fc_len > 0:
+            # Check if space before AND space after
+            has_space_before = result and result[-1] == ' '
+            after_pos = i + fc_len
+            has_space_after = after_pos < len(text) and text[after_pos] == ' '
+            
+            if has_space_before and has_space_after:
+                # Remove the space before
+                result.pop()
+            
+            result.append(text[i:i + fc_len])
+            i += fc_len
+        else:
+            result.append(text[i])
+            i += 1
+    return ''.join(result)
+
+
 def process_text(text: str) -> str:
     """Apply all fixes in order."""
     text = cleanup(text)
     text = fix_ellipsis(text)
     text = fix_long_lines(text)          # Move words to next line if too long
-    text = fix_all_left_to_right(text)   # Fix alignment last (after line lengths fixed)
+    text = fix_format_code_spaces(text)  # Remove " !c07 " -> "!c07 " to avoid visual double space
+    text = fix_all_left_to_right(text)   # Fix alignment AFTER visual cleanup
+    # Final cleanup to remove any double spaces introduced
+    while '  ' in text:
+        text = text.replace('  ', ' ')
     return text
 
 
