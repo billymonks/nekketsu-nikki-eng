@@ -202,6 +202,7 @@ def process_1st_read():
     
     # CSV files for 1ST_READ.BIN translations
     csv_files = [
+        TRANSLATIONS_DIR / "1st_read_strings.csv",   # Text in the game
         TRANSLATIONS_DIR / "1st_read_menu.csv",   # Menu labels, stats, schools
         TRANSLATIONS_DIR / "1st_read_moves.csv",  # Move names and UI text
     ]
