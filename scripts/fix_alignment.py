@@ -31,6 +31,19 @@ def get_format_code_length(text: str, pos: int) -> int:
     return FORMAT_CODE_PATTERNS.get(text[pos + 1], 0)
 
 
+def is_invisible_format_code(text: str, pos: int) -> bool:
+    """
+    Check if format code at pos is invisible (just changes state, no display).
+    Invisible: !c## (color), !p#### (portrait), !e## (expression)
+    Visible: !a, !b (buttons), !0-!9 (player names)
+    """
+    if pos + 1 >= len(text) or text[pos] != '!':
+        return False
+    next_char = text[pos + 1]
+    # Invisible codes: c (color), p (portrait), e (expression)
+    return next_char in 'cpe'
+
+
 def get_position_for_format_code(text: str, char_index: int) -> int:
     """
     Get byte position for format code alignment.
@@ -102,29 +115,42 @@ def fix_all_left_to_right(text: str) -> str:
                 has_space_before = result and result[-1] == ' '
                 after_pos = i + fc_len
                 has_space_after = after_pos < len(text) and text[after_pos] == ' '
+                invisible = is_invisible_format_code(text, i)
+                
+                # For visible codes, ensure space BEFORE if preceded by letter
+                if not invisible and not has_space_before and result and result[-1].isalpha():
+                    result.append(' ')
+                    has_space_before = True  # Update for subsequent logic
                 
                 if pos % 2 != 0:
                     # ODD position - need to shift by 1
-                    if has_space_after and not has_space_before:
-                        # Move space from after to before
+                    if has_space_after and not has_space_before and invisible:
+                        # Move space from after to before (only for invisible codes)
                         result.append(' ')
                         result.append(text[i:i + fc_len])
                         i = after_pos + 1  # Skip the space after
                     else:
-                        # Add space before
-                        result.append(' ')
+                        # Add space before (for alignment)
+                        if not has_space_before:
+                            result.append(' ')
                         result.append(text[i:i + fc_len])
                         i += fc_len
-                        # If had space both before and after, skip space after to avoid double
-                        if has_space_before and has_space_after:
+                        # If invisible and had space both before and after, skip after
+                        if invisible and has_space_before and has_space_after:
                             i += 1
+                        # For visible codes, ADD space after if next char is a letter
+                        elif not invisible and i < len(text) and text[i].isalpha():
+                            result.append(' ')
                 else:
                     # EVEN position - OK
                     result.append(text[i:i + fc_len])
                     i += fc_len
-                    # If space both before and after, skip space after to avoid visual double
-                    if has_space_before and has_space_after:
+                    # Only skip trailing space for invisible codes to avoid visual double
+                    if invisible and has_space_before and has_space_after:
                         i += 1
+                    # For visible codes, ADD space after if next char is a letter
+                    elif not invisible and i < len(text) and text[i].isalpha():
+                        result.append(' ')
             else:
                 # Literal ! - check if it will render
                 pos = get_position_for_slash(current, len(current))
