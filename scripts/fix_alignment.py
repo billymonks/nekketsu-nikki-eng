@@ -34,7 +34,7 @@ def get_format_code_length(text: str, pos: int) -> int:
 def get_position_for_format_code(text: str, char_index: int) -> int:
     """
     Get byte position for format code alignment.
-    Format codes count as 1 byte.
+    Format codes count as 0 bytes (they're invisible).
     Resets on space or /.
     """
     segment_start = 0
@@ -46,7 +46,7 @@ def get_position_for_format_code(text: str, char_index: int) -> int:
     while i < char_index and i < len(text):
         fc_len = get_format_code_length(text, i)
         if fc_len > 0:
-            pos += 1  # Format codes = 1 byte for format code alignment
+            # Format codes = 0 bytes (invisible, don't affect alignment)
             i += fc_len
         else:
             pos += 1 if ord(text[i]) < 128 else 2
@@ -97,25 +97,34 @@ def fix_all_left_to_right(text: str) -> str:
         elif char == '!':
             fc_len = get_format_code_length(text, i)
             if fc_len > 0:
-                # Format code - check alignment (format codes count as 1 byte)
+                # Format code - check alignment (format codes count as 0 bytes)
                 pos = get_position_for_format_code(current, len(current))
+                has_space_before = result and result[-1] == ' '
+                after_pos = i + fc_len
+                has_space_after = after_pos < len(text) and text[after_pos] == ' '
+                
                 if pos % 2 != 0:
                     # ODD position - need to shift by 1
-                    # Check if there's a space AFTER the format code we can move
-                    after_pos = i + fc_len
-                    if after_pos < len(text) and text[after_pos] == ' ':
-                        # Move space from after to before (avoids visual double space)
+                    if has_space_after and not has_space_before:
+                        # Move space from after to before
                         result.append(' ')
                         result.append(text[i:i + fc_len])
                         i = after_pos + 1  # Skip the space after
                     else:
-                        # No space after, just add one before
+                        # Add space before
                         result.append(' ')
                         result.append(text[i:i + fc_len])
                         i += fc_len
+                        # If had space both before and after, skip space after to avoid double
+                        if has_space_before and has_space_after:
+                            i += 1
                 else:
+                    # EVEN position - OK
                     result.append(text[i:i + fc_len])
                     i += fc_len
+                    # If space both before and after, skip space after to avoid visual double
+                    if has_space_before and has_space_after:
+                        i += 1
             else:
                 # Literal ! - check if it will render
                 pos = get_position_for_slash(current, len(current))
@@ -211,9 +220,9 @@ def fix_literal_exclamations(text: str) -> str:
 
 def fix_format_code_spaces(text: str) -> str:
     """
-    Remove space BEFORE format code if there's also space AFTER.
+    Remove space AFTER format code if there's also space BEFORE.
     "word !c07 word" renders as "word  word" (bad)
-    "word!c07 word" renders as "word word" (good)
+    "word !c07word" renders as "word word" (good)
     """
     result = []
     i = 0
@@ -225,12 +234,12 @@ def fix_format_code_spaces(text: str) -> str:
             after_pos = i + fc_len
             has_space_after = after_pos < len(text) and text[after_pos] == ' '
             
-            if has_space_before and has_space_after:
-                # Remove the space before
-                result.pop()
-            
             result.append(text[i:i + fc_len])
             i += fc_len
+            
+            if has_space_before and has_space_after:
+                # Skip the space after (remove it)
+                i += 1
         else:
             result.append(text[i])
             i += 1
@@ -242,8 +251,7 @@ def process_text(text: str) -> str:
     text = cleanup(text)
     text = fix_ellipsis(text)
     text = fix_long_lines(text)          # Move words to next line if too long
-    text = fix_format_code_spaces(text)  # Remove " !c07 " -> "!c07 " to avoid visual double space
-    text = fix_all_left_to_right(text)   # Fix alignment AFTER visual cleanup
+    text = fix_all_left_to_right(text)   # Fix alignment (/, format codes, !)
     # Final cleanup to remove any double spaces introduced
     while '  ' in text:
         text = text.replace('  ', ' ')
