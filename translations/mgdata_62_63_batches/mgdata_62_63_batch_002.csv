@@ -50,7 +50,7 @@
 "!0の勝利！","!0 wins！","Portrait: !pffff!e00",""
 "!0の答えは/もう聞かせてもらったつもり。","I've already /heard !0's answer.","Portrait: !p0502!e00",""
 "!0のＥＤＩＴキャラから順に、/持っている技やパラメータが表示されるわ。","Starting with !0's chars,/their moves and stats will be shown.","Portrait: !p1800!e00",""
-"!0のＨＰを/!1ポイント奪った！","Stole !1 HP /from !0 ！","Portrait: !pffff!e00",""
+"!0のＨＰを/!1ポイント奪った！","Stole !1 HP/from !0 ！","Portrait: !pffff!e00",""
 "!0は!c01不機嫌!c07になった！","!0 is now !c01moody !c07！","Portrait: !pffff!e00",""
 "!0は!c04ＨＰ!c07が０になった！/次の!c05１ターン!c07休み！","!0's !c04HP !c07hit 0 ！/Skip next !c05turn !c07！","Portrait: !pffff!e00",""
 "!0は!c04ＨＰ!c07０のため、/!c05１ターン!c07休み！","!0's !c04HP !c07is 0！ /Skip this turn！","Portrait: !pffff!e00",""
