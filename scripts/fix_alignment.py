@@ -19,7 +19,7 @@ from pathlib import Path
 FORMAT_CODE_PATTERNS = {
     '0': 2, '1': 2, '2': 2, '3': 2, '4': 2,
     '5': 2, '6': 2, '7': 2, '8': 2, '9': 2,
-    'a': 2, 'b': 2,
+    'a': 2, 'b': 2, 'h': 2,  # buttons
     'c': 4, 'p': 6, 'e': 4,
 }
 
@@ -102,8 +102,13 @@ def fix_all_left_to_right(text: str) -> str:
             # Check / alignment (format codes count as full length)
             pos = get_position_for_slash(current, len(current))
             if pos % 2 != 0:
-                # ODD position - add space before /
-                result.append(' ')
+                # ODD position - need to add space
+                # If preceded by fullwidth chars, insert space BEFORE them
+                # (so fullwidth chars stay at even position)
+                insert_pos = len(result)
+                while insert_pos > 0 and ord(result[insert_pos - 1]) >= 128:
+                    insert_pos -= 1
+                result.insert(insert_pos, ' ')
             result.append('/')
             i += 1
             
@@ -161,6 +166,24 @@ def fix_all_left_to_right(text: str) -> str:
                     # ODD position - will render
                     result.append('!')
                 i += 1
+        elif char == '！':
+            # Fullwidth ！ - check position
+            pos = get_position_for_slash(current, len(current))
+            if pos % 2 != 0:
+                # ODD position - fullwidth would break, use halfwidth
+                result.append('!')
+            else:
+                # EVEN position - fullwidth OK
+                result.append('！')
+            i += 1
+        elif ord(char) >= 128:
+            # Other fullwidth/2-byte characters - need EVEN position
+            pos = get_position_for_slash(current, len(current))
+            if pos % 2 != 0:
+                # ODD position - add space before to shift to EVEN
+                result.append(' ')
+            result.append(char)
+            i += 1
         else:
             result.append(char)
             i += 1
