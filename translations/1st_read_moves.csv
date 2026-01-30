@@ -25,8 +25,6 @@ offset,japanese,english,context,jp_bytes
 0x001D12B5,はい ,Yes ,Move/UI text,5
 0x001D12BC,／,／,Move/UI text,2
 0x001D12C0,いいえ,No,Move/UI text,6
-0x001D1310,ＹＥＳ,YES,Move/UI text,6
-0x001D1319,ＮＯ ,NO ,Move/UI text,5
 0x001D1320,チームの並びを,Team order,Move/UI text,14
 0x001D1330,シャッフルしますか？,Shuffle?,Move/UI text,20
 0x001D1348,もう一度しますか？,Play again?,Move/UI text,18
@@ -34,8 +32,6 @@ offset,japanese,english,context,jp_bytes
 0x001D137D,はい ,Yes ,Move/UI text,5
 0x001D1384,／,/,Move/UI text,2
 0x001D1388,いいえ,No,Move/UI text,6
-0x001D13F8,ＹＥＳ,YES,Move/UI text,6
-0x001D1401,ＮＯ ,NO ,Move/UI text,5
 0x001D1430,なし,None,Move/UI text,4
 0x001D1438,気合弾,Guts,Move/UI text,6
 0x001D1440,ガッツアッパー,Guts Upper,Move/UI text,14
@@ -51,7 +47,7 @@ offset,japanese,english,context,jp_bytes
 0x001D14C0,必勝連撃拳,Victory,Move/UI text,10
 0x001D14CC,螺旋炎舞脚,Spin Fire,Move/UI text,10
 0x001D14D8,クロスカッター,Cross Cutter,Move/UI text,14
-0x001D14E8,幻影キック,Illusion,Move/UI text,10
+0x001D14E8,幻影キック,PhantomKck,Move/UI text,10
 0x001D14F4,幻影ブレイカー,Phantom Break,Move/UI text,14
 0x001D1504,雷神アッパー,ThunderUp,Move/UI text,12
 0x001D1514,幻影ウェーブ,Phantom Wave,Move/UI text,12
@@ -108,7 +104,7 @@ offset,japanese,english,context,jp_bytes
 0x001D18F4,ヘヴンズラッシュ,Heavens Rush,Move/UI text,16
 0x001D1908,ヘヴンズクロス,Heavens Cross,Move/UI text,14
 0x001D1918,裏斬り,Slash,Move/UI text,6
-0x001D1920,対空裏斬り,AA Slash,Move/UI text,10
+0x001D1920,対空裏斬り,AA BackCut,Move/UI text,10
 0x001D192C,罵倒,Mock,Move/UI text,4
 0x001D1934,破壊,Ruin,Move/UI text,4
 0x001D193C,壮絶な裏斬り,Fierce Slash,Move/UI text,12
@@ -125,7 +121,7 @@ offset,japanese,english,context,jp_bytes
 0x001D19B0,鉄砲突き,Thrust,Move/UI text,8
 0x001D19BC,柏手破り,Clap,Move/UI text,8
 0x001D19C8,荒波四股,Stomp,Move/UI text,8
-0x001D19D4,ぶちかまし,Tackle,Move/UI text,10
+0x001D19D4,ぶちかまし,Bull Rush,Move/UI text,10
 0x001D19E0,大嵐,Rage,Move/UI text,4
 0x001D19E8,岩石砕き,Crush,Move/UI text,8
 0x001D19F4,大旋風,Whirl,Move/UI text,6
@@ -133,7 +129,7 @@ offset,japanese,english,context,jp_bytes
 0x001D1A0C,噴火山,Erupt,Move/UI text,6
 0x001D1A14,雪崩落とし,Avalanche,Move/UI text,10
 0x001D1A20,正波拳,Wave,Move/UI text,6
-0x001D1A28,対空正波拳,AA Wave,Move/UI text,10
+0x001D1A28,対空正波拳,AAWaveFist,Move/UI text,10
 0x001D1A34,実直拳,Honest,Move/UI text,6
 0x001D1A3C,真円脚,Circle,Move/UI text,6
 0x001D1A44,雷鋭蹴,Bolt,Move/UI text,6
@@ -157,8 +153,8 @@ offset,japanese,english,context,jp_bytes
 0x001D1B18,霧嶋流　狂獣裂破,Beast Rend,Move/UI text,16
 0x001D1B2C,霧嶋流　真空闇嵐,Void Storm,Move/UI text,16
 0x001D1B40,禁忌　力吸い,Taboo Drain,Move/UI text,12
-0x001D1B50,居合斬り,Iai,Move/UI text,8
-0x001D1B5C,十文字斬り,Cross,Move/UI text,10
+0x001D1B50,居合斬り,IaiSlash,Move/UI text,8
+0x001D1B5C,十文字斬り,CrossSlash,Move/UI text,10
 0x001D1B68,桜竜斬,Cherry,Move/UI text,6
 0x001D1B70,幻影蹴,Ghost,Move/UI text,6
 0x001D1B78,天雷斬,Bolt,Move/UI text,6

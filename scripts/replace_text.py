@@ -38,7 +38,7 @@ def load_translations_from_csv(csv_path: Path) -> dict:
     with open(csv_path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            jp = row.get('japanese', '').strip()
+            jp = row.get('japanese', '')
             en = row.get('english', '').strip()
             if jp and en:
                 translations[jp] = en
@@ -242,28 +242,6 @@ def process_1st_read():
 
 
 def main():
-    """
-    Translation Format Reference:
-    =============================
-    
-    LINE BREAKS:
-        Use / for line breaks (must be at EVEN byte position)
-        Example: "Line 1 /Line 2 /Line 3"
-    
-    COLOR CODES:
-        !c01 = pink/magenta
-        !c02 = green  
-        !c03 = blue
-        !c04 = orange/red
-        !c05 = pink
-        !c07 = white (default)
-    
-    IMPORTANT: The ! character must be at an EVEN byte position!
-        - Use fullwidth space (　) which is 2 bytes to maintain alignment
-        - "1 Human " (8 bytes) + !c07 = ! at position 12 (even) ✓
-        - "1 Human" (7 bytes) + !c07 = ! at position 11 (odd) ✗
-    """
-    
     print("Nekketsu Nikki Translation Tool")
     print("=" * 60)
     print(f"Translations folder: {TRANSLATIONS_DIR}")
