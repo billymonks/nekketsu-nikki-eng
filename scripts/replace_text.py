@@ -111,6 +111,95 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
     return replaced_count
 
 
+def replace_null_terminated_strings(input_file: Path, output_file: Path, replacements: dict, pad_to_length=True):
+    """
+    Replace text in a binary file, but ONLY when it appears as a null-terminated string.
+    
+    This is safer for short strings (like single kanji) that might accidentally
+    match binary data like pointers or code. By requiring null terminators,
+    we ensure we're only replacing actual string data.
+    
+    Matches patterns like:
+    - \x00<text>\x00  (null on both sides - middle/end of string array)
+    - <text>\x00 where preceded by non-string data (first item in array)
+    """
+    with open(input_file, 'rb') as f:
+        data = f.read()
+    
+    modified = bytearray(data)
+    replaced_count = 0
+    
+    # Sort by Japanese text length (longest first) to prevent substring corruption
+    sorted_replacements = sorted(replacements.items(), key=lambda x: len(x[0]), reverse=True)
+    
+    for jp_text, en_text in sorted_replacements:
+        jp_bytes = jp_text.encode('shift_jis')
+        en_bytes = en_text.encode('shift_jis')
+        
+        if pad_to_length:
+            if len(en_bytes) < len(jp_bytes):
+                padding = len(jp_bytes) - len(en_bytes)
+                en_bytes = en_bytes + b' ' * padding
+            elif len(en_bytes) > len(jp_bytes):
+                print(f"WARNING: English is {len(en_bytes) - len(jp_bytes)} bytes LONGER - truncating!")
+                en_bytes = en_bytes[:len(jp_bytes)]
+        
+        found = False
+        occurrences = 0
+        
+        # First pass: Replace \x00<text>\x00 pattern (null on both sides)
+        search_pattern = b'\x00' + jp_bytes + b'\x00'
+        replace_pattern = b'\x00' + en_bytes + b'\x00'
+        
+        pos = 0
+        while True:
+            idx = bytes(modified).find(search_pattern, pos)
+            if idx == -1:
+                break
+            modified[idx:idx + len(search_pattern)] = replace_pattern
+            pos = idx + len(replace_pattern)
+            occurrences += 1
+            found = True
+        
+        # Second pass: Replace <text>\x00 pattern where NOT preceded by null
+        # This catches the first item in string arrays
+        search_pattern2 = jp_bytes + b'\x00'
+        replace_pattern2 = en_bytes + b'\x00'
+        
+        pos = 0
+        while True:
+            idx = bytes(modified).find(search_pattern2, pos)
+            if idx == -1:
+                break
+            
+            # Check if preceded by null (already handled) or if this looks like a string start
+            prev_byte = modified[idx - 1] if idx > 0 else 0
+            
+            # Skip if preceded by null (would have been caught in first pass)
+            # Skip if preceded by high byte that could be part of Shift-JIS (0x80-0xFF)
+            # Allow if preceded by ASCII printable, control chars, or specific non-text bytes
+            if prev_byte != 0x00 and prev_byte < 0x80:
+                modified[idx:idx + len(search_pattern2)] = replace_pattern2
+                pos = idx + len(replace_pattern2)
+                occurrences += 1
+                found = True
+            else:
+                pos = idx + 1
+        
+        if found:
+            replaced_count += 1
+            print(f"  [{replaced_count}] {jp_text[:25]}... -> {en_text[:25]}... ({occurrences} occurrences)")
+        else:
+            print(f"  NOT FOUND (null-terminated): {jp_text[:40]}...")
+    
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+    
+    with open(output_file, 'wb') as f:
+        f.write(modified)
+    
+    return replaced_count
+
+
 def copy_original_files():
     """Copy original files from extracted-afs to modified-afs-contents for modification."""
     files_to_copy = [
@@ -200,12 +289,15 @@ def process_1st_read():
     input_file = EXTRACTED_DISC_DIR / "1ST_READ.BIN"
     output_file = MODIFIED_DISC_DIR / "1ST_READ.BIN"
     
-    # CSV files for 1ST_READ.BIN translations
+    # CSV files for 1ST_READ.BIN translations (normal global replacement)
     csv_files = [
         TRANSLATIONS_DIR / "1st_read_strings.csv",   # Text in the game
         TRANSLATIONS_DIR / "1st_read_menu.csv",   # Menu labels, stats, schools
         TRANSLATIONS_DIR / "1st_read_moves.csv",  # Move names and UI text
     ]
+    
+    # CSV file for dangerous short strings (null-terminated replacement only)
+    dangerous_csv = TRANSLATIONS_DIR / "1st_read_dangerous.csv"
     
     print("\n" + "=" * 60)
     print("Processing 1ST_READ.BIN (menu/UI text + move names)")
@@ -230,15 +322,28 @@ def process_1st_read():
         else:
             print(f"WARNING: Translation file not found: {csv_file}")
     
-    if not translations:
+    total_count = 0
+    
+    if translations:
+        # Apply normal translations (global replacement)
+        count = replace_text_in_file(output_file, output_file, translations)
+        print(f"\nReplaced {count} strings in 1ST_READ.BIN (global)")
+        total_count += count
+    else:
         print("No translations loaded for 1ST_READ.BIN")
-        return 0
     
-    # Apply translations
-    count = replace_text_in_file(output_file, output_file, translations)
-    print(f"\nReplaced {count} strings in 1ST_READ.BIN")
+    # Process dangerous short strings with null-terminated replacement
+    if dangerous_csv.exists():
+        print("\n" + "-" * 40)
+        print("Processing dangerous short strings (null-terminated only)")
+        print("-" * 40)
+        dangerous_translations = load_translations_from_csv(dangerous_csv)
+        if dangerous_translations:
+            count = replace_null_terminated_strings(output_file, output_file, dangerous_translations)
+            print(f"\nReplaced {count} dangerous strings in 1ST_READ.BIN (null-terminated)")
+            total_count += count
     
-    return count
+    return total_count
 
 
 def main():

@@ -1,304 +1,290 @@
-offset,japanese,english,context,jp_bytes
-0x001D1000,　　完全ガード,Perfect Guard,Move/UI text,14
-0x001D1020,　前受け身,Fwd Roll,Move/UI text,10
-0x001D1038,後ろ受け身,Back Roll,Move/UI text,10
-0x001D1050,　　しない,Off,Move/UI text,10
-0x001D1068,　ランダム,Random,Move/UI text,10
-0x001D1080,　　　　ノーマル,Normal,Move/UI text,16
-0x001D10A8,その場起き上がり,Stand in Place,Move/UI text,16
-0x001D10D0,　　前起き上がり,Roll Forward,Move/UI text,16
-0x001D10F8,　後ろ起き上がり,Roll Backward,Move/UI text,16
-0x001D1120,　側転起き上がり,Side Roll,Move/UI text,16
-0x001D1148,　する,On,Move/UI text,6
-0x001D1158,しない,Off,Move/UI text,6
-0x001D1168,初期設定に戻す,Reset Default,Move/UI text,14
-0x001D1188,ＥＸＩＴ,EXIT,Move/UI text,8
-0x001D119C,バツ失踪,Batsu?,Move/UI text,8
-0x001D11A8,ロイ登場,Roy!,Move/UI text,8
-0x001D11B4,すれ違い−将馬,Meet - Shoma,Move/UI text,14
-0x001D11C4,すれ違い−夏,Meet - Natsu,Move/UI text,12
-0x001D11D4,醍醐救出,Daigo!,Move/UI text,8
-0x001D11E0,悲劇,Sad,Move/UI text,4
-0x001D11E8,兄のヘルメット,Bro Helmet,Move/UI text,14
-0x001D1274,リーグ戦をもう一度しますか？,Play League again?,Move/UI text,28
-0x001D1298,同じ組み合わせでしますか？,Same matchup?,Move/UI text,26
-0x001D12B5,はい ,Yes ,Move/UI text,5
-0x001D12BC,／,／,Move/UI text,2
-0x001D12C0,いいえ,No,Move/UI text,6
-0x001D1320,チームの並びを,Team order,Move/UI text,14
-0x001D1330,シャッフルしますか？,Shuffle?,Move/UI text,20
-0x001D1348,もう一度しますか？,Play again?,Move/UI text,18
-0x001D1360,同じ組み合わせでしますか？,Same matchup?,Move/UI text,26
-0x001D137D,はい ,Yes ,Move/UI text,5
-0x001D1384,／,/,Move/UI text,2
-0x001D1388,いいえ,No,Move/UI text,6
-0x001D1430,なし,None,Move/UI text,4
-0x001D1438,気合弾,Guts,Move/UI text,6
-0x001D1440,ガッツアッパー,Guts Upper,Move/UI text,14
-0x001D1450,三日月キック,Moon Kick,Move/UI text,12
-0x001D1460,流星キック,Star Kick,Move/UI text,10
-0x001D146C,全開気合弾,Full Guts,Move/UI text,10
-0x001D1478,全開ガッツアッパー,Full Guts Upper,Move/UI text,18
-0x001D148C,全開流星キック,Full Meteor,Move/UI text,14
-0x001D149C,気功掌底,Chi Palm,Move/UI text,8
-0x001D14A8,昇陽拳,Rising,Move/UI text,6
-0x001D14B0,炎舞脚,Flame,Move/UI text,6
-0x001D14B8,連脚弾,Kicks,Move/UI text,6
-0x001D14C0,必勝連撃拳,Victory,Move/UI text,10
-0x001D14CC,螺旋炎舞脚,Spin Fire,Move/UI text,10
-0x001D14D8,クロスカッター,Cross Cutter,Move/UI text,14
-0x001D14E8,幻影キック,PhantomKck,Move/UI text,10
-0x001D14F4,幻影ブレイカー,Phantom Break,Move/UI text,14
-0x001D1504,雷神アッパー,ThunderUp,Move/UI text,12
-0x001D1514,幻影ウェーブ,Phantom Wave,Move/UI text,12
-0x001D1524,拡散クロスカッター,Spread Cutter,Move/UI text,18
-0x001D1538,ダブル幻影キック,Dbl Phantom Kick,Move/UI text,16
-0x001D154C,スーパー雷神アッパー,Super Thunder Up,Move/UI text,20
-0x001D1564,超剛速球,Fastball,Move/UI text,8
-0x001D1570,大回転打法,Grand Slam,Move/UI text,10
-0x001D157C,一本釣り打法,Hook Swing,Move/UI text,12
-0x001D158C,ナイアガラドロップ,Niagara Drop,Move/UI text,18
-0x001D15A0,豪快リード,Bold Lead,Move/UI text,10
-0x001D15AC,分身魔球,Mirage,Move/UI text,8
-0x001D15B8,ホームラン打法,Home Run Hit,Move/UI text,14
-0x001D15C8,超殺人スライディング,Killer Slide,Move/UI text,20
-0x001D15E0,入魂サーブ,Soul Serve,Move/UI text,10
-0x001D15EC,スライディングレシーブ,Slide Receive,Move/UI text,22
-0x001D1604,回転レシーブ,Spin Receive,Move/UI text,12
-0x001D1614,完全ブロック,Full Block,Move/UI text,12
-0x001D1624,特訓スパイク,Power Spike,Move/UI text,12
-0x001D1634,ファイヤーサーブ,Fire Serve,Move/UI text,16
-0x001D1648,天井サーブ,Lob Serve,Move/UI text,10
-0x001D1654,ロングシュート,Long Shoot,Move/UI text,14
-0x001D1664,シャイニングセーブ,Shining Save,Move/UI text,18
-0x001D1678,パーフェクトキャッチ,Perfect Catch,Move/UI text,20
-0x001D1690,オーバーヘッドキック,Overhead Kick,Move/UI text,20
-0x001D16A8,バイシクルキック,Bicycle Kick,Move/UI text,16
-0x001D16BC,スライディングキック,Sliding Kick,Move/UI text,20
-0x001D16D4,フェイント,Feint,Move/UI text,10
-0x001D16E0,爆裂Ｖゴール,Burst V Goal,Move/UI text,12
-0x001D16F0,爆裂リフティング,Burst Lifting,Move/UI text,16
-0x001D1704,ダイナマイトストレート,Dynamite Straight,Move/UI text,22
-0x001D171C,ツイスターアッパー,Twister Upper,Move/UI text,18
-0x001D1730,タッチダウンウェーブ,Touchdown Wave,Move/UI text,20
-0x001D1748,エアダイナマイト,Air Dynamite,Move/UI text,16
-0x001D175C,トリプルツイスター,Triple Twister,Move/UI text,18
-0x001D1770,スーパータッチダウン,Super Touchdown,Move/UI text,20
-0x001D1788,ダイナマイトジャスティス,Dynamite Justice,Move/UI text,24
-0x001D17A4,グルービーナックル,Groovy Knuckle,Move/UI text,18
-0x001D17B8,グルービーパンチ,Groovy Punch,Move/UI text,16
-0x001D17CC,エキサイティングキック,Exciting Kick,Move/UI text,22
-0x001D17E4,ビューティフルスピン,Beautiful Spin,Move/UI text,20
-0x001D17FC,グルービーホイール,Groovy Wheel,Move/UI text,18
-0x001D1810,スタンプキック,Stamp Kick,Move/UI text,14
-0x001D1820,グルービースペシャル,Groovy Special,Move/UI text,20
-0x001D1838,ワンダフルキック,Wonderful Kick,Move/UI text,16
-0x001D184C,グルービースクリュー,Groovy Screw,Move/UI text,20
-0x001D1864,ゴッドラッシュ,God Rush,Move/UI text,14
-0x001D1874,ゴッドディフェンス（前）,God Defense (F),Move/UI text,24
-0x001D1890,ゴッドディフェンス（後）,God Defense (B),Move/UI text,24
-0x001D18AC,ゴッドストレート,God Straight,Move/UI text,16
-0x001D18C0,ゴッドアッパー,God Upper,Move/UI text,14
-0x001D18D0,ゴッドフック,God Hook,Move/UI text,12
-0x001D18E0,ゴッドラリアット,God Lariat,Move/UI text,16
-0x001D18F4,ヘヴンズラッシュ,Heavens Rush,Move/UI text,16
-0x001D1908,ヘヴンズクロス,Heavens Cross,Move/UI text,14
-0x001D1918,裏斬り,Slash,Move/UI text,6
-0x001D1920,対空裏斬り,AA BackCut,Move/UI text,10
-0x001D192C,罵倒,Mock,Move/UI text,4
-0x001D1934,破壊,Ruin,Move/UI text,4
-0x001D193C,壮絶な裏斬り,Fierce Slash,Move/UI text,12
-0x001D194C,血祭り,Blood,Move/UI text,6
-0x001D1954,骸裡門,Corpse,Move/UI text,6
-0x001D195C,鳳撃襲,Hawk,Move/UI text,6
-0x001D1964,旋蹴舞,Spiral,Move/UI text,6
-0x001D196C,放舞,Open,Move/UI text,4
-0x001D1974,破天連撃,Havoc,Move/UI text,8
-0x001D1980,気功塊,Chi,Move/UI text,6
-0x001D1988,破の連舞,Ha Dance,Move/UI text,8
-0x001D1994,天の連舞,Heaven,Move/UI text,8
-0x001D19A0,破天　無影蹴,Shadow Kick,Move/UI text,12
-0x001D19B0,鉄砲突き,Thrust,Move/UI text,8
-0x001D19BC,柏手破り,Clap,Move/UI text,8
-0x001D19C8,荒波四股,Stomp,Move/UI text,8
-0x001D19D4,ぶちかまし,Bull Rush,Move/UI text,10
-0x001D19E0,大嵐,Rage,Move/UI text,4
-0x001D19E8,岩石砕き,Crush,Move/UI text,8
-0x001D19F4,大旋風,Whirl,Move/UI text,6
-0x001D19FC,乱れ鉄砲突き,Wild Thrust,Move/UI text,12
-0x001D1A0C,噴火山,Erupt,Move/UI text,6
-0x001D1A14,雪崩落とし,Avalanche,Move/UI text,10
-0x001D1A20,正波拳,Wave,Move/UI text,6
-0x001D1A28,対空正波拳,AAWaveFist,Move/UI text,10
-0x001D1A34,実直拳,Honest,Move/UI text,6
-0x001D1A3C,真円脚,Circle,Move/UI text,6
-0x001D1A44,雷鋭蹴,Bolt,Move/UI text,6
-0x001D1A4C,島津流　正波拳,Shimazu Wave,Move/UI text,14
-0x001D1A5C,島津流　真・実直拳,Shimazu Honest,Move/UI text,18
-0x001D1A70,島津流　雷鋭蹴,Shimazu Bolt,Move/UI text,14
-0x001D1A80,触診,Exam,Move/UI text,4
-0x001D1A88,出席確認,Roll,Move/UI text,8
-0x001D1A94,回診,Tour,Move/UI text,4
-0x001D1A9C,昇天切開,Ascend,Move/UI text,8
-0x001D1AA8,片翼の構,One Wing,Move/UI text,8
-0x001D1AB4,伸身,Flex,Move/UI text,4
-0x001D1ABC,死の介護,Reaper,Move/UI text,8
-0x001D1AC8,天獄への階段,Stair Hell,Move/UI text,12
-0x001D1AD8,奈落への補導,Road to Hell,Move/UI text,12
-0x001D1AE8,闇神楽,Dark,Move/UI text,6
-0x001D1AF0,空間裂き,Rip,Move/UI text,8
-0x001D1AFC,六腑突き,Gut,Move/UI text,8
-0x001D1B08,夜叉車,Wheel,Move/UI text,6
-0x001D1B10,闇駆け,Rush,Move/UI text,6
-0x001D1B18,霧嶋流　狂獣裂破,Beast Rend,Move/UI text,16
-0x001D1B2C,霧嶋流　真空闇嵐,Void Storm,Move/UI text,16
-0x001D1B40,禁忌　力吸い,Taboo Drain,Move/UI text,12
-0x001D1B50,居合斬り,IaiSlash,Move/UI text,8
-0x001D1B5C,十文字斬り,CrossSlash,Move/UI text,10
-0x001D1B68,桜竜斬,Cherry,Move/UI text,6
-0x001D1B70,幻影蹴,Ghost,Move/UI text,6
-0x001D1B78,天雷斬,Bolt,Move/UI text,6
-0x001D1B80,暗黒幻影蹴,Dark Ghost,Move/UI text,10
-0x001D1B8C,暗黒幻影陣,Dark Array,Move/UI text,10
-0x001D1B98,暗黒疾風斬,Dark Wind,Move/UI text,10
-0x001D1BA4,裏裡門,Gate,Move/UI text,6
-0x001D1BAC,鷂子栽肩,Shoulder,Move/UI text,8
-0x001D1BB8,破天の構,Heaven,Move/UI text,8
-0x001D1BC4,剛気功塊,Hard Chi,Move/UI text,8
-0x001D1BD0,破の双撃,Ha Twin,Move/UI text,8
-0x001D1BDC,疾風の型,Gale,Move/UI text,8
-0x001D1BE8,昇龍の型,Dragon,Move/UI text,8
-0x001D1BF4,紫電の型,Shock,Move/UI text,8
-0x001D1C00,破岩の型,Rock,Move/UI text,8
-0x001D1C0C,前方転身の型,Forward Roll,Move/UI text,12
-0x001D1C1C,演舞披露,Show Off,Move/UI text,8
-0x001D1C28,説教攻撃,Lecture,Move/UI text,8
-0x001D1C34,無双突き,Peerless,Move/UI text,8
-0x001D1C40,無双裏拳,Backfist,Move/UI text,8
-0x001D1C4C,大地突き,Earth,Move/UI text,8
-0x001D1C58,無双蹴り,Top Kick,Move/UI text,8
-0x001D1C64,真・無双正拳突き,True Peerless,Move/UI text,16
-0x001D1C78,真・漢の背中,True Manback,Move/UI text,12
-0x001D1C88,硬気功塊,Iron Chi,Move/UI text,8
-0x001D1C94,熱血竹刀,Shinai,Move/UI text,8
-0x001D1CA0,気合ナックル,Guts Knuckle,Move/UI text,12
-0x001D1CB0,気合キック,Guts Kick,Move/UI text,10
-0x001D1CBC,ダブル指導キック,Dbl Coach Kick,Move/UI text,16
-0x001D1CD0,回転竹刀落とし,Spin Shinai,Move/UI text,14
-0x001D1CE0,熱血腕立て伏せ,Hot Push-up,Move/UI text,14
-0x001D1CF0,熱血クロスカウンター,Hot Cross Counter,Move/UI text,20
-0x001D1D08,熱血風車,Hot Spin,Move/UI text,8
-0x001D1D14,熱血ヤセ我慢,Hot Guts,Move/UI text,12
-0x001D1D24,フラッシュ攻撃,Flash Attack,Move/UI text,14
-0x001D1D34,号外！,Extra!,Move/UI text,6
-0x001D1D3C,フィルム交換,Film Change,Move/UI text,12
-0x001D1D4C,スーパーフラッシュ攻撃,Super Flash,Move/UI text,22
-0x001D1D64,突撃インタビュー,Rush Interview,Move/UI text,16
-0x001D1D78,飛び込み,Dive,Move/UI text,8
-0x001D1D84,人工呼吸,CPR,Move/UI text,8
-0x001D1D90,平泳ぎキック,Breast Kick,Move/UI text,12
-0x001D1DA0,個人メドレー,Medley,Move/UI text,12
-0x001D1DB0,超バタ足,Flutter,Move/UI text,8
-0x001D1DBC,破戒の鉄鎖,Ruin Chain,Move/UI text,10
-0x001D1DC8,毒蛇の鉄鎖,Snake,Move/UI text,10
-0x001D1DD4,空覇の鉄鎖,Sky Chain,Move/UI text,10
-0x001D1DEC,眼光蹴り,Glare,Move/UI text,8
-0x001D1DFC,孤高のプライド,Lonely Pride,Move/UI text,14
-0x001D1E0C,必殺　電光鉄鎖,Thunder Chain,Move/UI text,14
-0x001D1E20,必殺　稲妻眼光蹴り,Lightning Glare,Move/UI text,18
-0x001D1E34,ほえーるサーブ♪,Whale Serve,Move/UI text,16
-0x001D1E50,サーブ・あんど・ボレー♪,Serve & Volley,Move/UI text,24
-0x001D1E64,ロケット☆ラケット,Rocket Racket,Move/UI text,18
-0x001D1E78,スピン☆スマッシュ,Spin Smash,Move/UI text,18
-0x001D1E90,じゃいあんとすいんぐ♪,Giant Swing,Move/UI text,22
-0x001D1EA4,パタパタ☆ラケット,Flutter Racket,Move/UI text,18
-0x001D1EB8,だだっこあたっく,Tantrum Attack,Move/UI text,16
-0x001D1ECC,もも☆クラッシュ,Momo Crash,Move/UI text,16
-0x001D1EE0,悲恋のセレナーデ,Sad Serenade,Move/UI text,16
-0x001D1EF0,魅惑のワルツ,Charm Waltz,Move/UI text,12
-0x001D1F04,深淵のメヌエット,Abyss Minuet,Move/UI text,16
-0x001D1F14,落日のララバイ,Sunset Lullaby,Move/UI text,14
-0x001D1F28,冥府のノクターン,Dark Nocturne,Move/UI text,16
-0x001D1F3C,慈愛のレクイエム,Love Requiem,Move/UI text,16
-0x001D1F4C,死呼ぶロンド,Death Rondo,Move/UI text,12
-0x001D1F60,バーニングエルボー,Burning Elbow,Move/UI text,18
-0x001D1F6C,彗星キック,Comet Kick,Move/UI text,10
-0x001D1F7C,熱血全開気合弾,Hot Full Guts,Move/UI text,14
-0x001D1F8C,全開彗星キック,Full Comet,Move/UI text,14
-0x001D1FA0,忌野流　モズ落し,Shrike Drop,Move/UI text,16
-0x001D1FA8,殺刃,Kill,Move/UI text,4
-0x001D1FB0,昇斬,Rise,Move/UI text,4
-0x001D1FB8,疾駆,Dash,Move/UI text,4
-0x001D1FCC,霧幻流　瞬殺無音,Silent Kill,Move/UI text,16
-0x001D1FE0,霧幻流　暗黒衝撃斬,Dark Shock Slash,Move/UI text,18
-0x001D1FF0,霧幻流　闇吹雪,Dark Blizzard,Move/UI text,14
-0x001D2004,暴走・無双正拳突き,Rampage Fist,Move/UI text,18
-0x001D2014,暴走・漢の背中,Rampage Back,Move/UI text,14
-0x001D2024,暴走・硬気功塊,Rampage Chi,Move/UI text,14
-0x001D2030,暗黒気合弾,Dark Guts,Move/UI text,10
-0x001D203C,暗黒闇神楽,Dark Dance,Move/UI text,10
-0x001D2050,ダブルラリアット,Double Lariat,Move/UI text,16
-0x001D2058,百裂脚,Kicks,Move/UI text,6
-0x001D2064,真空斬り,Vacuum,Move/UI text,8
-0x001D2078,グラップルビート,Grapple Beat,Move/UI text,16
-0x001D208C,ショックウェーブ,Shock Wave,Move/UI text,16
-0x001D20A8,スクリューパイルドライバー,Screw Piledriver,Move/UI text,26
-0x001D20BC,ライジングキック,Rising Kick,Move/UI text,16
-0x001D20C4,波動拳,Hadou,Move/UI text,6
-0x001D20D0,天仰波動拳,Sky Hadou,Move/UI text,10
-0x001D20DC,蒼空波動拳,Blue Hadou,Move/UI text,10
-0x001D20E4,咲桜拳,Bloom,Move/UI text,6
-0x001D20EC,千裂脚,Many,Move/UI text,6
-0x001D20F8,ファイヤーグラップルビート,Fire Grapple Beat,Move/UI text,26
-0x001D2114,電刃波動拳,Elec Hadou,Move/UI text,10
-0x001D2128,スーパーショックウェーブ,Super Shock Wave,Move/UI text,24
-0x001D2148,Ｗスクリューパイルドライバー,W Screw Piledriver,Move/UI text,28
-0x001D2168,Ｓグルービーホイール,S Groovy Wheel,Move/UI text,20
-0x001D2180,真空波動拳,Void Hadou,Move/UI text,10
-0x001D218C,真空天仰波動拳,Void Sky Hadou,Move/UI text,14
-0x001D219C,真空蒼空波動拳,Void Blue Hado,Move/UI text,14
-0x001D21AC,乱れ桜,Cherry,Move/UI text,6
-0x001D21B4,春一番,Spring,Move/UI text,6
-0x001D21BC,スーパー飛び込み,Super Dive,Move/UI text,16
-0x001D21D0,ダブル気合弾,Double Guts,Move/UI text,12
-0x001D21E0,ガッツ百倍,Guts x100,Move/UI text,10
-0x001D21EC,ラストシンフォニー,Last Symphony,Move/UI text,18
-0x001D2204,グランドスラム,Grand Slam,Move/UI text,14
-0x001D2214,ファイト百倍,Fight x100,Move/UI text,12
-0x001D2224,トラップＷシュート,Trap W Shoot,Move/UI text,18
-0x001D223C,Ｗライジングトルネード,W Rising Tornado,Move/UI text,22
-0x001D2258,ラブ＆ピース,Love & Peace,Move/UI text,12
-0x001D2268,Ｗパワーバスター,W Power Buster,Move/UI text,16
-0x001D227C,血゛獄,Hell,Move/UI text,6
-0x001D2284,協奏連撃蹴,Concert,Move/UI text,10
-0x001D2290,活火山,Volcan,Move/UI text,6
-0x001D2298,島津流　双龍正波拳,Shimazu Duo Wave,Move/UI text,18
-0x001D22B0,究極の矯正術,Correction,Move/UI text,12
-0x001D22C0,霧嶋流　十文字殺法,Cross Slash,Move/UI text,18
-0x001D22D4,残酷斬,Cruel,Move/UI text,6
-0x001D22DC,連撃連舞,Combo,Move/UI text,8
-0x001D22E8,委員長のワンポイントＡ,Class Rep Tip A,Move/UI text,22
-0x001D2304,男の中の男,Man's Man,Move/UI text,10
-0x001D2310,熱血気合砲,Hot Guts,Move/UI text,10
-0x001D231C,いただきスクープ,Get the Scoop,Move/UI text,16
-0x001D2330,シンクロナイズドアタック,Synchro Attack,Move/UI text,24
-0x001D234C,ガンつけ１２０％,Glare 120%,Move/UI text,16
-0x001D2360,人間壁打ち,Human Wall,Move/UI text,10
-0x001D236C,激励のコンチェルト,Cheer Concerto,Move/UI text,18
-0x001D2384,熱血Ｗ気合ビーム,Hot W Guts Beam,Move/UI text,16
-0x001D2398,霧幻流　残酷斬,Cruel Slash,Move/UI text,14
-0x001D23A8,男の中の狂気,Man's Fury,Move/UI text,12
-0x001D23B8,Ｗ暗黒気合弾,W Dark Guts,Move/UI text,12
-0x001D23C8,クロスファイヤーキック,Crossfire Kick,Move/UI text,22
-0x001D23E0,Ｗスカイアタック,W Sky Attack,Move/UI text,16
-0x001D23F4,ダイブ＆プレス,Dive & Press,Move/UI text,14
-0x001D2404,究極の愛の波動,Ultimate Love,Move/UI text,14
-0x001D2414,人間大砲,Cannon,Move/UI text,8
-0x001D2420,ファイナルシンフォニー,Final Symphony,Move/UI text,22
-0x001D243C,熱血大車輪,Hot Wheel,Move/UI text,10
-0x001D244C,トリプルヘブンズクロス,Triple Hvn Cross,Move/UI text,22
-0x001D2468,外道独楽,Spin,Move/UI text,8
-0x001D2474,粛正の嵐,Storm,Move/UI text,8
-0x001D2480,霧嶋流　一文字連殺,Line Kill,Move/UI text,18
-0x001D2494,聖女の鉄槌,Saint,Move/UI text,10
-0x001D24A0,騎馬落とし,Horse Drop,Move/UI text,10
+"offset","japanese","english","context","jp_bytes"
+"0x001D1000","　　完全ガード","Perfect Guard","Move/UI text","14"
+"0x001D1020","　前受け身","Fwd Roll","Move/UI text","10"
+"0x001D1038","後ろ受け身","Back Roll","Move/UI text","10"
+"0x001D1050","　　しない","Off","Move/UI text","10"
+"0x001D1068","　ランダム","Random","Move/UI text","10"
+"0x001D1080","　　　　ノーマル","Normal","Move/UI text","16"
+"0x001D10A8","その場起き上がり","Stand in Place","Move/UI text","16"
+"0x001D10D0","　　前起き上がり","Roll Forward","Move/UI text","16"
+"0x001D10F8","　後ろ起き上がり","Roll Backward","Move/UI text","16"
+"0x001D1120","　側転起き上がり","Side Roll","Move/UI text","16"
+"0x001D1148","　する","On","Move/UI text","6"
+"0x001D1158","しない","Off","Move/UI text","6"
+"0x001D1168","初期設定に戻す","Reset Default","Move/UI text","14"
+"0x001D1188","ＥＸＩＴ","EXIT","Move/UI text","8"
+"0x001D119C","バツ失踪","Batsu?","Move/UI text","8"
+"0x001D11A8","ロイ登場","Roy!","Move/UI text","8"
+"0x001D11B4","すれ違い−将馬","Meet - Shoma","Move/UI text","14"
+"0x001D11C4","すれ違い−夏","Meet - Natsu","Move/UI text","12"
+"0x001D11D4","醍醐救出","Daigo!","Move/UI text","8"
+"0x001D11E8","兄のヘルメット","Bro Helmet","Move/UI text","14"
+"0x001D1274","リーグ戦をもう一度しますか？","Play League again?","Move/UI text","28"
+"0x001D1298","同じ組み合わせでしますか？","Same matchup?","Move/UI text","26"
+"0x001D12B5","はい ","Yes ","Move/UI text","5"
+"0x001D12C0","いいえ","No","Move/UI text","6"
+"0x001D1320","チームの並びを","Team order","Move/UI text","14"
+"0x001D1330","シャッフルしますか？","Shuffle?","Move/UI text","20"
+"0x001D1348","もう一度しますか？","Play again?","Move/UI text","18"
+"0x001D1360","同じ組み合わせでしますか？","Same matchup?","Move/UI text","26"
+"0x001D137D","はい ","Yes ","Move/UI text","5"
+"0x001D1388","いいえ","No","Move/UI text","6"
+"0x001D1438","気合弾","Guts","Move/UI text","6"
+"0x001D1440","ガッツアッパー","Guts Upper","Move/UI text","14"
+"0x001D1450","三日月キック","Moon Kick","Move/UI text","12"
+"0x001D1460","流星キック","Star Kick","Move/UI text","10"
+"0x001D146C","全開気合弾","Full Guts","Move/UI text","10"
+"0x001D1478","全開ガッツアッパー","Full Guts Upper","Move/UI text","18"
+"0x001D148C","全開流星キック","Full Meteor","Move/UI text","14"
+"0x001D149C","気功掌底","Chi Palm","Move/UI text","8"
+"0x001D14A8","昇陽拳","Rising","Move/UI text","6"
+"0x001D14B0","炎舞脚","Flame","Move/UI text","6"
+"0x001D14B8","連脚弾","Kicks","Move/UI text","6"
+"0x001D14C0","必勝連撃拳","Victory","Move/UI text","10"
+"0x001D14CC","螺旋炎舞脚","Spin Fire","Move/UI text","10"
+"0x001D14D8","クロスカッター","Cross Cutter","Move/UI text","14"
+"0x001D14E8","幻影キック","PhantomKck","Move/UI text","10"
+"0x001D14F4","幻影ブレイカー","Phantom Break","Move/UI text","14"
+"0x001D1504","雷神アッパー","ThunderUp","Move/UI text","12"
+"0x001D1514","幻影ウェーブ","Phantom Wave","Move/UI text","12"
+"0x001D1524","拡散クロスカッター","Spread Cutter","Move/UI text","18"
+"0x001D1538","ダブル幻影キック","Dbl Phantom Kick","Move/UI text","16"
+"0x001D154C","スーパー雷神アッパー","Super Thunder Up","Move/UI text","20"
+"0x001D1564","超剛速球","Fastball","Move/UI text","8"
+"0x001D1570","大回転打法","Grand Slam","Move/UI text","10"
+"0x001D157C","一本釣り打法","Hook Swing","Move/UI text","12"
+"0x001D158C","ナイアガラドロップ","Niagara Drop","Move/UI text","18"
+"0x001D15A0","豪快リード","Bold Lead","Move/UI text","10"
+"0x001D15AC","分身魔球","Mirage","Move/UI text","8"
+"0x001D15B8","ホームラン打法","Home Run Hit","Move/UI text","14"
+"0x001D15C8","超殺人スライディング","Killer Slide","Move/UI text","20"
+"0x001D15E0","入魂サーブ","Soul Serve","Move/UI text","10"
+"0x001D15EC","スライディングレシーブ","Slide Receive","Move/UI text","22"
+"0x001D1604","回転レシーブ","Spin Receive","Move/UI text","12"
+"0x001D1614","完全ブロック","Full Block","Move/UI text","12"
+"0x001D1624","特訓スパイク","Power Spike","Move/UI text","12"
+"0x001D1634","ファイヤーサーブ","Fire Serve","Move/UI text","16"
+"0x001D1648","天井サーブ","Lob Serve","Move/UI text","10"
+"0x001D1654","ロングシュート","Long Shoot","Move/UI text","14"
+"0x001D1664","シャイニングセーブ","Shining Save","Move/UI text","18"
+"0x001D1678","パーフェクトキャッチ","Perfect Catch","Move/UI text","20"
+"0x001D1690","オーバーヘッドキック","Overhead Kick","Move/UI text","20"
+"0x001D16A8","バイシクルキック","Bicycle Kick","Move/UI text","16"
+"0x001D16BC","スライディングキック","Sliding Kick","Move/UI text","20"
+"0x001D16D4","フェイント","Feint","Move/UI text","10"
+"0x001D16E0","爆裂Ｖゴール","Burst V Goal","Move/UI text","12"
+"0x001D16F0","爆裂リフティング","Burst Lifting","Move/UI text","16"
+"0x001D1704","ダイナマイトストレート","Dynamite Straight","Move/UI text","22"
+"0x001D171C","ツイスターアッパー","Twister Upper","Move/UI text","18"
+"0x001D1730","タッチダウンウェーブ","Touchdown Wave","Move/UI text","20"
+"0x001D1748","エアダイナマイト","Air Dynamite","Move/UI text","16"
+"0x001D175C","トリプルツイスター","Triple Twister","Move/UI text","18"
+"0x001D1770","スーパータッチダウン","Super Touchdown","Move/UI text","20"
+"0x001D1788","ダイナマイトジャスティス","Dynamite Justice","Move/UI text","24"
+"0x001D17A4","グルービーナックル","Groovy Knuckle","Move/UI text","18"
+"0x001D17B8","グルービーパンチ","Groovy Punch","Move/UI text","16"
+"0x001D17CC","エキサイティングキック","Exciting Kick","Move/UI text","22"
+"0x001D17E4","ビューティフルスピン","Beautiful Spin","Move/UI text","20"
+"0x001D17FC","グルービーホイール","Groovy Wheel","Move/UI text","18"
+"0x001D1810","スタンプキック","Stamp Kick","Move/UI text","14"
+"0x001D1820","グルービースペシャル","Groovy Special","Move/UI text","20"
+"0x001D1838","ワンダフルキック","Wonderful Kick","Move/UI text","16"
+"0x001D184C","グルービースクリュー","Groovy Screw","Move/UI text","20"
+"0x001D1864","ゴッドラッシュ","God Rush","Move/UI text","14"
+"0x001D1874","ゴッドディフェンス（前）","God Defense (F)","Move/UI text","24"
+"0x001D1890","ゴッドディフェンス（後）","God Defense (B)","Move/UI text","24"
+"0x001D18AC","ゴッドストレート","God Straight","Move/UI text","16"
+"0x001D18C0","ゴッドアッパー","God Upper","Move/UI text","14"
+"0x001D18D0","ゴッドフック","God Hook","Move/UI text","12"
+"0x001D18E0","ゴッドラリアット","God Lariat","Move/UI text","16"
+"0x001D18F4","ヘヴンズラッシュ","Heavens Rush","Move/UI text","16"
+"0x001D1908","ヘヴンズクロス","Heavens Cross","Move/UI text","14"
+"0x001D1918","裏斬り","Slash","Move/UI text","6"
+"0x001D1920","対空裏斬り","AA BackCut","Move/UI text","10"
+"0x001D193C","壮絶な裏斬り","Fierce Slash","Move/UI text","12"
+"0x001D194C","血祭り","Blood","Move/UI text","6"
+"0x001D1954","骸裡門","Corpse","Move/UI text","6"
+"0x001D195C","鳳撃襲","Hawk","Move/UI text","6"
+"0x001D1964","旋蹴舞","Spiral","Move/UI text","6"
+"0x001D1974","破天連撃","Havoc","Move/UI text","8"
+"0x001D1980","気功塊","Chi","Move/UI text","6"
+"0x001D1988","破の連舞","Ha Dance","Move/UI text","8"
+"0x001D1994","天の連舞","Heaven","Move/UI text","8"
+"0x001D19A0","破天　無影蹴","Shadow Kick","Move/UI text","12"
+"0x001D19B0","鉄砲突き","Thrust","Move/UI text","8"
+"0x001D19BC","柏手破り","Clap","Move/UI text","8"
+"0x001D19C8","荒波四股","Stomp","Move/UI text","8"
+"0x001D19D4","ぶちかまし","Bull Rush","Move/UI text","10"
+"0x001D19E8","岩石砕き","Crush","Move/UI text","8"
+"0x001D19F4","大旋風","Whirl","Move/UI text","6"
+"0x001D19FC","乱れ鉄砲突き","Wild Thrust","Move/UI text","12"
+"0x001D1A0C","噴火山","Erupt","Move/UI text","6"
+"0x001D1A14","雪崩落とし","Avalanche","Move/UI text","10"
+"0x001D1A20","正波拳","Wave","Move/UI text","6"
+"0x001D1A28","対空正波拳","AAWaveFist","Move/UI text","10"
+"0x001D1A34","実直拳","Honest","Move/UI text","6"
+"0x001D1A3C","真円脚","Circle","Move/UI text","6"
+"0x001D1A44","雷鋭蹴","Bolt","Move/UI text","6"
+"0x001D1A4C","島津流　正波拳","Shimazu Wave","Move/UI text","14"
+"0x001D1A5C","島津流　真・実直拳","Shimazu Honest","Move/UI text","18"
+"0x001D1A70","島津流　雷鋭蹴","Shimazu Bolt","Move/UI text","14"
+"0x001D1A88","出席確認","Roll","Move/UI text","8"
+"0x001D1A9C","昇天切開","Ascend","Move/UI text","8"
+"0x001D1AA8","片翼の構","One Wing","Move/UI text","8"
+"0x001D1ABC","死の介護","Reaper","Move/UI text","8"
+"0x001D1AC8","天獄への階段","Stair Hell","Move/UI text","12"
+"0x001D1AD8","奈落への補導","Road to Hell","Move/UI text","12"
+"0x001D1AE8","闇神楽","Dark","Move/UI text","6"
+"0x001D1AF0","空間裂き","Rip","Move/UI text","8"
+"0x001D1AFC","六腑突き","Gut","Move/UI text","8"
+"0x001D1B08","夜叉車","Wheel","Move/UI text","6"
+"0x001D1B10","闇駆け","Rush","Move/UI text","6"
+"0x001D1B18","霧嶋流　狂獣裂破","Beast Rend","Move/UI text","16"
+"0x001D1B2C","霧嶋流　真空闇嵐","Void Storm","Move/UI text","16"
+"0x001D1B40","禁忌　力吸い","Taboo Drain","Move/UI text","12"
+"0x001D1B50","居合斬り","IaiSlash","Move/UI text","8"
+"0x001D1B5C","十文字斬り","CrossSlash","Move/UI text","10"
+"0x001D1B68","桜竜斬","Cherry","Move/UI text","6"
+"0x001D1B70","幻影蹴","Ghost","Move/UI text","6"
+"0x001D1B78","天雷斬","Bolt","Move/UI text","6"
+"0x001D1B80","暗黒幻影蹴","Dark Ghost","Move/UI text","10"
+"0x001D1B8C","暗黒幻影陣","Dark Array","Move/UI text","10"
+"0x001D1B98","暗黒疾風斬","Dark Wind","Move/UI text","10"
+"0x001D1BA4","裏裡門","Gate","Move/UI text","6"
+"0x001D1BAC","鷂子栽肩","Shoulder","Move/UI text","8"
+"0x001D1BB8","破天の構","Heaven","Move/UI text","8"
+"0x001D1BC4","剛気功塊","Hard Chi","Move/UI text","8"
+"0x001D1BD0","破の双撃","Ha Twin","Move/UI text","8"
+"0x001D1BDC","疾風の型","Gale","Move/UI text","8"
+"0x001D1BE8","昇龍の型","Dragon","Move/UI text","8"
+"0x001D1BF4","紫電の型","Shock","Move/UI text","8"
+"0x001D1C00","破岩の型","Rock","Move/UI text","8"
+"0x001D1C0C","前方転身の型","Forward Roll","Move/UI text","12"
+"0x001D1C1C","演舞披露","Show Off","Move/UI text","8"
+"0x001D1C28","説教攻撃","Lecture","Move/UI text","8"
+"0x001D1C34","無双突き","Peerless","Move/UI text","8"
+"0x001D1C40","無双裏拳","Backfist","Move/UI text","8"
+"0x001D1C4C","大地突き","Earth","Move/UI text","8"
+"0x001D1C58","無双蹴り","Top Kick","Move/UI text","8"
+"0x001D1C64","真・無双正拳突き","True Peerless","Move/UI text","16"
+"0x001D1C78","真・漢の背中","True Manback","Move/UI text","12"
+"0x001D1C88","硬気功塊","Iron Chi","Move/UI text","8"
+"0x001D1C94","熱血竹刀","Shinai","Move/UI text","8"
+"0x001D1CA0","気合ナックル","Guts Knuckle","Move/UI text","12"
+"0x001D1CB0","気合キック","Guts Kick","Move/UI text","10"
+"0x001D1CBC","ダブル指導キック","Dbl Coach Kick","Move/UI text","16"
+"0x001D1CD0","回転竹刀落とし","Spin Shinai","Move/UI text","14"
+"0x001D1CE0","熱血腕立て伏せ","Hot Push-up","Move/UI text","14"
+"0x001D1CF0","熱血クロスカウンター","Hot Cross Counter","Move/UI text","20"
+"0x001D1D08","熱血風車","Hot Spin","Move/UI text","8"
+"0x001D1D14","熱血ヤセ我慢","Hot Guts","Move/UI text","12"
+"0x001D1D24","フラッシュ攻撃","Flash Attack","Move/UI text","14"
+"0x001D1D34","号外！","Extra!","Move/UI text","6"
+"0x001D1D3C","フィルム交換","Film Change","Move/UI text","12"
+"0x001D1D4C","スーパーフラッシュ攻撃","Super Flash","Move/UI text","22"
+"0x001D1D64","突撃インタビュー","Rush Interview","Move/UI text","16"
+"0x001D1D78","飛び込み","Dive","Move/UI text","8"
+"0x001D1D84","人工呼吸","CPR","Move/UI text","8"
+"0x001D1D90","平泳ぎキック","Breast Kick","Move/UI text","12"
+"0x001D1DA0","個人メドレー","Medley","Move/UI text","12"
+"0x001D1DB0","超バタ足","Flutter","Move/UI text","8"
+"0x001D1DBC","破戒の鉄鎖","Ruin Chain","Move/UI text","10"
+"0x001D1DC8","毒蛇の鉄鎖","Snake","Move/UI text","10"
+"0x001D1DD4","空覇の鉄鎖","Sky Chain","Move/UI text","10"
+"0x001D1DEC","眼光蹴り","Glare","Move/UI text","8"
+"0x001D1DFC","孤高のプライド","Lonely Pride","Move/UI text","14"
+"0x001D1E0C","必殺　電光鉄鎖","Thunder Chain","Move/UI text","14"
+"0x001D1E20","必殺　稲妻眼光蹴り","Lightning Glare","Move/UI text","18"
+"0x001D1E34","ほえーるサーブ♪","Whale Serve","Move/UI text","16"
+"0x001D1E50","サーブ・あんど・ボレー♪","Serve & Volley","Move/UI text","24"
+"0x001D1E64","ロケット☆ラケット","Rocket Racket","Move/UI text","18"
+"0x001D1E78","スピン☆スマッシュ","Spin Smash","Move/UI text","18"
+"0x001D1E90","じゃいあんとすいんぐ♪","Giant Swing","Move/UI text","22"
+"0x001D1EA4","パタパタ☆ラケット","Flutter Racket","Move/UI text","18"
+"0x001D1EB8","だだっこあたっく","Tantrum Attack","Move/UI text","16"
+"0x001D1ECC","もも☆クラッシュ","Momo Crash","Move/UI text","16"
+"0x001D1EE0","悲恋のセレナーデ","Sad Serenade","Move/UI text","16"
+"0x001D1EF0","魅惑のワルツ","Charm Waltz","Move/UI text","12"
+"0x001D1F04","深淵のメヌエット","Abyss Minuet","Move/UI text","16"
+"0x001D1F14","落日のララバイ","Sunset Lullaby","Move/UI text","14"
+"0x001D1F28","冥府のノクターン","Dark Nocturne","Move/UI text","16"
+"0x001D1F3C","慈愛のレクイエム","Love Requiem","Move/UI text","16"
+"0x001D1F4C","死呼ぶロンド","Death Rondo","Move/UI text","12"
+"0x001D1F60","バーニングエルボー","Burning Elbow","Move/UI text","18"
+"0x001D1F6C","彗星キック","Comet Kick","Move/UI text","10"
+"0x001D1F7C","熱血全開気合弾","Hot Full Guts","Move/UI text","14"
+"0x001D1F8C","全開彗星キック","Full Comet","Move/UI text","14"
+"0x001D1FA0","忌野流　モズ落し","Shrike Drop","Move/UI text","16"
+"0x001D1FCC","霧幻流　瞬殺無音","Silent Kill","Move/UI text","16"
+"0x001D1FE0","霧幻流　暗黒衝撃斬","Dark Shock Slash","Move/UI text","18"
+"0x001D1FF0","霧幻流　闇吹雪","Dark Blizzard","Move/UI text","14"
+"0x001D2004","暴走・無双正拳突き","Rampage Fist","Move/UI text","18"
+"0x001D2014","暴走・漢の背中","Rampage Back","Move/UI text","14"
+"0x001D2024","暴走・硬気功塊","Rampage Chi","Move/UI text","14"
+"0x001D2030","暗黒気合弾","Dark Guts","Move/UI text","10"
+"0x001D203C","暗黒闇神楽","Dark Dance","Move/UI text","10"
+"0x001D2050","ダブルラリアット","Double Lariat","Move/UI text","16"
+"0x001D2058","百裂脚","Kicks","Move/UI text","6"
+"0x001D2064","真空斬り","Vacuum","Move/UI text","8"
+"0x001D2078","グラップルビート","Grapple Beat","Move/UI text","16"
+"0x001D208C","ショックウェーブ","Shock Wave","Move/UI text","16"
+"0x001D20A8","スクリューパイルドライバー","Screw Piledriver","Move/UI text","26"
+"0x001D20BC","ライジングキック","Rising Kick","Move/UI text","16"
+"0x001D20C4","波動拳","Hadou","Move/UI text","6"
+"0x001D20D0","天仰波動拳","Sky Hadou","Move/UI text","10"
+"0x001D20DC","蒼空波動拳","Blue Hadou","Move/UI text","10"
+"0x001D20E4","咲桜拳","Bloom","Move/UI text","6"
+"0x001D20EC","千裂脚","Many","Move/UI text","6"
+"0x001D20F8","ファイヤーグラップルビート","Fire Grapple Beat","Move/UI text","26"
+"0x001D2114","電刃波動拳","Elec Hadou","Move/UI text","10"
+"0x001D2128","スーパーショックウェーブ","Super Shock Wave","Move/UI text","24"
+"0x001D2148","Ｗスクリューパイルドライバー","W Screw Piledriver","Move/UI text","28"
+"0x001D2168","Ｓグルービーホイール","S Groovy Wheel","Move/UI text","20"
+"0x001D2180","真空波動拳","Void Hadou","Move/UI text","10"
+"0x001D218C","真空天仰波動拳","Void Sky Hadou","Move/UI text","14"
+"0x001D219C","真空蒼空波動拳","Void Blue Hado","Move/UI text","14"
+"0x001D21AC","乱れ桜","Cherry","Move/UI text","6"
+"0x001D21B4","春一番","Spring","Move/UI text","6"
+"0x001D21BC","スーパー飛び込み","Super Dive","Move/UI text","16"
+"0x001D21D0","ダブル気合弾","Double Guts","Move/UI text","12"
+"0x001D21E0","ガッツ百倍","Guts x100","Move/UI text","10"
+"0x001D21EC","ラストシンフォニー","Last Symphony","Move/UI text","18"
+"0x001D2204","グランドスラム","Grand Slam","Move/UI text","14"
+"0x001D2214","ファイト百倍","Fight x100","Move/UI text","12"
+"0x001D2224","トラップＷシュート","Trap W Shoot","Move/UI text","18"
+"0x001D223C","Ｗライジングトルネード","W Rising Tornado","Move/UI text","22"
+"0x001D2258","ラブ＆ピース","Love & Peace","Move/UI text","12"
+"0x001D2268","Ｗパワーバスター","W Power Buster","Move/UI text","16"
+"0x001D227C","血゛獄","Hell","Move/UI text","6"
+"0x001D2284","協奏連撃蹴","Concert","Move/UI text","10"
+"0x001D2290","活火山","Volcan","Move/UI text","6"
+"0x001D2298","島津流　双龍正波拳","Shimazu Duo Wave","Move/UI text","18"
+"0x001D22B0","究極の矯正術","Correction","Move/UI text","12"
+"0x001D22C0","霧嶋流　十文字殺法","Cross Slash","Move/UI text","18"
+"0x001D22D4","残酷斬","Cruel","Move/UI text","6"
+"0x001D22DC","連撃連舞","Combo","Move/UI text","8"
+"0x001D22E8","委員長のワンポイントＡ","Class Rep Tip A","Move/UI text","22"
+"0x001D2304","男の中の男","Man's Man","Move/UI text","10"
+"0x001D2310","熱血気合砲","Hot Guts","Move/UI text","10"
+"0x001D231C","いただきスクープ","Get the Scoop","Move/UI text","16"
+"0x001D2330","シンクロナイズドアタック","Synchro Attack","Move/UI text","24"
+"0x001D234C","ガンつけ１２０％","Glare 120%","Move/UI text","16"
+"0x001D2360","人間壁打ち","Human Wall","Move/UI text","10"
+"0x001D236C","激励のコンチェルト","Cheer Concerto","Move/UI text","18"
+"0x001D2384","熱血Ｗ気合ビーム","Hot W Guts Beam","Move/UI text","16"
+"0x001D2398","霧幻流　残酷斬","Cruel Slash","Move/UI text","14"
+"0x001D23A8","男の中の狂気","Man's Fury","Move/UI text","12"
+"0x001D23B8","Ｗ暗黒気合弾","W Dark Guts","Move/UI text","12"
+"0x001D23C8","クロスファイヤーキック","Crossfire Kick","Move/UI text","22"
+"0x001D23E0","Ｗスカイアタック","W Sky Attack","Move/UI text","16"
+"0x001D23F4","ダイブ＆プレス","Dive & Press","Move/UI text","14"
+"0x001D2404","究極の愛の波動","Ultimate Love","Move/UI text","14"
+"0x001D2414","人間大砲","Cannon","Move/UI text","8"
+"0x001D2420","ファイナルシンフォニー","Final Symphony","Move/UI text","22"
+"0x001D243C","熱血大車輪","Hot Wheel","Move/UI text","10"
+"0x001D244C","トリプルヘブンズクロス","Triple Hvn Cross","Move/UI text","22"
+"0x001D2468","外道独楽","Spin","Move/UI text","8"
+"0x001D2474","粛正の嵐","Storm","Move/UI text","8"
+"0x001D2480","霧嶋流　一文字連殺","Line Kill","Move/UI text","18"
+"0x001D2494","聖女の鉄槌","Saint","Move/UI text","10"
+"0x001D24A0","騎馬落とし","Horse Drop","Move/UI text","10"

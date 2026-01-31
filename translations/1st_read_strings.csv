@@ -1,1019 +1,1000 @@
-japanese,english,offset,notes
-バツ,Btsu,0x001D0A44,Auto-found name/menu item
-ひなた,Hinata,0x001D0A4C,Auto-found name/menu item
-ロイ,Roy,0x001D0A74,Auto-found name/menu item
-将馬,Shma,0x001D0A5C,Auto-found name/menu item
-ザキ,Zaki,0x001D0AF8,Auto-found name/menu item
-委員長,Chrpsn,0x001D0AD4,Auto-found name/menu item
-英雄,Eiyu,0x001D0AAC,Auto-found name/menu item
-響子,Kyoko,0x001D0AB4,Auto-found name/menu item
-雷蔵,Raizo,0x00344FB7,Auto-found name/menu item
-アキラ,Akira,0x001D0AA0,Auto-found name/menu item
-エッジ,Edge,0x001D0A98,Auto-found name/menu item
-もも,Momo,0x001D0B00,Auto-found name/menu item
-隼人,Hayt,0x001D0AE4,Auto-found name/menu item
-流,NG,0x001D0AF4,Auto-found name/menu item
-九郎,Kuro,0x001D0ABC,Auto-found name/menu item
-雹,HL,0x001D0AC4,Auto-found name/menu item
-はい,Yes,0x001CD24C,Auto-found name/menu item
-いいえ,No,0x001CD254,Auto-found name/menu item
-恭介,Kyosuke,,
-恭　介,Kyosuk,,
-雹　,Hail,0x001D0AC4,Auto-found name/menu item
-も　も,Momo,0x001D0B00,Auto-found name/menu item
-九　郎,Kuro,0x001D0ABC,Auto-found name/menu item
-隼　人,Hayato,0x001D0AE4,Auto-found name/menu item
-流　　,Nagare,0x001D0AF4,Auto-found name/menu item
-　流　,Nagare,0x001D0AF4,Auto-found name/menu item
-雷　蔵,Raizo,0x00344FB7,Auto-found name/menu item
-響　子,Kyoko,0x001D0AB4,Auto-found name/menu item
-英　雄,Eiyu,0x001D0AAC,Auto-found name/menu item
-ロ　イ,Roy,0x001D0A74,Auto-found name/menu item
-将　馬,Shoma,0x001D0A5C,Auto-found name/menu item
-ザ　キ,Zaki,0x001D0AF8,Auto-found name/menu item
-バ　ツ,Batsu,0x001D0A44,Auto-found name/menu item
-岩,GN,,Gan Isurugi
-メモリーカードがありません,No Memory Card,0x001CB8FC,
-フォーマットされていません,Not Formatted,0x001CB918,
-メモリーカードがいっぱいです,Memory Card Full,0x001CB934,
-ファイルがありません,No File Found,0x001CB954,
-ファイルがあります,File Exists,0x001CB96C,
-オープンできません,Cannot Open,0x001CB980,
-作成できません,Cannot Create,0x001CB994,
-実行ファイルがあります,Executable Exists,0x001CB9A4,
-アクセスできません,Cannot Access,0x001CB9BC,
-ベリファイエラー,Verify Error,0x001CB9D0,
-ゲームのご感想・ご意見をメールでも受け付けます！,Send feedback via email!,0x001CBFCC,
-メールのタイトルを必ず　　　　　　　　　　　　として、,Use the title below:,0x001CC000,
-「ジャスティス学園感想」,Justice High Feedback,0x001CC038,
-までお送りください。,Please send to us.,0x001CC068,
-オートロード,Auto Load,0x001CC690,
-オートセーブ,Auto Save,0x001CC6A0,
-のファイルをロードしています…,Loading file...,0x001CC6B4,
-メモリーカードを抜かないでください！,Do not remove card!,0x001CC6E0,
-のファイルのロードに成功しました。,File loaded OK.,0x001CC708,
-これ以降はこのメモリーカードが,This Memory Card will,0x001CC738,
-オートセーブの対象となります。,be used for Auto Save.,0x001CC758,
-電源を切るまでこのメモリーカードを,Do not remove this card,0x001CC778,
-抜かないでください。,until power off.,0x001CC79C,
-メモリーカードがありません。,No Memory Card.,0x001CC7B4,
-メモリーカードの接続を確認してください。,Check card connection.,0x001CC7D4,
-ファイルのセーブには　ブロックの空きが必要です。,Save needs free blocks.,0x001CC800,
-Ａボタンを押すともう一度チェックします。,Press A to check again.,0x001CC834,
-ＳＴＡＲＴボタンを押すとゲームを続行できますが、,Press START to continue but,0x001CC860,
-ゲームの内容はセーブされません。,game will not be saved.,0x001CC894,
-のファイルのロードに失敗しました。,Failed to load file.,0x001CC8B8,
-ファイルがありませんでした。,File not found.,0x001CC8E8,
-Ａボタンを押すと新しくデータを作成します。,Press A to create data.,0x001CC908,
-にファイルをセーブしています…,Saving file...,0x001CC934,
-のファイルのセーブに成功しました。,File saved OK.,0x001CC960,
-メモリーカードの容量が不足しています。,Not enough card space.,0x001CC990,
-のファイルのセーブに失敗しました。,Failed to save file.,0x001CC9B8,
-のメモリーカードが、,This Memory Card is,0x001CC9E8,
-以前セーブしたものではありません。,not the saved one.,0x001CCA0C,
-正しいメモリーカードを接続してください。,Insert correct card.,0x001CCA30,
-Ａボタンを押すと現在のファイルを上書きします。,Press A to overwrite.,0x001CCA5C,
-ダウンロードファイルをチェックしています…,Checking download...,0x001CCA8C,
-ダウンロードファイルのおまけ情報を、,Download bonus info,0x001CCAB8,
-システムファイルに書き込むのに成功しました。,saved to system file.,0x001CCAE0,
-ダウンロードファイルは消去されました。,Download deleted.,0x001CCB10,
-システムファイルに書き込むのに失敗しました。,Failed to write file.,0x001CCB38,
-のメモリーカードに、,On this Memory Card,0x001CCB68,
-ＥＤＩＴキャラのダウンロードファイルがあります。,EDIT char file exists.,0x001CCB8C,
-「ＥＤＩＴ管理」でキャラを読みこんでください。,Load in EDIT Manager.,0x001CCBC0,
-ＡＵＴＯＬＯＡＤ,AUTOLOAD,0x001CCBF0,
-ＡＵＴＯＳＡＶＥ,AUTOSAVE,0x001CCC04,
-メモリーカードにファイルを作成します。,Creating file on card.,0x001CD2A8,
-よろしいですか？,Are you sure?,0x001CD2D0,
-ファイルをセーブしています。,Saving file.,0x001CD2E8,
-電源を切ったり,Do not power off,0x001CD308,
-メモリーカードを抜いたりしないで下さい。,or remove card.,0x001CD318,
-セーブしました。,Saved.,0x001CD344,
-何かボタンを押してください。,Press any button.,0x001CD358,
-すでにファイルが存在します。,File already exists.,0x001CD378,
-上書きしてもよろしいですか？,Overwrite file?,0x001CD398,
-空きブロックがたりません。,Not enough blocks.,0x001CD3B8,
-正しくセーブできませんでした。,Save failed.,0x001CD3D4,
-メモリーカードのファイルをロードします。,Loading card file.,0x001CD3F4,
-ファイルをロードしています。,Loading file.,0x001CD420,
-ロードしました。,Loaded.,0x001CD440,
-「燃えろ！ジャスティス学園」の,Rival Schools,0x001CD454,
-システムファイルがありません。,system file missing.,0x001CD474,
-正しくロードできませんでした。,Load failed.,0x001CD494,
-メモリーカードの認識中です。,Reading Memory Card.,0x001CD4B4,
-メモリーカードを認識できませんでした。,Cannot read card.,0x001CD4D4,
-メモリーカードの接続を確認して下さい。,Check card connection.,0x001CD4FC,
-日記ファイルがありません。,No diary file.,0x001CD524,
-ＥＤＩＴファイルがありません。,No EDIT file.,0x001CD540,
-ネットワークに入ると、セーブしていない,Network may cause,0x001CD74C,
-データが失われることがあります。,unsaved data loss.,0x001CD774,
-セーブしますか？,Save?,0x001CD79C,
-：はい　　　　：いいえ,:Yes      :No,0x001CD7B0,
-アーケード版「燃えろ！ジャスティス学園」を,Play arcade version,0x001CD7CC,
-プレイすることができます。乱入対戦も可能です。,of Rival Schools.,0x001CD7F8,
-２人対戦の専用モードです。,2-player VS mode.,0x001CD828,
-連続技や必殺技のトレーニングができます。,Practice combos.,0x001CD848,
-もちろんＥＤＩＴキャラを使うこともできます。,EDIT chars can be used.,0x001CD874,
-２〜６チームの総当たり戦。,2-6 team round robin.,0x001CD8A4,
-勝敗数でチームの順位が決まります。,Rank by wins/losses.,0x001CD8C0,
-８チームによる勝ち抜き戦。,8 team elimination.,0x001CD8E4,
-最後まで勝ち残ったチームが優勝します。,Last team wins.,0x001CD900,
-４人までプレイ可能の学園生活ボードゲームです。,Board game for 4.,0x001CD928,
-ＥＤＩＴキャラクターを作成することができます。,Create EDIT chars.,0x001CD958,
-ネットワークに接続します。,Connect to Network.,0x001CD988,
-通信対戦をしたりホームページを見る事ができます。,Online play and web.,0x001CD9A4,
-ＥＤＩＴキャラを使うための登録や削除をします。,Manage EDIT chars.,0x001CD9D8,
-ダウンロードやパスワードのキャラ管理もここで。,Download and password.,0x001CDA08,
-ボタン設定や難易度、ゲームのルールなどを,Button config and rules,0x001CDA38,
-自由に変更できます。,can be changed.,0x001CDA64,
-メモリーカードのデータをセーブしたり,Save or load data,0x001CDA7C,
-ロードしたりできます。,from Memory Card.,0x001CDAA4,
-ストーリー、エンディングなどのデモや,View story demos,0x001CDABC,
-サウンドを楽しむことができます。,and enjoy sound.,0x001CDAE4,
-Ａ・Ｂポート両方にコントローラが必要です。,Controllers in A and B.,0x001CDB08,
-ドリームパスポートで,Use Dream Passport,0x001CDB34,
-ネットワークの設定をしてください。,to set up network.,0x001CDB4C,
-コンピュータの強さを８段階で設定します。,CPU strength: 8 levels.,0x001CDE18,
-数字が大きいほどコンピュータが強くなります。,Higher = stronger CPU.,0x001CDE44,
-攻撃力を４段階で設定します。,Attack: 4 levels.,0x001CDE74,
-数字が大きいほど攻撃のダメージが大きくなります。,Higher = more damage.,0x001CDE94,
-タイマースピードを５段階で設定します。,Timer: 5 levels.,0x001CDEC8,
-数字が大きいほど制限時間が短くなります。,Higher = less time.,0x001CDEF0,
-ＣＰＵ対戦時の勝ちぬき本数を設定します。,Set rounds vs CPU.,0x001CDF1C,
-１〜３マッチから選べます。,Choose 1-3 matches.,0x001CDF48,
-人間ｖｓ人間対戦時の勝ちぬき本数を設定します。,Set human vs human.,0x001CDF64,
-「あり」でコンティニューすると、同じキャラで,With ON continue uses,0x001CDF94,
-試合がはじまります。キャラ選択画面に行きません。,same char. No select.,0x001CDFC4,
-サウンド出力を「ステレオ」と「モノラル」から,Audio: Stereo or Mono.,0x001CDFF8,
-選択します。,Select.,0x001CE028,
-ゲーム中に流れるＢＧＭのボリュームを,BGM volume:,0x001CE038,
-１６段階で調節できます。,16 levels.,0x001CE060,
-ゲーム中のＳＥのボリュームを,SE volume:,0x001CE07C,
-コントローラのボタン設定を変更します。,Change buttons.,0x001CE09C,
-ゲームシステムの設定を変更します。,Change game settings.,0x001CE0C4,
-設定を初期状態に戻します。,Reset to default.,0x001CE0E8,
-ＭＯＤＥ　ＳＥＬＥＣＴ画面に戻ります。,Back to MODE SELECT.,0x001CE104,
-一つ前の画面に戻ります。,Back to prev screen.,0x001CE12C,
-熱血受け身は通常どおり可能です。,Hot-Blood Recovery OK.,0x001CE51C,
-制限はありません。,No restrictions.,0x001CE540,
-熱血受け身は可能ですが、,Hot-Blood OK but,0x001CE554,
-熱血受け身の最中、完全無敵ではありません。,not fully invincible.,0x001CE570,
-着地の時のみ熱血受け身が可能ですが、,Only on landing but,0x001CE59C,
-空中では受け身が取れません。,no air recovery.,0x001CE5C4,
-熱血受け身が一切できません。,No Hot-Blood Recovery.,0x001CE5E4,
-ＥＤＩＴキャラ以外は、,Except EDIT chars,0x001CE604,
-根性ゲージ３本で試合開始になります。,start with 3 Guts.,0x001CE61C,
-ＥＤＩＴキャラも含めて、,Including EDIT chars,0x001CE644,
-根性ゲージ５本で試合開始になります。,start with 5 Guts.,0x001CE660,
-根性ゲージ０本で試合開始になります。,Start with 0 Guts.,0x001CE688,
-根性ゲージが常にＭＡＸになり、,Guts always MAX and,0x001CE6B0,
-ゲージ消費攻撃が使い放題になります。,gauge attacks free.,0x001CE6D0,
-根性ゲージが常に０になり、,Guts always 0 and,0x001CE6F8,
-ゲージ消費攻撃が一切使えません。,no gauge attacks.,0x001CE714,
-上下段の違い以外は、自動的にガードします。,Auto guard high/low.,0x001CE738,
-レバーガード操作を,Lever guard must be,0x001CE764,
-自分で行なわなければなりません。,done manually.,0x001CE778,
-通常どおりバックジャンプすることができます。,Back jump normal.,0x001CE79C,
-バックジャンプが一切できなくなります。,No back jump.,0x001CE7CC,
-通常どおり、次のラウンドで使用するキャラを,Next round char can,0x001CE7F4,
-自由に選択することができます。,be freely selected.,0x001CE820,
-勝敗にかかわらず、次のラウンドでは,Win or lose next round,0x001CE840,
-必ずキャラが交代します。,char must switch.,0x001CE864,
-勝った時、次のラウンドでは,When you win,0x001CE880,
-負けた時、次のラウンドでは,When you lose,0x001CE89C,
-キャラ交代が一切できなくなります。,No char switching.,0x001CE8B8,
-通常どおり２プラトンが使用可能です。,2-Platoon OK.,0x001CE8DC,
-２プラトンが一切使用できません。,No 2-Platoon.,0x001CE904,
-通常どおり３プラトンが使用可能です。,3-Platoon OK.,0x001CE928,
-３プラトンが一切使用できません。,No 3-Platoon.,0x001CE950,
-通常どおりピヨります。,Dizzy normal.,0x001CE974,
-一切ピヨらなくなります。,No dizzy.,0x001CE98C,
-オプション画面に戻ります。,Back to Options.,0x001CE9A8,
-Ａボタンでファイルをロードします。,Press A to load.,0x001CEF44,
-メモリーカードを選択してください。,Select Memory Card.,0x001CEF68,
-Ａボタンでファイルをセーブします。,Press A to save.,0x001CEF8C,
-セーブには２ブロックの空き容量が必要です。,Needs 2 free blocks.,0x001CEFFC,
-セーブには１０ブロックの空き容量が必要です。,Needs 10 free blocks.,0x001CF028,
-セーブには６ブロックの空き容量が必要です。,Needs 6 free blocks.,0x001CF058,
-ＣＰＵ同士の対戦を見るモードです。,Watch CPU vs CPU.,0x001CF1B0,
-対戦するステージの背景を見るモードです。,View stage backgrounds.,0x001CF1D4,
-アーケードモードのストーリーデモを見るモードです。,View Arcade story.,0x001CF200,
-クリアしたストーリーのデモしか選択できません。,Cleared stories only.,0x001CF234,
-燃えろ！熱血青春日記のエンディングを見ます。,View diary endings.,0x001CF264,
-グッドエンディングを見たキャラしか選択できません。,Good endings only.,0x001CF294,
-燃えろ！熱血青春日記のコマキャラを見ます。,View diary panels.,0x001CF2C8,
-ゲーム中のＢＧＭを聞くモードです。,Listen to BGM.,0x001CF2F4,
-キャラクターのボイスを聞くモードです。,Listen to voices.,0x001CF318,
-スタッフロールを見るモードです。,View staff credits.,0x001CF340,
-一度でも見ていると選択できるようになります。,Viewable after seen.,0x001CF364,
-アーケードモードのランキングを見るモードです。,View Arcade rankings.,0x001CF394,
-鑑賞するステージを選択してください。,Select stage to view.,0x001CF568,
-見たいキャラを選択してください。,Select char to view.,0x001CF5C0,
-通信対戦ロビーへ接続します。,Connect to lobby.,0x001CF5E4,
-「燃えろ！ジャスティス学園」のオフィシャル,Official Rival Schools,0x001CF604,
-ホームページへ接続します。,homepage connect.,0x001CF630,
-ランキングや自分の作成したＥＤＩＴキャラの,Rankings and chars,0x001CF64C,
-アップロードファイルを作成することができます。,can be uploaded.,0x001CF678,
-メニューに戻ります。,Return to menu.,0x001CF6A8,
-キャラ回転,Rot. Char,0x001CF70C,
-モーション切り替え,Change Motion,0x001CF718,
-ウインドウ消去,Hide Window,0x001CF734,
-ＥＸＩＴ,EXIT,0x001CF744,
-フットワーク,Footwork,0x001CF750,
-喜び・勝ち,Joy/Victory,0x001CF770,
-すれ違いあいさつ,Passing Greet,0x001CF784,
-ダメージ,Damage,0x001CF7A8,
-ポカポカパンチ,Poka Punch,0x001CF7BC,
-気合タメ,Spirit Charge,0x001CF7CC,
-ぐるぐるぶっ飛び,Spin Launch,0x001CF7D8,
-ぐるぐるパンチタメ,Spin Punch Chrg,0x001CF7EC,
-ぐるぐるアッパー,Spin Upper,0x001CF800,
-パートナーＡ,Partner A,0x001CF814,
-パートナーＢ,Partner B,0x001CF824,
-あまり使わない,Rarely Use,0x001CF834,
-よく使う,Often Use,0x001CF84C,
-とてもよく使う,Use Very Often,0x001CF858,
-を登録します。,will register.,0x001CF880,
-をセーブする,Save,0x001CF890,
-ＥＤＩＴキャラのステータスやコマンド表の確認と,Check EDIT stats and,0x001CF8F4,
-ＣＰＵエディットを行うことができます。,perform CPU Edit.,0x001CF924,
-ＥＤＩＴキャラを他のメモリーカードにコピーする,Copy EDIT char to,0x001CF94C,
-ことができます。,another card.,0x001CF97C,
-いらなくなったＥＤＩＴキャラをメモリーカードから,Delete unwanted EDIT,0x001CF990,
-削除することができます。,chars from card.,0x001CF9C4,
-ホームページからダウンロードしたＥＤＩＴキャラを,Register downloaded,0x001CF9E0,
-メモリーカードに登録することができます。,EDIT chars to card.,0x001CFA14,
-パスワード入力からＥＤＩＴキャラをメモリーカード,Register EDIT via,0x001CFA40,
-に登録することができます。,password entry.,0x001CFA74,
-メニュー画面に戻ります。,Back to menu screen.,0x001CFA90,
-ＥＤＩＴキャラをＣＰＵとして使う時の,When using as CPU,0x001CFAAC,
-技使用率の設定を行うことができます。,set move usage rate.,0x001CFAD4,
-ＥＤＩＴキャラの詳しいステータスを,View detailed EDIT,0x001CFAFC,
-見ることができます。,char status.,0x001CFB20,
-ＥＤＩＴキャラの持っている必殺技の,View EDIT special,0x001CFB38,
-コマンド表を見ることができます。,move commands.,0x001CFB5C,
-ＥＤＩＴキャラのデータをパスワードに,Convert EDIT data,0x001CFB80,
-変換します。,to password.,0x001CFBA8,
-前の画面に戻ります。,Back to prev screen.,0x001CFBB8,
-ＥＤＩＴキャラをロードする,Load EDIT char,0x001CFBD0,
-メモリーカードを選んでください。,Select Memory Card.,0x001CFBEC,
-はい：　　　　　　いいえ：,Yes:        No:,0x001CFC3C,
-メモリーカードを抜いたりしないでください。,Do not remove card.,0x001CFC88,
-どのＥＤＩＴキャラをコピーしますか？,Which EDIT to copy?,0x001CFD68,
-ＥＤＩＴキャラ選択：,EDIT Char Select:,0x001CFD90,
-決定：　　　　　　キャンセル：,Confirm:     Cancel:,0x001CFDA8,
-ＥＤＩＴファイルの認識中です。,Reading EDIT file.,0x001CFDF0,
-ＥＤＩＴファイルを認識できませんでした。,Cannot read EDIT file.,0x001CFE10,
-コピーしました。,Copied.,0x001CFEC4,
-どこにセーブしますか？,Where to save?,0x001CFEF8,
-場所選択：,Select Slot:,0x001CFF10,
-そこには既にデータがあります。,Data already exists.,0x001CFF1C,
-どのＥＤＩＴキャラを削除しますか？,Which EDIT to delete?,0x001CFF5C,
-このＥＤＩＴキャラを削除します。,Delete this EDIT char.,0x001CFF80,
-削除しました。,Deleted.,0x001CFFA4,
-どのＥＤＩＴキャラの技使用率を設定しますか？,Set which move rate?,0x001CFFB4,
-どのＥＤＩＴキャラのステータスを表示しますか？,Show which status?,0x001CFFE4,
-どのＥＤＩＴキャラのコマンド表を表示しますか？,Show which commands?,0x001D0014,
-どのＥＤＩＴキャラのパスワードを表示しますか？,Show which password?,0x001D0044,
-登録しました。,Registered.,0x001D0074,
-ダウンロードファイルがある,Download file exists,0x001D0098,
-ダウンロードファイルがありません。,No download file.,0x001D00B4,
-ＥＤＩＴキャラが登録されていません。,No EDIT registered.,0x001D00D8,
-必殺技がないのでＣＰＵエディットできません。,No specials for CPU.,0x001D0100,
-ＣＰＵエディットの内容が変更されました。,CPU Edit changed.,0x001D0130,
-メモリーカードにセーブしないと,If not saved to card,0x001D015C,
-ＣＰＵエディットの内容が適用されません。,CPU Edit not applied.,0x001D017C,
-本当に終了してもよろしいですか？,Really quit?,0x001D01A8,
-アップロードファイルを作成します。,Creating upload file.,0x001D01F0,
-ＮＥＴＷＯＲＫメニューに戻ります。,Back to NETWORK menu.,0x001D0214,
-ファイルにＥＤＩＴキャラを登録しますか？,Register EDIT to file?,0x001D0238,
-（ランキング情報は自動的に登録されます）,(Rankings auto-reg),0x001D0264,
-ＥＤＩＴキャラが一人もいません。,No EDIT chars exist.,0x001D0290,
-どのＥＤＩＴキャラを登録しますか？,Which EDIT to reg?,0x001D02B4,
-このＥＤＩＴキャラを登録します。,Register this EDIT.,0x001D02D8,
-アップロードファイルをセーブする,Save upload file,0x001D02FC,
-アップロードファイルが既に存在します。,Upload file exists.,0x001D034C,
-アップロードファイルを作成しました。,Upload file created.,0x001D0374,
-ホームページへ接続し、登録してください。,Connect and register.,0x001D03C8,
-生徒選抜,Tryouts,0x001D0408,
-ジャスティス学園採石場,Justice Quarry,0x001D041C,
-太陽学園屋上,Taiyo Rooftop,0x001D0434,
-青春駅前広場,Youth Station,0x001D0444,
-根性神社,Guts Shrine,0x001D0454,
-ジギーパーク,Ziggy Park,0x001D0460,
-大和川堤防,Yamato Levee,0x001D0470,
-五輪ドーム,Gorin Dome,0x001D047C,
-聖純女学院中庭,Seijun Garden,0x001D0488,
-太陽学園教室,Taiyo Classroom,0x001D0498,
-ジャスティス学園,Justice High,0x001D04A8,
-再び立ち上がれ,Rise Again,0x001D04C4,
-勝利の足跡,Path to Victory,0x001D04DC,
-ストーリー 〜不安,Story - Anxiety,0x001D04E8,
-ストーリー 〜疑惑,Story - Doubt,0x001D04FC,
-ストーリー 〜もも,Story - Momo,0x001D0510,
-ストーリー 〜緊張,Story - Tension,0x001D0524,
-ストーリー 〜絶望,Story - Despair,0x001D0538,
-ストーリー 〜野望,Story - Ambition,0x001D054C,
-ストーリー 〜和解,Story - Truce,0x001D0560,
-ストーリー 〜希望,Story - Hope,0x001D0574,
-ストーリー 〜孤高,Story - Solitude,0x001D0588,
-ストーリー 〜予感,Story - Omen,0x001D059C,
-ストーリー 〜決意,Story - Resolve,0x001D05B0,
-ストーリー 〜帰還,Story - Return,0x001D05C4,
-ストーリー 〜封印,Story - Seal,0x001D05D8,
-エンディング 〜太陽学園,Ending - Taiyo,0x001D05EC,
-エンディング 〜太陽学園２,Ending - Taiyo 2,0x001D0604,
-エンディング 〜五輪高校,Ending - Gorin,0x001D0620,
-エンディング 〜五輪高校２,Ending - Gorin 2,0x001D0638,
-エンディング 〜外道高校,Ending - Gedo,0x001D0654,
-エンディング 〜聖純女学院,Ending - Seijun,0x001D066C,
-エンディング 〜パシフィックＨＳ,Ending - Pacific,0x001D0688,
-エンディング 〜ジャスティス学園,Ending - Justice,0x001D06A8,
-エンディング 〜暗黒生徒会,Ending - Dark,0x001D06C8,
-エンディング 〜相性診断,Ending - Chemistry,0x001D06E4,
-ジャスティス制作委員会,Justice Committee,0x001D06FC,
-ぼ〜どげ〜む,Board Game,0x001D0714,
-きゃらくた〜めいく,Character Make,0x001D0724,
-そろそろおわり,Almost Done,0x001D0740,
-いちばんはだれ？,Who is Number 1?,0x001D0750,
-で、けっきょく．．．。,So in the end...,0x001D0764,
-らぶらぶえんでぃんぐ,Love Love Ending,0x001D077C,
-ロベルト,Roberto,0x001D0A68,
-ティファニー,Tiffany,0x001D0A7C,
-ボーマン,Bowman,0x001D0A8C,
-Ｐアキラ,P.Akira,0x001D0AC8,
-Ｗダイゴ,W.Daigo,0x001D0B20,
-パスワード入力を中止します。,Cancel password.,0x001D0B44,
-いいえ：,No:,0x001D0B80,
-パスワードが違います。,Wrong password.,0x001D0B94,
-はい：Ａ,Yes: A,0x001D0C00,
-いいえ：Ｂ,No: B,0x001D0C0C,
-所属高校,School,0x001D0C20,
-なかよしキャラ,Best Friend,0x001D0C2C,
-根性ゲージ,Guts Gauge,0x001D0C44,
-すごく低い,Very Low,0x001D0C70,
-うたれ強い,Resilient,0x001D0C8C,
-すごく高い,Very High,0x001D0CA0,
-太陽学園,Taiyo High,0x001D0CDC,
-五輪高校,Gorin High,0x001D0CE8,
-パシフィックＨＳ,Pacific HS,0x001D0CF4,
-外道高校,Gedo High,0x001D0D08,
-聖純女学院,Seijun Academy,0x001D0D28,
-完全燃焼技,Burning Vigor,0x001D0D54,
-敵の動作,Enemy Action,0x001D0D90,
-敵の状態,Enemy State,0x001D0DB0,
-起き上がり,Wake-up,0x001D0DF4,
-アタックデータ表示,Show Attack Data,0x001D0E08,
-無敵時間表示,Show Invincibility,0x001D0E30,
-ノーマル,Normal,0x001D0E58,
-マニュアル,Manual,0x001D0E88,
-しゃがみ,Crouch,0x001D0EC0,
-ジャンプ,Jump,0x001D0EE0,
-ハイジャンプ,High Jump,0x001D0F00,
-手前回り込み,Roll Forward,0x001D0F20,
-奥回り込み,Roll Back,0x001D0F40,
-立ち投げ,Stand Throw,0x001D0F60,
-しゃがみ投げ,Crouch Throw,0x001D0F80,
-コンボチェック,Combo Check,0x001D0FA0,
-セミオート,Semi-Auto,0x001D0FE0,
-完全ガード,Full Guard,0x001D1000,
-前受け身,Forward Roll,0x001D1020,
-後ろ受け身,Back Roll,0x001D1038,
-ランダム,Random,0x001D1068,
-その場起き上がり,Stand Recovery,0x001D10A8,
-前起き上がり,Forward Recovery,0x001D10D0,
-後ろ起き上がり,Back Recovery,0x001D10F8,
-側転起き上がり,Roll Recovery,0x001D1120,
-初期設定に戻す,Reset Defaults,0x001D1168,
-バツ失踪,Batsu Missing,0x001D119C,
-ロイ登場,Roy Appears,0x001D11A8,
-醍醐救出,Daigo Rescue,0x001D11D4,
-兄のヘルメット,Brother Helmet,0x001D11E8,
-リーグ戦をもう一度しますか？,Replay league?,0x001D1274,
-同じ組み合わせでしますか？,Same matchups?,0x001D1298,
-チームの並びを,Shuffle team,0x001D1320,
-シャッフルしますか？,order?,0x001D1330,
-もう一度しますか？,Play again?,0x001D1348,
-ガッツアッパー,Guts Upper,0x001D1440,
-三日月キック,Crescent Kick,0x001D1450,
-流星キック,Meteor Kick,0x001D1460,
-全開気合弾,Full Guts,0x001D146C,
-全開ガッツアッパー,Full Guts Upper,0x001D1478,
-全開流星キック,Full Meteor Kick,0x001D148C,
-気功掌底,Qigong Palm,0x001D149C,
-必勝連撃拳,Victory,0x001D14C0,
-螺旋炎舞脚,Spin Fire,0x001D14CC,
-クロスカッター,Cross Cutter,0x001D14D8,
-幻影キック,Phantom Kick,0x001D14E8,
-幻影ブレイカー,Phantom Break,0x001D14F4,
-雷神アッパー,Thunder Upper,0x001D1504,
-幻影ウェーブ,Phantom Wave,0x001D1514,
-拡散クロスカッター,Spread Cutter,0x001D1524,
-ダブル幻影キック,Dbl Phantom Kick,0x001D1538,
-スーパー雷神アッパー,Super Thunder Up,0x001D154C,
-超剛速球,Super Fastball,0x001D1564,
-大回転打法,Grand Slam,0x001D1570,
-一本釣り打法,Line Drive,0x001D157C,
-ナイアガラドロップ,Niagara Drop,0x001D158C,
-豪快リード,Bold Lead,0x001D15A0,
-分身魔球,Shadow Ball,0x001D15AC,
-ホームラン打法,Home Run Hit,0x001D15B8,
-超殺人スライディング,Killer Slide,0x001D15C8,
-入魂サーブ,Soul Serve,0x001D15E0,
-スライディングレシーブ,Slide Receive,0x001D15EC,
-回転レシーブ,Spin Receive,0x001D1604,
-完全ブロック,Perfect Block,0x001D1614,
-特訓スパイク,Training Spike,0x001D1624,
-ファイヤーサーブ,Fire Serve,0x001D1634,
-天井サーブ,Lob Serve,0x001D1648,
-ロングシュート,Long Shot,0x001D1654,
-シャイニングセーブ,Shining Save,0x001D1664,
-パーフェクトキャッチ,Perfect Catch,0x001D1678,
-オーバーヘッドキック,Overhead Kick,0x001D1690,
-バイシクルキック,Bicycle Kick,0x001D16A8,
-スライディングキック,Sliding Kick,0x001D16BC,
-フェイント,Feint,0x001D16D4,
-爆裂Ｖゴール,Burst V-Goal,0x001D16E0,
-爆裂リフティング,Burst Juggle,0x001D16F0,
-ダイナマイトストレート,Dynamite Straight,0x001D1704,
-ツイスターアッパー,Twister Upper,0x001D171C,
-タッチダウンウェーブ,Touchdown Wave,0x001D1730,
-エアダイナマイト,Air Dynamite,0x001D1748,
-トリプルツイスター,Triple Twister,0x001D175C,
-スーパータッチダウン,Super Touchdown,0x001D1770,
-ダイナマイトジャスティス,Dynamite Justice,0x001D1788,
-グルービーナックル,Groovy Knuckle,0x001D17A4,
-グルービーパンチ,Groovy Punch,0x001D17B8,
-エキサイティングキック,Exciting Kick,0x001D17CC,
-ビューティフルスピン,Beautiful Spin,0x001D17E4,
-グルービーホイール,Groovy Wheel,0x001D17FC,
-スタンプキック,Stamp Kick,0x001D1810,
-グルービースペシャル,Groovy Special,0x001D1820,
-ワンダフルキック,Wonderful Kick,0x001D1838,
-グルービースクリュー,Groovy Screw,0x001D184C,
-ゴッドラッシュ,God Rush,0x001D1864,
-ゴッドディフェンス（前）,God Defend (F),0x001D1874,
-ゴッドディフェンス（後）,God Defend (B),0x001D1890,
-ゴッドストレート,God Straight,0x001D18AC,
-ゴッドアッパー,God Upper,0x001D18C0,
-ゴッドフック,God Hook,0x001D18D0,
-ゴッドラリアット,God Lariat,0x001D18E0,
-ヘヴンズラッシュ,Heaven Rush,0x001D18F4,
-ヘヴンズクロス,Heaven Cross,0x001D1908,
-対空裏斬り,AA BackCut,0x001D1920,
-壮絶な裏斬り,Fierce Slash,0x001D193C,
-破天連撃,Sky Rend Combo,0x001D1974,
-破の連舞,Rend Dance,0x001D1988,
-天の連舞,Heaven Dance,0x001D1994,
-破天　無影蹴,Shadow Kick,0x001D19A0,
-鉄砲突き,Cannon Thrust,0x001D19B0,
-柏手破り,Palm Break,0x001D19BC,
-荒波四股,Storm Stomp,0x001D19C8,
-ぶちかまし,Bull Rush,0x001D19D4,
-岩石砕き,Rock Crush,0x001D19E8,
-乱れ鉄砲突き,Wild Thrust,0x001D19FC,
-雪崩落とし,Avalanche,0x001D1A14,
-対空正波拳,AAWaveFist,0x001D1A28,
-島津流　正波拳,Shimazu Wave,0x001D1A4C,
-島津流　真・実直拳,True Honest Fist,0x001D1A5C,
-島津流　雷鋭蹴,Thunder Kick,0x001D1A70,
-出席確認,Roll Call,0x001D1A88,
-昇天切開,Heaven Slash,0x001D1A9C,
-片翼の構,One Wing Stance,0x001D1AA8,
-死の介護,Death Care,0x001D1ABC,
-天獄への階段,Heaven Stair,0x001D1AC8,
-奈落への補導,Hell Guidance,0x001D1AD8,
-空間裂き,Space Rend,0x001D1AF0,
-六腑突き,Organ Strike,0x001D1AFC,
-霧嶋流　狂獣裂破,Mad Beast Rend,0x001D1B18,
-霧嶋流　真空闇嵐,Vacuum Storm,0x001D1B2C,
-禁忌　力吸い,Power Drain,0x001D1B40,
-居合斬り,IaiSlash,0x001D1B50,
-十文字斬り,CrossSlash,0x001D1B5C,
-暗黒幻影蹴,Dark Ghost,0x001D1B80,
-暗黒幻影陣,Dark Array,0x001D1B8C,
-暗黒疾風斬,Dark Wind,0x001D1B98,
-鷂子栽肩,Hawk Shoulder,0x001D1BAC,
-破天の構,Sky Stance,0x001D1BB8,
-剛気功塊,Hard Chi Mass,0x001D1BC4,
-破の双撃,Twin Strike,0x001D1BD0,
-疾風の型,Gale Form,0x001D1BDC,
-昇龍の型,Dragon Form,0x001D1BE8,
-紫電の型,Thunder Form,0x001D1BF4,
-破岩の型,Rock Form,0x001D1C00,
-前方転身の型,Forward Form,0x001D1C0C,
-演舞披露,Show Dance,0x001D1C1C,
-説教攻撃,Sermon Attack,0x001D1C28,
-無双突き,Peerless Jab,0x001D1C34,
-無双裏拳,Peerless Back,0x001D1C40,
-大地突き,Earth Thrust,0x001D1C4C,
-無双蹴り,Peerless Kick,0x001D1C58,
-真・無双正拳突き,True Peerless,0x001D1C64,
-真・漢の背中,True Man Back,0x001D1C78,
-硬気功塊,Hard Chi Block,0x001D1C88,
-熱血竹刀,Hot Blood Kendo,0x001D1C94,
-気合ナックル,Spirit Knuckle,0x001D1CA0,
-気合キック,Spirit Kick,0x001D1CB0,
-ダブル指導キック,Double Coach,0x001D1CBC,
-回転竹刀落とし,Spin Shinai,0x001D1CD0,
-熱血腕立て伏せ,Hot Push-up,0x001D1CE0,
-熱血クロスカウンター,Hot Cross Counter,0x001D1CF0,
-熱血風車,Hot Windmill,0x001D1D08,
-熱血ヤセ我慢,Hot Endurance,0x001D1D14,
-フラッシュ攻撃,Flash Attack,0x001D1D24,
-フィルム交換,Film Change,0x001D1D3C,
-スーパーフラッシュ攻撃,Super Flash,0x001D1D4C,
-突撃インタビュー,Rush Interview,0x001D1D64,
-飛び込み,Dive,0x001D1D78,
-人工呼吸,CPR,0x001D1D84,
-平泳ぎキック,Breaststroke,0x001D1D90,
-個人メドレー,Medley,0x001D1DA0,
-超バタ足,Super Flutter,0x001D1DB0,
-破戒の鉄鎖,Ruin Chain,0x001D1DBC,
-毒蛇の鉄鎖,Viper Chain,0x001D1DC8,
-空覇の鉄鎖,Sky Chain,0x001D1DD4,
-眼光蹴り,Glare Kick,0x001D1DE0,
-孤高のプライド,Lone Pride,0x001D1DEC,
-必殺　電光鉄鎖,Lightning Chain,0x001D1DFC,
-必殺　稲妻眼光蹴り,Thunder Glare,0x001D1E0C,
-だだっこあたっく,Tantrum Attack,0x001D1EA4,
-悲恋のセレナーデ,Sad Serenade,0x001D1ECC,
-魅惑のワルツ,Charm Waltz,0x001D1EE0,
-深淵のメヌエット,Abyss Minuet,0x001D1EF0,
-落日のララバイ,Sunset Lullaby,0x001D1F04,
-冥府のノクターン,Dark Nocturne,0x001D1F14,
-慈愛のレクイエム,Love Requiem,0x001D1F28,
-死呼ぶロンド,Death Rondo,0x001D1F3C,
-バーニングエルボー,Burning Elbow,0x001D1F4C,
-彗星キック,Comet Kick,0x001D1F60,
-熱血全開気合弾,Hot Full Guts,0x001D1F6C,
-全開彗星キック,Full Comet Kick,0x001D1F7C,
-忌野流　モズ落し,Imano Shrike,0x001D1F8C,
-霧幻流　瞬殺無音,Silent Kill,0x001D1FB8,
-霧幻流　暗黒衝撃斬,Dark Impact,0x001D1FCC,
-霧幻流　闇吹雪,Dark Blizzard,0x001D1FE0,
-暴走・無双正拳突き,Rage Peerless,0x001D1FF0,
-暴走・漢の背中,Rage Man Back,0x001D2004,
-暴走・硬気功塊,Rage Chi Block,0x001D2014,
-暗黒気合弾,Dark Spirit Ball,0x001D2024,
-暗黒闇神楽,Dark Kagura,0x001D2030,
-ダブルラリアット,Double Lariat,0x001D203C,
-真空斬り,Vacuum Slash,0x001D2058,
-グラップルビート,Grapple Beat,0x001D2064,
-ショックウェーブ,Shock Wave,0x001D2078,
-スクリューパイルドライバー,Screw Piledriver,0x001D208C,
-ライジングキック,Rising Kick,0x001D20A8,
-天仰波動拳,Sky Wave Fist,0x001D20C4,
-蒼空波動拳,Blue Wave Fist,0x001D20D0,
-ファイヤーグラップルビート,Fire Grapple,0x001D20EC,
-電刃波動拳,Electric Wave,0x001D2108,
-スーパーショックウェーブ,Super Shock Wave,0x001D2114,
-Ｗスクリューパイルドライバー,W Screw Driver,0x001D2130,
-Ｓグルービーホイール,S Groovy Wheel,0x001D2150,
-真空波動拳,Vacuum Wave,0x001D2168,
-真空天仰波動拳,Vacuum Sky Wave,0x001D2174,
-真空蒼空波動拳,Vacuum Blue Wave,0x001D2184,
-スーパー飛び込み,Super Dive,0x001D21A4,
-ダブル気合弾,Double Spirit,0x001D21B8,
-ガッツ百倍,100x Guts,0x001D21C8,
-ラストシンフォニー,Last Symphony,0x001D21D4,
-グランドスラム,Grand Slam,0x001D21E8,
-ファイト百倍,100x Fight,0x001D21F8,
-トラップＷシュート,Trap W Shot,0x001D2208,
-Ｗライジングトルネード,W Rising Tornado,0x001D221C,
-ラブ＆ピース,Love & Peace,0x001D2234,
-Ｗパワーバスター,W Power Buster,0x001D2244,
-協奏連撃蹴,Concerto Kick,0x001D2260,
-島津流　双龍正波拳,Twin Dragon Wave,0x001D2274,
-究極の矯正術,Ultimate Fix,0x001D2288,
-霧嶋流　十文字殺法,Cross Kill,0x001D2298,
-連撃連舞,Combo Dance,0x001D22B4,
-委員長のワンポイントＡ,Class Rep Tip A,0x001D22C0,
-男の中の男,Man Among Men,0x001D22D8,
-熱血気合砲,Hot Spirit Cannon,0x001D22E4,
-いただきスクープ,Got the Scoop,0x001D22F0,
-シンクロナイズドアタック,Synchro Attack,0x001D2304,
-ガンつけ１２０％,Glare 120%,0x001D2320,
-人間壁打ち,Human Wall Hit,0x001D2334,
-激励のコンチェルト,Cheer Concerto,0x001D2340,
-熱血Ｗ気合ビーム,Hot W Spirit Beam,0x001D2354,
-霧幻流　残酷斬,Cruel Slash,0x001D2368,
-男の中の狂気,Madman,0x001D2378,
-Ｗ暗黒気合弾,W Dark Spirit,0x001D2388,
-クロスファイヤーキック,Crossfire Kick,0x001D2398,
-Ｗスカイアタック,W Sky Attack,0x001D23B0,
-ダイブ＆プレス,Dive & Press,0x001D23C4,
-究極の愛の波動,Ultimate Love,0x001D23D4,
-人間大砲,Human Cannon,0x001D23E4,
-ファイナルシンフォニー,Final Symphony,0x001D23F0,
-熱血大車輪,Hot Giant Swing,0x001D2408,
-トリプルヘブンズクロス,Triple Heaven,0x001D2414,
-外道独楽,Gedo Top,0x001D242C,
-粛正の嵐,Purge Storm,0x001D2438,
-霧嶋流　一文字連殺,Line Kill,0x001D2444,
-聖女の鉄槌,Saint Hammer,0x001D2458,
-騎馬落とし,Horse Drop,0x001D2464,
-登録状況,Reg Status,0x001D34EC,
-エントリーリスト,Entry List,0x001D34F8,
-トーナメントロビー,Tournament Lobby,0x001D3514,
-ギャラリーモード,Gallery Mode,0x001D352C,
-ハンドルネーム,Handle Name,0x001D3AFC,
-電話番号,Phone Number,0x001D3B0C,
-メールアドレス,Email Address,0x001D3B18,
-は必ず入力して下さい,is required,0x001D3B28,
-情報を登録中です,Registering info,0x001D3B40,
-しばらくお待ち下さい,Please wait,0x001D3B54,
-ディスクドアを開けたりしないで下さい,Do not open disc door,0x001D3B7C,
-スタートボタンを１秒間以上押すと,Hold START for 1 sec,0x001D3BA4,
-キャンセルします,to cancel,0x001D3BC8,
-電話番号が正しくありません,Invalid phone number,0x001D3BDC,
-お使いの電話番号を確認して,Check your phone number,0x001D3BF8,
-もう一度入力して下さい,and try again,0x001D3C14,
-今月の予想料金が,This month estimate,0x001D3C2C,
-設定された料金上限を超えました,exceeds limit,0x001D3C40,
-ＯＰＴＩＯＮの「課金情報」で,Check OPTION Billing,0x001D3C60,
-料金を確認して下さい,for charges,0x001D3C80,
-使用している本体が,Console is not the,0x001D3C98,
-登録時のものではありません,registered one,0x001D3CAC,
-新たに登録しなおして下さい,Please re-register,0x001D3CC8,
-接続に成功しました,Connected OK,0x001D3CE4,
-接続に失敗しました,Connection failed,0x001D3CF8,
-接続できませんでした,Could not connect,0x001D3D0C,
-モジュラーケーブルが,Check if cable,0x001D3D24,
-本体につながっているか,is connected to unit,0x001D3D3C,
-モデムの設定が正しいか,and modem settings,0x001D3D54,
-確認して下さい,are correct,0x001D3D6C,
-また、接続先を確認して下さい,Check destination,0x001D3D7C,
-接続先が正しいときは,If destination is OK,0x001D3D9C,
-ＤＣサポートセンターに,contact DC Support,0x001D3DB4,
-お問い合わせ下さい,Center,0x001D3DCC,
-サーバーに接続できませんでした,Cannot connect to server,0x001D3DE0,
-パスワードが違うか,Wrong password or,0x001D3E00,
-サーバーが混雑しているかもしれません,server may be busy,0x001D3E14,
-セガプロバイダーの場合,For SEGA provider,0x001D3E3C,
-「課金情報」を確認して下さい,check Billing info,0x001D3E54,
-話し中です,Line busy,0x001D3E74,
-しばらく時間をおいて下さい,Please wait a while,0x001D3E80,
-ＥＤＩＴデータが複数あります,Multiple EDIT data,0x001D3E9C,
-どのポートのデータを使用しますか？,Which port to use?,0x001D3EBC,
-ただいま対戦相手を捜しています,Searching opponent,0x001D3EF0,
-カプコンＩＤが間違っています,Capcom ID is wrong,0x001D3F10,
-対戦を断られました,Battle declined,0x001D3F30,
-適当な対戦相手が見つかりませんでした,No opponent found,0x001D3F44,
-対戦ジャンルや選択方法を変えるか,Change genre or method,0x001D3F6C,
-しばらくしてから再度ためして下さい,and try again later,0x001D3F90,
-ＫＤＤＩ回線で接続中です,Connecting via KDDI,0x001D3FB4,
-対戦中は電源を切ったりしないで下さい,No power off in battle,0x001D3FD0,
-回線が不安定なため切断されました,Disconnected: unstable,0x001D3FF8,
-Ａボタンを押して下さい,Press A button,0x001D401C,
-対戦相手に迷惑がかかりますので,Causes trouble for,0x001D4034,
-対戦中にリセットしないで下さい,opponent. No reset,0x001D4054,
-対戦中にディスクドアを,Do not open disc,0x001D4074,
-開かないで下さい,during battle,0x001D408C,
-再対戦は断られました,Rematch declined,0x001D40A0,
-カプコンＩＤ：,Capcom ID:,0x001D40B8,
-を登録しました,registered,0x001D40C8,
-を登録できませんでした,failed to register,0x001D40E0,
-これ以上ＩＤを登録できません,Cannot register more ID,0x001D40F8,
-ＩＤの編集をおこなって下さい,Please edit ID,0x001D4118,
-登録が完了しました,Registration complete,0x001D4138,
-あなたのカプコンＩＤは,Your Capcom ID is,0x001D414C,
-プロバイダーＡＰに接続中,Connecting to AP,0x001D416C,
-にダイヤル中です,Dialing,0x001D4188,
-登録内容を変更していいですか？,Change registration?,0x001D419C,
-は現在、通信対戦サーバーに,is not connected to,0x001D41CC,
-接続していないか、対戦中です,server or in battle,0x001D41E8,
-接続中は通信料金がかかります,Charges while online,0x001D4208,
-なお、セガプロバイダーで０９９０から,For SEGA 0990 numbers,0x001D4228,
-始まる電話番号の場合、ダイヤルＱ２,Dial Q2 applies:,0x001D4250,
-として通話料の他に３分１０円の,10 yen per 3 min,0x001D4274,
-接続料がかかります,plus connection fee,0x001D4294,
-ネットワークに接続しますか？,Connect to network?,0x001D42A8,
-メモリーカードをチェック中です,Checking Memory Card,0x001D42CC,
-電源を切ったりメモリーカードを,Do not power off or,0x001D42EC,
-抜いたりしないで下さい,remove card,0x001D430C,
-正しくロードできませんでした,Load failed,0x001D4324,
-同じプレイヤーと,Play same player,0x001D4344,
-もう一度対戦しますか？,again?,0x001D4358,
-のＩＤを登録しますか？,Register this ID?,0x001D4370,
-ゲームに戻ります,Return to game,0x001D4388,
-回線を切断してもよろしいですか？,Disconnect line?,0x001D439C,
-正しくセーブできませんでした,Save failed,0x001D43C0,
-登録済みのメモリーカードを,Insert registered,0x001D43E0,
-通信対戦を終了しますか？,End online battle?,0x001D441C,
-モデムが見つかりません,Modem not found,0x001D4438,
-モデムが外れていないか,Check if modem,0x001D4450,
-次の電話番号に電話をかけます,Calling this number,0x001D4468,
-接続先を確認して下さい,Check destination,0x001D4488,
-現在接続先が大変混み合っており,Destination very busy,0x001D44A0,
-電話がかかりません,Cannot connect,0x001D44C0,
-モデムの設定が正しいか確認して,Check modem settings,0x001D44D4,
-しばらくしてから,and try again,0x001D44F4,
-もう一度おかけなおし下さい,later,0x001D4508,
-ログインＩＤ、パスワードが,Check login ID and,0x001D4524,
-正しいか確認して下さい,password,0x001D4540,
-サーバーがメンテナンス中の,Server may be under,0x001D4558,
-可能性もあります,maintenance,0x001D4574,
-一定時間入力が無かったため,No input for a while,0x001D4588,
-回線を切断しました,Line disconnected,0x001D45A4,
-相手の反応がありません,No response from opponent,0x001D45B8,
-何らかの原因で回線を切断されました,Disconnected,0x001D45D0,
-ＮＥＴファイルが登録された,Insert Memory Card,0x001D45F4,
-メモリーカードを,with NET file,0x001D4610,
-６ブロック以上空きがある,with 6+ free blocks,0x001D4634,
-メモリーカードを接続して下さい,Please connect,0x001D4650,
-登録内容を変更してよろしいですか？,Change registration?,0x001D4670,
-ＮＥＴファイルは対応するゲームで,NET file can be used,0x001D4694,
-共通して使えます,across games,0x001D46B8,
-電話回線を使って情報を登録します,Register via phone,0x001D46CC,
-登録後、ネットワークに接続します,Then connect to net,0x001D46F0,
-接続料がかかります。よろしいですか？,Fees apply. OK?,0x001D4714,
-正しく登録できませんでした,Registration failed,0x001D473C,
-ＮＥＴファイルに,To NET file,0x001D4758,
-設定を保存しています,Saving settings,0x001D476C,
-セーブしました,Saved,0x001D4784,
-ロードしました,Loaded,0x001D4794,
-このモードを終了しますか？,Exit this mode?,0x001D47A4,
-対戦を申し込んでいます,Requesting battle,0x001D47C0,
-接続を中断しました,Connection aborted,0x001D47D8,
-ログインパスワードを入力して下さい,Enter login password,0x001D47EC,
-ユーザー名：,User:,0x001D4810,
-パスワード：,Pass:,0x001D4834,
-「通信対戦」モード終了まで,Until Online mode ends,0x001D4858,
-メモリーカードを絶対に,never remove,0x001D4874,
-抜かないで下さい,Memory Card,0x001D488C,
-ログインパスワードが入力されてません,No login password,0x001D48A0,
-のＩＤを削除してもいいですか？,Delete this ID?,0x001D48C8,
-あなたのカプコンＩＤや通信相手のＩＤ,Your Capcom ID and,0x001D48E8,
-などメモリーカードの登録情報を,card registration,0x001D4910,
-全て消去してもよろしいですか？,delete all data?,0x001D4930,
-元のメモリーカードを接続して,Insert original card,0x001D4950,
-正しくセーブされないので,Save will fail so,0x001D4970,
-先に進めません,cannot proceed,0x001D498C,
-元のメモリーカードがないので,No original card so,0x001D499C,
-接続できません,cannot connect,0x001D49BC,
-登録しませんでした,Did not register,0x001D49CC,
-はビジー状態です,is busy,0x001D49E0,
-再度チャレンジして下さい,Please try again,0x001D49F4,
-モデムからの応答がありません,No modem response,0x001D4A10,
-データをロードします,Loading data,0x001D4A30,
-メモリーカードを拡張ソケットに,Insert card in,0x001D4A48,
-入れて下さい,expansion slot,0x001D4A68,
-ＮＥＴファイル      ＝,NET File     =,0x001D4ABC,
-ＥＤＩＴファイル　　＝,EDIT File    =,0x001D4AD4,
-準備ができたら,When ready,0x001D4AEC,
-スタートボタンを押して下さい,press START,0x001D4AFC,
-データをロードしました,Data loaded,0x001D4B1C,
-のデータが設定されました,data has been set,0x001D4B34,
-入室条件を満たしていません,Entry requirements not met,0x001D4B50,
-この対戦ルームは満員です,This room is full,0x001D4B6C,
-相手は切断されました,Opponent disconnected,0x001D4B88,
-システムファイルがありません,No system file,0x001D4BA0,
-にシステムファイルの入った,Insert card with,0x001D4BCC,
-メモリーカードを入れて,system file,0x001D4BF4,
-再接続しますか？,Reconnect?,0x001D4C0C,
-何らかの原因で接続できませんでした,Could not connect,0x001D4C20,
-カプコンサーバーが,Capcom server may,0x001D4C44,
-混雑しているかもしれません,be busy,0x001D4C58,
-カプコンサーバーに接続中です,Connecting to Capcom,0x001D4C74,
-回線が混雑しています,Line is busy,0x001D4C94,
-次の番号でかけ直しますか？,Try next number?,0x001D4CAC,
-電話番号が登録されていません,No phone registered,0x001D4CC8,
-前回の戦いのリプレイデータを,Save last battle,0x001D4CE8,
-ファイルにセーブしますか？,replay to file?,0x001D4D08,
-セーブを終了しますか？,End saving?,0x001D4D24,
-上書きしますか？,Overwrite?,0x001D4D3C,
-新規でセーブしますか？,Save as new?,0x001D4D50,
-ＮＥＴファイルを新規作成します,Creating new NET file,0x001D4D90,
-は現在、この対戦ルームにはいません,is not in this room,0x001D4DC4,
-はメッセージを受け取りました,received message,0x001D4DE8,
-メッセージ送信中,Sending message,0x001D4E08,
-のメッセージを次回から拒否しますか？,Block their messages?,0x001D4E1C,
-のメッセージは次回から受け取りません,Messages blocked,0x001D4E44,
-の対戦を次回から拒否しますか？,Block their battles?,0x001D4E6C,
-の対戦を次回から拒否します,Battles blocked,0x001D4E8C,
-これよりトーナメントを開始します,Tournament starting,0x001D4EA8,
-トーナメント情報取得中です,Getting tourney info,0x001D4ECC,
-しばらくそのままでお待ち下さい,Please wait,0x001D4EE8,
-相手がいないため不戦勝になりました,Win by forfeit,0x001D4F08,
-対戦を開始します,Starting battle,0x001D4F2C,
-次の対戦を開始します,Starting next battle,0x001D4F40,
-只今、トーナメントが行われています,Tournament in progress,0x001D4F58,
-時間をおいて再エントリーして下さい,Re-enter later,0x001D4F7C,
-トーナメントは開催されていません,No tournament active,0x001D4FA0,
-エントリー条件が満たされていないため,Entry requirements,0x001D4FC4,
-エントリーできません,not met,0x001D4FEC,
-全試合が終了しました,All matches complete,0x001D5004,
-お疲れさまでした,Good work!,0x001D501C,
-これでトーナメントは終了いたします,Tournament ended,0x001D5030,
-またの参加をお待ちしています,Join us again!,0x001D5054,
-一定時間でサーバーに戻れなかったので,Could not return to,0x001D5074,
-失格となりました,server. Disqualified,0x001D509C,
-参加者が足りませんので,Not enough players,0x001D50B0,
-トーナメントは不成立になりました,Tournament cancelled,0x001D50C8,
-優勝者が決まりませんでした,No winner determined,0x001D50EC,
-登録拒否数オーバーです,Block list full,0x001D5108,
-これ以上、拒否者登録できません,Cannot block more,0x001D5120,
-ギャラリーモードで入りました,Entered Gallery mode,0x001D5140,
-開催中のトーナメントの経過が見れます,View tourney progress,0x001D5160,
-トーナメントへの参加希望の方は,To join tournament,0x001D5188,
-次回開催までお待ち下さい,wait for next one,0x001D51A8,
-トーナメントモードを退場しますか？,Exit Tournament mode?,0x001D51C4,
-一度退場すると次回開催まで,Once exited cannot,0x001D51E8,
-入場できなくなります,re-enter until next,0x001D5204,
-回線を切断しています,Disconnecting line,0x001D521C,
-しばらくお待ちください,Please wait,0x001D5234,
-ＩＤを削除しています,Deleting ID,0x001D524C,
-削除しました,Deleted,0x001D5264,
-希望する,Wants,0x001D52FC,
-希望しない,Don't Want,0x001D5308,
-ろー　　ちこそしいはきくにまのりもみらせたすとかなひてさんつぬふあうえおやゆよわ　　　　　ほへ゛゜　むれけ　ねるめ,,0x001D531C,
-ロー　　チコソシイハキクニマノリモミラセタストカナヒテサンツヌフアウエオヤユヨワ　　　　　ホヘ゛゜　ムレケ　ネルメ,,0x001D5390,
-あいうえおなにぬねのらりるれろかきくけこはひふへほわをん　さしすせそまみむめもー！？「」たちつてとやゆよ゛゜、。〜『』,,0x001D5894,
-アイウエオナニヌネノラリルレロカキクケコハヒフヘホワヲン　サシスセソマミムメモー！？「」タチツテトヤユヨ゛゜、。〜『』,,0x001D5910,
-あぁいぃうぅえぇおぉつっやゃゆゅよょアァイィウゥエェオォツッヤャユュヨョ,,0x001D5B04,
-かがきぎくぐけげこごさざしじすずせぜそぞただちぢつづてでとどはばひびふぶへべほぼぱばぴびぷぶぺべぽぼカガキギクグケゲコゴサザシジスズセゼソゾタダチヂツヅテデトドハバヒビフブヘベホボパバピビプブペベポボウヴ,,0x001D5B50,
-はぱひぴふぷへぺほぽハパヒピフプヘペホポばぱびぴぶぷべぺぼぽバパビピブプベペボポ,,0x001D5C20,
-日月火水木金土,SuMoTuWeThFrSa,0x001D6914,
-まもなくエントリー受付終了,Entry closing soon,0x001D69BC,
-エントリーメンバー,Entry Members,0x001D6AE0,
-開催準備中,Preparing,0x001D6AF4,
-しばらく,Please,0x001D6B00,
-お待ちください,wait,0x001D6B0C,
-Ａボタンを押してください,Press A button,0x001D6B1C,
-しばらくお待ちください・・・,Please wait...,0x001D6B38,
-ＳＥＩＧＩ,Seigi,0x001D6CFD,
-ＭＡＫＯＴＯ,Makoto,0x001D6D08,
-ＴＯＭＯ,Tomo,0x001D6D15,
-デミトリ,Demitri,0x001D6D2A,
-フォッカー,Fokker,0x001D6D33,
-アレックス,Alex,0x001D6D3E,
-ジュンペイ,Junpei,0x001D6D49,
-ヒリュウ,Hiryuu,0x001D6D54,
-キャミィ,Cammy,0x001D6D6E,
-レイレイ,Lei-Lei,0x001D6D77,
-ジューン,June,0x001D6D87,
-参加じゃい,Joining!,0x001D6EDC,
-１人＋１,　1P+1,0x001D6F66,
-１人＋２,　1P+2,0x001D6F6F,
-１人＋３,　1P+3,0x001D6F78,
-２人＋１,　2P+1,0x001D6F8A,
-２人＋２,　2P+2,0x001D6F93,
-３人＋１,　3P+1,0x001D6FA5,
-２人, 2P,,
-３人, 3P,,
-４人, 4P,,
-ＮＯ　ＤＡＴＡ,No data,0x001D7020,
-ターン目,Turn,0x001D7030,
-ポートＡ,Port A,0x001D70A0,
-ポートＢ,Port B,0x001D70AC,
-ポートＣ,Port C,0x001D70B8,
-ポートＤ,Port D,0x001D70C4,
-完全燃焼技　２,Burning Vigor 2,0x001D71A4,
-完全燃焼技　３,Burning Vigor 3,0x001D71B8,
-完全燃焼技　４,Burning Vigor 4,0x001D71CC,
-全キャラ友好度＋５,All Friendship +5,0x001D71F4,
-１８ｘ１８：ただいまマイクのテスト中・・・,18x18: Mic test...,0x001D7268,
-２０ｘ２０：ただいまマイクのテスト中・・・,20x20: Mic test...,0x001D7294,
-２２ｘ２２：ただいまマイクのテスト中・・・,22x22: Mic test...,0x001D72C0,
-２４ｘ２４：ただいまマイクのテスト中・・・,24x24: Mic test...,0x001D72EC,
-２６ｘ２６：ただいまマイクのテスト中・・・,26x26: Mic test...,0x001D7318,
-学園祭に参加する,Join School Festival,0x001D7358,
-続きから始める,Continue,0x001D736C,
-ビンゴ表,BingoCrd,0x001D7500,
-視点変更,ChngView,0x001D750C,
-マス説明,TileInfo,0x001D7518,
-キャンセル,Cancel,0x001D7524,
-ボーナスチェックポイント,Bonus Checkpoint,0x001D75BC,
-プレイヤー,Player,0x001D76A8,
-ジャスキャラ,Jas Char,0x001D76B8,
-ゲームの目的,Game Goal,0x001D76D8,
-ＥＤＩＴキャラを作るには,How to Make EDIT,0x001D76E8,
-ゲームの流れについて,Game Flow,0x001D7704,
-ＭＡＰの説明,MAP Guide,0x001D771C,
-戦闘について,About Battle,0x001D772C,
-ジャスキャラについて,About Jas Chars,0x001D773C,
-全パラメータ　レベル＋１,All Params Level +1,0x001D777C,
-完全燃焼　１,Burning 1,0x001D77C8,
-完全燃焼　２,Burning 2,0x001D77D8,
-完全燃焼　３,Burning 3,0x001D77E8,
-完全燃焼　４,Burning 4,0x001D77F8,
-校舎３Ｆ,Bldg 3F,0x001D8028,
-校舎２Ｆ,Bldg 2F,0x001D8031,
-校舎１Ｆ,Bldg 1F,0x001D803A,
-グラウンド北,North Ground,0x001D8058,
-グラウンド南,South Ground,0x001D8065,
-生徒会室,SCouncil,0x001D8088,
-進路指導室,GuidancOfc,0x001D8091,
-家庭科室,HmEcRoom,0x001D80B1,
-風紀委員会室,DisciplnRoom,0x001D80C8,
-新聞部部室,News Club,0x001D80F1,
-職員室・西,Staff West,0x001D80FC,
-職員室・東,Staff East,0x001D8107,
-購買部１,Shop 1,0x001D8119,
-購買部２,Shop 2,0x001D8122,
-化学部部室,Chem Club,0x001D8132,
-水泳部部室,Swim Club,0x001D813D,
-バレー部部室,Volley Club,0x001D8148,
-テニス部部室,Tennis Club,0x001D8155,
-野球部部室,BasebClb,0x001D8162,
-サッカー部部室,Soccer Club,0x001D816D,
-相撲部部室,Sumo Club,0x001D817C,
-応援団部室,Cheer Club,0x001D8187,
-パラメータアップマス,Param Up Tile,0x001D8192,
-攻撃力がアップします,Attack goes up,0x001D81C4,
-（ＨＰ消費）,(Uses HP),0x001D81DD,
-防御力がアップします,Defense goes up,0x001D8228,
-体力がアップします,Stamina goes up,0x001D828C,
-根性がアップします,Guts goes up,0x001D82F0,
-潜在能力,Potential,0x001D833B,
-潜在能力がアップします,Potential goes up,0x001D8354,
-知力がアップします,Int goes up,0x001D83B8,
-パラメータダウンマス,Param Down Tile,0x001D83EA,
-パラメータのどれか一つが,One param goes,0x001D841C,
-ダウンします（ＨＰ回復）,down (HP recover),0x001D8435,
-２パラメータ間で経験値を,Transfer EXP between,0x001D8480,
-受け渡します（ＨＰ消費）,2 params (Uses HP),0x001D8499,
-カードゲットマス,Get Card Tile,0x001D84B2,
-カードが一枚手に入ります,Get one card,0x001D84E4,
-技ゲットマス,Get Mve Tile,0x001D8516,
-必殺技を手に入れることが,Can get a special,0x001D8548,
-できます（ＨＰ回復）,move (HP recover),0x001D8561,
-チェックポイント,Checkpoint,0x001D857A,
-国語の単位を,Japanese credits,0x001D85AC,
-手に入れることができます,can be obtained,0x001D85C5,
-英語の単位を,Engl creds,0x001D8610,
-数学の単位を,Math creds,0x001D8674,
-理科の単位を,Science creds,0x001D86D8,
-社会の単位を,Soc St creds,0x001D873C,
-美術の単位を,Art creds,0x001D87A0,
-音楽の単位を,Music creds,0x001D8804,
-体育の単位を,PE creds,0x001D8868,
-カードが三枚手に入ります,Get three cards,0x001D88CC,
-パラメータランダムマス,Random Param Tile,0x001D88FE,
-全パラメータがランダムに,All params randomly,0x001D8930,
-上下します（ＨＰ消費）,change (Uses HP),0x001D8949,
-必殺技変更マス,Change Move Tile,0x001D8962,
-ＥＤＩＴキャラの技の,Change EDIT char,0x001D8994,
-組み合わせを変更します,move combination,0x001D89AD,
-忌野流残酷斬,Imano Slash,0x001D9D63,
-Ｗ気合暗黒弾,WSpiritDkOrb,0x001D9D7D,
-粛清の嵐,PurgStrm,0x001D9E28,
-スクリューパイルＤ,Screw Pile D,0x001D9EF8,
-空中気合弾,Air Spirit Ball,0x001D9FA4,
-空中幻影キック,Air Phantom Kick,0x001D9FD4,
-空中炎舞脚,Air Fire Kick,0x001D9FF0,
-空中エキサイティングＫ,Air Exciting K,0x001D9FFC,
-ＷスクリューパイルＤ,W Screw Pile D,0x001DA054,
-空中号外！,Air Extra!,0x001DA0FC,
-空中回診,Air Rounds,0x001DA128,
-千裂脚／島津流雷鋭蹴,1000 Kicks/Thunder,0x001DA150,
-空中正波拳,Air Wave Fist,0x001DA1F8,
-空中夜叉車,Air Yaksha Cart,0x001DA204,
-居合い斬り,Iai Slash,0x001DA280,
-空中熱血竹刀,Air Hot Kendo,0x001DA2D0,
-空中超剛速球,Air Super Fastball,0x001DA3A0,
-空中飛び込み,Air Dive,0x001DA3B0,
-空中入魂サーブ,Air Soul Serve,0x001DA3C0,
-空中シャイニングセーブ,Air Shining Save,0x001DA4C4,
-Ｆグラップルビート,F Grapple Beat,0x001DA580,
-忌野流　モズ落とし,Imano Shrike Drop,0x001DA5F0,
-空中裏斬り,AirBackCut,0x001DA6BC,
-空中破戒の鉄鎖,Air Ruin Chain,0x001DA6C8,
-空中破壊,Air Destroy,0x001DA6D8,
-空中悲恋のセレナーデ,Air Sad Serenade,0x001DA75C,
-ヘブンズクロス,Heaven Cross,0x001DA82C,
-豪快スライディング,Bold Slide,0x001DA8F8,
-豪快キック,Bold Kick,0x001DA90C,
-破天無影蹴,Shadow Kick,0x001DA918,
-空中ダブル幻影キック,Air Dbl Phantom Kick,0x001DA958,
-空中螺旋炎舞脚,Air Spin Fire,0x001DA970,
-佝佝佝佝佝,,0x001DC3E5,
-炎旧克悃棔,,0x001F1A4C,
-アイウエオＡＢＣＤＥカキクケコＦＧＨＩＪサシスセソＫＬＭＮＯタチツテトＰＱＲＳＴナニヌネノＵＶＷＸＹハヒフヘホＺ１２３４マミムメモ５６７８９ラリルレロ０,,0x00334028,
-ＥＡＳＹ,EASY,0x0033E0CC,
-ＮＯＲＭＡＬ,NORMAL,0x0033E0D5,
-ＨＡＲＤ,HARD,0x0033E0E2,
-五　輪　高　校,Gorin High,0x0033F717,
-パシフィックハイスクール,Pacific High School,0x0033F726,
-外　道　高　校,Gedo High,0x0033F73F,
-聖　純　女　学　院,Seijun Girls Academy,0x0033F75F,
-漁夫の利,Reap Benefits,0x0033F9D8,
-書き直し,Rewrite,0x0033FCEB,
-ボードゲーム用名前：,Board Game Name:,0x0033FCF4,
-格闘ゲーム用名前　：,Fighting Name:,0x0033FD09,
-性別　　　　　　　：,Gender:,0x0033FD1E,
-学校　　　　　　　：,School:,0x0033FD33,
-学科　　　　　　　：,Course:,0x0033FD48,
-好きな言葉　　　　：,Motto:,0x0033FD5D,
-パシフィック,Pacific,0x003409CA,
-ジャスティス,Justice,0x003409E0,
-ねこまる,Nekomaru,0x003453CC,
-狭  慫,,0x00357110,
-裁肖犀団,,0x003690C0,
-濮痼舮蛟躄,,0x0038CCD2,
-瀚選 稈,,0x003930DD,
-窶縲艢蛟,,0x00395362,
+"japanese","english","offset","notes"
+"ひなた","Hinata","0x001D0A4C","Auto-found name/menu item"
+"委員長","Chrpsn","0x001D0AD4","Auto-found name/menu item"
+"アキラ","Akira","0x001D0AA0","Auto-found name/menu item"
+"エッジ","Edge","0x001D0A98","Auto-found name/menu item"
+"いいえ","No","0x001CD254","Auto-found name/menu item"
+"恭　介","Kyosuk","",""
+"も　も","Momo","0x001D0B00","Auto-found name/menu item"
+"九　郎","Kuro","0x001D0ABC","Auto-found name/menu item"
+"隼　人","Hayato","0x001D0AE4","Auto-found name/menu item"
+"流　　","Nagare","0x001D0AF4","Auto-found name/menu item"
+"　流　","Nagare","0x001D0AF4","Auto-found name/menu item"
+"雷　蔵","Raizo","0x00344FB7","Auto-found name/menu item"
+"響　子","Kyoko","0x001D0AB4","Auto-found name/menu item"
+"英　雄","Eiyu","0x001D0AAC","Auto-found name/menu item"
+"ロ　イ","Roy","0x001D0A74","Auto-found name/menu item"
+"将　馬","Shoma","0x001D0A5C","Auto-found name/menu item"
+"ザ　キ","Zaki","0x001D0AF8","Auto-found name/menu item"
+"バ　ツ","Batsu","0x001D0A44","Auto-found name/menu item"
+"メモリーカードがありません","No Memory Card","0x001CB8FC",""
+"フォーマットされていません","Not Formatted","0x001CB918",""
+"メモリーカードがいっぱいです","Memory Card Full","0x001CB934",""
+"ファイルがありません","No File Found","0x001CB954",""
+"ファイルがあります","File Exists","0x001CB96C",""
+"オープンできません","Cannot Open","0x001CB980",""
+"作成できません","Cannot Create","0x001CB994",""
+"実行ファイルがあります","Executable Exists","0x001CB9A4",""
+"アクセスできません","Cannot Access","0x001CB9BC",""
+"ベリファイエラー","Verify Error","0x001CB9D0",""
+"ゲームのご感想・ご意見をメールでも受け付けます！","Send feedback via email!","0x001CBFCC",""
+"メールのタイトルを必ず　　　　　　　　　　　　として、","Use the title below:","0x001CC000",""
+"「ジャスティス学園感想」","Justice High Feedback","0x001CC038",""
+"までお送りください。","Please send to us.","0x001CC068",""
+"オートロード","Auto Load","0x001CC690",""
+"オートセーブ","Auto Save","0x001CC6A0",""
+"のファイルをロードしています…","Loading file...","0x001CC6B4",""
+"メモリーカードを抜かないでください！","Do not remove card!","0x001CC6E0",""
+"のファイルのロードに成功しました。","File loaded OK.","0x001CC708",""
+"これ以降はこのメモリーカードが","This Memory Card will","0x001CC738",""
+"オートセーブの対象となります。","be used for Auto Save.","0x001CC758",""
+"電源を切るまでこのメモリーカードを","Do not remove this card","0x001CC778",""
+"抜かないでください。","until power off.","0x001CC79C",""
+"メモリーカードがありません。","No Memory Card.","0x001CC7B4",""
+"メモリーカードの接続を確認してください。","Check card connection.","0x001CC7D4",""
+"ファイルのセーブには　ブロックの空きが必要です。","Save needs free blocks.","0x001CC800",""
+"Ａボタンを押すともう一度チェックします。","Press A to check again.","0x001CC834",""
+"ＳＴＡＲＴボタンを押すとゲームを続行できますが、","Press START to continue but","0x001CC860",""
+"ゲームの内容はセーブされません。","game will not be saved.","0x001CC894",""
+"のファイルのロードに失敗しました。","Failed to load file.","0x001CC8B8",""
+"ファイルがありませんでした。","File not found.","0x001CC8E8",""
+"Ａボタンを押すと新しくデータを作成します。","Press A to create data.","0x001CC908",""
+"にファイルをセーブしています…","Saving file...","0x001CC934",""
+"のファイルのセーブに成功しました。","File saved OK.","0x001CC960",""
+"メモリーカードの容量が不足しています。","Not enough card space.","0x001CC990",""
+"のファイルのセーブに失敗しました。","Failed to save file.","0x001CC9B8",""
+"のメモリーカードが、","This Memory Card is","0x001CC9E8",""
+"以前セーブしたものではありません。","not the saved one.","0x001CCA0C",""
+"正しいメモリーカードを接続してください。","Insert correct card.","0x001CCA30",""
+"Ａボタンを押すと現在のファイルを上書きします。","Press A to overwrite.","0x001CCA5C",""
+"ダウンロードファイルをチェックしています…","Checking download...","0x001CCA8C",""
+"ダウンロードファイルのおまけ情報を、","Download bonus info","0x001CCAB8",""
+"システムファイルに書き込むのに成功しました。","saved to system file.","0x001CCAE0",""
+"ダウンロードファイルは消去されました。","Download deleted.","0x001CCB10",""
+"システムファイルに書き込むのに失敗しました。","Failed to write file.","0x001CCB38",""
+"のメモリーカードに、","On this Memory Card","0x001CCB68",""
+"ＥＤＩＴキャラのダウンロードファイルがあります。","EDIT char file exists.","0x001CCB8C",""
+"「ＥＤＩＴ管理」でキャラを読みこんでください。","Load in EDIT Manager.","0x001CCBC0",""
+"ＡＵＴＯＬＯＡＤ","AUTOLOAD","0x001CCBF0",""
+"ＡＵＴＯＳＡＶＥ","AUTOSAVE","0x001CCC04",""
+"メモリーカードにファイルを作成します。","Creating file on card.","0x001CD2A8",""
+"よろしいですか？","Are you sure?","0x001CD2D0",""
+"ファイルをセーブしています。","Saving file.","0x001CD2E8",""
+"電源を切ったり","Do not power off","0x001CD308",""
+"メモリーカードを抜いたりしないで下さい。","or remove card.","0x001CD318",""
+"セーブしました。","Saved.","0x001CD344",""
+"何かボタンを押してください。","Press any button.","0x001CD358",""
+"すでにファイルが存在します。","File already exists.","0x001CD378",""
+"上書きしてもよろしいですか？","Overwrite file?","0x001CD398",""
+"空きブロックがたりません。","Not enough blocks.","0x001CD3B8",""
+"正しくセーブできませんでした。","Save failed.","0x001CD3D4",""
+"メモリーカードのファイルをロードします。","Loading card file.","0x001CD3F4",""
+"ファイルをロードしています。","Loading file.","0x001CD420",""
+"ロードしました。","Loaded.","0x001CD440",""
+"「燃えろ！ジャスティス学園」の","Rival Schools","0x001CD454",""
+"システムファイルがありません。","system file missing.","0x001CD474",""
+"正しくロードできませんでした。","Load failed.","0x001CD494",""
+"メモリーカードの認識中です。","Reading Memory Card.","0x001CD4B4",""
+"メモリーカードを認識できませんでした。","Cannot read card.","0x001CD4D4",""
+"メモリーカードの接続を確認して下さい。","Check card connection.","0x001CD4FC",""
+"日記ファイルがありません。","No diary file.","0x001CD524",""
+"ＥＤＩＴファイルがありません。","No EDIT file.","0x001CD540",""
+"ネットワークに入ると、セーブしていない","Network may cause","0x001CD74C",""
+"データが失われることがあります。","unsaved data loss.","0x001CD774",""
+"セーブしますか？","Save?","0x001CD79C",""
+"：はい　　　　：いいえ",":Yes      :No","0x001CD7B0",""
+"アーケード版「燃えろ！ジャスティス学園」を","Play arcade version","0x001CD7CC",""
+"プレイすることができます。乱入対戦も可能です。","of Rival Schools.","0x001CD7F8",""
+"２人対戦の専用モードです。","2-player VS mode.","0x001CD828",""
+"連続技や必殺技のトレーニングができます。","Practice combos.","0x001CD848",""
+"もちろんＥＤＩＴキャラを使うこともできます。","EDIT chars can be used.","0x001CD874",""
+"２〜６チームの総当たり戦。","2-6 team round robin.","0x001CD8A4",""
+"勝敗数でチームの順位が決まります。","Rank by wins/losses.","0x001CD8C0",""
+"８チームによる勝ち抜き戦。","8 team elimination.","0x001CD8E4",""
+"最後まで勝ち残ったチームが優勝します。","Last team wins.","0x001CD900",""
+"４人までプレイ可能の学園生活ボードゲームです。","Board game for 4.","0x001CD928",""
+"ＥＤＩＴキャラクターを作成することができます。","Create EDIT chars.","0x001CD958",""
+"ネットワークに接続します。","Connect to Network.","0x001CD988",""
+"通信対戦をしたりホームページを見る事ができます。","Online play and web.","0x001CD9A4",""
+"ＥＤＩＴキャラを使うための登録や削除をします。","Manage EDIT chars.","0x001CD9D8",""
+"ダウンロードやパスワードのキャラ管理もここで。","Download and password.","0x001CDA08",""
+"ボタン設定や難易度、ゲームのルールなどを","Button config and rules","0x001CDA38",""
+"自由に変更できます。","can be changed.","0x001CDA64",""
+"メモリーカードのデータをセーブしたり","Save or load data","0x001CDA7C",""
+"ロードしたりできます。","from Memory Card.","0x001CDAA4",""
+"ストーリー、エンディングなどのデモや","View story demos","0x001CDABC",""
+"サウンドを楽しむことができます。","and enjoy sound.","0x001CDAE4",""
+"Ａ・Ｂポート両方にコントローラが必要です。","Controllers in A and B.","0x001CDB08",""
+"ドリームパスポートで","Use Dream Passport","0x001CDB34",""
+"ネットワークの設定をしてください。","to set up network.","0x001CDB4C",""
+"コンピュータの強さを８段階で設定します。","CPU strength: 8 levels.","0x001CDE18",""
+"数字が大きいほどコンピュータが強くなります。","Higher = stronger CPU.","0x001CDE44",""
+"攻撃力を４段階で設定します。","Attack: 4 levels.","0x001CDE74",""
+"数字が大きいほど攻撃のダメージが大きくなります。","Higher = more damage.","0x001CDE94",""
+"タイマースピードを５段階で設定します。","Timer: 5 levels.","0x001CDEC8",""
+"数字が大きいほど制限時間が短くなります。","Higher = less time.","0x001CDEF0",""
+"ＣＰＵ対戦時の勝ちぬき本数を設定します。","Set rounds vs CPU.","0x001CDF1C",""
+"１〜３マッチから選べます。","Choose 1-3 matches.","0x001CDF48",""
+"人間ｖｓ人間対戦時の勝ちぬき本数を設定します。","Set human vs human.","0x001CDF64",""
+"「あり」でコンティニューすると、同じキャラで","With ON continue uses","0x001CDF94",""
+"試合がはじまります。キャラ選択画面に行きません。","same char. No select.","0x001CDFC4",""
+"サウンド出力を「ステレオ」と「モノラル」から","Audio: Stereo or Mono.","0x001CDFF8",""
+"選択します。","Select.","0x001CE028",""
+"ゲーム中に流れるＢＧＭのボリュームを","BGM volume:","0x001CE038",""
+"１６段階で調節できます。","16 levels.","0x001CE060",""
+"ゲーム中のＳＥのボリュームを","SE volume:","0x001CE07C",""
+"コントローラのボタン設定を変更します。","Change buttons.","0x001CE09C",""
+"ゲームシステムの設定を変更します。","Change game settings.","0x001CE0C4",""
+"設定を初期状態に戻します。","Reset to default.","0x001CE0E8",""
+"ＭＯＤＥ　ＳＥＬＥＣＴ画面に戻ります。","Back to MODE SELECT.","0x001CE104",""
+"一つ前の画面に戻ります。","Back to prev screen.","0x001CE12C",""
+"熱血受け身は通常どおり可能です。","Hot-Blood Recovery OK.","0x001CE51C",""
+"制限はありません。","No restrictions.","0x001CE540",""
+"熱血受け身は可能ですが、","Hot-Blood OK but","0x001CE554",""
+"熱血受け身の最中、完全無敵ではありません。","not fully invincible.","0x001CE570",""
+"着地の時のみ熱血受け身が可能ですが、","Only on landing but","0x001CE59C",""
+"空中では受け身が取れません。","no air recovery.","0x001CE5C4",""
+"熱血受け身が一切できません。","No Hot-Blood Recovery.","0x001CE5E4",""
+"ＥＤＩＴキャラ以外は、","Except EDIT chars","0x001CE604",""
+"根性ゲージ３本で試合開始になります。","start with 3 Guts.","0x001CE61C",""
+"ＥＤＩＴキャラも含めて、","Including EDIT chars","0x001CE644",""
+"根性ゲージ５本で試合開始になります。","start with 5 Guts.","0x001CE660",""
+"根性ゲージ０本で試合開始になります。","Start with 0 Guts.","0x001CE688",""
+"根性ゲージが常にＭＡＸになり、","Guts always MAX and","0x001CE6B0",""
+"ゲージ消費攻撃が使い放題になります。","gauge attacks free.","0x001CE6D0",""
+"根性ゲージが常に０になり、","Guts always 0 and","0x001CE6F8",""
+"ゲージ消費攻撃が一切使えません。","no gauge attacks.","0x001CE714",""
+"上下段の違い以外は、自動的にガードします。","Auto guard high/low.","0x001CE738",""
+"レバーガード操作を","Lever guard must be","0x001CE764",""
+"自分で行なわなければなりません。","done manually.","0x001CE778",""
+"通常どおりバックジャンプすることができます。","Back jump normal.","0x001CE79C",""
+"バックジャンプが一切できなくなります。","No back jump.","0x001CE7CC",""
+"通常どおり、次のラウンドで使用するキャラを","Next round char can","0x001CE7F4",""
+"自由に選択することができます。","be freely selected.","0x001CE820",""
+"勝敗にかかわらず、次のラウンドでは","Win or lose next round","0x001CE840",""
+"必ずキャラが交代します。","char must switch.","0x001CE864",""
+"勝った時、次のラウンドでは","When you win","0x001CE880",""
+"負けた時、次のラウンドでは","When you lose","0x001CE89C",""
+"キャラ交代が一切できなくなります。","No char switching.","0x001CE8B8",""
+"通常どおり２プラトンが使用可能です。","2-Platoon OK.","0x001CE8DC",""
+"２プラトンが一切使用できません。","No 2-Platoon.","0x001CE904",""
+"通常どおり３プラトンが使用可能です。","3-Platoon OK.","0x001CE928",""
+"３プラトンが一切使用できません。","No 3-Platoon.","0x001CE950",""
+"通常どおりピヨります。","Dizzy normal.","0x001CE974",""
+"一切ピヨらなくなります。","No dizzy.","0x001CE98C",""
+"オプション画面に戻ります。","Back to Options.","0x001CE9A8",""
+"Ａボタンでファイルをロードします。","Press A to load.","0x001CEF44",""
+"メモリーカードを選択してください。","Select Memory Card.","0x001CEF68",""
+"Ａボタンでファイルをセーブします。","Press A to save.","0x001CEF8C",""
+"セーブには２ブロックの空き容量が必要です。","Needs 2 free blocks.","0x001CEFFC",""
+"セーブには１０ブロックの空き容量が必要です。","Needs 10 free blocks.","0x001CF028",""
+"セーブには６ブロックの空き容量が必要です。","Needs 6 free blocks.","0x001CF058",""
+"ＣＰＵ同士の対戦を見るモードです。","Watch CPU vs CPU.","0x001CF1B0",""
+"対戦するステージの背景を見るモードです。","View stage backgrounds.","0x001CF1D4",""
+"アーケードモードのストーリーデモを見るモードです。","View Arcade story.","0x001CF200",""
+"クリアしたストーリーのデモしか選択できません。","Cleared stories only.","0x001CF234",""
+"燃えろ！熱血青春日記のエンディングを見ます。","View diary endings.","0x001CF264",""
+"グッドエンディングを見たキャラしか選択できません。","Good endings only.","0x001CF294",""
+"燃えろ！熱血青春日記のコマキャラを見ます。","View diary panels.","0x001CF2C8",""
+"ゲーム中のＢＧＭを聞くモードです。","Listen to BGM.","0x001CF2F4",""
+"キャラクターのボイスを聞くモードです。","Listen to voices.","0x001CF318",""
+"スタッフロールを見るモードです。","View staff credits.","0x001CF340",""
+"一度でも見ていると選択できるようになります。","Viewable after seen.","0x001CF364",""
+"アーケードモードのランキングを見るモードです。","View Arcade rankings.","0x001CF394",""
+"鑑賞するステージを選択してください。","Select stage to view.","0x001CF568",""
+"見たいキャラを選択してください。","Select char to view.","0x001CF5C0",""
+"通信対戦ロビーへ接続します。","Connect to lobby.","0x001CF5E4",""
+"「燃えろ！ジャスティス学園」のオフィシャル","Official Rival Schools","0x001CF604",""
+"ホームページへ接続します。","homepage connect.","0x001CF630",""
+"ランキングや自分の作成したＥＤＩＴキャラの","Rankings and chars","0x001CF64C",""
+"アップロードファイルを作成することができます。","can be uploaded.","0x001CF678",""
+"メニューに戻ります。","Return to menu.","0x001CF6A8",""
+"キャラ回転","Rot. Char","0x001CF70C",""
+"モーション切り替え","Change Motion","0x001CF718",""
+"ウインドウ消去","Hide Window","0x001CF734",""
+"ＥＸＩＴ","EXIT","0x001CF744",""
+"フットワーク","Footwork","0x001CF750",""
+"喜び・勝ち","Joy/Victory","0x001CF770",""
+"すれ違いあいさつ","Passing Greet","0x001CF784",""
+"ダメージ","Damage","0x001CF7A8",""
+"ポカポカパンチ","Poka Punch","0x001CF7BC",""
+"気合タメ","Spirit Charge","0x001CF7CC",""
+"ぐるぐるぶっ飛び","Spin Launch","0x001CF7D8",""
+"ぐるぐるパンチタメ","Spin Punch Chrg","0x001CF7EC",""
+"ぐるぐるアッパー","Spin Upper","0x001CF800",""
+"パートナーＡ","Partner A","0x001CF814",""
+"パートナーＢ","Partner B","0x001CF824",""
+"あまり使わない","Rarely Use","0x001CF834",""
+"よく使う","Often Use","0x001CF84C",""
+"とてもよく使う","Use Very Often","0x001CF858",""
+"を登録します。","will register.","0x001CF880",""
+"をセーブする","Save","0x001CF890",""
+"ＥＤＩＴキャラのステータスやコマンド表の確認と","Check EDIT stats and","0x001CF8F4",""
+"ＣＰＵエディットを行うことができます。","perform CPU Edit.","0x001CF924",""
+"ＥＤＩＴキャラを他のメモリーカードにコピーする","Copy EDIT char to","0x001CF94C",""
+"ことができます。","another card.","0x001CF97C",""
+"いらなくなったＥＤＩＴキャラをメモリーカードから","Delete unwanted EDIT","0x001CF990",""
+"削除することができます。","chars from card.","0x001CF9C4",""
+"ホームページからダウンロードしたＥＤＩＴキャラを","Register downloaded","0x001CF9E0",""
+"メモリーカードに登録することができます。","EDIT chars to card.","0x001CFA14",""
+"パスワード入力からＥＤＩＴキャラをメモリーカード","Register EDIT via","0x001CFA40",""
+"に登録することができます。","password entry.","0x001CFA74",""
+"メニュー画面に戻ります。","Back to menu screen.","0x001CFA90",""
+"ＥＤＩＴキャラをＣＰＵとして使う時の","When using as CPU","0x001CFAAC",""
+"技使用率の設定を行うことができます。","set move usage rate.","0x001CFAD4",""
+"ＥＤＩＴキャラの詳しいステータスを","View detailed EDIT","0x001CFAFC",""
+"見ることができます。","char status.","0x001CFB20",""
+"ＥＤＩＴキャラの持っている必殺技の","View EDIT special","0x001CFB38",""
+"コマンド表を見ることができます。","move commands.","0x001CFB5C",""
+"ＥＤＩＴキャラのデータをパスワードに","Convert EDIT data","0x001CFB80",""
+"変換します。","to password.","0x001CFBA8",""
+"前の画面に戻ります。","Back to prev screen.","0x001CFBB8",""
+"ＥＤＩＴキャラをロードする","Load EDIT char","0x001CFBD0",""
+"メモリーカードを選んでください。","Select Memory Card.","0x001CFBEC",""
+"はい：　　　　　　いいえ：","Yes:        No:","0x001CFC3C",""
+"メモリーカードを抜いたりしないでください。","Do not remove card.","0x001CFC88",""
+"どのＥＤＩＴキャラをコピーしますか？","Which EDIT to copy?","0x001CFD68",""
+"ＥＤＩＴキャラ選択：","EDIT Char Select:","0x001CFD90",""
+"決定：　　　　　　キャンセル：","Confirm:     Cancel:","0x001CFDA8",""
+"ＥＤＩＴファイルの認識中です。","Reading EDIT file.","0x001CFDF0",""
+"ＥＤＩＴファイルを認識できませんでした。","Cannot read EDIT file.","0x001CFE10",""
+"コピーしました。","Copied.","0x001CFEC4",""
+"どこにセーブしますか？","Where to save?","0x001CFEF8",""
+"場所選択：","Select Slot:","0x001CFF10",""
+"そこには既にデータがあります。","Data already exists.","0x001CFF1C",""
+"どのＥＤＩＴキャラを削除しますか？","Which EDIT to delete?","0x001CFF5C",""
+"このＥＤＩＴキャラを削除します。","Delete this EDIT char.","0x001CFF80",""
+"削除しました。","Deleted.","0x001CFFA4",""
+"どのＥＤＩＴキャラの技使用率を設定しますか？","Set which move rate?","0x001CFFB4",""
+"どのＥＤＩＴキャラのステータスを表示しますか？","Show which status?","0x001CFFE4",""
+"どのＥＤＩＴキャラのコマンド表を表示しますか？","Show which commands?","0x001D0014",""
+"どのＥＤＩＴキャラのパスワードを表示しますか？","Show which password?","0x001D0044",""
+"登録しました。","Registered.","0x001D0074",""
+"ダウンロードファイルがある","Download file exists","0x001D0098",""
+"ダウンロードファイルがありません。","No download file.","0x001D00B4",""
+"ＥＤＩＴキャラが登録されていません。","No EDIT registered.","0x001D00D8",""
+"必殺技がないのでＣＰＵエディットできません。","No specials for CPU.","0x001D0100",""
+"ＣＰＵエディットの内容が変更されました。","CPU Edit changed.","0x001D0130",""
+"メモリーカードにセーブしないと","If not saved to card","0x001D015C",""
+"ＣＰＵエディットの内容が適用されません。","CPU Edit not applied.","0x001D017C",""
+"本当に終了してもよろしいですか？","Really quit?","0x001D01A8",""
+"アップロードファイルを作成します。","Creating upload file.","0x001D01F0",""
+"ＮＥＴＷＯＲＫメニューに戻ります。","Back to NETWORK menu.","0x001D0214",""
+"ファイルにＥＤＩＴキャラを登録しますか？","Register EDIT to file?","0x001D0238",""
+"（ランキング情報は自動的に登録されます）","(Rankings auto-reg)","0x001D0264",""
+"ＥＤＩＴキャラが一人もいません。","No EDIT chars exist.","0x001D0290",""
+"どのＥＤＩＴキャラを登録しますか？","Which EDIT to reg?","0x001D02B4",""
+"このＥＤＩＴキャラを登録します。","Register this EDIT.","0x001D02D8",""
+"アップロードファイルをセーブする","Save upload file","0x001D02FC",""
+"アップロードファイルが既に存在します。","Upload file exists.","0x001D034C",""
+"アップロードファイルを作成しました。","Upload file created.","0x001D0374",""
+"ホームページへ接続し、登録してください。","Connect and register.","0x001D03C8",""
+"生徒選抜","Tryouts","0x001D0408",""
+"ジャスティス学園採石場","Justice Quarry","0x001D041C",""
+"太陽学園屋上","Taiyo Rooftop","0x001D0434",""
+"青春駅前広場","Youth Station","0x001D0444",""
+"根性神社","Guts Shrine","0x001D0454",""
+"ジギーパーク","Ziggy Park","0x001D0460",""
+"大和川堤防","Yamato Levee","0x001D0470",""
+"五輪ドーム","Gorin Dome","0x001D047C",""
+"聖純女学院中庭","Seijun Garden","0x001D0488",""
+"太陽学園教室","Taiyo Classroom","0x001D0498",""
+"ジャスティス学園","Justice High","0x001D04A8",""
+"再び立ち上がれ","Rise Again","0x001D04C4",""
+"勝利の足跡","Path to Victory","0x001D04DC",""
+"ストーリー 〜不安","Story - Anxiety","0x001D04E8",""
+"ストーリー 〜疑惑","Story - Doubt","0x001D04FC",""
+"ストーリー 〜もも","Story - Momo","0x001D0510",""
+"ストーリー 〜緊張","Story - Tension","0x001D0524",""
+"ストーリー 〜絶望","Story - Despair","0x001D0538",""
+"ストーリー 〜野望","Story - Ambition","0x001D054C",""
+"ストーリー 〜和解","Story - Truce","0x001D0560",""
+"ストーリー 〜希望","Story - Hope","0x001D0574",""
+"ストーリー 〜孤高","Story - Solitude","0x001D0588",""
+"ストーリー 〜予感","Story - Omen","0x001D059C",""
+"ストーリー 〜決意","Story - Resolve","0x001D05B0",""
+"ストーリー 〜帰還","Story - Return","0x001D05C4",""
+"ストーリー 〜封印","Story - Seal","0x001D05D8",""
+"エンディング 〜太陽学園","Ending - Taiyo","0x001D05EC",""
+"エンディング 〜太陽学園２","Ending - Taiyo 2","0x001D0604",""
+"エンディング 〜五輪高校","Ending - Gorin","0x001D0620",""
+"エンディング 〜五輪高校２","Ending - Gorin 2","0x001D0638",""
+"エンディング 〜外道高校","Ending - Gedo","0x001D0654",""
+"エンディング 〜聖純女学院","Ending - Seijun","0x001D066C",""
+"エンディング 〜パシフィックＨＳ","Ending - Pacific","0x001D0688",""
+"エンディング 〜ジャスティス学園","Ending - Justice","0x001D06A8",""
+"エンディング 〜暗黒生徒会","Ending - Dark","0x001D06C8",""
+"エンディング 〜相性診断","Ending - Chemistry","0x001D06E4",""
+"ジャスティス制作委員会","Justice Committee","0x001D06FC",""
+"ぼ〜どげ〜む","Board Game","0x001D0714",""
+"きゃらくた〜めいく","Character Make","0x001D0724",""
+"そろそろおわり","Almost Done","0x001D0740",""
+"いちばんはだれ？","Who is Number 1?","0x001D0750",""
+"で、けっきょく．．．。","So in the end...","0x001D0764",""
+"らぶらぶえんでぃんぐ","Love Love Ending","0x001D077C",""
+"ロベルト","Roberto","0x001D0A68",""
+"ティファニー","Tiffany","0x001D0A7C",""
+"ボーマン","Bowman","0x001D0A8C",""
+"Ｐアキラ","P.Akira","0x001D0AC8",""
+"Ｗダイゴ","W.Daigo","0x001D0B20",""
+"パスワード入力を中止します。","Cancel password.","0x001D0B44",""
+"いいえ：","No:","0x001D0B80",""
+"パスワードが違います。","Wrong password.","0x001D0B94",""
+"はい：Ａ","Yes: A","0x001D0C00",""
+"いいえ：Ｂ","No: B","0x001D0C0C",""
+"所属高校","School","0x001D0C20",""
+"なかよしキャラ","Best Friend","0x001D0C2C",""
+"根性ゲージ","Guts Gauge","0x001D0C44",""
+"すごく低い","Very Low","0x001D0C70",""
+"うたれ強い","Resilient","0x001D0C8C",""
+"すごく高い","Very High","0x001D0CA0",""
+"太陽学園","Taiyo High","0x001D0CDC",""
+"五輪高校","Gorin High","0x001D0CE8",""
+"パシフィックＨＳ","Pacific HS","0x001D0CF4",""
+"外道高校","Gedo High","0x001D0D08",""
+"聖純女学院","Seijun Academy","0x001D0D28",""
+"完全燃焼技","Burning Vigor","0x001D0D54",""
+"敵の動作","Enemy Action","0x001D0D90",""
+"敵の状態","Enemy State","0x001D0DB0",""
+"起き上がり","Wake-up","0x001D0DF4",""
+"アタックデータ表示","Show Attack Data","0x001D0E08",""
+"無敵時間表示","Show Invincibility","0x001D0E30",""
+"ノーマル","Normal","0x001D0E58",""
+"マニュアル","Manual","0x001D0E88",""
+"しゃがみ","Crouch","0x001D0EC0",""
+"ジャンプ","Jump","0x001D0EE0",""
+"ハイジャンプ","High Jump","0x001D0F00",""
+"手前回り込み","Roll Forward","0x001D0F20",""
+"奥回り込み","Roll Back","0x001D0F40",""
+"立ち投げ","Stand Throw","0x001D0F60",""
+"しゃがみ投げ","Crouch Throw","0x001D0F80",""
+"コンボチェック","Combo Check","0x001D0FA0",""
+"セミオート","Semi-Auto","0x001D0FE0",""
+"完全ガード","Full Guard","0x001D1000",""
+"前受け身","Forward Roll","0x001D1020",""
+"後ろ受け身","Back Roll","0x001D1038",""
+"ランダム","Random","0x001D1068",""
+"その場起き上がり","Stand Recovery","0x001D10A8",""
+"前起き上がり","Forward Recovery","0x001D10D0",""
+"後ろ起き上がり","Back Recovery","0x001D10F8",""
+"側転起き上がり","Roll Recovery","0x001D1120",""
+"初期設定に戻す","Reset Defaults","0x001D1168",""
+"バツ失踪","Batsu Missing","0x001D119C",""
+"ロイ登場","Roy Appears","0x001D11A8",""
+"醍醐救出","Daigo Rescue","0x001D11D4",""
+"兄のヘルメット","Brother Helmet","0x001D11E8",""
+"リーグ戦をもう一度しますか？","Replay league?","0x001D1274",""
+"同じ組み合わせでしますか？","Same matchups?","0x001D1298",""
+"チームの並びを","Shuffle team","0x001D1320",""
+"シャッフルしますか？","order?","0x001D1330",""
+"もう一度しますか？","Play again?","0x001D1348",""
+"ガッツアッパー","Guts Upper","0x001D1440",""
+"三日月キック","Crescent Kick","0x001D1450",""
+"流星キック","Meteor Kick","0x001D1460",""
+"全開気合弾","Full Guts","0x001D146C",""
+"全開ガッツアッパー","Full Guts Upper","0x001D1478",""
+"全開流星キック","Full Meteor Kick","0x001D148C",""
+"気功掌底","Qigong Palm","0x001D149C",""
+"必勝連撃拳","Victory","0x001D14C0",""
+"螺旋炎舞脚","Spin Fire","0x001D14CC",""
+"クロスカッター","Cross Cutter","0x001D14D8",""
+"幻影キック","Phantom Kick","0x001D14E8",""
+"幻影ブレイカー","Phantom Break","0x001D14F4",""
+"雷神アッパー","Thunder Upper","0x001D1504",""
+"幻影ウェーブ","Phantom Wave","0x001D1514",""
+"拡散クロスカッター","Spread Cutter","0x001D1524",""
+"ダブル幻影キック","Dbl Phantom Kick","0x001D1538",""
+"スーパー雷神アッパー","Super Thunder Up","0x001D154C",""
+"超剛速球","Super Fastball","0x001D1564",""
+"大回転打法","Grand Slam","0x001D1570",""
+"一本釣り打法","Line Drive","0x001D157C",""
+"ナイアガラドロップ","Niagara Drop","0x001D158C",""
+"豪快リード","Bold Lead","0x001D15A0",""
+"分身魔球","Shadow Ball","0x001D15AC",""
+"ホームラン打法","Home Run Hit","0x001D15B8",""
+"超殺人スライディング","Killer Slide","0x001D15C8",""
+"入魂サーブ","Soul Serve","0x001D15E0",""
+"スライディングレシーブ","Slide Receive","0x001D15EC",""
+"回転レシーブ","Spin Receive","0x001D1604",""
+"完全ブロック","Perfect Block","0x001D1614",""
+"特訓スパイク","Training Spike","0x001D1624",""
+"ファイヤーサーブ","Fire Serve","0x001D1634",""
+"天井サーブ","Lob Serve","0x001D1648",""
+"ロングシュート","Long Shot","0x001D1654",""
+"シャイニングセーブ","Shining Save","0x001D1664",""
+"パーフェクトキャッチ","Perfect Catch","0x001D1678",""
+"オーバーヘッドキック","Overhead Kick","0x001D1690",""
+"バイシクルキック","Bicycle Kick","0x001D16A8",""
+"スライディングキック","Sliding Kick","0x001D16BC",""
+"フェイント","Feint","0x001D16D4",""
+"爆裂Ｖゴール","Burst V-Goal","0x001D16E0",""
+"爆裂リフティング","Burst Juggle","0x001D16F0",""
+"ダイナマイトストレート","Dynamite Straight","0x001D1704",""
+"ツイスターアッパー","Twister Upper","0x001D171C",""
+"タッチダウンウェーブ","Touchdown Wave","0x001D1730",""
+"エアダイナマイト","Air Dynamite","0x001D1748",""
+"トリプルツイスター","Triple Twister","0x001D175C",""
+"スーパータッチダウン","Super Touchdown","0x001D1770",""
+"ダイナマイトジャスティス","Dynamite Justice","0x001D1788",""
+"グルービーナックル","Groovy Knuckle","0x001D17A4",""
+"グルービーパンチ","Groovy Punch","0x001D17B8",""
+"エキサイティングキック","Exciting Kick","0x001D17CC",""
+"ビューティフルスピン","Beautiful Spin","0x001D17E4",""
+"グルービーホイール","Groovy Wheel","0x001D17FC",""
+"スタンプキック","Stamp Kick","0x001D1810",""
+"グルービースペシャル","Groovy Special","0x001D1820",""
+"ワンダフルキック","Wonderful Kick","0x001D1838",""
+"グルービースクリュー","Groovy Screw","0x001D184C",""
+"ゴッドラッシュ","God Rush","0x001D1864",""
+"ゴッドディフェンス（前）","God Defend (F)","0x001D1874",""
+"ゴッドディフェンス（後）","God Defend (B)","0x001D1890",""
+"ゴッドストレート","God Straight","0x001D18AC",""
+"ゴッドアッパー","God Upper","0x001D18C0",""
+"ゴッドフック","God Hook","0x001D18D0",""
+"ゴッドラリアット","God Lariat","0x001D18E0",""
+"ヘヴンズラッシュ","Heaven Rush","0x001D18F4",""
+"ヘヴンズクロス","Heaven Cross","0x001D1908",""
+"対空裏斬り","AA BackCut","0x001D1920",""
+"壮絶な裏斬り","Fierce Slash","0x001D193C",""
+"破天連撃","Sky Rend Combo","0x001D1974",""
+"破の連舞","Rend Dance","0x001D1988",""
+"天の連舞","Heaven Dance","0x001D1994",""
+"破天　無影蹴","Shadow Kick","0x001D19A0",""
+"鉄砲突き","Cannon Thrust","0x001D19B0",""
+"柏手破り","Palm Break","0x001D19BC",""
+"荒波四股","Storm Stomp","0x001D19C8",""
+"ぶちかまし","Bull Rush","0x001D19D4",""
+"岩石砕き","Rock Crush","0x001D19E8",""
+"乱れ鉄砲突き","Wild Thrust","0x001D19FC",""
+"雪崩落とし","Avalanche","0x001D1A14",""
+"対空正波拳","AAWaveFist","0x001D1A28",""
+"島津流　正波拳","Shimazu Wave","0x001D1A4C",""
+"島津流　真・実直拳","True Honest Fist","0x001D1A5C",""
+"島津流　雷鋭蹴","Thunder Kick","0x001D1A70",""
+"出席確認","Roll Call","0x001D1A88",""
+"昇天切開","Heaven Slash","0x001D1A9C",""
+"片翼の構","One Wing Stance","0x001D1AA8",""
+"死の介護","Death Care","0x001D1ABC",""
+"天獄への階段","Heaven Stair","0x001D1AC8",""
+"奈落への補導","Hell Guidance","0x001D1AD8",""
+"空間裂き","Space Rend","0x001D1AF0",""
+"六腑突き","Organ Strike","0x001D1AFC",""
+"霧嶋流　狂獣裂破","Mad Beast Rend","0x001D1B18",""
+"霧嶋流　真空闇嵐","Vacuum Storm","0x001D1B2C",""
+"禁忌　力吸い","Power Drain","0x001D1B40",""
+"居合斬り","IaiSlash","0x001D1B50",""
+"十文字斬り","CrossSlash","0x001D1B5C",""
+"暗黒幻影蹴","Dark Ghost","0x001D1B80",""
+"暗黒幻影陣","Dark Array","0x001D1B8C",""
+"暗黒疾風斬","Dark Wind","0x001D1B98",""
+"鷂子栽肩","Hawk Shoulder","0x001D1BAC",""
+"破天の構","Sky Stance","0x001D1BB8",""
+"剛気功塊","Hard Chi Mass","0x001D1BC4",""
+"破の双撃","Twin Strike","0x001D1BD0",""
+"疾風の型","Gale Form","0x001D1BDC",""
+"昇龍の型","Dragon Form","0x001D1BE8",""
+"紫電の型","Thunder Form","0x001D1BF4",""
+"破岩の型","Rock Form","0x001D1C00",""
+"前方転身の型","Forward Form","0x001D1C0C",""
+"演舞披露","Show Dance","0x001D1C1C",""
+"説教攻撃","Sermon Attack","0x001D1C28",""
+"無双突き","Peerless Jab","0x001D1C34",""
+"無双裏拳","Peerless Back","0x001D1C40",""
+"大地突き","Earth Thrust","0x001D1C4C",""
+"無双蹴り","Peerless Kick","0x001D1C58",""
+"真・無双正拳突き","True Peerless","0x001D1C64",""
+"真・漢の背中","True Man Back","0x001D1C78",""
+"硬気功塊","Hard Chi Block","0x001D1C88",""
+"熱血竹刀","Hot Blood Kendo","0x001D1C94",""
+"気合ナックル","Spirit Knuckle","0x001D1CA0",""
+"気合キック","Spirit Kick","0x001D1CB0",""
+"ダブル指導キック","Double Coach","0x001D1CBC",""
+"回転竹刀落とし","Spin Shinai","0x001D1CD0",""
+"熱血腕立て伏せ","Hot Push-up","0x001D1CE0",""
+"熱血クロスカウンター","Hot Cross Counter","0x001D1CF0",""
+"熱血風車","Hot Windmill","0x001D1D08",""
+"熱血ヤセ我慢","Hot Endurance","0x001D1D14",""
+"フラッシュ攻撃","Flash Attack","0x001D1D24",""
+"フィルム交換","Film Change","0x001D1D3C",""
+"スーパーフラッシュ攻撃","Super Flash","0x001D1D4C",""
+"突撃インタビュー","Rush Interview","0x001D1D64",""
+"飛び込み","Dive","0x001D1D78",""
+"人工呼吸","CPR","0x001D1D84",""
+"平泳ぎキック","Breaststroke","0x001D1D90",""
+"個人メドレー","Medley","0x001D1DA0",""
+"超バタ足","Super Flutter","0x001D1DB0",""
+"破戒の鉄鎖","Ruin Chain","0x001D1DBC",""
+"毒蛇の鉄鎖","Viper Chain","0x001D1DC8",""
+"空覇の鉄鎖","Sky Chain","0x001D1DD4",""
+"眼光蹴り","Glare Kick","0x001D1DE0",""
+"孤高のプライド","Lone Pride","0x001D1DEC",""
+"必殺　電光鉄鎖","Lightning Chain","0x001D1DFC",""
+"必殺　稲妻眼光蹴り","Thunder Glare","0x001D1E0C",""
+"だだっこあたっく","Tantrum Attack","0x001D1EA4",""
+"悲恋のセレナーデ","Sad Serenade","0x001D1ECC",""
+"魅惑のワルツ","Charm Waltz","0x001D1EE0",""
+"深淵のメヌエット","Abyss Minuet","0x001D1EF0",""
+"落日のララバイ","Sunset Lullaby","0x001D1F04",""
+"冥府のノクターン","Dark Nocturne","0x001D1F14",""
+"慈愛のレクイエム","Love Requiem","0x001D1F28",""
+"死呼ぶロンド","Death Rondo","0x001D1F3C",""
+"バーニングエルボー","Burning Elbow","0x001D1F4C",""
+"彗星キック","Comet Kick","0x001D1F60",""
+"熱血全開気合弾","Hot Full Guts","0x001D1F6C",""
+"全開彗星キック","Full Comet Kick","0x001D1F7C",""
+"忌野流　モズ落し","Imano Shrike","0x001D1F8C",""
+"霧幻流　瞬殺無音","Silent Kill","0x001D1FB8",""
+"霧幻流　暗黒衝撃斬","Dark Impact","0x001D1FCC",""
+"霧幻流　闇吹雪","Dark Blizzard","0x001D1FE0",""
+"暴走・無双正拳突き","Rage Peerless","0x001D1FF0",""
+"暴走・漢の背中","Rage Man Back","0x001D2004",""
+"暴走・硬気功塊","Rage Chi Block","0x001D2014",""
+"暗黒気合弾","Dark Spirit Ball","0x001D2024",""
+"暗黒闇神楽","Dark Kagura","0x001D2030",""
+"ダブルラリアット","Double Lariat","0x001D203C",""
+"真空斬り","Vacuum Slash","0x001D2058",""
+"グラップルビート","Grapple Beat","0x001D2064",""
+"ショックウェーブ","Shock Wave","0x001D2078",""
+"スクリューパイルドライバー","Screw Piledriver","0x001D208C",""
+"ライジングキック","Rising Kick","0x001D20A8",""
+"天仰波動拳","Sky Wave Fist","0x001D20C4",""
+"蒼空波動拳","Blue Wave Fist","0x001D20D0",""
+"ファイヤーグラップルビート","Fire Grapple","0x001D20EC",""
+"電刃波動拳","Electric Wave","0x001D2108",""
+"スーパーショックウェーブ","Super Shock Wave","0x001D2114",""
+"Ｗスクリューパイルドライバー","W Screw Driver","0x001D2130",""
+"Ｓグルービーホイール","S Groovy Wheel","0x001D2150",""
+"真空波動拳","Vacuum Wave","0x001D2168",""
+"真空天仰波動拳","Vacuum Sky Wave","0x001D2174",""
+"真空蒼空波動拳","Vacuum Blue Wave","0x001D2184",""
+"スーパー飛び込み","Super Dive","0x001D21A4",""
+"ダブル気合弾","Double Spirit","0x001D21B8",""
+"ガッツ百倍","100x Guts","0x001D21C8",""
+"ラストシンフォニー","Last Symphony","0x001D21D4",""
+"グランドスラム","Grand Slam","0x001D21E8",""
+"ファイト百倍","100x Fight","0x001D21F8",""
+"トラップＷシュート","Trap W Shot","0x001D2208",""
+"Ｗライジングトルネード","W Rising Tornado","0x001D221C",""
+"ラブ＆ピース","Love & Peace","0x001D2234",""
+"Ｗパワーバスター","W Power Buster","0x001D2244",""
+"協奏連撃蹴","Concerto Kick","0x001D2260",""
+"島津流　双龍正波拳","Twin Dragon Wave","0x001D2274",""
+"究極の矯正術","Ultimate Fix","0x001D2288",""
+"霧嶋流　十文字殺法","Cross Kill","0x001D2298",""
+"連撃連舞","Combo Dance","0x001D22B4",""
+"委員長のワンポイントＡ","Class Rep Tip A","0x001D22C0",""
+"男の中の男","Man Among Men","0x001D22D8",""
+"熱血気合砲","Hot Spirit Cannon","0x001D22E4",""
+"いただきスクープ","Got the Scoop","0x001D22F0",""
+"シンクロナイズドアタック","Synchro Attack","0x001D2304",""
+"ガンつけ１２０％","Glare 120%","0x001D2320",""
+"人間壁打ち","Human Wall Hit","0x001D2334",""
+"激励のコンチェルト","Cheer Concerto","0x001D2340",""
+"熱血Ｗ気合ビーム","Hot W Spirit Beam","0x001D2354",""
+"霧幻流　残酷斬","Cruel Slash","0x001D2368",""
+"男の中の狂気","Madman","0x001D2378",""
+"Ｗ暗黒気合弾","W Dark Spirit","0x001D2388",""
+"クロスファイヤーキック","Crossfire Kick","0x001D2398",""
+"Ｗスカイアタック","W Sky Attack","0x001D23B0",""
+"ダイブ＆プレス","Dive & Press","0x001D23C4",""
+"究極の愛の波動","Ultimate Love","0x001D23D4",""
+"人間大砲","Human Cannon","0x001D23E4",""
+"ファイナルシンフォニー","Final Symphony","0x001D23F0",""
+"熱血大車輪","Hot Giant Swing","0x001D2408",""
+"トリプルヘブンズクロス","Triple Heaven","0x001D2414",""
+"外道独楽","Gedo Top","0x001D242C",""
+"粛正の嵐","Purge Storm","0x001D2438",""
+"霧嶋流　一文字連殺","Line Kill","0x001D2444",""
+"聖女の鉄槌","Saint Hammer","0x001D2458",""
+"騎馬落とし","Horse Drop","0x001D2464",""
+"登録状況","Reg Status","0x001D34EC",""
+"エントリーリスト","Entry List","0x001D34F8",""
+"トーナメントロビー","Tournament Lobby","0x001D3514",""
+"ギャラリーモード","Gallery Mode","0x001D352C",""
+"ハンドルネーム","Handle Name","0x001D3AFC",""
+"電話番号","Phone Number","0x001D3B0C",""
+"メールアドレス","Email Address","0x001D3B18",""
+"は必ず入力して下さい","is required","0x001D3B28",""
+"情報を登録中です","Registering info","0x001D3B40",""
+"しばらくお待ち下さい","Please wait","0x001D3B54",""
+"ディスクドアを開けたりしないで下さい","Do not open disc door","0x001D3B7C",""
+"スタートボタンを１秒間以上押すと","Hold START for 1 sec","0x001D3BA4",""
+"キャンセルします","to cancel","0x001D3BC8",""
+"電話番号が正しくありません","Invalid phone number","0x001D3BDC",""
+"お使いの電話番号を確認して","Check your phone number","0x001D3BF8",""
+"もう一度入力して下さい","and try again","0x001D3C14",""
+"今月の予想料金が","This month estimate","0x001D3C2C",""
+"設定された料金上限を超えました","exceeds limit","0x001D3C40",""
+"ＯＰＴＩＯＮの「課金情報」で","Check OPTION Billing","0x001D3C60",""
+"料金を確認して下さい","for charges","0x001D3C80",""
+"使用している本体が","Console is not the","0x001D3C98",""
+"登録時のものではありません","registered one","0x001D3CAC",""
+"新たに登録しなおして下さい","Please re-register","0x001D3CC8",""
+"接続に成功しました","Connected OK","0x001D3CE4",""
+"接続に失敗しました","Connection failed","0x001D3CF8",""
+"接続できませんでした","Could not connect","0x001D3D0C",""
+"モジュラーケーブルが","Check if cable","0x001D3D24",""
+"本体につながっているか","is connected to unit","0x001D3D3C",""
+"モデムの設定が正しいか","and modem settings","0x001D3D54",""
+"確認して下さい","are correct","0x001D3D6C",""
+"また、接続先を確認して下さい","Check destination","0x001D3D7C",""
+"接続先が正しいときは","If destination is OK","0x001D3D9C",""
+"ＤＣサポートセンターに","contact DC Support","0x001D3DB4",""
+"お問い合わせ下さい","Center","0x001D3DCC",""
+"サーバーに接続できませんでした","Cannot connect to server","0x001D3DE0",""
+"パスワードが違うか","Wrong password or","0x001D3E00",""
+"サーバーが混雑しているかもしれません","server may be busy","0x001D3E14",""
+"セガプロバイダーの場合","For SEGA provider","0x001D3E3C",""
+"「課金情報」を確認して下さい","check Billing info","0x001D3E54",""
+"話し中です","Line busy","0x001D3E74",""
+"しばらく時間をおいて下さい","Please wait a while","0x001D3E80",""
+"ＥＤＩＴデータが複数あります","Multiple EDIT data","0x001D3E9C",""
+"どのポートのデータを使用しますか？","Which port to use?","0x001D3EBC",""
+"ただいま対戦相手を捜しています","Searching opponent","0x001D3EF0",""
+"カプコンＩＤが間違っています","Capcom ID is wrong","0x001D3F10",""
+"対戦を断られました","Battle declined","0x001D3F30",""
+"適当な対戦相手が見つかりませんでした","No opponent found","0x001D3F44",""
+"対戦ジャンルや選択方法を変えるか","Change genre or method","0x001D3F6C",""
+"しばらくしてから再度ためして下さい","and try again later","0x001D3F90",""
+"ＫＤＤＩ回線で接続中です","Connecting via KDDI","0x001D3FB4",""
+"対戦中は電源を切ったりしないで下さい","No power off in battle","0x001D3FD0",""
+"回線が不安定なため切断されました","Disconnected: unstable","0x001D3FF8",""
+"Ａボタンを押して下さい","Press A button","0x001D401C",""
+"対戦相手に迷惑がかかりますので","Causes trouble for","0x001D4034",""
+"対戦中にリセットしないで下さい","opponent. No reset","0x001D4054",""
+"対戦中にディスクドアを","Do not open disc","0x001D4074",""
+"開かないで下さい","during battle","0x001D408C",""
+"再対戦は断られました","Rematch declined","0x001D40A0",""
+"カプコンＩＤ：","Capcom ID:","0x001D40B8",""
+"を登録しました","registered","0x001D40C8",""
+"を登録できませんでした","failed to register","0x001D40E0",""
+"これ以上ＩＤを登録できません","Cannot register more ID","0x001D40F8",""
+"ＩＤの編集をおこなって下さい","Please edit ID","0x001D4118",""
+"登録が完了しました","Registration complete","0x001D4138",""
+"あなたのカプコンＩＤは","Your Capcom ID is","0x001D414C",""
+"プロバイダーＡＰに接続中","Connecting to AP","0x001D416C",""
+"にダイヤル中です","Dialing","0x001D4188",""
+"登録内容を変更していいですか？","Change registration?","0x001D419C",""
+"は現在、通信対戦サーバーに","is not connected to","0x001D41CC",""
+"接続していないか、対戦中です","server or in battle","0x001D41E8",""
+"接続中は通信料金がかかります","Charges while online","0x001D4208",""
+"なお、セガプロバイダーで０９９０から","For SEGA 0990 numbers","0x001D4228",""
+"始まる電話番号の場合、ダイヤルＱ２","Dial Q2 applies:","0x001D4250",""
+"として通話料の他に３分１０円の","10 yen per 3 min","0x001D4274",""
+"接続料がかかります","plus connection fee","0x001D4294",""
+"ネットワークに接続しますか？","Connect to network?","0x001D42A8",""
+"メモリーカードをチェック中です","Checking Memory Card","0x001D42CC",""
+"電源を切ったりメモリーカードを","Do not power off or","0x001D42EC",""
+"抜いたりしないで下さい","remove card","0x001D430C",""
+"正しくロードできませんでした","Load failed","0x001D4324",""
+"同じプレイヤーと","Play same player","0x001D4344",""
+"もう一度対戦しますか？","again?","0x001D4358",""
+"のＩＤを登録しますか？","Register this ID?","0x001D4370",""
+"ゲームに戻ります","Return to game","0x001D4388",""
+"回線を切断してもよろしいですか？","Disconnect line?","0x001D439C",""
+"正しくセーブできませんでした","Save failed","0x001D43C0",""
+"登録済みのメモリーカードを","Insert registered","0x001D43E0",""
+"通信対戦を終了しますか？","End online battle?","0x001D441C",""
+"モデムが見つかりません","Modem not found","0x001D4438",""
+"モデムが外れていないか","Check if modem","0x001D4450",""
+"次の電話番号に電話をかけます","Calling this number","0x001D4468",""
+"接続先を確認して下さい","Check destination","0x001D4488",""
+"現在接続先が大変混み合っており","Destination very busy","0x001D44A0",""
+"電話がかかりません","Cannot connect","0x001D44C0",""
+"モデムの設定が正しいか確認して","Check modem settings","0x001D44D4",""
+"しばらくしてから","and try again","0x001D44F4",""
+"もう一度おかけなおし下さい","later","0x001D4508",""
+"ログインＩＤ、パスワードが","Check login ID and","0x001D4524",""
+"正しいか確認して下さい","password","0x001D4540",""
+"サーバーがメンテナンス中の","Server may be under","0x001D4558",""
+"可能性もあります","maintenance","0x001D4574",""
+"一定時間入力が無かったため","No input for a while","0x001D4588",""
+"回線を切断しました","Line disconnected","0x001D45A4",""
+"相手の反応がありません","No response from opponent","0x001D45B8",""
+"何らかの原因で回線を切断されました","Disconnected","0x001D45D0",""
+"ＮＥＴファイルが登録された","Insert Memory Card","0x001D45F4",""
+"メモリーカードを","with NET file","0x001D4610",""
+"６ブロック以上空きがある","with 6+ free blocks","0x001D4634",""
+"メモリーカードを接続して下さい","Please connect","0x001D4650",""
+"登録内容を変更してよろしいですか？","Change registration?","0x001D4670",""
+"ＮＥＴファイルは対応するゲームで","NET file can be used","0x001D4694",""
+"共通して使えます","across games","0x001D46B8",""
+"電話回線を使って情報を登録します","Register via phone","0x001D46CC",""
+"登録後、ネットワークに接続します","Then connect to net","0x001D46F0",""
+"接続料がかかります。よろしいですか？","Fees apply. OK?","0x001D4714",""
+"正しく登録できませんでした","Registration failed","0x001D473C",""
+"ＮＥＴファイルに","To NET file","0x001D4758",""
+"設定を保存しています","Saving settings","0x001D476C",""
+"セーブしました","Saved","0x001D4784",""
+"ロードしました","Loaded","0x001D4794",""
+"このモードを終了しますか？","Exit this mode?","0x001D47A4",""
+"対戦を申し込んでいます","Requesting battle","0x001D47C0",""
+"接続を中断しました","Connection aborted","0x001D47D8",""
+"ログインパスワードを入力して下さい","Enter login password","0x001D47EC",""
+"ユーザー名：","User:","0x001D4810",""
+"パスワード：","Pass:","0x001D4834",""
+"「通信対戦」モード終了まで","Until Online mode ends","0x001D4858",""
+"メモリーカードを絶対に","never remove","0x001D4874",""
+"抜かないで下さい","Memory Card","0x001D488C",""
+"ログインパスワードが入力されてません","No login password","0x001D48A0",""
+"のＩＤを削除してもいいですか？","Delete this ID?","0x001D48C8",""
+"あなたのカプコンＩＤや通信相手のＩＤ","Your Capcom ID and","0x001D48E8",""
+"などメモリーカードの登録情報を","card registration","0x001D4910",""
+"全て消去してもよろしいですか？","delete all data?","0x001D4930",""
+"元のメモリーカードを接続して","Insert original card","0x001D4950",""
+"正しくセーブされないので","Save will fail so","0x001D4970",""
+"先に進めません","cannot proceed","0x001D498C",""
+"元のメモリーカードがないので","No original card so","0x001D499C",""
+"接続できません","cannot connect","0x001D49BC",""
+"登録しませんでした","Did not register","0x001D49CC",""
+"はビジー状態です","is busy","0x001D49E0",""
+"再度チャレンジして下さい","Please try again","0x001D49F4",""
+"モデムからの応答がありません","No modem response","0x001D4A10",""
+"データをロードします","Loading data","0x001D4A30",""
+"メモリーカードを拡張ソケットに","Insert card in","0x001D4A48",""
+"入れて下さい","expansion slot","0x001D4A68",""
+"ＮＥＴファイル      ＝","NET File     =","0x001D4ABC",""
+"ＥＤＩＴファイル　　＝","EDIT File    =","0x001D4AD4",""
+"準備ができたら","When ready","0x001D4AEC",""
+"スタートボタンを押して下さい","press START","0x001D4AFC",""
+"データをロードしました","Data loaded","0x001D4B1C",""
+"のデータが設定されました","data has been set","0x001D4B34",""
+"入室条件を満たしていません","Entry requirements not met","0x001D4B50",""
+"この対戦ルームは満員です","This room is full","0x001D4B6C",""
+"相手は切断されました","Opponent disconnected","0x001D4B88",""
+"システムファイルがありません","No system file","0x001D4BA0",""
+"にシステムファイルの入った","Insert card with","0x001D4BCC",""
+"メモリーカードを入れて","system file","0x001D4BF4",""
+"再接続しますか？","Reconnect?","0x001D4C0C",""
+"何らかの原因で接続できませんでした","Could not connect","0x001D4C20",""
+"カプコンサーバーが","Capcom server may","0x001D4C44",""
+"混雑しているかもしれません","be busy","0x001D4C58",""
+"カプコンサーバーに接続中です","Connecting to Capcom","0x001D4C74",""
+"回線が混雑しています","Line is busy","0x001D4C94",""
+"次の番号でかけ直しますか？","Try next number?","0x001D4CAC",""
+"電話番号が登録されていません","No phone registered","0x001D4CC8",""
+"前回の戦いのリプレイデータを","Save last battle","0x001D4CE8",""
+"ファイルにセーブしますか？","replay to file?","0x001D4D08",""
+"セーブを終了しますか？","End saving?","0x001D4D24",""
+"上書きしますか？","Overwrite?","0x001D4D3C",""
+"新規でセーブしますか？","Save as new?","0x001D4D50",""
+"ＮＥＴファイルを新規作成します","Creating new NET file","0x001D4D90",""
+"は現在、この対戦ルームにはいません","is not in this room","0x001D4DC4",""
+"はメッセージを受け取りました","received message","0x001D4DE8",""
+"メッセージ送信中","Sending message","0x001D4E08",""
+"のメッセージを次回から拒否しますか？","Block their messages?","0x001D4E1C",""
+"のメッセージは次回から受け取りません","Messages blocked","0x001D4E44",""
+"の対戦を次回から拒否しますか？","Block their battles?","0x001D4E6C",""
+"の対戦を次回から拒否します","Battles blocked","0x001D4E8C",""
+"これよりトーナメントを開始します","Tournament starting","0x001D4EA8",""
+"トーナメント情報取得中です","Getting tourney info","0x001D4ECC",""
+"しばらくそのままでお待ち下さい","Please wait","0x001D4EE8",""
+"相手がいないため不戦勝になりました","Win by forfeit","0x001D4F08",""
+"対戦を開始します","Starting battle","0x001D4F2C",""
+"次の対戦を開始します","Starting next battle","0x001D4F40",""
+"只今、トーナメントが行われています","Tournament in progress","0x001D4F58",""
+"時間をおいて再エントリーして下さい","Re-enter later","0x001D4F7C",""
+"トーナメントは開催されていません","No tournament active","0x001D4FA0",""
+"エントリー条件が満たされていないため","Entry requirements","0x001D4FC4",""
+"エントリーできません","not met","0x001D4FEC",""
+"全試合が終了しました","All matches complete","0x001D5004",""
+"お疲れさまでした","Good work!","0x001D501C",""
+"これでトーナメントは終了いたします","Tournament ended","0x001D5030",""
+"またの参加をお待ちしています","Join us again!","0x001D5054",""
+"一定時間でサーバーに戻れなかったので","Could not return to","0x001D5074",""
+"失格となりました","server. Disqualified","0x001D509C",""
+"参加者が足りませんので","Not enough players","0x001D50B0",""
+"トーナメントは不成立になりました","Tournament cancelled","0x001D50C8",""
+"優勝者が決まりませんでした","No winner determined","0x001D50EC",""
+"登録拒否数オーバーです","Block list full","0x001D5108",""
+"これ以上、拒否者登録できません","Cannot block more","0x001D5120",""
+"ギャラリーモードで入りました","Entered Gallery mode","0x001D5140",""
+"開催中のトーナメントの経過が見れます","View tourney progress","0x001D5160",""
+"トーナメントへの参加希望の方は","To join tournament","0x001D5188",""
+"次回開催までお待ち下さい","wait for next one","0x001D51A8",""
+"トーナメントモードを退場しますか？","Exit Tournament mode?","0x001D51C4",""
+"一度退場すると次回開催まで","Once exited cannot","0x001D51E8",""
+"入場できなくなります","re-enter until next","0x001D5204",""
+"回線を切断しています","Disconnecting line","0x001D521C",""
+"しばらくお待ちください","Please wait","0x001D5234",""
+"ＩＤを削除しています","Deleting ID","0x001D524C",""
+"削除しました","Deleted","0x001D5264",""
+"希望する","Wants","0x001D52FC",""
+"希望しない","Don't Want","0x001D5308",""
+"ろー　　ちこそしいはきくにまのりもみらせたすとかなひてさんつぬふあうえおやゆよわ　　　　　ほへ゛゜　むれけ　ねるめ","","0x001D531C",""
+"ロー　　チコソシイハキクニマノリモミラセタストカナヒテサンツヌフアウエオヤユヨワ　　　　　ホヘ゛゜　ムレケ　ネルメ","","0x001D5390",""
+"あいうえおなにぬねのらりるれろかきくけこはひふへほわをん　さしすせそまみむめもー！？「」たちつてとやゆよ゛゜、。〜『』","","0x001D5894",""
+"アイウエオナニヌネノラリルレロカキクケコハヒフヘホワヲン　サシスセソマミムメモー！？「」タチツテトヤユヨ゛゜、。〜『』","","0x001D5910",""
+"あぁいぃうぅえぇおぉつっやゃゆゅよょアァイィウゥエェオォツッヤャユュヨョ","","0x001D5B04",""
+"かがきぎくぐけげこごさざしじすずせぜそぞただちぢつづてでとどはばひびふぶへべほぼぱばぴびぷぶぺべぽぼカガキギクグケゲコゴサザシジスズセゼソゾタダチヂツヅテデトドハバヒビフブヘベホボパバピビプブペベポボウヴ","","0x001D5B50",""
+"はぱひぴふぷへぺほぽハパヒピフプヘペホポばぱびぴぶぷべぺぼぽバパビピブプベペボポ","","0x001D5C20",""
+"日月火水木金土","SuMoTuWeThFrSa","0x001D6914",""
+"まもなくエントリー受付終了","Entry closing soon","0x001D69BC",""
+"エントリーメンバー","Entry Members","0x001D6AE0",""
+"開催準備中","Preparing","0x001D6AF4",""
+"しばらく","Please","0x001D6B00",""
+"お待ちください","wait","0x001D6B0C",""
+"Ａボタンを押してください","Press A button","0x001D6B1C",""
+"しばらくお待ちください・・・","Please wait...","0x001D6B38",""
+"ＳＥＩＧＩ","Seigi","0x001D6CFD",""
+"ＭＡＫＯＴＯ","Makoto","0x001D6D08",""
+"ＴＯＭＯ","Tomo","0x001D6D15",""
+"デミトリ","Demitri","0x001D6D2A",""
+"フォッカー","Fokker","0x001D6D33",""
+"アレックス","Alex","0x001D6D3E",""
+"ジュンペイ","Junpei","0x001D6D49",""
+"ヒリュウ","Hiryuu","0x001D6D54",""
+"キャミィ","Cammy","0x001D6D6E",""
+"レイレイ","Lei-Lei","0x001D6D77",""
+"ジューン","June","0x001D6D87",""
+"参加じゃい","Joining!","0x001D6EDC",""
+"１人＋１","　1P+1","0x001D6F66",""
+"１人＋２","　1P+2","0x001D6F6F",""
+"１人＋３","　1P+3","0x001D6F78",""
+"２人＋１","　2P+1","0x001D6F8A",""
+"２人＋２","　2P+2","0x001D6F93",""
+"３人＋１","　3P+1","0x001D6FA5",""
+"ＮＯ　ＤＡＴＡ","No data","0x001D7020",""
+"ターン目","Turn","0x001D7030",""
+"ポートＡ","Port A","0x001D70A0",""
+"ポートＢ","Port B","0x001D70AC",""
+"ポートＣ","Port C","0x001D70B8",""
+"ポートＤ","Port D","0x001D70C4",""
+"完全燃焼技　２","Burning Vigor 2","0x001D71A4",""
+"完全燃焼技　３","Burning Vigor 3","0x001D71B8",""
+"完全燃焼技　４","Burning Vigor 4","0x001D71CC",""
+"全キャラ友好度＋５","All Friendship +5","0x001D71F4",""
+"１８ｘ１８：ただいまマイクのテスト中・・・","18x18: Mic test...","0x001D7268",""
+"２０ｘ２０：ただいまマイクのテスト中・・・","20x20: Mic test...","0x001D7294",""
+"２２ｘ２２：ただいまマイクのテスト中・・・","22x22: Mic test...","0x001D72C0",""
+"２４ｘ２４：ただいまマイクのテスト中・・・","24x24: Mic test...","0x001D72EC",""
+"２６ｘ２６：ただいまマイクのテスト中・・・","26x26: Mic test...","0x001D7318",""
+"学園祭に参加する","Join School Festival","0x001D7358",""
+"続きから始める","Continue","0x001D736C",""
+"ビンゴ表","BingoCrd","0x001D7500",""
+"視点変更","ChngView","0x001D750C",""
+"マス説明","TileInfo","0x001D7518",""
+"キャンセル","Cancel","0x001D7524",""
+"ボーナスチェックポイント","Bonus Checkpoint","0x001D75BC",""
+"プレイヤー","Player","0x001D76A8",""
+"ジャスキャラ","Jas Char","0x001D76B8",""
+"ゲームの目的","Game Goal","0x001D76D8",""
+"ＥＤＩＴキャラを作るには","How to Make EDIT","0x001D76E8",""
+"ゲームの流れについて","Game Flow","0x001D7704",""
+"ＭＡＰの説明","MAP Guide","0x001D771C",""
+"戦闘について","About Battle","0x001D772C",""
+"ジャスキャラについて","About Jas Chars","0x001D773C",""
+"全パラメータ　レベル＋１","All Params Level +1","0x001D777C",""
+"完全燃焼　１","Burning 1","0x001D77C8",""
+"完全燃焼　２","Burning 2","0x001D77D8",""
+"完全燃焼　３","Burning 3","0x001D77E8",""
+"完全燃焼　４","Burning 4","0x001D77F8",""
+"校舎３Ｆ","Bldg 3F","0x001D8028",""
+"校舎２Ｆ","Bldg 2F","0x001D8031",""
+"校舎１Ｆ","Bldg 1F","0x001D803A",""
+"グラウンド北","North Ground","0x001D8058",""
+"グラウンド南","South Ground","0x001D8065",""
+"生徒会室","SCouncil","0x001D8088",""
+"進路指導室","GuidancOfc","0x001D8091",""
+"家庭科室","HmEcRoom","0x001D80B1",""
+"風紀委員会室","DisciplnRoom","0x001D80C8",""
+"新聞部部室","News Club","0x001D80F1",""
+"職員室・西","Staff West","0x001D80FC",""
+"職員室・東","Staff East","0x001D8107",""
+"購買部１","Shop 1","0x001D8119",""
+"購買部２","Shop 2","0x001D8122",""
+"化学部部室","Chem Club","0x001D8132",""
+"水泳部部室","Swim Club","0x001D813D",""
+"バレー部部室","Volley Club","0x001D8148",""
+"テニス部部室","Tennis Club","0x001D8155",""
+"野球部部室","BasebClb","0x001D8162",""
+"サッカー部部室","Soccer Club","0x001D816D",""
+"相撲部部室","Sumo Club","0x001D817C",""
+"応援団部室","Cheer Club","0x001D8187",""
+"パラメータアップマス","Param Up Tile","0x001D8192",""
+"攻撃力がアップします","Attack goes up","0x001D81C4",""
+"（ＨＰ消費）","(Uses HP)","0x001D81DD",""
+"防御力がアップします","Defense goes up","0x001D8228",""
+"体力がアップします","Stamina goes up","0x001D828C",""
+"根性がアップします","Guts goes up","0x001D82F0",""
+"潜在能力","Potential","0x001D833B",""
+"潜在能力がアップします","Potential goes up","0x001D8354",""
+"知力がアップします","Int goes up","0x001D83B8",""
+"パラメータダウンマス","Param Down Tile","0x001D83EA",""
+"パラメータのどれか一つが","One param goes","0x001D841C",""
+"ダウンします（ＨＰ回復）","down (HP recover)","0x001D8435",""
+"２パラメータ間で経験値を","Transfer EXP between","0x001D8480",""
+"受け渡します（ＨＰ消費）","2 params (Uses HP)","0x001D8499",""
+"カードゲットマス","Get Card Tile","0x001D84B2",""
+"カードが一枚手に入ります","Get one card","0x001D84E4",""
+"技ゲットマス","Get Mve Tile","0x001D8516",""
+"必殺技を手に入れることが","Can get a special","0x001D8548",""
+"できます（ＨＰ回復）","move (HP recover)","0x001D8561",""
+"チェックポイント","Checkpoint","0x001D857A",""
+"国語の単位を","Japanese credits","0x001D85AC",""
+"手に入れることができます","can be obtained","0x001D85C5",""
+"英語の単位を","Engl creds","0x001D8610",""
+"数学の単位を","Math creds","0x001D8674",""
+"理科の単位を","Science creds","0x001D86D8",""
+"社会の単位を","Soc St creds","0x001D873C",""
+"美術の単位を","Art creds","0x001D87A0",""
+"音楽の単位を","Music creds","0x001D8804",""
+"体育の単位を","PE creds","0x001D8868",""
+"カードが三枚手に入ります","Get three cards","0x001D88CC",""
+"パラメータランダムマス","Random Param Tile","0x001D88FE",""
+"全パラメータがランダムに","All params randomly","0x001D8930",""
+"上下します（ＨＰ消費）","change (Uses HP)","0x001D8949",""
+"必殺技変更マス","Change Move Tile","0x001D8962",""
+"ＥＤＩＴキャラの技の","Change EDIT char","0x001D8994",""
+"組み合わせを変更します","move combination","0x001D89AD",""
+"忌野流残酷斬","Imano Slash","0x001D9D63",""
+"Ｗ気合暗黒弾","WSpiritDkOrb","0x001D9D7D",""
+"粛清の嵐","PurgStrm","0x001D9E28",""
+"スクリューパイルＤ","Screw Pile D","0x001D9EF8",""
+"空中気合弾","Air Spirit Ball","0x001D9FA4",""
+"空中幻影キック","Air Phantom Kick","0x001D9FD4",""
+"空中炎舞脚","Air Fire Kick","0x001D9FF0",""
+"空中エキサイティングＫ","Air Exciting K","0x001D9FFC",""
+"ＷスクリューパイルＤ","W Screw Pile D","0x001DA054",""
+"空中号外！","Air Extra!","0x001DA0FC",""
+"空中回診","Air Rounds","0x001DA128",""
+"千裂脚／島津流雷鋭蹴","1000 Kicks/Thunder","0x001DA150",""
+"空中正波拳","Air Wave Fist","0x001DA1F8",""
+"空中夜叉車","Air Yaksha Cart","0x001DA204",""
+"居合い斬り","Iai Slash","0x001DA280",""
+"空中熱血竹刀","Air Hot Kendo","0x001DA2D0",""
+"空中超剛速球","Air Super Fastball","0x001DA3A0",""
+"空中飛び込み","Air Dive","0x001DA3B0",""
+"空中入魂サーブ","Air Soul Serve","0x001DA3C0",""
+"空中シャイニングセーブ","Air Shining Save","0x001DA4C4",""
+"Ｆグラップルビート","F Grapple Beat","0x001DA580",""
+"忌野流　モズ落とし","Imano Shrike Drop","0x001DA5F0",""
+"空中裏斬り","AirBackCut","0x001DA6BC",""
+"空中破戒の鉄鎖","Air Ruin Chain","0x001DA6C8",""
+"空中破壊","Air Destroy","0x001DA6D8",""
+"空中悲恋のセレナーデ","Air Sad Serenade","0x001DA75C",""
+"ヘブンズクロス","Heaven Cross","0x001DA82C",""
+"豪快スライディング","Bold Slide","0x001DA8F8",""
+"豪快キック","Bold Kick","0x001DA90C",""
+"破天無影蹴","Shadow Kick","0x001DA918",""
+"空中ダブル幻影キック","Air Dbl Phantom Kick","0x001DA958",""
+"空中螺旋炎舞脚","Air Spin Fire","0x001DA970",""
+"佝佝佝佝佝","","0x001DC3E5",""
+"炎旧克悃棔","","0x001F1A4C",""
+"アイウエオＡＢＣＤＥカキクケコＦＧＨＩＪサシスセソＫＬＭＮＯタチツテトＰＱＲＳＴナニヌネノＵＶＷＸＹハヒフヘホＺ１２３４マミムメモ５６７８９ラリルレロ０","","0x00334028",""
+"ＥＡＳＹ","EASY","0x0033E0CC",""
+"ＮＯＲＭＡＬ","NORMAL","0x0033E0D5",""
+"ＨＡＲＤ","HARD","0x0033E0E2",""
+"五　輪　高　校","Gorin High","0x0033F717",""
+"パシフィックハイスクール","Pacific High School","0x0033F726",""
+"外　道　高　校","Gedo High","0x0033F73F",""
+"聖　純　女　学　院","Seijun Girls HS","0x0033F75F",""
+"漁夫の利","Reap Benefits","0x0033F9D8",""
+"書き直し","Rewrite","0x0033FCEB",""
+"ボードゲーム用名前：","Board Game Name:","0x0033FCF4",""
+"格闘ゲーム用名前　：","Fighting Name:","0x0033FD09",""
+"性別　　　　　　　：","Gender:","0x0033FD1E",""
+"学校　　　　　　　：","School:","0x0033FD33",""
+"学科　　　　　　　：","Course:","0x0033FD48",""
+"好きな言葉　　　　：","Motto:","0x0033FD5D",""
+"パシフィック","Pacific","0x003409CA",""
+"ジャスティス","Justice","0x003409E0",""
+"ねこまる","Nekomaru","0x003453CC",""
+"狭  慫","","0x00357110",""
+"裁肖犀団","","0x003690C0",""
+"濮痼舮蛟躄","","0x0038CCD2",""
+"瀚選 稈","","0x003930DD",""
+"窶縲艢蛟","","0x00395362",""
 "機琲 
-戯",,0x003AD429,
-は　い,Yes,,
+戯","","0x003AD429",""
+"は　い","Yes","",""
