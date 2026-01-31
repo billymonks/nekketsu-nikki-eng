@@ -67,10 +67,14 @@ def load_all_translations(target_file: str) -> dict:
     return all_translations
 
 
-def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict, pad_to_length=True):
+def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict, pad_to_length=True, pad_char=b' '):
     """
     Replace text in a binary file using Shift-JIS encoding.
-    Pads English text with spaces to match Japanese byte length.
+    Pads English text to match Japanese byte length.
+    
+    Args:
+        pad_char: Byte to use for padding. Default is space (b' ').
+                  Use b'\x00' for null padding (good for menu/UI text).
     
     IMPORTANT: Replacements are sorted by length (longest first) to prevent
     shorter substrings from corrupting longer strings during replacement.
@@ -92,7 +96,7 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
             if pad_to_length:
                 if len(en_bytes) < len(jp_bytes):
                     padding = len(jp_bytes) - len(en_bytes)
-                    en_bytes = en_bytes + b' ' * padding
+                    en_bytes = en_bytes + pad_char * padding
                 elif len(en_bytes) > len(jp_bytes):
                     print(f"WARNING: English is {len(en_bytes) - len(jp_bytes)} bytes LONGER - truncating!")
                     en_bytes = en_bytes[:len(jp_bytes)]
@@ -139,7 +143,7 @@ def replace_null_terminated_strings(input_file: Path, output_file: Path, replace
         if pad_to_length:
             if len(en_bytes) < len(jp_bytes):
                 padding = len(jp_bytes) - len(en_bytes)
-                en_bytes = en_bytes + b' ' * padding
+                en_bytes = en_bytes + b'\x00' * padding
             elif len(en_bytes) > len(jp_bytes):
                 print(f"WARNING: English is {len(en_bytes) - len(jp_bytes)} bytes LONGER - truncating!")
                 en_bytes = en_bytes[:len(jp_bytes)]
@@ -325,8 +329,8 @@ def process_1st_read():
     total_count = 0
     
     if translations:
-        # Apply normal translations (global replacement)
-        count = replace_text_in_file(output_file, output_file, translations)
+        # Apply normal translations (global replacement) - use null padding for cleaner display
+        count = replace_text_in_file(output_file, output_file, translations, pad_char=b'\x00')
         print(f"\nReplaced {count} strings in 1ST_READ.BIN (global)")
         total_count += count
     else:

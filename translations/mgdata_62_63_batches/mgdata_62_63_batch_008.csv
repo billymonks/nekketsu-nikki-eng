@@ -89,6 +89,7 @@
 "!c07が上がると、歩いてる時にぶつかって/イベントが発生することもあるわよ。/!c00友好度!c07はステータス画面で確認してね。","When it!c07 rises, you may /bump into them walking./Check !c00Affinity !c07on status.","Color-coded menu/UI text",""
 "!c07が完全に回復した！","!c07fully recovered!","Color-coded menu/UI text",""
 "!c07が手に入ります","Get !c07","Color-coded menu/UI text",""
+"単位!c07が手に入ると、/それだけでポイントゲット。/その!c01単位!c07が!c01ビンゴ表!c07にあれば、","Getting credits !c07earns points. /If that !c01credit !c07is on/your !c01Bingo Board !c07,","Color-coded menu/UI text",""
 "!c07が手に入ると、/それだけでポイントゲット。/その!c01単位!c07が!c01ビンゴ表!c07にあれば、","Getting !c07earns points. /If that !c01credit !c07is on/your !c01Bingo Board !c07,","Color-coded menu/UI text",""
 "!c07が高い状態で、一位になれば、/ちょっといいエンディングが見れるかも……/ここから先は内緒ね。","With high!c07 and first place,/you might see a better ending…/That's all I can say.","Color-coded menu/UI text",""
 "!c07じゃ、さっそくゲームを始めるわね","Well then, let's start the game.","Portrait: !p1800!e00",""
