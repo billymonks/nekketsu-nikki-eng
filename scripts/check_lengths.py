@@ -11,7 +11,14 @@ from pathlib import Path
 
 
 def get_byte_length(text: str) -> int:
-    """Get the byte length of text in Shift-JIS encoding."""
+    """Get the byte length of text in Shift-JIS encoding.
+    
+    Note: '/' is a line break control character in the game's script format
+    and doesn't count toward displayed text length, so we exclude it.
+    """
+    # Remove '/' as it's a line break control character, not displayed text
+    text = text.replace('/', '')
+    
     try:
         return len(text.encode('shift_jis'))
     except UnicodeEncodeError:

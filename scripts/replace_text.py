@@ -115,13 +115,16 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
     return replaced_count
 
 
-def replace_null_terminated_strings(input_file: Path, output_file: Path, replacements: dict, pad_to_length=True):
+def replace_null_terminated_strings(input_file: Path, output_file: Path, replacements: dict, pad_to_length=True, pad_char=b' '):
     """
     Replace text in a binary file, but ONLY when it appears as a null-terminated string.
     
     This is safer for short strings (like single kanji) that might accidentally
     match binary data like pointers or code. By requiring null terminators,
     we ensure we're only replacing actual string data.
+    
+    Args:
+        pad_char: Byte to use for padding. Default is null (b'\x00').
     
     Matches patterns like:
     - \x00<text>\x00  (null on both sides - middle/end of string array)
@@ -143,7 +146,7 @@ def replace_null_terminated_strings(input_file: Path, output_file: Path, replace
         if pad_to_length:
             if len(en_bytes) < len(jp_bytes):
                 padding = len(jp_bytes) - len(en_bytes)
-                en_bytes = en_bytes + b'\x00' * padding
+                en_bytes = en_bytes + pad_char * padding
             elif len(en_bytes) > len(jp_bytes):
                 print(f"WARNING: English is {len(en_bytes) - len(jp_bytes)} bytes LONGER - truncating!")
                 en_bytes = en_bytes[:len(jp_bytes)]
@@ -329,8 +332,8 @@ def process_1st_read():
     total_count = 0
     
     if translations:
-        # Apply normal translations (global replacement) - use null padding for cleaner display
-        count = replace_text_in_file(output_file, output_file, translations, pad_char=b'\x00')
+        # Apply normal translations (global replacement) - use space padding (null breaks color codes)
+        count = replace_text_in_file(output_file, output_file, translations, pad_char=b' ')
         print(f"\nReplaced {count} strings in 1ST_READ.BIN (global)")
         total_count += count
     else:
