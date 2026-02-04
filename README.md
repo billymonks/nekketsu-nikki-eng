@@ -1,6 +1,6 @@
 # Nekketsu Nikki English Translation Project
 
-A fan translation project to bring the **Nekketsu Seishun Nikki** (熱血青春日記 / "Diary of Zealous Youth") mode from the Japanese version of Project Justice (Moero! Justice Gakuen) to English.
+A fan translation project to bring the **Nekketsu Nikki** mode from the Japanese version of Project Justice (Moero! Justice Gakuen) to English.
 
 ## What is Nekketsu Nikki?
 
