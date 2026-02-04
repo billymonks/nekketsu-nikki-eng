@@ -14,9 +14,7 @@ TRANSLATIONS_DIR = PROJECT_DIR / "translations"
 
 # Files to scan for dangerous short strings
 SOURCE_FILES = [
-    "1st_read_strings.csv",
-    "1st_read_menu.csv", 
-    "1st_read_moves.csv",
+    "1st_read_strings.csv",  # All text (merged from menu/moves)
 ]
 
 DANGEROUS_FILE = "1st_read_dangerous.csv"

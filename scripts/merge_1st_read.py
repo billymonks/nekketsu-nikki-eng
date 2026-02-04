@@ -100,23 +100,93 @@ def main():
         print("No conflicts found!")
     
     # Count what would be merged
-    new_from_menu = sum(1 for jp in menu if jp not in strings)
-    new_from_moves = sum(1 for jp in moves if jp not in strings)
-    updates_from_menu = sum(1 for jp in menu if jp in strings and not strings[jp]['english'] and menu[jp]['english'])
-    updates_from_moves = sum(1 for jp in moves if jp in strings and not strings[jp]['english'] and moves[jp]['english'])
+    new_from_menu = [jp for jp in menu if jp not in strings]
+    new_from_moves = [jp for jp in moves if jp not in strings]
+    updates_from_menu = [jp for jp in menu if jp in strings and not strings[jp]['english'] and menu[jp]['english']]
+    updates_from_moves = [jp for jp in moves if jp in strings and not strings[jp]['english'] and moves[jp]['english']]
     
     print()
     print("Merge summary:")
-    print(f"  New entries from menu.csv: {new_from_menu}")
-    print(f"  New entries from moves.csv: {new_from_moves}")
-    print(f"  Empty entries in strings.csv that menu.csv can fill: {updates_from_menu}")
-    print(f"  Empty entries in strings.csv that moves.csv can fill: {updates_from_moves}")
+    print(f"  New entries from menu.csv: {len(new_from_menu)}")
+    print(f"  New entries from moves.csv: {len(new_from_moves)}")
+    print(f"  Empty entries in strings.csv that menu.csv can fill: {len(updates_from_menu)}")
+    print(f"  Empty entries in strings.csv that moves.csv can fill: {len(updates_from_moves)}")
     
-    return len(conflicts)
+    return conflicts, strings, menu, moves, new_from_menu, new_from_moves, strings_path
+
+
+def perform_merge(strings_path, strings, menu, moves, new_from_menu, new_from_moves):
+    """Actually merge the entries into strings.csv"""
+    
+    # Read original file to preserve structure
+    with open(strings_path, 'r', encoding='utf-8') as f:
+        content = f.read().replace('\x00', '')
+    
+    reader = csv.DictReader(io.StringIO(content))
+    fieldnames = reader.fieldnames or ['japanese', 'english', 'offset', 'notes']
+    rows = list(reader)
+    
+    added = 0
+    
+    # Add new entries from menu (strings.csv uses 'offset' not 'context')
+    for jp in new_from_menu:
+        data = menu[jp]
+        rows.append({
+            'japanese': jp,
+            'english': data['english'],
+            'offset': data.get('context', ''),  # menu uses 'context', strings uses 'offset'
+            'notes': f"merged from menu.csv - {data['notes']}" if data['notes'] else "merged from menu.csv"
+        })
+        added += 1
+        print(f"  + {jp} -> {data['english']} (from menu)")
+    
+    # Add new entries from moves
+    for jp in new_from_moves:
+        data = moves[jp]
+        rows.append({
+            'japanese': jp,
+            'english': data['english'],
+            'offset': data.get('context', ''),  # moves uses 'context', strings uses 'offset'
+            'notes': f"merged from moves.csv - {data['notes']}" if data['notes'] else "merged from moves.csv"
+        })
+        added += 1
+        print(f"  + {jp} -> {data['english']} (from moves)")
+    
+    # Write back
+    with open(strings_path, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.DictWriter(f, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
+        writer.writeheader()
+        writer.writerows(rows)
+    
+    return added
 
 
 if __name__ == '__main__':
-    conflicts = main()
-    if conflicts > 0:
+    import sys
+    
+    result = main()
+    conflicts, strings, menu, moves, new_from_menu, new_from_moves, strings_path = result
+    
+    if conflicts:
         print("\nResolve conflicts before merging!")
         exit(1)
+    
+    total_new = len(new_from_menu) + len(new_from_moves)
+    if total_new == 0:
+        print("\nNothing to merge.")
+        exit(0)
+    
+    # Auto-merge if --merge flag or prompt
+    if '--merge' in sys.argv:
+        do_merge = True
+    else:
+        print(f"\nReady to merge {total_new} new entries. Proceed? [y/N] ", end='')
+        response = input().strip().lower()
+        do_merge = response in ('y', 'yes')
+    
+    if do_merge:
+        print("\nMerging...")
+        added = perform_merge(strings_path, strings, menu, moves, new_from_menu, new_from_moves)
+        print(f"\nDone! Added {added} entries to 1st_read_strings.csv")
+    else:
+        print("\nMerge cancelled.")

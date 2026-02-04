@@ -11,36 +11,6 @@ Nekketsu Nikki is a unique game mode exclusive to the Japanese release of Projec
 
 This mode was completely removed from the Western release of Project Justice due to the extensive localization work required.
 
-## Project Structure
-
-```
-nekketsu-nikki-eng/
-├── original-disc/          # Original Japanese GDI disc image
-│   ├── disc.gdi
-│   ├── track01.bin
-│   ├── track02.raw
-│   └── track03.bin
-├── extracted-disc/         # Extracted files from Japanese disc
-│   ├── *.AFS               # Sega AFS archives (contain game assets)
-│   ├── *.BIN               # Binary/executable files
-│   ├── *.PVR               # PowerVR textures
-│   ├── DPETC/              # DreamPassport config/messages
-│   ├── DPFONT/             # Font files
-│   ├── DPSS/               # Screenshots/images (GIF)
-│   ├── DPTEX/              # Textures
-│   └── DPWWW/              # HTML content for browser
-├── extracted-afs/          # Extracted AFS archive contents (created by scripts)
-├── modified-disc-files/    # Modified files (same structure as extracted-disc)
-├── translated-disc/        # Output folder for rebuilt disc image
-├── scripts/                # Helper scripts for translation
-│   ├── extract_all_afs.bat   # Batch extract all AFS files
-│   ├── find_japanese_text.py # Find Japanese text in binaries
-│   └── text_dump.py          # Dump text to CSV for translation
-└── tools/
-    ├── afsexplorer.exe     # AFSPacker - AFS archive tool
-    └── buildgdi.exe        # GDI disc image builder
-```
-
 ## Translation Workflow
 
 ### Phase 1: Asset Extraction
@@ -65,12 +35,12 @@ nekketsu-nikki-eng/
 
 ## Tools
 
-### Included Tools (`tools/`)
+Download these .exe files from their releases and place them in the /tools folder
 
 | Tool | Description |
 |------|-------------|
 | `AFSPacker.exe` | [AFSPacker](https://github.com/MaikelChan/AFSPacker) - Extract and create AFS archives |
-| `buildgdi.exe` | Build GDI disc images from modified files |
+| `buildgdi.exe` | [GDIBuilder](https://github.com/Sappharad/GDIbuilder) - Build GDI disc images from modified files |
 
 ### AFSPacker Usage
 
@@ -87,19 +57,6 @@ AFSPacker -i <input_afs_file>               :  Show AFS information
 | Script | Description |
 |--------|-------------|
 | `extract_all_afs.bat` | Batch extract all AFS archives to `extracted-afs/` |
-| `find_japanese_text.py` | Scan files for Shift-JIS Japanese text |
-| `text_dump.py` | Extract strings to CSV/TXT for translation |
-
-**Texture files that likely need translation:**
-
-| File | Location | Description |
-|------|----------|-------------|
-| `OPTION01-03.PVR` | `DPTEX/` | Options menu graphics |
-| `SKB_KANA.PVR` | `DPTEX/` | Soft keyboard (Japanese kana) |
-| `SKB_EISU.PVR` | `DPTEX/` | Soft keyboard (alphanumeric) |
-| `JYOUCYU0-2.PVR` | `DPTEX/` | Various UI text |
-| `TAG_SU.PVR` | `DPTEX/` | UI tags/labels |
-| Files in `XPLTEX/` | `extracted-afs/` | Player/character textures |
 
 **Workflow for texture editing:**
 1. Convert PVR → PNG using PVRTexTool or similar
@@ -112,34 +69,17 @@ AFSPacker -i <input_afs_file>               :  Show AFS information
 The game uses **Shift-JIS** encoding for Japanese text. When translating:
 - Ensure output files use correct encoding
 - Some text may be in custom formats within binary files
-- Font glyphs may need expansion for English characters
-
-## Font Files
-
-Located in `DPFONT/`:
-
-| File | Size | Description |
-|------|------|-------------|
-| `S18RM04P.DAT` | 18px | Small font |
-| `S20RM04P.DAT` | 20px | Medium font |
-| `S24RM04P.DAT` | 24px | Large font |
-| `S26RM04P.DAT` | 26px | Extra large font |
-
-These are likely bitmap fonts containing Japanese characters. For full English support, fonts may need to be:
-- Analyzed to understand the format
-- Modified to ensure ASCII/Latin characters display correctly
-- Potentially replaced with custom fonts if format allows
 
 ## Resources
 
 - [GameFAQs Nekketsu Nikki Guide](https://gamefaqs.gamespot.com/dreamcast/377885-project-justice/faqs/10107) - Detailed mode mechanics
-- [Nekketsu Nikki Blog](https://nekketsunikki.wordpress.com/) - Fan documentation
+- [Capcom Fighting Collection 2](https://www.capcom-games.com/cfc2/en-us/) - Support Capcom's commendable efforts in bringing their classic library to modern platforms
 
 ## Contributing
 
 This is a work in progress. Contributions welcome for:
-- Text extraction scripts
-- Translation work
+- Text/image extraction scripts
+- Translation work/localization
 - Technical documentation
 - Testing
 
