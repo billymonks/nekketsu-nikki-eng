@@ -46,7 +46,7 @@
 "攻撃力","ATK","Stats - Attack Power","JP:6 EN:3 OK (-3)"
 "防御力","DEF","Stats - Defense Power","JP:6 EN:3 OK (-3)"
 "体　力","VIT","Stats - Stamina","JP:6 EN:3 OK (-3)"
-"潜在能力","POT","Stats - Potential","JP:8 EN:3 OK (-5)"
+"潜在能力","POTENTL","Stats - Potential","JP:8 EN:3 OK (-5)"
 "知　力","INT","Stats - Intelligence","JP:6 EN:3 OK (-3)"
 "ターン","Turn","Board game - Turn counter","JP:6 EN:4 OK (-2)"
 "　攻撃力"," ATK    ","Stats display - Attack (with space)","JP:8 EN:8 EXACT"

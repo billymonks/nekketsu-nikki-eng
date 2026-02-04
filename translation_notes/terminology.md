@@ -175,6 +175,7 @@ Consistent translations for game-specific terms.
 | カメラバッグ | Camera Bag | |
 | アキラへのチョーカー | Choker for Akira | |
 | 忌野一族 | Imano clan | |
+| 漁夫の利 | Profit | |
 
 
 ## Special Moves
@@ -184,6 +185,8 @@ Consistent translations for game-specific terms.
 | Ｗパワーバスター | W Power Buster |  |
 | プラトン技を | Tag-team move | Shortened from Two-Platoon technique |
 | 残酷斬 | Cruel Slash | |
+| いただきスクープ | Get the Scoop | |
+
 
 
 ---
