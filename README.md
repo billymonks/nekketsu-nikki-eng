@@ -14,7 +14,7 @@ This mode was completely removed from the Western release of Project Justice due
 ## Requirements
 
 - [.NET Runtime 6](https://dotnet.microsoft.com/download/dotnet/6.0)
-- Python
+- [Python 3](https://www.python.org/downloads/)
 
 ## Tools
 
@@ -25,26 +25,18 @@ Download these .exe files from their releases and place them in the /tools folde
 | `AFSPacker.exe` | [AFSPacker](https://github.com/MaikelChan/AFSPacker) - Extract and create AFS archives |
 | `buildgdi.exe` | [GDIBuilder](https://github.com/Sappharad/GDIbuilder) - Build GDI disc images from modified files |
 
-### AFSPacker Usage
-
-```bash
-AFSPacker -e <input_afs_file> <output_dir>  :  Extract AFS archive
-AFSPacker -c <input_dir> <output_afs_file>  :  Create AFS archive
-AFSPacker -i <input_afs_file>               :  Show AFS information
-```
-
 ## How to Update Translation
 
 1. Name original disc "disc.gdi" and place original disc files in folder /original-disc/
 2. Use buildgdi to extract disc contents to /extracted-disc/ folder
 3. Run extract_all_afs.bat to extract contents of afs files to /extracted-afs/ folder
-4. Modify English column of CSV files: 1st_read_strings.csv, 1st_read_dangerous.csv, and  /translations/mgdata_62_63/ folder.
+4. Modify English column of CSV files: 1st_read_strings.csv, 1st_read_dangerous.csv, and files in /translations/mgdata_62_63_batches/ folder.
 5. Run fix_alignment.py. This will edit translations to ensure special characters are positioned on valid bytes.
 6. Run check_lengths.py. This will ensure translations fit into byte limits defined by original Japanese text.
-7. If translations that were too long are found, a folder for "toolong translations" will be created. Edit the CSV files in here and run apply_toolong_fixes.py. Repeat until no issues found.
+7. If translations that are too long are found, a folder called "toolong_reports" will be created. Edit the CSV files in here and run apply_toolong_fixes.py. Repeat until no issues found.
 8. Run merge_batches.py. This will merge the mgdata_62_63 files into a single csv file. (mgdata/000000062 + mgdata/000000063 had so many strings, it was crashing my computer to have them all in 1 file while editing)
-8. Run replace_text.py. This will generate files in /modified-afs-contents/ and /modified-disc-files/.
-9. Run rebuild.bat. Updated disc will be placed in 
+9. Run replace_text.py. This will generate files in /modified-afs-contents/ and /modified-disc-files/.
+10. Run rebuild.bat. Updated disc will be placed in /translated-disc/
 
 ### Helper Scripts (`scripts/`)
 
