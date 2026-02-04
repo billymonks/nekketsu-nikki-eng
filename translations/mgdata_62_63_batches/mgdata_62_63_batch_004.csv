@@ -95,7 +95,7 @@
 "!c03▲：走り　５〜１０移動!c02（ＨＰ−!0!c02）/!c05▼：歩き　１〜　６移動!c07","!c03▲: Run Move 5-10!c02 (HP-!0 !c02),/!c05▼: Walk Move 1-6 !c07","Color-coded menu/UI text",""
 "!c03「ランダム」!c07を選べば、/自動的にＣＰＵが決定されるわよ。","Select !c03""Random"" !c07for /automatic CPU selection.","Color-coded menu/UI text",""
 "!c03『いただきスクープ』!c07を覚えた！","Learned !c03'Get the Scoop' !c07！","Color-coded menu/UI text",""
-"!c03『ガッツ百倍』!c07を覚えた！","Learned !c03'GUTS Hundredfold' !c07！","Color-coded menu/UI text",""
+"!c03『ガッツ百倍』!c07を覚えた！","Learned !c03'GUTS x100' !c07！","Color-coded menu/UI text",""
 "!c03『ガンつけ１２０％』!c07を覚えた！","Learned !c03'120% Staredown' !c07！","Color-coded menu/UI text",""
 "!c03『グランドスラム』!c07を覚えた！","Learned !c03'Grand Slam' !c07！","Color-coded menu/UI text",""
 "!c03『シンクロナイズドアタック』!c07を覚えた！","Learned !c03'Synchronized Attack' !c07！","Color-coded menu/UI text",""
