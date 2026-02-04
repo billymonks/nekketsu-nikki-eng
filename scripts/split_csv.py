@@ -1,5 +1,5 @@
 """
-Split a large translation CSV into smaller batch files of 100 strings each.
+Split a large translation CSV into smaller batch files.
 """
 import csv
 import io
