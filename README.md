@@ -61,4 +61,11 @@ If you can help me with any of this, please feel free to reach out or create a f
 
 ## Legal Notice
 
-This project is for educational and preservation purposes. You must own a legitimate copy of Moero! Justice Gakuen to use this translation patch.
+**Moero! Justice Gakuen**, **Project Justice**, and all related characters, assets, and trademarks are the property of **Capcom Co., Ltd.** This is an unofficial fan translation project with no affiliation to Capcom.
+
+This project:
+- Does **not** distribute any original game files, assets, or copyrighted material
+- Contains only translation tools and text replacements created by contributors
+- Requires users to own a legitimate copy of Moero! Justice Gakuen
+
+This project is intended for educational and preservation purposes only. If Capcom or any rights holder requests removal, this project will be taken down immediately.
