@@ -11,27 +11,10 @@ Nekketsu Nikki is a unique game mode exclusive to the Japanese release of Projec
 
 This mode was completely removed from the Western release of Project Justice due to the extensive localization work required.
 
-## Translation Workflow
+## Requirements
 
-### Phase 1: Asset Extraction
-1. Extract AFS archives using AFSPacker (`tools/AFSPacker.exe`)
-2. Identify text files and their encoding (Shift-JIS)
-3. Document text locations and formats
-
-### Phase 2: Text Translation
-1. Extract all Japanese text strings (use `scripts/text_dump.py`)
-2. Translate to English
-3. Handle text length constraints (may need abbreviation)
-
-### Phase 3: Asset Modification
-1. Edit text files with translated content
-2. Modify texture files containing Japanese text
-3. Place modified files in `modified-disc-files/` maintaining directory structure
-
-### Phase 4: Disc Rebuilding
-1. Run `tools/buildgdi.exe` to create new disc image
-2. Test in Dreamcast emulator (Flycast, Redream, etc.)
-3. Verify text displays correctly
+- [.NET Runtime 6](https://dotnet.microsoft.com/download/dotnet/6.0)
+- Python
 
 ## Tools
 
@@ -50,25 +33,24 @@ AFSPacker -c <input_dir> <output_afs_file>  :  Create AFS archive
 AFSPacker -i <input_afs_file>               :  Show AFS information
 ```
 
-**Requires:** [.NET Runtime 6](https://dotnet.microsoft.com/download/dotnet/6.0)
+## How to Update Translation
+
+1. Name original disc "disc.gdi" and place original disc files in folder /original-disc/
+2. Use buildgdi to extract disc contents to /extracted-disc/ folder
+3. Run extract_all_afs.bat to extract contents of afs files to /extracted-afs/ folder
+4. Modify English column of CSV files: 1st_read_strings.csv, 1st_read_dangerous.csv, and  /translations/mgdata_62_63/ folder.
+5. Run fix_alignment.py. This will edit translations to ensure special characters are positioned on valid bytes.
+6. Run check_lengths.py. This will ensure translations fit into byte limits defined by original Japanese text.
+7. If translations that were too long are found, a folder for "toolong translations" will be created. Edit the CSV files in here and run apply_toolong_fixes.py. Repeat until no issues found.
+8. Run merge_batches.py. This will merge the mgdata_62_63 files into a single csv file. (mgdata/000000062 + mgdata/000000063 had so many strings, it was crashing my computer to have them all in 1 file while editing)
+8. Run replace_text.py. This will generate files in /modified-afs-contents/ and /modified-disc-files/.
+9. Run rebuild.bat. Updated disc will be placed in 
 
 ### Helper Scripts (`scripts/`)
 
 | Script | Description |
 |--------|-------------|
 | `extract_all_afs.bat` | Batch extract all AFS archives to `extracted-afs/` |
-
-**Workflow for texture editing:**
-1. Convert PVR → PNG using PVRTexTool or similar
-2. Edit in image editor (Photoshop, GIMP, etc.)
-3. Convert PNG → PVR maintaining same format/compression
-4. Replace original file in `modified-disc-files/`
-
-## Text Encoding
-
-The game uses **Shift-JIS** encoding for Japanese text. When translating:
-- Ensure output files use correct encoding
-- Some text may be in custom formats within binary files
 
 ## Resources
 
