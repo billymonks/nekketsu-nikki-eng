@@ -47,15 +47,17 @@ Download these .exe files from their releases and place them in the /tools folde
 ## Resources
 
 - [GameFAQs Nekketsu Nikki Guide](https://gamefaqs.gamespot.com/dreamcast/377885-project-justice/faqs/10107) - Detailed mode mechanics
-- [Capcom Fighting Collection 2](https://www.capcom-games.com/cfc2/en-us/) - Support Capcom's commendable efforts in bringing their classic library to modern platforms
+- [Capcom Fighting Collection 2](https://www.capcom-games.com/cfc2/en-us/) - Support Capcom's amazing efforts in bringing their classic library to modern platforms
 
-## Contributing
+## What's left?
 
-This is a work in progress. Contributions welcome for:
-- Text/image extraction scripts
-- Translation work/localization
-- Technical documentation
-- Testing
+- **Translation refinement** - It was difficult making text fit into the character limits, and as a result, there's a lot of awkward dialogue. There might be missing translations in places also. Testing is required to find everything.
+- **Untranslated text** - There are several text elements that I could not find anywhere in the disc contents. I believe that many of these elements are actually texture files.
+- **Texture files** - I couldn't figure out a way to extract the textures of the game to properly translate them. As a result:
+  - The board itself is untranslated (use the MAP function to see what each space does)
+  - Some menus are also untranslated (description text box shows what options do when highlighted)
+
+If you can help me with any of this, please feel free to reach out or create a fork/pull request! Feel free to build off this work. Credit is appreciated but not required.
 
 ## Legal Notice
 
