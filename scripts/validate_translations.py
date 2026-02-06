@@ -125,17 +125,17 @@ def validate_batch_dir(batch_dir: Path):
     for batch_file in batch_files:
         issues = validate_csv(batch_file)
         if issues:
-            print(f"\n{'='*60}")
-            print(f"Issues in {batch_file.name}:")
-            print('='*60)
-            for issue in issues:
-                print(f"\nLine {issue['line']}:")
-                print(f"  JP: {issue['japanese']}...")
-                print(f"  EN: {issue['english']}...")
-                for prob in issue['issues']:
-                    pos_type = prob.get('position_type', 'overall')
-                    print(f"  ❌ '{prob['code']}' at byte {prob['byte_pos']} ({pos_type}) - ODD")
-                    print(f"     ...after: '{prob['text_before']}'")
+            #print(f"\n{'='*60}")
+            #print(f"Issues in {batch_file.name}:")
+            #print('='*60)
+            #for issue in issues:
+            #    print(f"\nLine {issue['line']}:")
+            #    print(f"  JP: {issue['japanese']}...")
+            #    print(f"  EN: {issue['english']}...")
+            #    for prob in issue['issues']:
+            #        pos_type = prob.get('position_type', 'overall')
+            #        print(f"  ❌ '{prob['code']}' at byte {prob['byte_pos']} ({pos_type}) - ODD")
+            #        print(f"     ...after: '{prob['text_before']}'")
             total_issues += len(issues)
     
     if total_issues == 0:

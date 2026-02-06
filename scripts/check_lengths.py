@@ -50,8 +50,12 @@ def check_csv(csv_path: Path) -> list:
             continue
         
         jp_bytes = get_byte_length(jp)
+        # Japanese limit: round down to even (game uses even length for replacement)
+        if jp_bytes % 2:
+            jp_bytes -= 1
         en_bytes = get_byte_length(en)
-        
+        # Compare against the (even) Japanese limit; English length is not rounded
+
         if en_bytes > jp_bytes:
             overflow = en_bytes - jp_bytes
             issues.append({

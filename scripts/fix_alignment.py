@@ -470,7 +470,7 @@ def fix_batch_dir(batch_dir: Path):
     for batch_file in batch_files:
         result = fix_csv(batch_file)
         if result['changes']:
-            print(f"  {batch_file.name}: {result['changes']} changes")
+            # print(f"  {batch_file.name}: {result['changes']} changes")
             total += result['changes']
     
     print(f"\nTotal: {total} changes" if total else "\nNo changes needed")
@@ -510,10 +510,10 @@ def report_long_lines_batch(batch_dir: Path):
     for batch_file in batch_files:
         issues = report_long_lines(batch_file)
         if issues:
-            print(f"\n{batch_file.name}:")
-            for issue in issues:
-                print(f"  Row {issue['row']}, Line {issue['line']}: {issue['bytes']} bytes")
-                print(f"    {issue['text']}")
+            # print(f"\n{batch_file.name}:")
+            # for issue in issues:
+                # print(f"  Row {issue['row']}, Line {issue['line']}: {issue['bytes']} bytes")
+                # print(f"    {issue['text']}")
             total_issues += len(issues)
     
     print(f"\nTotal: {total_issues} lines over 39 bytes")
