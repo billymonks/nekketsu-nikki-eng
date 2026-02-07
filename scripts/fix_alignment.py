@@ -19,7 +19,7 @@ from pathlib import Path
 FORMAT_CODE_PATTERNS = {
     '0': 2, '1': 2, '2': 2, '3': 2, '4': 2,
     '5': 2, '6': 2, '7': 2, '8': 2, '9': 2,
-    'a': 2, 'b': 2, 'h': 2,  # buttons
+    'a': 2, 'b': 2, 'x': 2, 'y': 2, 'h': 2,  # buttons
     'c': 4, 'p': 6, 'e': 4,
 }
 
@@ -35,7 +35,7 @@ def is_invisible_format_code(text: str, pos: int) -> bool:
     """
     Check if format code at pos is invisible (just changes state, no display).
     Invisible: !c## (color), !p#### (portrait), !e## (expression)
-    Visible: !a, !b (buttons), !0-!9 (player names)
+    Visible: !a, !b, !x, !y (buttons), !0-!9 (player names)
     """
     if pos + 1 >= len(text) or text[pos] != '!':
         return False
@@ -313,7 +313,7 @@ def get_display_length(text: str) -> int:
     - !c## (colors) = 0 bytes (don't display)
     - !p#### (portraits) = 0 bytes
     - !e## (expressions) = 0 bytes
-    - !a, !b (buttons) = 0 bytes? or some length - assuming 0 for now
+    - !a, !b, !x, !y (buttons) = 0 bytes? or some length - assuming 0 for now
     - !0-!9 (player names) = 10 bytes (max name length)
     - Other chars = 1 byte (ASCII) or 2 bytes (fullwidth)
     """
@@ -327,7 +327,7 @@ def get_display_length(text: str) -> int:
             if next_char.isdigit():
                 # !0-!9 player names = 10 bytes max
                 length += 10
-            # !c, !p, !e, !a, !b = 0 display bytes
+            # !c, !p, !e, !a, !b, !x, !y = 0 display bytes
             i += fc_len
         else:
             length += 1 if ord(text[i]) < 128 else 2
