@@ -12,7 +12,6 @@ Rules (from testing):
 - ... → … saves 1 byte when at even position
 """
 import csv
-import io
 from pathlib import Path
 
 
@@ -433,62 +432,64 @@ def find_long_lines(text: str, max_bytes: int = 39) -> list[tuple[int, str, int]
 
 
 def fix_csv(csv_path: Path) -> dict:
-    """Fix a CSV file. Returns counts of changes."""
+    """Fix a MGDATA CSV file. Returns counts of changes."""
     with open(csv_path, 'r', encoding='utf-8') as f:
-        content = f.read().replace('\x00', '')
-    
-    rows = list(csv.DictReader(io.StringIO(content)))
+        reader = csv.DictReader(f)
+        rows = list(reader)
+
     changes = 0
-    
+
     for row in rows:
-        original = row.get('english', '')
+        original = row.get('English', '')
         if not original:
             continue
         fixed = process_text(original)
         if fixed != original:
             changes += 1
-            row['english'] = fixed
-    
+            row['English'] = fixed
+
     with open(csv_path, 'w', encoding='utf-8', newline='') as f:
-        writer = csv.DictWriter(
-            f,
-            fieldnames=['japanese', 'english', 'context', 'notes'],
-            quoting=csv.QUOTE_ALL,
-            extrasaction='ignore'
-        )
-        writer.writeheader()
-        writer.writerows(rows)
-    
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL, doublequote=True)
+        writer.writerow(['Japanese', 'English', 'offset'])
+        for row in rows:
+            writer.writerow([row['Japanese'], row['English'], row['offset']])
+
     return {'changes': changes}
 
 
-def fix_batch_dir(batch_dir: Path):
-    """Fix all batch CSV files."""
-    batch_files = sorted(batch_dir.glob("*_batch_*.csv"))
+def fix_mgdata_files(translations_dir: Path):
+    """Fix MGDATA CSV files."""
+    target_files = [
+        translations_dir / "MGDATA_00000062.csv",
+        translations_dir / "MGDATA_00000063.csv",
+    ]
     total = 0
-    
-    for batch_file in batch_files:
-        result = fix_csv(batch_file)
+
+    for target_file in target_files:
+        if not target_file.exists():
+            print(f"  WARNING: {target_file.name} not found, skipping.")
+            continue
+        result = fix_csv(target_file)
         if result['changes']:
-            # print(f"  {batch_file.name}: {result['changes']} changes")
+            print(f"  {target_file.name}: {result['changes']} changes")
             total += result['changes']
-    
+
     print(f"\nTotal: {total} changes" if total else "\nNo changes needed")
 
 
-def report_long_lines(csv_path: Path) -> list[dict]:
+def report_long_lines(csv_path: Path) -> list:
     """Find all lines that are too long in a CSV file."""
     with open(csv_path, 'r', encoding='utf-8') as f:
-        content = f.read().replace('\x00', '')
-    
-    rows = list(csv.DictReader(io.StringIO(content)))
+        reader = csv.DictReader(f)
+        rows = list(reader)
+
     issues = []
-    
-    for row_idx, row in enumerate(rows, start=2):  # +2 for header and 1-based
-        english = row.get('english', '')
+
+    for row_idx, row in enumerate(rows, start=2):
+        english = row.get('English', '')
         if not english:
             continue
-        
+
         problems = find_long_lines(english)
         for line_num, segment, byte_count in problems:
             issues.append({
@@ -498,45 +499,46 @@ def report_long_lines(csv_path: Path) -> list[dict]:
                 'text': segment[:50] + ('...' if len(segment) > 50 else ''),
                 'full_text': english
             })
-    
+
     return issues
 
 
-def report_long_lines_batch(batch_dir: Path):
-    """Report all too-long lines in batch CSV files."""
-    batch_files = sorted(batch_dir.glob("*_batch_*.csv"))
+def report_long_lines_mgdata(translations_dir: Path):
+    """Report all too-long lines in MGDATA CSV files."""
+    target_files = [
+        translations_dir / "MGDATA_00000062.csv",
+        translations_dir / "MGDATA_00000063.csv",
+    ]
     total_issues = 0
-    
-    for batch_file in batch_files:
-        issues = report_long_lines(batch_file)
+
+    for target_file in target_files:
+        if not target_file.exists():
+            continue
+        issues = report_long_lines(target_file)
         if issues:
-            # print(f"\n{batch_file.name}:")
-            # for issue in issues:
-                # print(f"  Row {issue['row']}, Line {issue['line']}: {issue['bytes']} bytes")
-                # print(f"    {issue['text']}")
+            print(f"\n{target_file.name}:")
+            for issue in issues:
+                print(f"  Row {issue['row']}, Line {issue['line']}: {issue['bytes']} bytes")
+                print(f"    {issue['text']}")
             total_issues += len(issues)
-    
+
     print(f"\nTotal: {total_issues} lines over 39 bytes")
 
 
 if __name__ == "__main__":
     import sys
-    
+
     project_dir = Path(__file__).parent.parent
-    batch_dir = project_dir / "translations" / "mgdata_62_63_batches"
-    
-    if not batch_dir.exists():
-        print(f"ERROR: Batch directory not found: {batch_dir}")
-        exit(1)
-    
+    translations_dir = project_dir / "translations"
+
     # Check for --check-length flag
     if len(sys.argv) > 1 and sys.argv[1] == '--check-length':
         print("Checking for lines over 39 bytes...")
-        report_long_lines_batch(batch_dir)
+        report_long_lines_mgdata(translations_dir)
     else:
         print("Fixing alignment...")
-        fix_batch_dir(batch_dir)
-        
+        fix_mgdata_files(translations_dir)
+
         print("\nValidating...")
-        from validate_translations import validate_batch_dir
-        validate_batch_dir(batch_dir)
+        from validate_translations import validate_mgdata_files
+        validate_mgdata_files(translations_dir)

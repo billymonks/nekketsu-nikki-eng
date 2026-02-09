@@ -1,7 +1,6 @@
 @echo off
 REM Quick rebuild script for testing translations
 
-python .\merge_batches.py
 python .\replace_text.py
 
 cd /d "%~dp0\.."

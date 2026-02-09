@@ -25,46 +25,30 @@ def load_translations_from_csv(csv_path: Path) -> dict:
     """
     Load translations from a CSV file.
     
-    CSV format: japanese,english,context,notes
+    Supports two formats:
+    - Source CSVs: japanese,english,context,notes
+    - MGDATA CSVs: Japanese,English,offset
     
     Returns dict of {japanese_text: english_text}
     """
     translations = {}
-    
+
     if not csv_path.exists():
         print(f"WARNING: Translation file not found: {csv_path}")
         return translations
-    
+
     with open(csv_path, 'r', encoding='utf-8') as f:
         reader = csv.DictReader(f)
         for row in reader:
-            jp = row.get('japanese', '')
-            en = row.get('english', '').strip()
+            # Support both column name conventions
+            jp = row.get('Japanese', row.get('japanese', ''))
+            en = row.get('English', row.get('english', ''))
             if jp and en:
                 translations[jp] = en
-    
+
     print(f"Loaded {len(translations)} translations from {csv_path.name}")
     return translations
 
-
-def load_all_translations(target_file: str) -> dict:
-    """
-    Load all translation CSV files for a target file.
-    
-    Naming convention: {target}_{category}.csv
-    Example: mgdata_62_dialog.csv, mgdata_62_player_select.csv
-    """
-    all_translations = {}
-    
-    # Find all CSVs matching the target pattern
-    pattern = target_file.lower().replace('/', '_').replace('\\', '_')
-    
-    for csv_file in TRANSLATIONS_DIR.glob("*.csv"):
-        if csv_file.stem.startswith(pattern) or pattern in csv_file.stem:
-            translations = load_translations_from_csv(csv_file)
-            all_translations.update(translations)
-    
-    return all_translations
 
 
 def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict, pad_to_length=True, pad_char=b' '):
@@ -242,50 +226,29 @@ def process_mgdata():
     print("=" * 60)
     copy_original_files()
     
-    # Load shared translations first
-    shared_translations = {}
-    shared_file = TRANSLATIONS_DIR / "mgdata_62_63.csv"
-    if shared_file.exists():
-        shared_translations.update(load_translations_from_csv(shared_file))
-    
-    # Load file-specific translations (these override shared)
-    translations_62 = {}
-    only_62_file = TRANSLATIONS_DIR / "mgdata_62_only.csv"
-    if only_62_file.exists():
-        translations_62.update(load_translations_from_csv(only_62_file))
-    
-    translations_63 = {}
-    only_63_file = TRANSLATIONS_DIR / "mgdata_63_only.csv"
-    if only_63_file.exists():
-        translations_63.update(load_translations_from_csv(only_63_file))
-    
-    if not shared_translations and not translations_62 and not translations_63:
-        print("No translations found!")
-        return 0
+    mgdata_files = [
+        ("00000062", "MGDATA_00000062.csv", "female protagonist"),
+        ("00000063", "MGDATA_00000063.csv", "male protagonist"),
+    ]
     
     total = 0
     
-    # Process file 62 (female protagonist) - shared + 62-specific
-    print("\n" + "=" * 60)
-    print("Processing MGDATA/00000062 (female protagonist)")
-    print("=" * 60)
-    target_62 = MODIFIED_AFS_DIR / "MGDATA" / "00000062"
-    if target_62.exists():
-        trans_62 = {**shared_translations, **translations_62}  # 62-specific overrides shared
-        count = replace_text_in_file(target_62, target_62, trans_62)
-        print(f"\nReplaced {count} strings in {target_62.name}")
-        total += count
-    
-    # Process file 63 (male protagonist) - shared + 63-specific
-    print("\n" + "=" * 60)
-    print("Processing MGDATA/00000063 (male protagonist)")
-    print("=" * 60)
-    target_63 = MODIFIED_AFS_DIR / "MGDATA" / "00000063"
-    if target_63.exists():
-        trans_63 = {**shared_translations, **translations_63}  # 63-specific overrides shared
-        count = replace_text_in_file(target_63, target_63, trans_63)
-        print(f"\nReplaced {count} strings in {target_63.name}")
-        total += count
+    for file_num, csv_name, label in mgdata_files:
+        csv_path = TRANSLATIONS_DIR / csv_name
+        translations = load_translations_from_csv(csv_path)
+        
+        if not translations:
+            print(f"No translations found for {file_num}!")
+            continue
+        
+        print("\n" + "=" * 60)
+        print(f"Processing MGDATA/{file_num} ({label})")
+        print("=" * 60)
+        target = MODIFIED_AFS_DIR / "MGDATA" / file_num
+        if target.exists():
+            count = replace_text_in_file(target, target, translations)
+            print(f"\nReplaced {count} strings in {target.name}")
+            total += count
     
     return total
 
