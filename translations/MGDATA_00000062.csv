@@ -9576,7 +9576,7 @@
 "!p1800!e00!c05残り１０ターン!c07よ！/ラストスパート！/みんな頑張ってね！","!p1800!e00!c0510 turns left!c07！/Final sprint！/Do your best！","0xA05AE"
 "!pffff!e00振動の設定を変更します","!pffff!e00Vibration settings","0xA05F8"
 "!pffff!e00!c05振動!c07の設定を、変更してください/!aボタンで決定/!bボタンでキャンセルします","!pffff!e00Change !c05Vibration !c07settings/Press !a to confirm /Press !b to cancel","0xA061A"
-"!p1800!e00は〜い、ここまで！/今日は東京ゲームショウバージョンだから、/ここで終了よ。続きは製品版でね!h","!p1800!e00Okay, that's all!/This is the Tokyo Game Show version,/so we end here. See you in the full game !h","0xA0676"
+"!p1800!e00は〜い、ここまで！/今日は東京ゲームショウバージョンだから、/ここで終了よ。続きは製品版でね!h","!p1800!e00Okay, that's all!/This is the TGS version. /See you in the full game!h","0xA0676"
 "!pffff!e00!0の!c04ＨＰ!c07が!1増えた！","!pffff!e00!0's !c04HP !c07+ !1！","0xA06DE"
 "!pffff!e00!0の!c04ＨＰ!c07が!1減った！","!pffff!e00!0's !c04HP !c07- !1！","0xA0706"
 "!pffff!e00!0は!c04ＨＰ!c07が０になった！/次の!c05１ターン!c07休み！","!pffff!e00!0's !c04HP !c07hit 0 ！/Skip next !c05turn !c07！","0xA072E"
