@@ -1,0 +1,3680 @@
+======================================================================
+AVAILABLE BYTES REPORT FOR 1ST_READ.BIN
+======================================================================
+
+Fits normally:          2402
+Fits using extra nulls: 27
+Still too long:         47
+Not found:              25
+Could be expanded:      832 unique strings
+
+======================================================================
+COULD BE EXPANDED (832 strings with extra null space)
+  'spare' = how many more bytes the English could grow.
+  'avail' = min available across all occurrences (the real limit).
+======================================================================
+
+  EN(20B) / JP(54B) / avail(55B) = +35B spare  [1 occ, extra nulls: 1]
+    JP: メールのタイトルを必ず　　　　　　　　　　　　として、
+    EN: Use the title below:
+
+  EN(17B) / JP(48B) / avail(51B) = +34B spare  [1 occ, extra nulls: 3]
+    JP: パスワード入力からＥＤＩＴキャラをメモリーカード
+    EN: Register EDIT via
+
+  EN(18B) / JP(50B) / avail(51B) = +33B spare  [1 occ, extra nulls: 1]
+    JP: アーケードモードのストーリーデモを見るモードです。
+    EN: View Arcade story.
+
+  EN(18B) / JP(50B) / avail(51B) = +33B spare  [1 occ, extra nulls: 1]
+    JP: グッドエンディングを見たキャラしか選択できません。
+    EN: Good endings only.
+
+  EN(19B) / JP(48B) / avail(51B) = +32B spare  [1 occ, extra nulls: 3]
+    JP: ホームページからダウンロードしたＥＤＩＴキャラを
+    EN: Register downloaded
+
+  EN(20B) / JP(48B) / avail(51B) = +31B spare  [1 occ, extra nulls: 3]
+    JP: 通信対戦をしたりホームページを見る事ができます。
+    EN: Online play and web.
+
+  EN(20B) / JP(48B) / avail(51B) = +31B spare  [1 occ, extra nulls: 3]
+    JP: いらなくなったＥＤＩＴキャラをメモリーカードから
+    EN: Delete unwanted EDIT
+
+  EN(16B) / JP(46B) / avail(47B) = +31B spare  [1 occ, extra nulls: 1]
+    JP: アップロードファイルを作成することができます。
+    EN: can be uploaded.
+
+  EN(21B) / JP(48B) / avail(51B) = +30B spare  [1 occ, extra nulls: 3]
+    JP: 数字が大きいほど攻撃のダメージが大きくなります。
+    EN: Higher = more damage.
+
+  EN(21B) / JP(48B) / avail(51B) = +30B spare  [1 occ, extra nulls: 3]
+    JP: 試合がはじまります。キャラ選択画面に行きません。
+    EN: same char. No select.
+
+  EN(17B) / JP(46B) / avail(47B) = +30B spare  [1 occ, extra nulls: 1]
+    JP: ４人までプレイ可能の学園生活ボードゲームです。
+    EN: Board game for 4.
+
+  EN(17B) / JP(46B) / avail(47B) = +30B spare  [1 occ, extra nulls: 1]
+    JP: ＥＤＩＴキャラを他のメモリーカードにコピーする
+    EN: Copy EDIT char to
+
+  EN(17B) / JP(44B) / avail(47B) = +30B spare  [1 occ, extra nulls: 3]
+    JP: 通常どおりバックジャンプすることができます。
+    EN: Back jump normal.
+
+  EN(22B) / JP(48B) / avail(51B) = +29B spare  [1 occ, extra nulls: 3]
+    JP: ＥＤＩＴキャラのダウンロードファイルがあります。
+    EN: EDIT char file exists.
+
+  EN(18B) / JP(46B) / avail(47B) = +29B spare  [1 occ, extra nulls: 1]
+    JP: ＥＤＩＴキャラクターを作成することができます。
+    EN: Create EDIT chars.
+
+  EN(18B) / JP(46B) / avail(47B) = +29B spare  [1 occ, extra nulls: 1]
+    JP: ＥＤＩＴキャラを使うための登録や削除をします。
+    EN: Manage EDIT chars.
+
+  EN(18B) / JP(46B) / avail(47B) = +29B spare  [1 occ, extra nulls: 1]
+    JP: どのＥＤＩＴキャラのステータスを表示しますか？
+    EN: Show which status?
+
+  EN(23B) / JP(48B) / avail(51B) = +28B spare  [1 occ, extra nulls: 3]
+    JP: ファイルのセーブには　ブロックの空きが必要です。
+    EN: Save needs free blocks.
+
+  EN(19B) / JP(46B) / avail(47B) = +28B spare  [1 occ, extra nulls: 1]
+    JP: プレイすることができます。乱入対戦も可能です。
+    EN: of Project Justice.
+
+  EN(19B) / JP(46B) / avail(47B) = +28B spare  [1 occ, extra nulls: 1]
+    JP: 人間ｖｓ人間対戦時の勝ちぬき本数を設定します。
+    EN: Set human vs human.
+
+  EN(19B) / JP(44B) / avail(47B) = +28B spare  [1 occ, extra nulls: 3]
+    JP: 燃えろ！熱血青春日記のエンディングを見ます。
+    EN: View diary endings.
+
+  EN(15B) / JP(40B) / avail(43B) = +28B spare  [1 occ, extra nulls: 3]
+    JP: メモリーカードを抜いたりしないで下さい。
+    EN: or remove card.
+
+  EN(11B) / JP(36B) / avail(39B) = +28B spare  [1 occ, extra nulls: 3]
+    JP: ゲーム中に流れるＢＧＭのボリュームを
+    EN: BGM volume:
+
+  EN(24B) / JP(48B) / avail(51B) = +27B spare  [1 occ, extra nulls: 3]
+    JP: ゲームのご感想・ご意見をメールでも受け付けます！
+    EN: Send feedback via email!
+
+  EN(20B) / JP(46B) / avail(47B) = +27B spare  [1 occ, extra nulls: 1]
+    JP: ＥＤＩＴキャラのステータスやコマンド表の確認と
+    EN: Check EDIT stats and
+
+  EN(20B) / JP(46B) / avail(47B) = +27B spare  [1 occ, extra nulls: 1]
+    JP: どのＥＤＩＴキャラのコマンド表を表示しますか？
+    EN: Show which commands?
+
+  EN(20B) / JP(46B) / avail(47B) = +27B spare  [1 occ, extra nulls: 1]
+    JP: どのＥＤＩＴキャラのパスワードを表示しますか？
+    EN: Show which password?
+
+  EN(20B) / JP(44B) / avail(47B) = +27B spare  [1 occ, extra nulls: 3]
+    JP: 一度でも見ていると選択できるようになります。
+    EN: Viewable after seen.
+
+  EN(20B) / JP(44B) / avail(47B) = +27B spare  [1 occ, extra nulls: 3]
+    JP: どのＥＤＩＴキャラの技使用率を設定しますか？
+    EN: Set which move rate?
+
+  EN(20B) / JP(44B) / avail(47B) = +27B spare  [1 occ, extra nulls: 3]
+    JP: 必殺技がないのでＣＰＵエディットできません。
+    EN: No specials for CPU.
+
+  EN(16B) / JP(40B) / avail(43B) = +27B spare  [1 occ, extra nulls: 3]
+    JP: 連続技や必殺技のトレーニングができます。
+    EN: Practice combos.
+
+  EN(21B) / JP(46B) / avail(47B) = +26B spare  [1 occ, extra nulls: 1]
+    JP: Ａボタンを押すと現在のファイルを上書きします。
+    EN: Press A to overwrite.
+
+  EN(21B) / JP(46B) / avail(47B) = +26B spare  [1 occ, extra nulls: 1]
+    JP: 「ＥＤＩＴ管理」でキャラを読みこんでください。
+    EN: Load in EDIT Manager.
+
+  EN(21B) / JP(46B) / avail(47B) = +26B spare  [1 occ, extra nulls: 1]
+    JP: クリアしたストーリーのデモしか選択できません。
+    EN: Cleared stories only.
+
+  EN(21B) / JP(46B) / avail(47B) = +26B spare  [1 occ, extra nulls: 1]
+    JP: アーケードモードのランキングを見るモードです。
+    EN: View Arcade rankings.
+
+  EN(21B) / JP(44B) / avail(47B) = +26B spare  [1 occ, extra nulls: 3]
+    JP: システムファイルに書き込むのに成功しました。
+    EN: saved to system file.
+
+  EN(21B) / JP(44B) / avail(47B) = +26B spare  [1 occ, extra nulls: 3]
+    JP: システムファイルに書き込むのに失敗しました。
+    EN: Failed to write file.
+
+  EN(21B) / JP(44B) / avail(47B) = +26B spare  [1 occ, extra nulls: 3]
+    JP: 「あり」でコンティニューすると、同じキャラで
+    EN: With ON continue uses
+
+  EN(21B) / JP(44B) / avail(47B) = +26B spare  [1 occ, extra nulls: 3]
+    JP: セーブには１０ブロックの空き容量が必要です。
+    EN: Needs 10 free blocks.
+
+  EN(17B) / JP(40B) / avail(43B) = +26B spare  [1 occ, extra nulls: 3]
+    JP: ＣＰＵエディットの内容が変更されました。
+    EN: CPU Edit changed.
+
+  EN(13B) / JP(38B) / avail(39B) = +26B spare  [1 occ, extra nulls: 1]
+    JP: バックジャンプが一切できなくなります。
+    EN: No back jump.
+
+  EN(13B) / JP(36B) / avail(39B) = +26B spare  [1 occ, extra nulls: 3]
+    JP: 通常どおり２プラトンが使用可能です。
+    EN: 2-Platoon OK.
+
+  EN(13B) / JP(36B) / avail(39B) = +26B spare  [1 occ, extra nulls: 3]
+    JP: 通常どおり３プラトンが使用可能です。
+    EN: 3-Platoon OK.
+
+  EN(22B) / JP(46B) / avail(47B) = +25B spare  [1 occ, extra nulls: 1]
+    JP: ダウンロードやパスワードのキャラ管理もここで。
+    EN: Download and password.
+
+  EN(22B) / JP(44B) / avail(47B) = +25B spare  [1 occ, extra nulls: 3]
+    JP: 数字が大きいほどコンピュータが強くなります。
+    EN: Higher = stronger CPU.
+
+  EN(22B) / JP(44B) / avail(47B) = +25B spare  [1 occ, extra nulls: 3]
+    JP: サウンド出力を「ステレオ」と「モノラル」から
+    EN: Audio: Stereo or Mono.
+
+  EN(18B) / JP(42B) / avail(43B) = +25B spare  [1 occ, extra nulls: 1]
+    JP: 燃えろ！熱血青春日記のコマキャラを見ます。
+    EN: View diary panels.
+
+  EN(18B) / JP(42B) / avail(43B) = +25B spare  [1 occ, extra nulls: 1]
+    JP: ランキングや自分の作成したＥＤＩＴキャラの
+    EN: Rankings and chars
+
+  EN(18B) / JP(42B) / avail(43B) = +25B spare  [1 occ, extra nulls: 1]
+    JP: １８ｘ１８：ただいまマイクのテスト中・・・
+    EN: 18x18: Mic test...
+
+  EN(18B) / JP(42B) / avail(43B) = +25B spare  [1 occ, extra nulls: 1]
+    JP: ２０ｘ２０：ただいまマイクのテスト中・・・
+    EN: 20x20: Mic test...
+
+  EN(18B) / JP(42B) / avail(43B) = +25B spare  [1 occ, extra nulls: 1]
+    JP: ２２ｘ２２：ただいまマイクのテスト中・・・
+    EN: 22x22: Mic test...
+
+  EN(18B) / JP(42B) / avail(43B) = +25B spare  [1 occ, extra nulls: 1]
+    JP: ２４ｘ２４：ただいまマイクのテスト中・・・
+    EN: 24x24: Mic test...
+
+  EN(18B) / JP(42B) / avail(43B) = +25B spare  [1 occ, extra nulls: 1]
+    JP: ２６ｘ２６：ただいまマイクのテスト中・・・
+    EN: 26x26: Mic test...
+
+  EN(18B) / JP(40B) / avail(43B) = +25B spare  [2 occ, extra nulls: 3]
+    JP: メモリーカードのファイルをロードします。
+    EN: Loading card file.
+
+  EN(18B) / JP(40B) / avail(43B) = +25B spare  [1 occ, extra nulls: 3]
+    JP: ＣＰＵ対戦時の勝ちぬき本数を設定します。
+    EN: Set rounds vs CPU.
+
+  EN(14B) / JP(28B) / avail(39B) = +25B spare  [1 occ, extra nulls: 11]
+    JP: しばらくお待ちください・・・
+    EN: Please wait...
+
+  EN(27B) / JP(48B) / avail(51B) = +24B spare  [1 occ, extra nulls: 3]
+    JP: ＳＴＡＲＴボタンを押すとゲームを続行できますが、
+    EN: Press START to continue but
+
+  EN(23B) / JP(44B) / avail(47B) = +24B spare  [1 occ, extra nulls: 3]
+    JP: もちろんＥＤＩＴキャラを使うこともできます。
+    EN: EDIT chars can be used.
+
+  EN(19B) / JP(42B) / avail(43B) = +24B spare  [1 occ, extra nulls: 1]
+    JP: アーケード版「燃えろ！ジャスティス学園」を
+    EN: Play arcade version
+
+  EN(19B) / JP(42B) / avail(43B) = +24B spare  [1 occ, extra nulls: 1]
+    JP: 通常どおり、次のラウンドで使用するキャラを
+    EN: Next round char can
+
+  EN(19B) / JP(42B) / avail(43B) = +24B spare  [1 occ, extra nulls: 1]
+    JP: メモリーカードを抜いたりしないでください。
+    EN: Do not remove card.
+
+  EN(19B) / JP(40B) / avail(43B) = +24B spare  [1 occ, extra nulls: 3]
+    JP: 数字が大きいほど制限時間が短くなります。
+    EN: Higher = less time.
+
+  EN(19B) / JP(40B) / avail(43B) = +24B spare  [1 occ, extra nulls: 3]
+    JP: メモリーカードに登録することができます。
+    EN: EDIT chars to card.
+
+  EN(19B) / JP(40B) / avail(43B) = +24B spare  [1 occ, extra nulls: 3]
+    JP: （ランキング情報は自動的に登録されます）
+    EN: (Rankings auto-reg)
+
+  EN(15B) / JP(38B) / avail(39B) = +24B spare  [1 occ, extra nulls: 1]
+    JP: 最後まで勝ち残ったチームが優勝します。
+    EN: Last team wins.
+
+  EN(15B) / JP(38B) / avail(39B) = +24B spare  [1 occ, extra nulls: 1]
+    JP: コントローラのボタン設定を変更します。
+    EN: Change buttons.
+
+  EN(15B) / JP(36B) / avail(39B) = +24B spare  [1 occ, extra nulls: 3]
+    JP: 接続料がかかります。よろしいですか？
+    EN: Fees apply. OK?
+
+  EN(20B) / JP(42B) / avail(43B) = +23B spare  [1 occ, extra nulls: 1]
+    JP: ダウンロードファイルをチェックしています…
+    EN: Checking download...
+
+  EN(20B) / JP(42B) / avail(43B) = +23B spare  [1 occ, extra nulls: 1]
+    JP: 上下段の違い以外は、自動的にガードします。
+    EN: Auto guard high/low.
+
+  EN(20B) / JP(42B) / avail(43B) = +23B spare  [2 occ, extra nulls: 1]
+    JP: セーブには２ブロックの空き容量が必要です。
+    EN: Needs 2 free blocks.
+
+  EN(20B) / JP(42B) / avail(43B) = +23B spare  [2 occ, extra nulls: 1]
+    JP: セーブには６ブロックの空き容量が必要です。
+    EN: Needs 6 free blocks.
+
+  EN(20B) / JP(40B) / avail(43B) = +23B spare  [1 occ, extra nulls: 3]
+    JP: 正しいメモリーカードを接続してください。
+    EN: Insert correct card.
+
+  EN(16B) / JP(38B) / avail(39B) = +23B spare  [1 occ, extra nulls: 1]
+    JP: タイマースピードを５段階で設定します。
+    EN: Timer: 5 levels.
+
+  EN(16B) / JP(36B) / avail(39B) = +23B spare  [1 occ, extra nulls: 3]
+    JP: ストーリー、エンディングなどのデモや
+    EN: View story demos
+
+  EN(16B) / JP(36B) / avail(39B) = +23B spare  [1 occ, extra nulls: 3]
+    JP: のメッセージは次回から受け取りません
+    EN: Messages blocked
+
+  EN(12B) / JP(34B) / avail(35B) = +23B spare  [1 occ, extra nulls: 1]
+    JP: 何らかの原因で回線を切断されました
+    EN: Disconnected
+
+  EN(12B) / JP(32B) / avail(35B) = +23B spare  [1 occ, extra nulls: 3]
+    JP: 本当に終了してもよろしいですか？
+    EN: Really quit?
+
+  EN(21B) / JP(42B) / avail(43B) = +22B spare  [1 occ, extra nulls: 1]
+    JP: 熱血受け身の最中、完全無敵ではありません。
+    EN: not fully invincible.
+
+  EN(21B) / JP(40B) / avail(43B) = +22B spare  [1 occ, extra nulls: 3]
+    JP: ＣＰＵエディットの内容が適用されません。
+    EN: CPU Edit not applied.
+
+  EN(21B) / JP(40B) / avail(43B) = +22B spare  [1 occ, extra nulls: 3]
+    JP: ホームページへ接続し、登録してください。
+    EN: Connect and register.
+
+  EN(17B) / JP(38B) / avail(39B) = +22B spare  [1 occ, extra nulls: 1]
+    JP: ダウンロードファイルは消去されました。
+    EN: Download deleted.
+
+  EN(17B) / JP(38B) / avail(39B) = +22B spare  [1 occ, extra nulls: 1]
+    JP: メモリーカードを認識できませんでした。
+    EN: Cannot read card.
+
+  EN(17B) / JP(38B) / avail(39B) = +22B spare  [1 occ, extra nulls: 1]
+    JP: ネットワークに入ると、セーブしていない
+    EN: Network may cause
+
+  EN(17B) / JP(38B) / avail(39B) = +22B spare  [1 occ, extra nulls: 1]
+    JP: キャラクターのボイスを聞くモードです。
+    EN: Listen to voices.
+
+  EN(17B) / JP(38B) / avail(39B) = +22B spare  [1 occ, extra nulls: 1]
+    JP: ＣＰＵエディットを行うことができます。
+    EN: perform CPU Edit.
+
+  EN(17B) / JP(36B) / avail(39B) = +22B spare  [1 occ, extra nulls: 3]
+    JP: メモリーカードのデータをセーブしたり
+    EN: Save or load data
+
+  EN(17B) / JP(36B) / avail(39B) = +22B spare  [1 occ, extra nulls: 3]
+    JP: ＥＤＩＴキャラをＣＰＵとして使う時の
+    EN: When using as CPU
+
+  EN(17B) / JP(36B) / avail(39B) = +22B spare  [1 occ, extra nulls: 3]
+    JP: ＥＤＩＴキャラのデータをパスワードに
+    EN: Convert EDIT data
+
+  EN(17B) / JP(36B) / avail(39B) = +22B spare  [1 occ, extra nulls: 3]
+    JP: 適当な対戦相手が見つかりませんでした
+    EN: No opponent found
+
+  EN(17B) / JP(36B) / avail(39B) = +22B spare  [1 occ, extra nulls: 3]
+    JP: ログインパスワードが入力されてません
+    EN: No login password
+
+  EN(13B) / JP(32B) / avail(35B) = +22B spare  [1 occ, extra nulls: 3]
+    JP: ２プラトンが一切使用できません。
+    EN: No 2-Platoon.
+
+  EN(13B) / JP(32B) / avail(35B) = +22B spare  [1 occ, extra nulls: 3]
+    JP: ３プラトンが一切使用できません。
+    EN: No 3-Platoon.
+
+  EN(5B) / JP(26B) / avail(27B) = +22B spare  [1 occ, extra nulls: 1]
+    JP: もう一度おかけなおし下さい
+    EN: later
+
+  EN(22B) / JP(42B) / avail(43B) = +21B spare  [2 occ, extra nulls: 1]
+    JP: 「燃えろ！ジャスティス学園」のオフィシャル
+    EN: Official Rival Schools
+
+  EN(22B) / JP(40B) / avail(43B) = +21B spare  [2 occ, extra nulls: 3]
+    JP: メモリーカードの接続を確認してください。
+    EN: Check card connection.
+
+  EN(22B) / JP(40B) / avail(43B) = +21B spare  [1 occ, extra nulls: 3]
+    JP: ＥＤＩＴファイルを認識できませんでした。
+    EN: Cannot read EDIT file.
+
+  EN(22B) / JP(40B) / avail(43B) = +21B spare  [1 occ, extra nulls: 3]
+    JP: ファイルにＥＤＩＴキャラを登録しますか？
+    EN: Register EDIT to file?
+
+  EN(18B) / JP(36B) / avail(39B) = +21B spare  [1 occ, extra nulls: 3]
+    JP: 根性ゲージ３本で試合開始になります。
+    EN: start with 3 Guts.
+
+  EN(18B) / JP(36B) / avail(39B) = +21B spare  [1 occ, extra nulls: 3]
+    JP: 根性ゲージ５本で試合開始になります。
+    EN: start with 5 Guts.
+
+  EN(18B) / JP(36B) / avail(39B) = +21B spare  [1 occ, extra nulls: 3]
+    JP: 根性ゲージ０本で試合開始になります。
+    EN: Start with 0 Guts.
+
+  EN(18B) / JP(36B) / avail(39B) = +21B spare  [1 occ, extra nulls: 3]
+    JP: サーバーが混雑しているかもしれません
+    EN: server may be busy
+
+  EN(18B) / JP(36B) / avail(39B) = +21B spare  [1 occ, extra nulls: 3]
+    JP: あなたのカプコンＩＤや通信相手のＩＤ
+    EN: Your Capcom ID and
+
+  EN(18B) / JP(36B) / avail(39B) = +21B spare  [1 occ, extra nulls: 3]
+    JP: エントリー条件が満たされていないため
+    EN: Entry requirements
+
+  EN(14B) / JP(34B) / avail(35B) = +21B spare  [1 occ, extra nulls: 1]
+    JP: のファイルのセーブに成功しました。
+    EN: File saved OK.
+
+  EN(14B) / JP(34B) / avail(35B) = +21B spare  [1 occ, extra nulls: 1]
+    JP: ゲーム中のＢＧＭを聞くモードです。
+    EN: Listen to BGM.
+
+  EN(14B) / JP(34B) / avail(35B) = +21B spare  [1 occ, extra nulls: 1]
+    JP: 相手がいないため不戦勝になりました
+    EN: Win by forfeit
+
+  EN(14B) / JP(34B) / avail(35B) = +21B spare  [1 occ, extra nulls: 1]
+    JP: 時間をおいて再エントリーして下さい
+    EN: Re-enter later
+
+  EN(18B) / JP(32B) / avail(39B) = +21B spare  [1 occ, extra nulls: 7]
+    JP: データが失われることがあります。
+    EN: unsaved data loss.
+
+  EN(14B) / JP(32B) / avail(35B) = +21B spare  [1 occ, extra nulls: 3]
+    JP: 自分で行なわなければなりません。
+    EN: done manually.
+
+  EN(14B) / JP(32B) / avail(35B) = +21B spare  [1 occ, extra nulls: 3]
+    JP: コマンド表を見ることができます。
+    EN: move commands.
+
+  EN(10B) / JP(28B) / avail(31B) = +21B spare  [1 occ, extra nulls: 3]
+    JP: ゲーム中のＳＥのボリュームを
+    EN: SE volume:
+
+  EN(23B) / JP(42B) / avail(43B) = +20B spare  [1 occ, extra nulls: 1]
+    JP: Ａボタンを押すと新しくデータを作成します。
+    EN: Press A to create data.
+
+  EN(23B) / JP(42B) / avail(43B) = +20B spare  [1 occ, extra nulls: 1]
+    JP: Ａ・Ｂポート両方にコントローラが必要です。
+    EN: Controllers in A and B.
+
+  EN(23B) / JP(40B) / avail(43B) = +20B spare  [1 occ, extra nulls: 3]
+    JP: Ａボタンを押すともう一度チェックします。
+    EN: Press A to check again.
+
+  EN(23B) / JP(40B) / avail(43B) = +20B spare  [1 occ, extra nulls: 3]
+    JP: ボタン設定や難易度、ゲームのルールなどを
+    EN: Button config and rules
+
+  EN(23B) / JP(40B) / avail(43B) = +20B spare  [1 occ, extra nulls: 3]
+    JP: コンピュータの強さを８段階で設定します。
+    EN: CPU strength: 8 levels.
+
+  EN(23B) / JP(40B) / avail(43B) = +20B spare  [1 occ, extra nulls: 3]
+    JP: 対戦するステージの背景を見るモードです。
+    EN: View stage backgrounds.
+
+  EN(19B) / JP(38B) / avail(39B) = +20B spare  [1 occ, extra nulls: 1]
+    JP: アップロードファイルが既に存在します。
+    EN: Upload file exists.
+
+  EN(19B) / JP(36B) / avail(39B) = +20B spare  [1 occ, extra nulls: 3]
+    JP: メモリーカードを抜かないでください！
+    EN: Do not remove card!
+
+  EN(19B) / JP(36B) / avail(39B) = +20B spare  [1 occ, extra nulls: 3]
+    JP: ダウンロードファイルのおまけ情報を、
+    EN: Download bonus info
+
+  EN(19B) / JP(36B) / avail(39B) = +20B spare  [1 occ, extra nulls: 3]
+    JP: 着地の時のみ熱血受け身が可能ですが、
+    EN: Only on landing but
+
+  EN(19B) / JP(36B) / avail(39B) = +20B spare  [1 occ, extra nulls: 3]
+    JP: ゲージ消費攻撃が使い放題になります。
+    EN: gauge attacks free.
+
+  EN(19B) / JP(36B) / avail(39B) = +20B spare  [1 occ, extra nulls: 3]
+    JP: どのＥＤＩＴキャラをコピーしますか？
+    EN: Which EDIT to copy?
+
+  EN(19B) / JP(36B) / avail(39B) = +20B spare  [1 occ, extra nulls: 3]
+    JP: ＥＤＩＴキャラが登録されていません。
+    EN: No EDIT registered.
+
+  EN(19B) / JP(36B) / avail(39B) = +20B spare  [1 occ, extra nulls: 3]
+    JP: 一定時間でサーバーに戻れなかったので
+    EN: Could not return to
+
+  EN(15B) / JP(34B) / avail(35B) = +20B spare  [1 occ, extra nulls: 1]
+    JP: のファイルのロードに成功しました。
+    EN: File loaded OK.
+
+  EN(11B) / JP(30B) / avail(31B) = +20B spare  [1 occ, extra nulls: 1]
+    JP: しばらくそのままでお待ち下さい
+    EN: Please wait
+
+  EN(11B) / JP(28B) / avail(31B) = +20B spare  [1 occ, extra nulls: 3]
+    JP: スタートボタンを押して下さい
+    EN: press START
+
+  EN(7B) / JP(26B) / avail(27B) = +20B spare  [2 occ, extra nulls: 1-3]
+    JP: 混雑しているかもしれません
+    EN: be busy
+
+  EN(20B) / JP(38B) / avail(39B) = +19B spare  [1 occ, extra nulls: 1]
+    JP: ＭＯＤＥ　ＳＥＬＥＣＴ画面に戻ります。
+    EN: Back to MODE SELECT.
+
+  EN(20B) / JP(36B) / avail(39B) = +19B spare  [1 occ, extra nulls: 3]
+    JP: 技使用率の設定を行うことができます。
+    EN: set move usage rate.
+
+  EN(20B) / JP(36B) / avail(39B) = +19B spare  [1 occ, extra nulls: 3]
+    JP: アップロードファイルを作成しました。
+    EN: Upload file created.
+
+  EN(16B) / JP(34B) / avail(35B) = +19B spare  [1 occ, extra nulls: 1]
+    JP: Ａボタンでファイルをロードします。
+    EN: Press A to load.
+
+  EN(16B) / JP(34B) / avail(35B) = +19B spare  [1 occ, extra nulls: 1]
+    JP: Ａボタンでファイルをセーブします。
+    EN: Press A to save.
+
+  EN(16B) / JP(34B) / avail(35B) = +19B spare  [1 occ, extra nulls: 1]
+    JP: 始まる電話番号の場合、ダイヤルＱ２
+    EN: Dial Q2 applies:
+
+  EN(16B) / JP(34B) / avail(35B) = +19B spare  [1 occ, extra nulls: 1]
+    JP: これでトーナメントは終了いたします
+    EN: Tournament ended
+
+  EN(16B) / JP(32B) / avail(35B) = +19B spare  [1 occ, extra nulls: 3]
+    JP: サウンドを楽しむことができます。
+    EN: and enjoy sound.
+
+  EN(16B) / JP(32B) / avail(35B) = +19B spare  [1 occ, extra nulls: 3]
+    JP: アップロードファイルをセーブする
+    EN: Save upload file
+
+  EN(16B) / JP(32B) / avail(35B) = +19B spare  [1 occ, extra nulls: 3]
+    JP: 回線を切断してもよろしいですか？
+    EN: Disconnect line?
+
+  EN(12B) / JP(30B) / avail(31B) = +19B spare  [2 occ, extra nulls: 1]
+    JP: 正しくセーブできませんでした。
+    EN: Save failed.
+
+  EN(12B) / JP(30B) / avail(31B) = +19B spare  [2 occ, extra nulls: 1]
+    JP: 正しくロードできませんでした。
+    EN: Load failed.
+
+  EN(12B) / JP(28B) / avail(31B) = +19B spare  [2 occ, extra nulls: 3]
+    JP: ファイルをセーブしています。
+    EN: Saving file.
+
+  EN(3B) / JP(6B) / avail(22B) = +19B spare  [1 occ, extra nulls: 16]
+    JP: 体　力
+    EN: VIT
+
+  EN(3B) / JP(6B) / avail(22B) = +19B spare  [1 occ, extra nulls: 16]
+    JP: 知　力
+    EN: INT
+
+  EN(21B) / JP(36B) / avail(39B) = +18B spare  [1 occ, extra nulls: 3]
+    JP: 鑑賞するステージを選択してください。
+    EN: Select stage to view.
+
+  EN(21B) / JP(36B) / avail(39B) = +18B spare  [1 occ, extra nulls: 3]
+    JP: ディスクドアを開けたりしないで下さい
+    EN: Do not open disc door
+
+  EN(21B) / JP(36B) / avail(39B) = +18B spare  [1 occ, extra nulls: 3]
+    JP: なお、セガプロバイダーで０９９０から
+    EN: For SEGA 0990 numbers
+
+  EN(21B) / JP(36B) / avail(39B) = +18B spare  [1 occ, extra nulls: 3]
+    JP: のメッセージを次回から拒否しますか？
+    EN: Block their messages?
+
+  EN(21B) / JP(36B) / avail(39B) = +18B spare  [1 occ, extra nulls: 3]
+    JP: 開催中のトーナメントの経過が見れます
+    EN: View tourney progress
+
+  EN(17B) / JP(34B) / avail(35B) = +18B spare  [1 occ, extra nulls: 1]
+    JP: ＣＰＵ同士の対戦を見るモードです。
+    EN: Watch CPU vs CPU.
+
+  EN(17B) / JP(34B) / avail(35B) = +18B spare  [1 occ, extra nulls: 1]
+    JP: ＥＤＩＴキャラの持っている必殺技の
+    EN: View EDIT special
+
+  EN(17B) / JP(34B) / avail(35B) = +18B spare  [1 occ, extra nulls: 1]
+    JP: ダウンロードファイルがありません。
+    EN: No download file.
+
+  EN(17B) / JP(34B) / avail(35B) = +18B spare  [1 occ, extra nulls: 1]
+    JP: 何らかの原因で接続できませんでした
+    EN: Could not connect
+
+  EN(17B) / JP(32B) / avail(35B) = +18B spare  [1 occ, extra nulls: 3]
+    JP: ゲージ消費攻撃が一切使えません。
+    EN: no gauge attacks.
+
+  EN(13B) / JP(30B) / avail(31B) = +18B spare  [2 occ, extra nulls: 1]
+    JP: ＥＤＩＴファイルがありません。
+    EN: No EDIT file.
+
+  EN(13B) / JP(30B) / avail(31B) = +18B spare  [1 occ, extra nulls: 1]
+    JP: 設定された料金上限を超えました
+    EN: exceeds limit
+
+  EN(13B) / JP(28B) / avail(31B) = +18B spare  [2 occ, extra nulls: 3]
+    JP: ファイルをロードしています。
+    EN: Loading file.
+
+  EN(9B) / JP(24B) / avail(27B) = +18B spare  [1 occ, extra nulls: 3]
+    JP: 一切ピヨらなくなります。
+    EN: No dizzy.
+
+  EN(22B) / JP(38B) / avail(39B) = +17B spare  [2 occ, extra nulls: 1]
+    JP: メモリーカードの容量が不足しています。
+    EN: Not enough card space.
+
+  EN(22B) / JP(38B) / avail(39B) = +17B spare  [2 occ, extra nulls: 1]
+    JP: メモリーカードにファイルを作成します。
+    EN: Creating file on card.
+
+  EN(22B) / JP(38B) / avail(39B) = +17B spare  [1 occ, extra nulls: 1]
+    JP: メモリーカードの接続を確認して下さい。
+    EN: Check card connection.
+
+  EN(22B) / JP(36B) / avail(39B) = +17B spare  [1 occ, extra nulls: 3]
+    JP: 対戦中は電源を切ったりしないで下さい
+    EN: No power off in battle
+
+  EN(18B) / JP(34B) / avail(35B) = +17B spare  [2 occ, extra nulls: 1]
+    JP: 以前セーブしたものではありません。
+    EN: not the saved one.
+
+  EN(18B) / JP(34B) / avail(35B) = +17B spare  [1 occ, extra nulls: 1]
+    JP: ネットワークの設定をしてください。
+    EN: to set up network.
+
+  EN(18B) / JP(34B) / avail(35B) = +17B spare  [1 occ, extra nulls: 1]
+    JP: キャラ交代が一切できなくなります。
+    EN: No char switching.
+
+  EN(18B) / JP(34B) / avail(35B) = +17B spare  [1 occ, extra nulls: 1]
+    JP: ＥＤＩＴキャラの詳しいステータスを
+    EN: View detailed EDIT
+
+  EN(18B) / JP(34B) / avail(35B) = +17B spare  [1 occ, extra nulls: 1]
+    JP: どのＥＤＩＴキャラを登録しますか？
+    EN: Which EDIT to reg?
+
+  EN(18B) / JP(34B) / avail(35B) = +17B spare  [1 occ, extra nulls: 1]
+    JP: どのポートのデータを使用しますか？
+    EN: Which port to use?
+
+  EN(18B) / JP(32B) / avail(35B) = +17B spare  [1 occ, extra nulls: 3]
+    JP: 電話回線を使って情報を登録します
+    EN: Register via phone
+
+  EN(14B) / JP(30B) / avail(31B) = +17B spare  [1 occ, extra nulls: 1]
+    JP: にファイルをセーブしています…
+    EN: Saving file...
+
+  EN(14B) / JP(30B) / avail(31B) = +17B spare  [1 occ, extra nulls: 1]
+    JP: メモリーカードを接続して下さい
+    EN: Please connect
+
+  EN(14B) / JP(30B) / avail(31B) = +17B spare  [1 occ, extra nulls: 1]
+    JP: メモリーカードを拡張ソケットに
+    EN: Insert card in
+
+  EN(18B) / JP(28B) / avail(35B) = +17B spare  [1 occ, extra nulls: 7]
+    JP: リーグ戦をもう一度しますか？
+    EN: Play League again?
+
+  EN(14B) / JP(28B) / avail(31B) = +17B spare  [1 occ, extra nulls: 3]
+    JP: ＩＤの編集をおこなって下さい
+    EN: Please edit ID
+
+  EN(14B) / JP(28B) / avail(31B) = +17B spare  [1 occ, extra nulls: 3]
+    JP: またの参加をお待ちしています
+    EN: Join us again!
+
+  EN(10B) / JP(24B) / avail(27B) = +17B spare  [1 occ, extra nulls: 3]
+    JP: １６段階で調節できます。
+    EN: 16 levels.
+
+  EN(6B) / JP(22B) / avail(23B) = +17B spare  [1 occ, extra nulls: 1]
+    JP: もう一度対戦しますか？
+    EN: again?
+
+  EN(19B) / JP(34B) / avail(35B) = +16B spare  [1 occ, extra nulls: 1]
+    JP: メモリーカードを選択してください。
+    EN: Select Memory Card.
+
+  EN(19B) / JP(34B) / avail(35B) = +16B spare  [1 occ, extra nulls: 1]
+    JP: しばらくしてから再度ためして下さい
+    EN: and try again later
+
+  EN(19B) / JP(34B) / avail(35B) = +16B spare  [1 occ, extra nulls: 1]
+    JP: は現在、この対戦ルームにはいません
+    EN: is not in this room
+
+  EN(19B) / JP(32B) / avail(35B) = +16B spare  [1 occ, extra nulls: 3]
+    JP: スタッフロールを見るモードです。
+    EN: View staff credits.
+
+  EN(19B) / JP(32B) / avail(35B) = +16B spare  [1 occ, extra nulls: 3]
+    JP: メモリーカードを選んでください。
+    EN: Select Memory Card.
+
+  EN(19B) / JP(32B) / avail(35B) = +16B spare  [1 occ, extra nulls: 3]
+    JP: このＥＤＩＴキャラを登録します。
+    EN: Register this EDIT.
+
+  EN(19B) / JP(32B) / avail(35B) = +16B spare  [1 occ, extra nulls: 3]
+    JP: 登録後、ネットワークに接続します
+    EN: Then connect to net
+
+  EN(19B) / JP(32B) / avail(35B) = +16B spare  [1 occ, extra nulls: 3]
+    JP: これよりトーナメントを開始します
+    EN: Tournament starting
+
+  EN(15B) / JP(30B) / avail(31B) = +16B spare  [1 occ, extra nulls: 1]
+    JP: のファイルをロードしています…
+    EN: Loading file...
+
+  EN(15B) / JP(30B) / avail(31B) = +16B spare  [1 occ, extra nulls: 1]
+    JP: のＩＤを削除してもいいですか？
+    EN: Delete this ID?
+
+  EN(15B) / JP(28B) / avail(31B) = +16B spare  [3 occ, extra nulls: 3]
+    JP: メモリーカードがありません。
+    EN: No Memory Card.
+
+  EN(15B) / JP(28B) / avail(31B) = +16B spare  [1 occ, extra nulls: 3]
+    JP: ファイルがありませんでした。
+    EN: File not found.
+
+  EN(15B) / JP(28B) / avail(31B) = +16B spare  [2 occ, extra nulls: 3]
+    JP: 上書きしてもよろしいですか？
+    EN: Overwrite file?
+
+  EN(19B) / JP(28B) / avail(35B) = +16B spare  [1 occ, extra nulls: 7]
+    JP: ネットワークに接続しますか？
+    EN: Connect to network?
+
+  EN(7B) / JP(20B) / avail(23B) = +16B spare  [1 occ, extra nulls: 3]
+    JP: エントリーできません
+    EN: not met
+
+  EN(6B) / JP(20B) / avail(22B) = +16B spare  [1 occ, extra nulls: 2]
+    JP: 好きな言葉　　　　：
+    EN: Motto:
+
+  EN(8B) / JP(12B) / avail(24B) = +16B spare  [1 occ, extra nulls: 12]
+    JP: 体育の単位を
+    EN: PE creds
+
+  EN(8B) / JP(8B) / avail(24B) = +16B spare  [1 occ, extra nulls: 16]
+    JP: 　攻撃力
+    EN:  ATK    
+
+  EN(8B) / JP(8B) / avail(24B) = +16B spare  [1 occ, extra nulls: 16]
+    JP: 　防御力
+    EN:  DEF    
+
+  EN(8B) / JP(8B) / avail(24B) = +16B spare  [1 occ, extra nulls: 16]
+    JP: 　体　力
+    EN:  VIT    
+
+  EN(8B) / JP(8B) / avail(24B) = +16B spare  [1 occ, extra nulls: 16]
+    JP: 　根　性
+    EN:  GUTS   
+
+  EN(8B) / JP(8B) / avail(24B) = +16B spare  [1 occ, extra nulls: 16]
+    JP: 　知　力
+    EN:  INT    
+
+  EN(20B) / JP(34B) / avail(35B) = +15B spare  [1 occ, extra nulls: 1]
+    JP: のファイルのロードに失敗しました。
+    EN: Failed to load file.
+
+  EN(20B) / JP(34B) / avail(35B) = +15B spare  [1 occ, extra nulls: 1]
+    JP: のファイルのセーブに失敗しました。
+    EN: Failed to save file.
+
+  EN(20B) / JP(34B) / avail(35B) = +15B spare  [1 occ, extra nulls: 1]
+    JP: 勝敗数でチームの順位が決まります。
+    EN: Rank by wins/losses.
+
+  EN(20B) / JP(34B) / avail(35B) = +15B spare  [1 occ, extra nulls: 1]
+    JP: 登録内容を変更してよろしいですか？
+    EN: Change registration?
+
+  EN(20B) / JP(34B) / avail(35B) = +15B spare  [1 occ, extra nulls: 1]
+    JP: ログインパスワードを入力して下さい
+    EN: Enter login password
+
+  EN(20B) / JP(32B) / avail(35B) = +15B spare  [1 occ, extra nulls: 3]
+    JP: 見たいキャラを選択してください。
+    EN: Select char to view.
+
+  EN(20B) / JP(32B) / avail(35B) = +15B spare  [1 occ, extra nulls: 3]
+    JP: ＥＤＩＴキャラが一人もいません。
+    EN: No EDIT chars exist.
+
+  EN(20B) / JP(32B) / avail(35B) = +15B spare  [1 occ, extra nulls: 3]
+    JP: スタートボタンを１秒間以上押すと
+    EN: Hold START for 1 sec
+
+  EN(20B) / JP(32B) / avail(35B) = +15B spare  [1 occ, extra nulls: 3]
+    JP: ＮＥＴファイルは対応するゲームで
+    EN: NET file can be used
+
+  EN(20B) / JP(32B) / avail(35B) = +15B spare  [1 occ, extra nulls: 3]
+    JP: トーナメントは開催されていません
+    EN: No tournament active
+
+  EN(20B) / JP(32B) / avail(35B) = +15B spare  [1 occ, extra nulls: 3]
+    JP: トーナメントは不成立になりました
+    EN: Tournament cancelled
+
+  EN(16B) / JP(30B) / avail(31B) = +15B spare  [1 occ, extra nulls: 1]
+    JP: として通話料の他に３分１０円の
+    EN: 10 yen per 3 min
+
+  EN(16B) / JP(30B) / avail(31B) = +15B spare  [1 occ, extra nulls: 1]
+    JP: 全て消去してもよろしいですか？
+    EN: delete all data?
+
+  EN(16B) / JP(28B) / avail(31B) = +15B spare  [1 occ, extra nulls: 3]
+    JP: メモリーカードがいっぱいです
+    EN: Memory Card Full
+
+  EN(16B) / JP(28B) / avail(31B) = +15B spare  [1 occ, extra nulls: 3]
+    JP: 空中では受け身が取れません。
+    EN: no air recovery.
+
+  EN(16B) / JP(28B) / avail(31B) = +15B spare  [2 occ, extra nulls: 3]
+    JP: パスワード入力を中止します。
+    EN: Cancel password.
+
+  EN(16B) / JP(28B) / avail(31B) = +15B spare  [1 occ, extra nulls: 3]
+    JP: 前回の戦いのリプレイデータを
+    EN: Save last battle
+
+  EN(16B) / JP(28B) / avail(31B) = +15B spare  [1 occ, extra nulls: 3]
+    JP: はメッセージを受け取りました
+    EN: received message
+
+  EN(12B) / JP(26B) / avail(27B) = +15B spare  [1 occ, extra nulls: 1]
+    JP: 勝った時、次のラウンドでは
+    EN: When you win
+
+  EN(8B) / JP(22B) / avail(23B) = +15B spare  [1 occ, extra nulls: 1]
+    JP: 正しいか確認して下さい
+    EN: password
+
+  EN(8B) / JP(20B) / avail(23B) = +15B spare  [1 occ, extra nulls: 3]
+    JP: シャッフルしますか？
+    EN: Shuffle?
+
+  EN(9B) / JP(12B) / avail(24B) = +15B spare  [1 occ, extra nulls: 12]
+    JP: 美術の単位を
+    EN: Art creds
+
+  EN(21B) / JP(34B) / avail(35B) = +14B spare  [1 occ, extra nulls: 1]
+    JP: ゲームシステムの設定を変更します。
+    EN: Change game settings.
+
+  EN(21B) / JP(34B) / avail(35B) = +14B spare  [1 occ, extra nulls: 1]
+    JP: どのＥＤＩＴキャラを削除しますか？
+    EN: Which EDIT to delete?
+
+  EN(21B) / JP(34B) / avail(35B) = +14B spare  [1 occ, extra nulls: 1]
+    JP: アップロードファイルを作成します。
+    EN: Creating upload file.
+
+  EN(21B) / JP(34B) / avail(35B) = +14B spare  [1 occ, extra nulls: 1]
+    JP: ＮＥＴＷＯＲＫメニューに戻ります。
+    EN: Back to NETWORK menu.
+
+  EN(21B) / JP(34B) / avail(35B) = +14B spare  [1 occ, extra nulls: 1]
+    JP: トーナメントモードを退場しますか？
+    EN: Exit Tournament mode?
+
+  EN(17B) / JP(30B) / avail(31B) = +14B spare  [1 occ, extra nulls: 1]
+    JP: などメモリーカードの登録情報を
+    EN: card registration
+
+  EN(17B) / JP(30B) / avail(31B) = +14B spare  [1 occ, extra nulls: 1]
+    JP: これ以上、拒否者登録できません
+    EN: Cannot block more
+
+  EN(17B) / JP(28B) / avail(31B) = +14B spare  [3 occ, extra nulls: 3]
+    JP: 何かボタンを押してください。
+    EN: Press any button.
+
+  EN(17B) / JP(28B) / avail(31B) = +14B spare  [1 occ, extra nulls: 3]
+    JP: 攻撃力を４段階で設定します。
+    EN: Attack: 4 levels.
+
+  EN(17B) / JP(28B) / avail(31B) = +14B spare  [1 occ, extra nulls: 3]
+    JP: 通信対戦ロビーへ接続します。
+    EN: Connect to lobby.
+
+  EN(17B) / JP(28B) / avail(31B) = +14B spare  [1 occ, extra nulls: 3]
+    JP: Ｗスクリューパイルドライバー
+    EN: W ScrewPiledriver
+
+  EN(17B) / JP(28B) / avail(31B) = +14B spare  [1 occ, extra nulls: 3]
+    JP: また、接続先を確認して下さい
+    EN: Check destination
+
+  EN(17B) / JP(28B) / avail(31B) = +14B spare  [1 occ, extra nulls: 3]
+    JP: モデムからの応答がありません
+    EN: No modem response
+
+  EN(13B) / JP(26B) / avail(27B) = +14B spare  [1 occ, extra nulls: 1]
+    JP: フォーマットされていません
+    EN: Not Formatted
+
+  EN(17B) / JP(26B) / avail(31B) = +14B spare  [1 occ, extra nulls: 5]
+    JP: ２人対戦の専用モードです。
+    EN: 2-player VS mode.
+
+  EN(13B) / JP(26B) / avail(27B) = +14B spare  [1 occ, extra nulls: 1]
+    JP: 負けた時、次のラウンドでは
+    EN: When you lose
+
+  EN(13B) / JP(25B) / avail(27B) = +14B spare  [1 occ, extra nulls: 2]
+    JP: エンディング 〜暗黒生徒会
+    EN: Ending - Dark
+
+  EN(13B) / JP(26B) / avail(27B) = +14B spare  [2 occ, extra nulls: 1]
+    JP: 同じ組み合わせでしますか？
+    EN: Same matchup?
+
+  EN(9B) / JP(20B) / avail(23B) = +14B spare  [1 occ, extra nulls: 3]
+    JP: ゲームの流れについて
+    EN: Game Flow
+
+  EN(10B) / JP(12B) / avail(24B) = +14B spare  [1 occ, extra nulls: 12]
+    JP: 数学の単位を
+    EN: Math creds
+
+  EN(22B) / JP(34B) / avail(35B) = +13B spare  [1 occ, extra nulls: 1]
+    JP: 勝敗にかかわらず、次のラウンドでは
+    EN: Win or lose next round
+
+  EN(22B) / JP(34B) / avail(35B) = +13B spare  [1 occ, extra nulls: 1]
+    JP: 只今、トーナメントが行われています
+    EN: Tournament in progress
+
+  EN(22B) / JP(32B) / avail(35B) = +13B spare  [1 occ, extra nulls: 3]
+    JP: 熱血受け身は通常どおり可能です。
+    EN: Hot-Blood Recovery OK.
+
+  EN(22B) / JP(32B) / avail(35B) = +13B spare  [1 occ, extra nulls: 3]
+    JP: このＥＤＩＴキャラを削除します。
+    EN: Delete this EDIT char.
+
+  EN(22B) / JP(32B) / avail(35B) = +13B spare  [1 occ, extra nulls: 3]
+    JP: 対戦ジャンルや選択方法を変えるか
+    EN: Change genre or method
+
+  EN(22B) / JP(32B) / avail(35B) = +13B spare  [1 occ, extra nulls: 3]
+    JP: 回線が不安定なため切断されました
+    EN: Disconnected: unstable
+
+  EN(18B) / JP(30B) / avail(31B) = +13B spare  [1 occ, extra nulls: 1]
+    JP: ＥＤＩＴファイルの認識中です。
+    EN: Reading EDIT file.
+
+  EN(18B) / JP(30B) / avail(31B) = +13B spare  [1 occ, extra nulls: 1]
+    JP: ただいま対戦相手を捜しています
+    EN: Searching opponent
+
+  EN(18B) / JP(30B) / avail(31B) = +13B spare  [1 occ, extra nulls: 1]
+    JP: 対戦相手に迷惑がかかりますので
+    EN: Causes trouble for
+
+  EN(18B) / JP(30B) / avail(31B) = +13B spare  [1 occ, extra nulls: 1]
+    JP: 対戦中にリセットしないで下さい
+    EN: opponent. No reset
+
+  EN(18B) / JP(30B) / avail(31B) = +13B spare  [1 occ, extra nulls: 1]
+    JP: トーナメントへの参加希望の方は
+    EN: To join tournament
+
+  EN(18B) / JP(28B) / avail(31B) = +13B spare  [1 occ, extra nulls: 3]
+    JP: 「課金情報」を確認して下さい
+    EN: check Billing info
+
+  EN(18B) / JP(28B) / avail(31B) = +13B spare  [1 occ, extra nulls: 3]
+    JP: ＥＤＩＴデータが複数あります
+    EN: Multiple EDIT data
+
+  EN(18B) / JP(28B) / avail(31B) = +13B spare  [1 occ, extra nulls: 3]
+    JP: カプコンＩＤが間違っています
+    EN: Capcom ID is wrong
+
+  EN(14B) / JP(26B) / avail(27B) = +13B spare  [1 occ, extra nulls: 1]
+    JP: 日記ファイルがありません。
+    EN: No diary file.
+
+  EN(14B) / JP(26B) / avail(27B) = +13B spare  [1 occ, extra nulls: 1]
+    JP: ＥＤＩＴキャラをロードする
+    EN: Load EDIT char
+
+  EN(14B) / JP(26B) / avail(27B) = +13B spare  [1 occ, extra nulls: 1]
+    JP: 登録時のものではありません
+    EN: registered one
+
+  EN(16B) / JP(26B) / avail(29B) = +13B spare  [1 occ, extra nulls: 3]
+    JP: にシステムファイルの入った
+    EN: Insert card with
+
+  EN(14B) / JP(24B) / avail(27B) = +13B spare  [1 occ, extra nulls: 3]
+    JP: Ａボタンを押してください
+    EN: Press A button
+
+  EN(14B) / JP(24B) / avail(27B) = +13B spare  [1 occ, extra nulls: 3]
+    JP: サーブ・あんど・ボレー♪
+    EN: Serve & Volley
+
+  EN(6B) / JP(18B) / avail(19B) = +13B spare  [1 occ, extra nulls: 1]
+    JP: お問い合わせ下さい
+    EN: Center
+
+  EN(11B) / JP(18B) / avail(24B) = +13B spare  [1 occ, extra nulls: 6]
+    JP: 知力がアップします
+    EN: Int goes up
+
+  EN(6B) / JP(16B) / avail(19B) = +13B spare  [2 occ, extra nulls: 3]
+    JP: セーブしました。
+    EN: Saved.
+
+  EN(6B) / JP(16B) / avail(19B) = +13B spare  [1 occ, extra nulls: 3]
+    JP: 　　　　ノーマル
+    EN: Normal
+
+  EN(11B) / JP(12B) / avail(24B) = +13B spare  [1 occ, extra nulls: 12]
+    JP: 音楽の単位を
+    EN: Music creds
+
+  EN(23B) / JP(34B) / avail(35B) = +12B spare  [1 occ, extra nulls: 1]
+    JP: 電源を切るまでこのメモリーカードを
+    EN: Do not remove this card
+
+  EN(23B) / JP(32B) / avail(35B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: ゲームの内容はセーブされません。
+    EN: game will not be saved.
+
+  EN(19B) / JP(30B) / avail(31B) = +12B spare  [1 occ, extra nulls: 1]
+    JP: 根性ゲージが常にＭＡＸになり、
+    EN: Guts always MAX and
+
+  EN(19B) / JP(30B) / avail(31B) = +12B spare  [1 occ, extra nulls: 1]
+    JP: 自由に選択することができます。
+    EN: be freely selected.
+
+  EN(19B) / JP(30B) / avail(31B) = +12B spare  [1 occ, extra nulls: 1]
+    JP: 電源を切ったりメモリーカードを
+    EN: Do not power off or
+
+  EN(19B) / JP(28B) / avail(31B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: 接続していないか、対戦中です
+    EN: server or in battle
+
+  EN(19B) / JP(28B) / avail(31B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: 次の電話番号に電話をかけます
+    EN: Calling this number
+
+  EN(19B) / JP(28B) / avail(31B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: 元のメモリーカードがないので
+    EN: No original card so
+
+  EN(19B) / JP(28B) / avail(31B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: 電話番号が登録されていません
+    EN: No phone registered
+
+  EN(15B) / JP(26B) / avail(27B) = +12B spare  [2 occ, extra nulls: 1-3]
+    JP: に登録することができます。
+    EN: password entry.
+
+  EN(15B) / JP(26B) / avail(27B) = +12B spare  [1 occ, extra nulls: 1]
+    JP: はい：　　　　　　いいえ：
+    EN: Yes:        No:
+
+  EN(15B) / JP(25B) / avail(27B) = +12B spare  [1 occ, extra nulls: 2]
+    JP: エンディング 〜聖純女学院
+    EN: Ending - Seijun
+
+  EN(15B) / JP(26B) / avail(27B) = +12B spare  [1 occ, extra nulls: 1]
+    JP: ファイヤーグラップルビート
+    EN: FireGrappleBeat
+
+  EN(15B) / JP(26B) / avail(27B) = +12B spare  [1 occ, extra nulls: 1]
+    JP: このモードを終了しますか？
+    EN: Exit this mode?
+
+  EN(15B) / JP(26B) / avail(27B) = +12B spare  [1 occ, extra nulls: 1]
+    JP: ファイルにセーブしますか？
+    EN: replay to file?
+
+  EN(15B) / JP(24B) / avail(27B) = +12B spare  [2 occ, extra nulls: 3]
+    JP: ゴッドディフェンス（前）
+    EN: God Defense (F)
+
+  EN(15B) / JP(24B) / avail(27B) = +12B spare  [2 occ, extra nulls: 3]
+    JP: ゴッドディフェンス（後）
+    EN: God Defense (B)
+
+  EN(13B) / JP(22B) / avail(25B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: ：はい　　　　：いいえ
+    EN: :Yes      :No
+
+  EN(11B) / JP(22B) / avail(23B) = +12B spare  [1 occ, extra nulls: 1]
+    JP: スーパーフラッシュ攻撃
+    EN: Super Flash
+
+  EN(11B) / JP(22B) / avail(23B) = +12B spare  [1 occ, extra nulls: 1]
+    JP: データをロードしました
+    EN: Data loaded
+
+  EN(11B) / JP(22B) / avail(23B) = +12B spare  [1 occ, extra nulls: 1]
+    JP: メモリーカードを入れて
+    EN: system file
+
+  EN(11B) / JP(22B) / avail(23B) = +12B spare  [1 occ, extra nulls: 1]
+    JP: セーブを終了しますか？
+    EN: End saving?
+
+  EN(11B) / JP(22B) / avail(23B) = +12B spare  [2 occ, extra nulls: 1]
+    JP: じゃいあんとすいんぐ♪
+    EN: Giant Swing
+
+  EN(11B) / JP(20B) / avail(23B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: は必ず入力して下さい
+    EN: is required
+
+  EN(11B) / JP(20B) / avail(23B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: しばらくお待ち下さい
+    EN: Please wait
+
+  EN(11B) / JP(20B) / avail(23B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: 料金を確認して下さい
+    EN: for charges
+
+  EN(11B) / JP(20B) / avail(23B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: ＩＤを削除しています
+    EN: Deleting ID
+
+  EN(11B) / JP(18B) / avail(23B) = +12B spare  [2 occ, extra nulls: 5-7]
+    JP: もう一度しますか？
+    EN: Play again?
+
+  EN(12B) / JP(18B) / avail(24B) = +12B spare  [1 occ, extra nulls: 6]
+    JP: 根性がアップします
+    EN: Guts goes up
+
+  EN(7B) / JP(16B) / avail(19B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: ロードしました。
+    EN: Loaded.
+
+  EN(5B) / JP(16B) / avail(17B) = +12B spare  [5 occ, extra nulls: 1-3]
+    JP: セーブしますか？
+    EN: Save?
+
+  EN(7B) / JP(16B) / avail(19B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: コピーしました。
+    EN: Copied.
+
+  EN(7B) / JP(16B) / avail(19B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: にダイヤル中です
+    EN: Dialing
+
+  EN(7B) / JP(16B) / avail(19B) = +12B spare  [1 occ, extra nulls: 3]
+    JP: はビジー状態です
+    EN: is busy
+
+  EN(12B) / JP(12B) / avail(24B) = +12B spare  [1 occ, extra nulls: 12]
+    JP: 技ゲットマス
+    EN: Get Mve Tile
+
+  EN(12B) / JP(12B) / avail(24B) = +12B spare  [1 occ, extra nulls: 12]
+    JP: 社会の単位を
+    EN: Soc St creds
+
+  EN(20B) / JP(30B) / avail(31B) = +11B spare  [1 occ, extra nulls: 1]
+    JP: システムファイルがありません。
+    EN: system file missing.
+
+  EN(20B) / JP(30B) / avail(31B) = +11B spare  [1 occ, extra nulls: 1]
+    JP: 決定：　　　　　　キャンセル：
+    EN: Confirm:     Cancel:
+
+  EN(20B) / JP(30B) / avail(31B) = +11B spare  [1 occ, extra nulls: 1]
+    JP: そこには既にデータがあります。
+    EN: Data already exists.
+
+  EN(20B) / JP(30B) / avail(31B) = +11B spare  [1 occ, extra nulls: 1]
+    JP: メモリーカードにセーブしないと
+    EN: If not saved to card
+
+  EN(20B) / JP(30B) / avail(31B) = +11B spare  [1 occ, extra nulls: 1]
+    JP: 登録内容を変更していいですか？
+    EN: Change registration?
+
+  EN(20B) / JP(30B) / avail(31B) = +11B spare  [1 occ, extra nulls: 1]
+    JP: メモリーカードをチェック中です
+    EN: Checking Memory Card
+
+  EN(20B) / JP(30B) / avail(31B) = +11B spare  [1 occ, extra nulls: 1]
+    JP: モデムの設定が正しいか確認して
+    EN: Check modem settings
+
+  EN(20B) / JP(30B) / avail(31B) = +11B spare  [1 occ, extra nulls: 1]
+    JP: の対戦を次回から拒否しますか？
+    EN: Block their battles?
+
+  EN(20B) / JP(28B) / avail(31B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: すでにファイルが存在します。
+    EN: File already exists.
+
+  EN(20B) / JP(28B) / avail(31B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: メモリーカードの認識中です。
+    EN: Reading Memory Card.
+
+  EN(20B) / JP(28B) / avail(31B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: ＯＰＴＩＯＮの「課金情報」で
+    EN: Check OPTION Billing
+
+  EN(20B) / JP(28B) / avail(31B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: 接続中は通信料金がかかります
+    EN: Charges while online
+
+  EN(20B) / JP(28B) / avail(31B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: 元のメモリーカードを接続して
+    EN: Insert original card
+
+  EN(20B) / JP(28B) / avail(31B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: カプコンサーバーに接続中です
+    EN: Connecting to Capcom
+
+  EN(20B) / JP(28B) / avail(31B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: ギャラリーモードで入りました
+    EN: Entered Gallery mode
+
+  EN(16B) / JP(26B) / avail(27B) = +11B spare  [1 occ, extra nulls: 1]
+    JP: オプション画面に戻ります。
+    EN: Back to Options.
+
+  EN(16B) / JP(25B) / avail(27B) = +11B spare  [1 occ, extra nulls: 2]
+    JP: エンディング 〜太陽学園２
+    EN: Ending - Taiyo 2
+
+  EN(16B) / JP(25B) / avail(27B) = +11B spare  [1 occ, extra nulls: 2]
+    JP: エンディング 〜五輪高校２
+    EN: Ending - Gorin 2
+
+  EN(16B) / JP(26B) / avail(27B) = +11B spare  [2 occ, extra nulls: 1-3]
+    JP: スクリューパイルドライバー
+    EN: Screw Piledriver
+
+  EN(16B) / JP(26B) / avail(27B) = +11B spare  [1 occ, extra nulls: 1]
+    JP: 次の番号でかけ直しますか？
+    EN: Try next number?
+
+  EN(16B) / JP(24B) / avail(27B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: 熱血受け身は可能ですが、
+    EN: Hot-Blood OK but
+
+  EN(16B) / JP(24B) / avail(27B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: 削除することができます。
+    EN: chars from card.
+
+  EN(16B) / JP(24B) / avail(27B) = +11B spare  [2 occ, extra nulls: 3]
+    JP: ダイナマイトジャスティス
+    EN: Dynamite Justice
+
+  EN(16B) / JP(24B) / avail(27B) = +11B spare  [2 occ, extra nulls: 3]
+    JP: スーパーショックウェーブ
+    EN: Super Shock Wave
+
+  EN(16B) / JP(24B) / avail(27B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: プロバイダーＡＰに接続中
+    EN: Connecting to AP
+
+  EN(16B) / JP(24B) / avail(27B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: 再度チャレンジして下さい
+    EN: Please try again
+
+  EN(16B) / JP(24B) / avail(27B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: ボーナスチェックポイント
+    EN: Bonus Checkpoint
+
+  EN(16B) / JP(24B) / avail(27B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: ＥＤＩＴキャラを作るには
+    EN: How to Make EDIT
+
+  EN(12B) / JP(22B) / avail(23B) = +11B spare  [1 occ, extra nulls: 1]
+    JP: メモリーカードを絶対に
+    EN: never remove
+
+  EN(12B) / JP(22B) / avail(23B) = +11B spare  [1 occ, extra nulls: 1]
+    JP: 新規でセーブしますか？
+    EN: Save as new?
+
+  EN(12B) / JP(20B) / avail(23B) = +11B spare  [2 occ, extra nulls: 3]
+    JP: 見ることができます。
+    EN: char status.
+
+  EN(12B) / JP(20B) / avail(23B) = +11B spare  [2 occ, extra nulls: 3]
+    JP: 超殺人スライディング
+    EN: Killer Slide
+
+  EN(12B) / JP(20B) / avail(23B) = +11B spare  [2 occ, extra nulls: 3]
+    JP: スライディングキック
+    EN: Sliding Kick
+
+  EN(12B) / JP(20B) / avail(23B) = +11B spare  [2 occ, extra nulls: 3]
+    JP: グルービースクリュー
+    EN: Groovy Screw
+
+  EN(12B) / JP(20B) / avail(23B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: データをロードします
+    EN: Loading data
+
+  EN(12B) / JP(20B) / avail(23B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: 回線が混雑しています
+    EN: Line is busy
+
+  EN(13B) / JP(20B) / avail(24B) = +11B spare  [6 occ, extra nulls: 4]
+    JP: パラメータアップマス
+    EN: Param Up Tile
+
+  EN(8B) / JP(16B) / avail(19B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: ＡＵＴＯＬＯＡＤ
+    EN: AUTOLOAD
+
+  EN(8B) / JP(16B) / avail(19B) = +11B spare  [1 occ, extra nulls: 3]
+    JP: ＡＵＴＯＳＡＶＥ
+    EN: AUTOSAVE
+
+  EN(13B) / JP(16B) / avail(24B) = +11B spare  [1 occ, extra nulls: 8]
+    JP: カードゲットマス
+    EN: Get Card Tile
+
+  EN(4B) / JP(12B) / avail(15B) = +11B spare  [2 occ, extra nulls: 3]
+    JP: をセーブする
+    EN: Save
+
+  EN(21B) / JP(30B) / avail(31B) = +10B spare  [1 occ, extra nulls: 1]
+    JP: これ以降はこのメモリーカードが
+    EN: This Memory Card will
+
+  EN(21B) / JP(30B) / avail(31B) = +10B spare  [1 occ, extra nulls: 1]
+    JP: 現在接続先が大変混み合っており
+    EN: Destination very busy
+
+  EN(21B) / JP(30B) / avail(31B) = +10B spare  [1 occ, extra nulls: 1]
+    JP: ＮＥＴファイルを新規作成します
+    EN: Creating new NET file
+
+  EN(17B) / JP(26B) / avail(27B) = +10B spare  [1 occ, extra nulls: 1]
+    JP: 設定を初期状態に戻します。
+    EN: Reset to default.
+
+  EN(17B) / JP(26B) / avail(27B) = +10B spare  [1 occ, extra nulls: 1]
+    JP: 根性ゲージが常に０になり、
+    EN: Guts always 0 and
+
+  EN(17B) / JP(26B) / avail(27B) = +10B spare  [1 occ, extra nulls: 1]
+    JP: ホームページへ接続します。
+    EN: homepage connect.
+
+  EN(17B) / JP(26B) / avail(27B) = +10B spare  [1 occ, extra nulls: 1]
+    JP: 登録済みのメモリーカードを
+    EN: Insert registered
+
+  EN(17B) / JP(24B) / avail(27B) = +10B spare  [1 occ, extra nulls: 3]
+    JP: 必ずキャラが交代します。
+    EN: char must switch.
+
+  EN(17B) / JP(24B) / avail(27B) = +10B spare  [1 occ, extra nulls: 3]
+    JP: 正しくセーブされないので
+    EN: Save will fail so
+
+  EN(17B) / JP(24B) / avail(27B) = +10B spare  [1 occ, extra nulls: 3]
+    JP: のデータが設定されました
+    EN: data has been set
+
+  EN(17B) / JP(24B) / avail(27B) = +10B spare  [1 occ, extra nulls: 3]
+    JP: この対戦ルームは満員です
+    EN: This room is full
+
+  EN(17B) / JP(24B) / avail(27B) = +10B spare  [1 occ, extra nulls: 3]
+    JP: 次回開催までお待ち下さい
+    EN: wait for next one
+
+  EN(13B) / JP(22B) / avail(23B) = +10B spare  [1 occ, extra nulls: 1]
+    JP: 通常どおりピヨります。
+    EN: Dizzy normal.
+
+  EN(13B) / JP(22B) / avail(23B) = +10B spare  [2 occ, extra nulls: 1]
+    JP: スライディングレシーブ
+    EN: Slide Receive
+
+  EN(13B) / JP(22B) / avail(23B) = +10B spare  [2 occ, extra nulls: 1]
+    JP: エキサイティングキック
+    EN: Exciting Kick
+
+  EN(13B) / JP(22B) / avail(23B) = +10B spare  [1 occ, extra nulls: 1]
+    JP: もう一度入力して下さい
+    EN: and try again
+
+  EN(16B) / JP(22B) / avail(26B) = +10B spare  [1 occ, extra nulls: 4]
+    JP: 組み合わせを変更します
+    EN: move combination
+
+  EN(13B) / JP(20B) / avail(23B) = +10B spare  [2 occ, extra nulls: 3]
+    JP: パーフェクトキャッチ
+    EN: Perfect Catch
+
+  EN(13B) / JP(20B) / avail(23B) = +10B spare  [2 occ, extra nulls: 3]
+    JP: オーバーヘッドキック
+    EN: Overhead Kick
+
+  EN(14B) / JP(20B) / avail(24B) = +10B spare  [1 occ, extra nulls: 4]
+    JP: 攻撃力がアップします
+    EN: Attack goes up
+
+  EN(9B) / JP(18B) / avail(19B) = +10B spare  [1 occ, extra nulls: 1]
+    JP: 霧嶋流　一文字連殺
+    EN: Line Kill
+
+  EN(9B) / JP(16B) / avail(19B) = +10B spare  [1 occ, extra nulls: 3]
+    JP: キャンセルします
+    EN: to cancel
+
+  EN(9B) / JP(16B) / avail(19B) = +10B spare  [1 occ, extra nulls: 3]
+    JP: 　側転起き上がり
+    EN: Side Roll
+
+  EN(8B) / JP(14B) / avail(18B) = +10B spare  [1 occ, extra nulls: 4]
+    JP: ゲット×３マス
+    EN: Get 3 Sq
+
+  EN(22B) / JP(30B) / avail(31B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: オートセーブの対象となります。
+    EN: be used for Auto Save.
+
+  EN(22B) / JP(28B) / avail(31B) = +9B spare  [1 occ, extra nulls: 3]
+    JP: 熱血受け身が一切できません。
+    EN: No Hot-Blood Recovery.
+
+  EN(14B) / JP(22B) / avail(23B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: ＮＥＴファイル      ＝
+    EN: NET File     =
+
+  EN(18B) / JP(26B) / avail(27B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: 空きブロックがたりません。
+    EN: Not enough blocks.
+
+  EN(18B) / JP(26B) / avail(27B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: 新たに登録しなおして下さい
+    EN: Please re-register
+
+  EN(18B) / JP(26B) / avail(27B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: ログインＩＤ、パスワードが
+    EN: Check login ID and
+
+  EN(18B) / JP(26B) / avail(27B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: ＮＥＴファイルが登録された
+    EN: Insert Memory Card
+
+  EN(18B) / JP(26B) / avail(27B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: 一度退場すると次回開催まで
+    EN: Once exited cannot
+
+  EN(18B) / JP(26B) / avail(27B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: まもなくエントリー受付終了
+    EN: Entry closing soon
+
+  EN(18B) / JP(24B) / avail(27B) = +9B spare  [1 occ, extra nulls: 3]
+    JP: 通信対戦を終了しますか？
+    EN: End online battle?
+
+  EN(14B) / JP(22B) / avail(23B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: どこにセーブしますか？
+    EN: Where to save?
+
+  EN(14B) / JP(22B) / avail(23B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: ジャスティス学園採石場
+    EN: Justice Quarry
+
+  EN(14B) / JP(22B) / avail(23B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: Ａボタンを押して下さい
+    EN: Press A button
+
+  EN(14B) / JP(22B) / avail(23B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: モデムが外れていないか
+    EN: Check if modem
+
+  EN(14B) / JP(22B) / avail(23B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: ＥＤＩＴファイル　　＝
+    EN: EDIT File    =
+
+  EN(14B) / JP(22B) / avail(23B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: 空中エキサイティングＫ
+    EN: Air Exciting K
+
+  EN(14B) / JP(20B) / avail(23B) = +9B spare  [2 occ, extra nulls: 3]
+    JP: タッチダウンウェーブ
+    EN: Touchdown Wave
+
+  EN(14B) / JP(20B) / avail(23B) = +9B spare  [2 occ, extra nulls: 3]
+    JP: ビューティフルスピン
+    EN: Beautiful Spin
+
+  EN(14B) / JP(20B) / avail(23B) = +9B spare  [1 occ, extra nulls: 3]
+    JP: グルービースペシャル
+    EN: Groovy Special
+
+  EN(14B) / JP(20B) / avail(23B) = +9B spare  [2 occ, extra nulls: 3]
+    JP: Ｓグルービーホイール
+    EN: S Groovy Wheel
+
+  EN(14B) / JP(20B) / avail(23B) = +9B spare  [1 occ, extra nulls: 3]
+    JP: モジュラーケーブルが
+    EN: Check if cable
+
+  EN(15B) / JP(20B) / avail(24B) = +9B spare  [1 occ, extra nulls: 4]
+    JP: 防御力がアップします
+    EN: Defense goes up
+
+  EN(15B) / JP(20B) / avail(24B) = +9B spare  [1 occ, extra nulls: 4]
+    JP: パラメータダウンマス
+    EN: Param Down Tile
+
+  EN(14B) / JP(20B) / avail(23B) = +9B spare  [1 occ, extra nulls: 3]
+    JP: ＷスクリューパイルＤ
+    EN: W Screw Pile D
+
+  EN(15B) / JP(18B) / avail(24B) = +9B spare  [1 occ, extra nulls: 6]
+    JP: 体力がアップします
+    EN: Stamina goes up
+
+  EN(10B) / JP(18B) / avail(19B) = +9B spare  [1 occ, extra nulls: 1]
+    JP: 豪快スライディング
+    EN: Bold Slide
+
+  EN(10B) / JP(18B) / avail(19B) = +9B spare  [2 occ, extra nulls: 1]
+    JP: スピン☆スマッシュ
+    EN: Spin Smash
+
+  EN(10B) / JP(16B) / avail(19B) = +9B spare  [1 occ, extra nulls: 3]
+    JP: ぐるぐるアッパー
+    EN: Spin Upper
+
+  EN(10B) / JP(16B) / avail(19B) = +9B spare  [2 occ, extra nulls: 3]
+    JP: ファイヤーサーブ
+    EN: Fire Serve
+
+  EN(10B) / JP(16B) / avail(19B) = +9B spare  [2 occ, extra nulls: 3]
+    JP: ゴッドラリアット
+    EN: God Lariat
+
+  EN(10B) / JP(16B) / avail(19B) = +9B spare  [4 occ, extra nulls: 3]
+    JP: ショックウェーブ
+    EN: Shock Wave
+
+  EN(10B) / JP(16B) / avail(19B) = +9B spare  [2 occ, extra nulls: 3]
+    JP: スーパー飛び込み
+    EN: Super Dive
+
+  EN(10B) / JP(16B) / avail(19B) = +9B spare  [1 occ, extra nulls: 3]
+    JP: エントリーリスト
+    EN: Entry List
+
+  EN(10B) / JP(16B) / avail(19B) = +9B spare  [1 occ, extra nulls: 3]
+    JP: 再接続しますか？
+    EN: Reconnect?
+
+  EN(10B) / JP(16B) / avail(19B) = +9B spare  [1 occ, extra nulls: 3]
+    JP: 上書きしますか？
+    EN: Overwrite?
+
+  EN(10B) / JP(16B) / avail(19B) = +9B spare  [1 occ, extra nulls: 3]
+    JP: お疲れさまでした
+    EN: Good work!
+
+  EN(10B) / JP(16B) / avail(19B) = +9B spare  [9 occ, extra nulls: 3-8]
+    JP: チェックポイント
+    EN: Checkpoint
+
+  EN(10B) / JP(16B) / avail(19B) = +9B spare  [2 occ, extra nulls: 3]
+    JP: もも☆クラッシュ
+    EN: Momo Crash
+
+  EN(6B) / JP(12B) / avail(15B) = +9B spare  [2 occ, extra nulls: 3]
+    JP: 個人メドレー
+    EN: Medley
+
+  EN(23B) / JP(28B) / avail(31B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: これ以上ＩＤを登録できません
+    EN: Cannot register more ID
+
+  EN(19B) / JP(26B) / avail(27B) = +8B spare  [1 occ, extra nulls: 1]
+    JP: ８チームによる勝ち抜き戦。
+    EN: 8 team elimination.
+
+  EN(19B) / JP(26B) / avail(27B) = +8B spare  [1 occ, extra nulls: 1]
+    JP: ネットワークに接続します。
+    EN: Connect to Network.
+
+  EN(19B) / JP(26B) / avail(27B) = +8B spare  [1 occ, extra nulls: 1]
+    JP: １〜３マッチから選べます。
+    EN: Choose 1-3 matches.
+
+  EN(19B) / JP(26B) / avail(27B) = +8B spare  [1 occ, extra nulls: 1]
+    JP: しばらく時間をおいて下さい
+    EN: Please wait a while
+
+  EN(19B) / JP(26B) / avail(27B) = +8B spare  [1 occ, extra nulls: 1]
+    JP: は現在、通信対戦サーバーに
+    EN: is not connected to
+
+  EN(19B) / JP(26B) / avail(27B) = +8B spare  [1 occ, extra nulls: 1]
+    JP: サーバーがメンテナンス中の
+    EN: Server may be under
+
+  EN(19B) / JP(26B) / avail(27B) = +8B spare  [1 occ, extra nulls: 1]
+    JP: 正しく登録できませんでした
+    EN: Registration failed
+
+  EN(19B) / JP(24B) / avail(27B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: ＫＤＤＩ回線で接続中です
+    EN: Connecting via KDDI
+
+  EN(19B) / JP(24B) / avail(27B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: ６ブロック以上空きがある
+    EN: with 6+ free blocks
+
+  EN(19B) / JP(24B) / avail(27B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: 全パラメータ　レベル＋１
+    EN: All Params Level +1
+
+  EN(15B) / JP(22B) / avail(23B) = +8B spare  [1 occ, extra nulls: 1]
+    JP: パスワードが違います。
+    EN: Wrong password.
+
+  EN(15B) / JP(22B) / avail(23B) = +8B spare  [1 occ, extra nulls: 1]
+    JP: モデムが見つかりません
+    EN: Modem not found
+
+  EN(15B) / JP(22B) / avail(23B) = +8B spare  [1 occ, extra nulls: 1]
+    JP: 登録拒否数オーバーです
+    EN: Block list full
+
+  EN(16B) / JP(22B) / avail(24B) = +8B spare  [1 occ, extra nulls: 2]
+    JP: 上下します（ＨＰ消費）
+    EN: change (Uses HP)
+
+  EN(15B) / JP(20B) / avail(23B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: 自由に変更できます。
+    EN: can be changed.
+
+  EN(15B) / JP(20B) / avail(23B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: スーパータッチダウン
+    EN: Super Touchdown
+
+  EN(15B) / JP(20B) / avail(23B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: 設定を保存しています
+    EN: Saving settings
+
+  EN(15B) / JP(20B) / avail(23B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: ジャスキャラについて
+    EN: About Jus Chars
+
+  EN(16B) / JP(20B) / avail(24B) = +8B spare  [1 occ, extra nulls: 4]
+    JP: ＥＤＩＴキャラの技の
+    EN: Change EDIT char
+
+  EN(11B) / JP(18B) / avail(19B) = +8B spare  [1 occ, extra nulls: 1]
+    JP: オープンできません
+    EN: Cannot Open
+
+  EN(11B) / JP(16B) / avail(19B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: ぐるぐるぶっ飛び
+    EN: Spin Launch
+
+  EN(11B) / JP(16B) / avail(19B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: 霧幻流　瞬殺無音
+    EN: Silent Kill
+
+  EN(11B) / JP(16B) / avail(19B) = +8B spare  [2 occ, extra nulls: 3]
+    JP: ライジングキック
+    EN: Rising Kick
+
+  EN(11B) / JP(16B) / avail(19B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: 可能性もあります
+    EN: maintenance
+
+  EN(11B) / JP(16B) / avail(19B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: ＮＥＴファイルに
+    EN: To NET file
+
+  EN(11B) / JP(16B) / avail(19B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: 抜かないで下さい
+    EN: Memory Card
+
+  EN(11B) / JP(16B) / avail(19B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: ほえーるサーブ♪
+    EN: Whale Serve
+
+  EN(7B) / JP(14B) / avail(15B) = +8B spare  [1 occ, extra nulls: 1]
+    JP: ＮＯ　ＤＡＴＡ
+    EN: No data
+
+  EN(7B) / JP(12B) / avail(15B) = +8B spare  [1 occ, extra nulls: 3]
+    JP: 選択します。
+    EN: Select.
+
+  EN(3B) / JP(10B) / avail(11B) = +8B spare  [2 occ, extra nulls: 1]
+    JP: 　　しない
+    EN: Off
+
+  EN(3B) / JP(8B) / avail(11B) = +8B spare  [2 occ, extra nulls: 3]
+    JP: 人工呼吸
+    EN: CPR
+
+  EN(24B) / JP(30B) / avail(31B) = +7B spare  [1 occ, extra nulls: 1]
+    JP: サーバーに接続できませんでした
+    EN: Cannot connect to server
+
+  EN(20B) / JP(26B) / avail(27B) = +7B spare  [1 occ, extra nulls: 1]
+    JP: ダウンロードファイルがある
+    EN: Download file exists
+
+  EN(20B) / JP(26B) / avail(27B) = +7B spare  [1 occ, extra nulls: 1]
+    JP: 電話番号が正しくありません
+    EN: Invalid phone number
+
+  EN(20B) / JP(26B) / avail(27B) = +7B spare  [1 occ, extra nulls: 1]
+    JP: 一定時間入力が無かったため
+    EN: No input for a while
+
+  EN(20B) / JP(26B) / avail(27B) = +7B spare  [1 occ, extra nulls: 1]
+    JP: トーナメント情報取得中です
+    EN: Getting tourney info
+
+  EN(20B) / JP(26B) / avail(27B) = +7B spare  [1 occ, extra nulls: 1]
+    JP: 優勝者が決まりませんでした
+    EN: No winner determined
+
+  EN(20B) / JP(24B) / avail(27B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: 一つ前の画面に戻ります。
+    EN: Back to prev screen.
+
+  EN(20B) / JP(24B) / avail(27B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: ＥＤＩＴキャラも含めて、
+    EN: Including EDIT chars
+
+  EN(20B) / JP(24B) / avail(27B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: メニュー画面に戻ります。
+    EN: Back to menu screen.
+
+  EN(16B) / JP(22B) / avail(23B) = +7B spare  [1 occ, extra nulls: 1]
+    JP: で、けっきょく．．．。
+    EN: So in the end...
+
+  EN(16B) / JP(22B) / avail(23B) = +7B spare  [1 occ, extra nulls: 1]
+    JP: 対戦中にディスクドアを
+    EN: Do not open disc
+
+  EN(17B) / JP(22B) / avail(24B) = +7B spare  [1 occ, extra nulls: 2]
+    JP: 潜在能力がアップします
+    EN: Potential goes up
+
+  EN(17B) / JP(22B) / avail(24B) = +7B spare  [1 occ, extra nulls: 2]
+    JP: パラメータランダムマス
+    EN: Random Param Tile
+
+  EN(16B) / JP(22B) / avail(23B) = +7B spare  [1 occ, extra nulls: 1]
+    JP: 空中シャイニングセーブ
+    EN: Air Shining Save
+
+  EN(16B) / JP(20B) / avail(23B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: 抜かないでください。
+    EN: until power off.
+
+  EN(16B) / JP(20B) / avail(23B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: らぶらぶえんでぃんぐ
+    EN: Love Love Ending
+
+  EN(16B) / JP(20B) / avail(23B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: 再対戦は断られました
+    EN: Rematch declined
+
+  EN(17B) / JP(20B) / avail(24B) = +7B spare  [1 occ, extra nulls: 4]
+    JP: できます（ＨＰ回復）
+    EN: move (HP recover)
+
+  EN(16B) / JP(20B) / avail(23B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: 空中悲恋のセレナーデ
+    EN: Air Sad Serenade
+
+  EN(12B) / JP(17B) / avail(19B) = +7B spare  [1 occ, extra nulls: 2]
+    JP: ストーリー 〜もも
+    EN: Story - Momo
+
+  EN(12B) / JP(17B) / avail(19B) = +7B spare  [1 occ, extra nulls: 2]
+    JP: ストーリー 〜希望
+    EN: Story - Hope
+
+  EN(12B) / JP(17B) / avail(19B) = +7B spare  [1 occ, extra nulls: 2]
+    JP: ストーリー 〜予感
+    EN: Story - Omen
+
+  EN(12B) / JP(17B) / avail(19B) = +7B spare  [1 occ, extra nulls: 2]
+    JP: ストーリー 〜封印
+    EN: Story - Seal
+
+  EN(12B) / JP(18B) / avail(19B) = +7B spare  [2 occ, extra nulls: 1]
+    JP: ナイアガラドロップ
+    EN: Niagara Drop
+
+  EN(12B) / JP(18B) / avail(19B) = +7B spare  [3 occ, extra nulls: 1]
+    JP: シャイニングセーブ
+    EN: Shining Save
+
+  EN(12B) / JP(18B) / avail(19B) = +7B spare  [4 occ, extra nulls: 1-3]
+    JP: グルービーホイール
+    EN: Groovy Wheel
+
+  EN(12B) / JP(18B) / avail(19B) = +7B spare  [1 occ, extra nulls: 1]
+    JP: 接続に成功しました
+    EN: Connected OK
+
+  EN(12B) / JP(18B) / avail(19B) = +7B spare  [2 occ, extra nulls: 1-3]
+    JP: スクリューパイルＤ
+    EN: Screw Pile D
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: ベリファイエラー
+    EN: Verify Error
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [2 occ, extra nulls: 3]
+    JP: バイシクルキック
+    EN: Bicycle Kick
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: 爆裂リフティング
+    EN: Burst Juggle
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [2 occ, extra nulls: 3]
+    JP: エアダイナマイト
+    EN: Air Dynamite
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [2 occ, extra nulls: 3]
+    JP: グルービーパンチ
+    EN: Groovy Punch
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: ゴッドストレート
+    EN: God Straight
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: ヘヴンズラッシュ
+    EN: Heavens Rush
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [2 occ, extra nulls: 3]
+    JP: 霧嶋流　狂獣裂破
+    EN: Kiri MadRend
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [2 occ, extra nulls: 3]
+    JP: ダブル指導キック
+    EN: DblCoachKick
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [3 occ, extra nulls: 3]
+    JP: 悲恋のセレナーデ
+    EN: Sad Serenade
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [2 occ, extra nulls: 3]
+    JP: 深淵のメヌエット
+    EN: Abyss Minuet
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [2 occ, extra nulls: 3]
+    JP: 慈愛のレクイエム
+    EN: Love Requiem
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: 共通して使えます
+    EN: across games
+
+  EN(12B) / JP(16B) / avail(19B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: 　　前起き上がり
+    EN: Roll Forward
+
+  EN(8B) / JP(14B) / avail(15B) = +7B spare  [1 occ, extra nulls: 1]
+    JP: 削除しました。
+    EN: Deleted.
+
+  EN(8B) / JP(14B) / avail(15B) = +7B spare  [2 occ, extra nulls: 1]
+    JP: ゴッドラッシュ
+    EN: God Rush
+
+  EN(8B) / JP(14B) / avail(15B) = +7B spare  [1 occ, extra nulls: 1]
+    JP: 続きから始める
+    EN: Continue
+
+  EN(8B) / JP(12B) / avail(15B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: フットワーク
+    EN: Footwork
+
+  EN(8B) / JP(12B) / avail(15B) = +7B spare  [2 occ, extra nulls: 3]
+    JP: ゴッドフック
+    EN: God Hook
+
+  EN(8B) / JP(12B) / avail(15B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: 空中飛び込み
+    EN: Air Dive
+
+  EN(4B) / JP(8B) / avail(11B) = +7B spare  [2 occ, extra nulls: 3]
+    JP: ＥＸＩＴ
+    EN: EXIT
+
+  EN(4B) / JP(8B) / avail(11B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: ロイ登場
+    EN: Roy!
+
+  EN(4B) / JP(8B) / avail(11B) = +7B spare  [5 occ, extra nulls: 3]
+    JP: 飛び込み
+    EN: Dive
+
+  EN(4B) / JP(8B) / avail(11B) = +7B spare  [1 occ, extra nulls: 3]
+    JP: ターン目
+    EN: Turn
+
+  EN(21B) / JP(26B) / avail(27B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: ２〜６チームの総当たり戦。
+    EN: 2-6 team round robin.
+
+  EN(17B) / JP(22B) / avail(23B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: 実行ファイルがあります
+    EN: Executable Exists
+
+  EN(17B) / JP(22B) / avail(23B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: ロードしたりできます。
+    EN: from Memory Card.
+
+  EN(17B) / JP(22B) / avail(23B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: ＥＤＩＴキャラ以外は、
+    EN: Except EDIT chars
+
+  EN(17B) / JP(22B) / avail(23B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: ジャスティス制作委員会
+    EN: Justice Committee
+
+  EN(17B) / JP(22B) / avail(23B) = +6B spare  [2 occ, extra nulls: 1]
+    JP: ダイナマイトストレート
+    EN: Dynamite Straight
+
+  EN(17B) / JP(22B) / avail(23B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: セガプロバイダーの場合
+    EN: For SEGA provider
+
+  EN(17B) / JP(22B) / avail(23B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: あなたのカプコンＩＤは
+    EN: Your Capcom ID is
+
+  EN(17B) / JP(22B) / avail(23B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: のＩＤを登録しますか？
+    EN: Register this ID?
+
+  EN(17B) / JP(22B) / avail(23B) = +6B spare  [2 occ, extra nulls: 1-3]
+    JP: 接続先を確認して下さい
+    EN: Check destination
+
+  EN(17B) / JP(22B) / avail(23B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: 対戦を申し込んでいます
+    EN: Requesting battle
+
+  EN(15B) / JP(20B) / avail(21B) = +6B spare  [2 occ, extra nulls: 1-3]
+    JP: メニューに戻ります。
+    EN: Return to menu.
+
+  EN(17B) / JP(20B) / avail(23B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: ＥＤＩＴキャラ選択：
+    EN: EDIT Char Select:
+
+  EN(17B) / JP(20B) / avail(23B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: 熱血クロスカウンター
+    EN: Hot Cross Counter
+
+  EN(13B) / JP(18B) / avail(19B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: アクセスできません
+    EN: Cannot Access
+
+  EN(13B) / JP(18B) / avail(19B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: モーション切り替え
+    EN: Change Motion
+
+  EN(13B) / JP(17B) / avail(19B) = +6B spare  [1 occ, extra nulls: 2]
+    JP: ストーリー 〜疑惑
+    EN: Story - Doubt
+
+  EN(13B) / JP(17B) / avail(19B) = +6B spare  [1 occ, extra nulls: 2]
+    JP: ストーリー 〜和解
+    EN: Story - Truce
+
+  EN(13B) / JP(18B) / avail(19B) = +6B spare  [2 occ, extra nulls: 1]
+    JP: 拡散クロスカッター
+    EN: Spread Cutter
+
+  EN(13B) / JP(18B) / avail(19B) = +6B spare  [2 occ, extra nulls: 1]
+    JP: ツイスターアッパー
+    EN: Twister Upper
+
+  EN(13B) / JP(18B) / avail(19B) = +6B spare  [2 occ, extra nulls: 1]
+    JP: バーニングエルボー
+    EN: Burning Elbow
+
+  EN(13B) / JP(18B) / avail(19B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: エントリーメンバー
+    EN: Entry Members
+
+  EN(13B) / JP(18B) / avail(19B) = +6B spare  [2 occ, extra nulls: 1]
+    JP: ロケット☆ラケット
+    EN: Rocket Racket
+
+  EN(13B) / JP(16B) / avail(19B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: すれ違いあいさつ
+    EN: Passing Greet
+
+  EN(13B) / JP(16B) / avail(19B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: 真・無双正拳突き
+    EN: True Peerless
+
+  EN(13B) / JP(16B) / avail(19B) = +6B spare  [2 occ, extra nulls: 3]
+    JP: 冥府のノクターン
+    EN: Dark Nocturne
+
+  EN(13B) / JP(16B) / avail(19B) = +6B spare  [2 occ, extra nulls: 3]
+    JP: ダブルラリアット
+    EN: Double Lariat
+
+  EN(13B) / JP(16B) / avail(19B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: 開かないで下さい
+    EN: during battle
+
+  EN(13B) / JP(16B) / avail(19B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: 学園祭に参加する
+    EN: Join Festival
+
+  EN(13B) / JP(16B) / avail(19B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: 　後ろ起き上がり
+    EN: Roll Backward
+
+  EN(9B) / JP(14B) / avail(15B) = +6B spare  [2 occ, extra nulls: 1]
+    JP: ロングシュート
+    EN: Long Shot
+
+  EN(9B) / JP(14B) / avail(15B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: ゴッドアッパー
+    EN: God Upper
+
+  EN(9B) / JP(14B) / avail(15B) = +6B spare  [2 occ, extra nulls: 1]
+    JP: 孤高のプライド
+    EN: LonePride
+
+  EN(9B) / JP(12B) / avail(15B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: オートロード
+    EN: Auto Load
+
+  EN(9B) / JP(12B) / avail(15B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: パートナーＡ
+    EN: Partner A
+
+  EN(9B) / JP(12B) / avail(15B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: パートナーＢ
+    EN: Partner B
+
+  EN(9B) / JP(12B) / avail(15B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: ハイジャンプ
+    EN: High Jump
+
+  EN(9B) / JP(12B) / avail(15B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: 奈落への補導
+    EN: HellGuide
+
+  EN(9B) / JP(12B) / avail(15B) = +6B spare  [2 occ, extra nulls: 3]
+    JP: 熱血ヤセ我慢
+    EN: HotEndure
+
+  EN(9B) / JP(12B) / avail(15B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: ゲームの目的
+    EN: Game Goal
+
+  EN(9B) / JP(12B) / avail(15B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: ＭＡＰの説明
+    EN: MAP Guide
+
+  EN(9B) / JP(12B) / avail(15B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: 完全燃焼　１
+    EN: Burning 1
+
+  EN(9B) / JP(12B) / avail(15B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: 完全燃焼　２
+    EN: Burning 2
+
+  EN(9B) / JP(12B) / avail(15B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: 完全燃焼　３
+    EN: Burning 3
+
+  EN(9B) / JP(12B) / avail(15B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: 完全燃焼　４
+    EN: Burning 4
+
+  EN(5B) / JP(10B) / avail(11B) = +6B spare  [1 occ, extra nulls: 1]
+    JP: いいえ：Ｂ
+    EN: No: B
+
+  EN(5B) / JP(10B) / avail(11B) = +6B spare  [2 occ, extra nulls: 1]
+    JP: フェイント
+    EN: Feint
+
+  EN(5B) / JP(8B) / avail(11B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: 破天連撃
+    EN: Havoc
+
+  EN(5B) / JP(8B) / avail(11B) = +6B spare  [1 occ, extra nulls: 3]
+    JP: 希望する
+    EN: Wants
+
+  EN(22B) / JP(26B) / avail(27B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: 「通信対戦」モード終了まで
+    EN: Until Online mode ends
+
+  EN(18B) / JP(22B) / avail(23B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: ＤＣサポートセンターに
+    EN: contact DC Support
+
+  EN(18B) / JP(22B) / avail(23B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: を登録できませんでした
+    EN: failed to register
+
+  EN(18B) / JP(22B) / avail(23B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: 参加者が足りませんので
+    EN: Not enough players
+
+  EN(18B) / JP(20B) / avail(23B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: ドリームパスポートで
+    EN: Use Dream Passport
+
+  EN(18B) / JP(20B) / avail(23B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: 回線を切断しています
+    EN: Disconnecting line
+
+  EN(18B) / JP(20B) / avail(23B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: 千裂脚／島津流雷鋭蹴
+    EN: 1000 Kicks/Thunder
+
+  EN(14B) / JP(17B) / avail(19B) = +5B spare  [1 occ, extra nulls: 2]
+    JP: ストーリー 〜帰還
+    EN: Story - Return
+
+  EN(14B) / JP(18B) / avail(19B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: トリプルツイスター
+    EN: Triple Twister
+
+  EN(14B) / JP(18B) / avail(19B) = +5B spare  [2 occ, extra nulls: 1]
+    JP: グルービーナックル
+    EN: Groovy Knuckle
+
+  EN(14B) / JP(18B) / avail(19B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: 電話がかかりません
+    EN: Cannot connect
+
+  EN(14B) / JP(18B) / avail(19B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: Ｆグラップルビート
+    EN: F Grapple Beat
+
+  EN(15B) / JP(18B) / avail(20B) = +5B spare  [1 occ, extra nulls: 2]
+    JP: 聖　純　女　学　院
+    EN: Seijun Girls HS
+
+  EN(14B) / JP(18B) / avail(19B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: パタパタ☆ラケット
+    EN: Flutter Racket
+
+  EN(14B) / JP(16B) / avail(19B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: その場起き上がり
+    EN: Stand in Place
+
+  EN(14B) / JP(16B) / avail(19B) = +5B spare  [2 occ, extra nulls: 3]
+    JP: ワンダフルキック
+    EN: Wonderful Kick
+
+  EN(14B) / JP(16B) / avail(19B) = +5B spare  [2 occ, extra nulls: 3]
+    JP: 霧嶋流　真空闇嵐
+    EN: Kiri VoidStorm
+
+  EN(14B) / JP(16B) / avail(19B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: 突撃インタビュー
+    EN: Rush Interview
+
+  EN(14B) / JP(16B) / avail(19B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: だだっこあたっく
+    EN: Tantrum Attack
+
+  EN(12B) / JP(16B) / avail(17B) = +5B spare  [4 occ, extra nulls: 1-3]
+    JP: グラップルビート
+    EN: Grapple Beat
+
+  EN(14B) / JP(16B) / avail(19B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: ゲームに戻ります
+    EN: Return to game
+
+  EN(10B) / JP(14B) / avail(15B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: ポカポカパンチ
+    EN: Poka Punch
+
+  EN(10B) / JP(14B) / avail(15B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: あまり使わない
+    EN: Rarely Use
+
+  EN(10B) / JP(14B) / avail(15B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: 再び立ち上がれ
+    EN: Rise Again
+
+  EN(10B) / JP(14B) / avail(15B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: 兄のヘルメット
+    EN: Bro Helmet
+
+  EN(10B) / JP(14B) / avail(15B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: チームの並びを
+    EN: Team order
+
+  EN(10B) / JP(14B) / avail(15B) = +5B spare  [4 occ, extra nulls: 1]
+    JP: ガッツアッパー
+    EN: Guts Upper
+
+  EN(10B) / JP(14B) / avail(15B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: スタンプキック
+    EN: Stamp Kick
+
+  EN(10B) / JP(14B) / avail(15B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: カプコンＩＤ：
+    EN: Capcom ID:
+
+  EN(10B) / JP(14B) / avail(15B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: を登録しました
+    EN: registered
+
+  EN(10B) / JP(14B) / avail(15B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: 準備ができたら
+    EN: When ready
+
+  EN(10B) / JP(12B) / avail(15B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: ジギーパーク
+    EN: Ziggy Park
+
+  EN(10B) / JP(12B) / avail(15B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: ぼ〜どげ〜む
+    EN: Board Game
+
+  EN(10B) / JP(12B) / avail(15B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: 一本釣り打法
+    EN: Hook Swing
+
+  EN(10B) / JP(12B) / avail(15B) = +5B spare  [2 occ, extra nulls: 3]
+    JP: 完全ブロック
+    EN: Full Block
+
+  EN(10B) / JP(12B) / avail(15B) = +5B spare  [2 occ, extra nulls: 3]
+    JP: 爆裂Ｖゴール
+    EN: BurstVGoal
+
+  EN(10B) / JP(12B) / avail(15B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: 禁忌　力吸い
+    EN: TabooDrain
+
+  EN(10B) / JP(12B) / avail(15B) = +5B spare  [2 occ, extra nulls: 3]
+    JP: 気合ナックル
+    EN: SpiritKnkl
+
+  EN(10B) / JP(12B) / avail(15B) = +5B spare  [2 occ, extra nulls: 3]
+    JP: 平泳ぎキック
+    EN: BreastKick
+
+  EN(6B) / JP(10B) / avail(11B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: マニュアル
+    EN: Manual
+
+  EN(8B) / JP(10B) / avail(13B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: 参加じゃい
+    EN: Joining!
+
+  EN(6B) / JP(10B) / avail(11B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: 　ランダム
+    EN: Random
+
+  EN(6B) / JP(8B) / avail(11B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: はい：Ａ
+    EN: Yes: A
+
+  EN(6B) / JP(8B) / avail(11B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: 所属高校
+    EN: School
+
+  EN(6B) / JP(8B) / avail(11B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: バツ失踪
+    EN: Batsu?
+
+  EN(6B) / JP(8B) / avail(11B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: 醍醐救出
+    EN: Daigo!
+
+  EN(6B) / JP(8B) / avail(11B) = +5B spare  [1 occ, extra nulls: 3]
+    JP: 破の双撃
+    EN: HaTwin
+
+  EN(4B) / JP(8B) / avail(9B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: ＨＡＲＤ
+    EN: HARD
+
+  EN(8B) / JP(8B) / avail(13B) = +5B spare  [2 occ, extra nulls: 5-7]
+    JP: ねこまる
+    EN: Nekomaru
+
+  EN(2B) / JP(6B) / avail(7B) = +5B spare  [1 occ, extra nulls: 1]
+    JP: 　する
+    EN: On
+
+  EN(23B) / JP(26B) / avail(27B) = +4B spare  [1 occ, extra nulls: 1]
+    JP: お使いの電話番号を確認して
+    EN: Check your phone number
+
+  EN(21B) / JP(24B) / avail(25B) = +4B spare  [1 occ, extra nulls: 1]
+    JP: 「ジャスティス学園感想」
+    EN: Justice High Feedback
+
+  EN(19B) / JP(20B) / avail(23B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: のメモリーカードが、
+    EN: This Memory Card is
+
+  EN(19B) / JP(20B) / avail(23B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: のメモリーカードに、
+    EN: On this Memory Card
+
+  EN(19B) / JP(20B) / avail(23B) = +4B spare  [2 occ, extra nulls: 3]
+    JP: スーパー雷神アッパー
+    EN: Super Thunder Upper
+
+  EN(17B) / JP(20B) / avail(21B) = +4B spare  [3 occ, extra nulls: 1-3]
+    JP: 接続できませんでした
+    EN: Could not connect
+
+  EN(19B) / JP(20B) / avail(23B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: 入場できなくなります
+    EN: re-enter until next
+
+  EN(15B) / JP(18B) / avail(19B) = +4B spare  [1 occ, extra nulls: 1]
+    JP: ぐるぐるパンチタメ
+    EN: Spin Punch Chrg
+
+  EN(15B) / JP(17B) / avail(19B) = +4B spare  [1 occ, extra nulls: 2]
+    JP: ストーリー 〜不安
+    EN: Story - Anxiety
+
+  EN(15B) / JP(17B) / avail(19B) = +4B spare  [1 occ, extra nulls: 2]
+    JP: ストーリー 〜緊張
+    EN: Story - Tension
+
+  EN(15B) / JP(17B) / avail(19B) = +4B spare  [1 occ, extra nulls: 2]
+    JP: ストーリー 〜絶望
+    EN: Story - Despair
+
+  EN(15B) / JP(17B) / avail(19B) = +4B spare  [1 occ, extra nulls: 2]
+    JP: ストーリー 〜決意
+    EN: Story - Resolve
+
+  EN(15B) / JP(18B) / avail(19B) = +4B spare  [2 occ, extra nulls: 1]
+    JP: 全開ガッツアッパー
+    EN: Full Guts Upper
+
+  EN(15B) / JP(18B) / avail(19B) = +4B spare  [2 occ, extra nulls: 1]
+    JP: 必殺　稲妻眼光蹴り
+    EN: Finl LghtnGlare
+
+  EN(15B) / JP(18B) / avail(19B) = +4B spare  [2 occ, extra nulls: 1]
+    JP: 霧幻流　暗黒衝撃斬
+    EN: Mugen DarkImpSl
+
+  EN(15B) / JP(18B) / avail(19B) = +4B spare  [1 occ, extra nulls: 1]
+    JP: 対戦を断られました
+    EN: Battle declined
+
+  EN(17B) / JP(18B) / avail(21B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: 全キャラ友好度＋５
+    EN: All Friendship +5
+
+  EN(13B) / JP(16B) / avail(17B) = +4B spare  [12 occ, extra nulls: 1-7]
+    JP: よろしいですか？
+    EN: Are you sure?
+
+  EN(15B) / JP(16B) / avail(19B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: メッセージ送信中
+    EN: Sending message
+
+  EN(15B) / JP(16B) / avail(19B) = +4B spare  [2 occ, extra nulls: 3]
+    JP: 対戦を開始します
+    EN: Starting battle
+
+  EN(11B) / JP(14B) / avail(15B) = +4B spare  [1 occ, extra nulls: 1]
+    JP: ウインドウ消去
+    EN: Hide Window
+
+  EN(11B) / JP(14B) / avail(15B) = +4B spare  [1 occ, extra nulls: 1]
+    JP: 登録しました。
+    EN: Registered.
+
+  EN(11B) / JP(14B) / avail(15B) = +4B spare  [1 occ, extra nulls: 1]
+    JP: そろそろおわり
+    EN: Almost Done
+
+  EN(11B) / JP(14B) / avail(15B) = +4B spare  [1 occ, extra nulls: 1]
+    JP: なかよしキャラ
+    EN: Best Friend
+
+  EN(11B) / JP(14B) / avail(15B) = +4B spare  [1 occ, extra nulls: 1]
+    JP: コンボチェック
+    EN: Combo Check
+
+  EN(13B) / JP(14B) / avail(17B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: 後ろ起き上がり
+    EN: Back Recovery
+
+  EN(13B) / JP(14B) / avail(17B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: 側転起き上がり
+    EN: Roll Recovery
+
+  EN(11B) / JP(14B) / avail(15B) = +4B spare  [2 occ, extra nulls: 1]
+    JP: 回転竹刀落とし
+    EN: Spin Shinai
+
+  EN(11B) / JP(14B) / avail(15B) = +4B spare  [1 occ, extra nulls: 1]
+    JP: 熱血腕立て伏せ
+    EN: Hot Push-up
+
+  EN(11B) / JP(14B) / avail(15B) = +4B spare  [1 occ, extra nulls: 1]
+    JP: 霧幻流　残酷斬
+    EN: Cruel Slash
+
+  EN(11B) / JP(14B) / avail(15B) = +4B spare  [1 occ, extra nulls: 1]
+    JP: ハンドルネーム
+    EN: Handle Name
+
+  EN(11B) / JP(12B) / avail(15B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: 特訓スパイク
+    EN: Power Spike
+
+  EN(11B) / JP(12B) / avail(15B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: 破天　無影蹴
+    EN: Shadow Kick
+
+  EN(11B) / JP(12B) / avail(15B) = +4B spare  [2 occ, extra nulls: 3]
+    JP: 天獄への階段
+    EN: HeavenStair
+
+  EN(11B) / JP(12B) / avail(15B) = +4B spare  [2 occ, extra nulls: 3]
+    JP: 前方転身の型
+    EN: FwdRollForm
+
+  EN(11B) / JP(12B) / avail(15B) = +4B spare  [2 occ, extra nulls: 3]
+    JP: 真・漢の背中
+    EN: TrueManBack
+
+  EN(11B) / JP(12B) / avail(15B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: フィルム交換
+    EN: Film Change
+
+  EN(11B) / JP(12B) / avail(15B) = +4B spare  [2 occ, extra nulls: 3]
+    JP: 魅惑のワルツ
+    EN: Charm Waltz
+
+  EN(11B) / JP(12B) / avail(15B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: 死呼ぶロンド
+    EN: Death Rondo
+
+  EN(7B) / JP(10B) / avail(11B) = +4B spare  [5 occ, extra nulls: 1-3]
+    JP: 起き上がり
+    EN: Wake-up
+
+  EN(9B) / JP(10B) / avail(13B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: 奥回り込み
+    EN: Roll Back
+
+  EN(7B) / JP(10B) / avail(11B) = +4B spare  [1 occ, extra nulls: 1]
+    JP: 必勝連撃拳
+    EN: Victory
+
+  EN(7B) / JP(10B) / avail(11B) = +4B spare  [4 occ, extra nulls: 1]
+    JP: 天仰波動拳
+    EN: SkyHado
+
+  EN(7B) / JP(10B) / avail(11B) = +4B spare  [2 occ, extra nulls: 1]
+    JP: 真空波動拳
+    EN: VacHado
+
+  EN(7B) / JP(8B) / avail(11B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: 生徒選抜
+    EN: Tryouts
+
+  EN(7B) / JP(8B) / avail(11B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: Ｐアキラ
+    EN: P.Akira
+
+  EN(7B) / JP(8B) / avail(11B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: Ｗダイゴ
+    EN: W.Daigo
+
+  EN(7B) / JP(8B) / avail(11B) = +4B spare  [2 occ, extra nulls: 3]
+    JP: 柏手破り
+    EN: PalmBrk
+
+  EN(7B) / JP(8B) / avail(11B) = +4B spare  [2 occ, extra nulls: 3]
+    JP: 片翼の構
+    EN: OneWing
+
+  EN(7B) / JP(8B) / avail(11B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: 剛気功塊
+    EN: HardChi
+
+  EN(7B) / JP(8B) / avail(11B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: 演舞披露
+    EN: ShowOff
+
+  EN(7B) / JP(8B) / avail(11B) = +4B spare  [2 occ, extra nulls: 3]
+    JP: 説教攻撃
+    EN: Lecture
+
+  EN(7B) / JP(8B) / avail(11B) = +4B spare  [2 occ, extra nulls: 3]
+    JP: 無双蹴り
+    EN: TopKick
+
+  EN(7B) / JP(8B) / avail(11B) = +4B spare  [2 occ, extra nulls: 3]
+    JP: 熱血風車
+    EN: HotSpin
+
+  EN(3B) / JP(6B) / avail(7B) = +4B spare  [2 occ, extra nulls: 1]
+    JP: は　い
+    EN: Yes
+
+  EN(3B) / JP(6B) / avail(7B) = +4B spare  [6 occ, extra nulls: 1-3]
+    JP: 気功塊
+    EN: Chi
+
+  EN(3B) / JP(4B) / avail(7B) = +4B spare  [1 occ, extra nulls: 3]
+    JP: 悲劇
+    EN: Sad
+
+  EN(20B) / JP(22B) / avail(23B) = +3B spare  [1 occ, extra nulls: 1]
+    JP: 本体につながっているか
+    EN: is connected to unit
+
+  EN(20B) / JP(20B) / avail(23B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 前の画面に戻ります。
+    EN: Back to prev screen.
+
+  EN(20B) / JP(20B) / avail(23B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 接続先が正しいときは
+    EN: If destination is OK
+
+  EN(20B) / JP(20B) / avail(23B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 次の対戦を開始します
+    EN: Starting next battle
+
+  EN(20B) / JP(20B) / avail(23B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 全試合が終了しました
+    EN: All matches complete
+
+  EN(20B) / JP(20B) / avail(23B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 空中ダブル幻影キック
+    EN: Air Dbl Phantom Kick
+
+  EN(16B) / JP(18B) / avail(19B) = +3B spare  [1 occ, extra nulls: 1]
+    JP: 制限はありません。
+    EN: No restrictions.
+
+  EN(16B) / JP(17B) / avail(19B) = +3B spare  [1 occ, extra nulls: 2]
+    JP: ストーリー 〜野望
+    EN: Story - Ambition
+
+  EN(16B) / JP(17B) / avail(19B) = +3B spare  [1 occ, extra nulls: 2]
+    JP: ストーリー 〜孤高
+    EN: Story - Solitude
+
+  EN(16B) / JP(18B) / avail(19B) = +3B spare  [1 occ, extra nulls: 1]
+    JP: アタックデータ表示
+    EN: Show Attack Data
+
+  EN(16B) / JP(18B) / avail(19B) = +3B spare  [2 occ, extra nulls: 1]
+    JP: 島津流　真・実直拳
+    EN: Shimazu TrueFist
+
+  EN(16B) / JP(18B) / avail(19B) = +3B spare  [1 occ, extra nulls: 1]
+    JP: 暴走・無双正拳突き
+    EN: Rage PeerlessJab
+
+  EN(16B) / JP(18B) / avail(19B) = +3B spare  [1 occ, extra nulls: 1]
+    JP: 登録しませんでした
+    EN: Did not register
+
+  EN(16B) / JP(16B) / avail(19B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: いちばんはだれ？
+    EN: Who is Number 1?
+
+  EN(16B) / JP(16B) / avail(19B) = +3B spare  [3 occ, extra nulls: 3]
+    JP: ダブル幻影キック
+    EN: Dbl Phantom Kick
+
+  EN(16B) / JP(16B) / avail(19B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 忌野流　モズ落し
+    EN: Imano ShrikeDrop
+
+  EN(16B) / JP(16B) / avail(19B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 情報を登録中です
+    EN: Registering info
+
+  EN(16B) / JP(16B) / avail(19B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 同じプレイヤーと
+    EN: Play same player
+
+  EN(12B) / JP(14B) / avail(15B) = +3B spare  [4 occ, extra nulls: 1]
+    JP: クロスカッター
+    EN: Cross Cutter
+
+  EN(12B) / JP(14B) / avail(15B) = +3B spare  [1 occ, extra nulls: 1]
+    JP: ホームラン打法
+    EN: Home Run Hit
+
+  EN(12B) / JP(14B) / avail(15B) = +3B spare  [1 occ, extra nulls: 1]
+    JP: 島津流　正波拳
+    EN: Shimazu Wave
+
+  EN(12B) / JP(14B) / avail(15B) = +3B spare  [2 occ, extra nulls: 1]
+    JP: フラッシュ攻撃
+    EN: Flash Attack
+
+  EN(12B) / JP(14B) / avail(15B) = +3B spare  [1 occ, extra nulls: 1]
+    JP: 暴走・漢の背中
+    EN: Rage ManBack
+
+  EN(12B) / JP(14B) / avail(15B) = +3B spare  [1 occ, extra nulls: 1]
+    JP: 暴走・硬気功塊
+    EN: Rage IronChi
+
+  EN(12B) / JP(14B) / avail(15B) = +3B spare  [1 occ, extra nulls: 1]
+    JP: すれ違い−将馬
+    EN: Meet - Shoma
+
+  EN(12B) / JP(12B) / avail(15B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 変換します。
+    EN: to password.
+
+  EN(12B) / JP(12B) / avail(15B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 手前回り込み
+    EN: Roll Forward
+
+  EN(12B) / JP(12B) / avail(15B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: しゃがみ投げ
+    EN: Crouch Throw
+
+  EN(12B) / JP(12B) / avail(15B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 三日月キック
+    EN: CrescentKick
+
+  EN(12B) / JP(12B) / avail(15B) = +3B spare  [4 occ, extra nulls: 3]
+    JP: 雷神アッパー
+    EN: ThunderUpper
+
+  EN(12B) / JP(12B) / avail(15B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 幻影ウェーブ
+    EN: Phantom Wave
+
+  EN(12B) / JP(12B) / avail(15B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 回転レシーブ
+    EN: Spin Receive
+
+  EN(12B) / JP(12B) / avail(15B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 壮絶な裏斬り
+    EN: Fierce Slash
+
+  EN(12B) / JP(12B) / avail(15B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 乱れ鉄砲突き
+    EN: WildGunThrst
+
+  EN(12B) / JP(12B) / avail(15B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: Ｗ暗黒気合弾
+    EN: W DarkSpirit
+
+  EN(12B) / JP(12B) / avail(15B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 戦闘について
+    EN: About Battle
+
+  EN(12B) / JP(12B) / avail(15B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 空中超剛速球
+    EN: Air Fastball
+
+  EN(12B) / JP(12B) / avail(15B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: すれ違い−夏
+    EN: Meet - Natsu
+
+  EN(8B) / JP(10B) / avail(11B) = +3B spare  [2 occ, extra nulls: 1-3]
+    JP: 暗黒気合弾
+    EN: DarkGuts
+
+  EN(8B) / JP(10B) / avail(11B) = +3B spare  [4 occ, extra nulls: 1]
+    JP: 蒼空波動拳
+    EN: BlueHado
+
+  EN(8B) / JP(10B) / avail(11B) = +3B spare  [2 occ, extra nulls: 1]
+    JP: 電刃波動拳
+    EN: ElecHado
+
+  EN(8B) / JP(10B) / avail(11B) = +3B spare  [1 occ, extra nulls: 1]
+    JP: 　前受け身
+    EN: Fwd Roll
+
+  EN(6B) / JP(8B) / avail(9B) = +3B spare  [2 occ, extra nulls: 1-3]
+    JP: ノーマル
+    EN: Normal
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 気功掌底
+    EN: Chi Palm
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [3 occ, extra nulls: 3]
+    JP: 超剛速球
+    EN: Fastball
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 分身魔球
+    EN: CloneOrb
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 破の連舞
+    EN: Ha Dance
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 天の連舞
+    EN: SkyDance
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [4 occ, extra nulls: 3]
+    JP: 鉄砲突き
+    EN: GunThrst
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 荒波四股
+    EN: WaveStmp
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 岩石砕き
+    EN: RockCrsh
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 出席確認
+    EN: RollCall
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 昇天切開
+    EN: AscSlash
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 死の介護
+    EN: GrimCare
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 空間裂き
+    EN: SpaceRip
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 六腑突き
+    EN: OrganJab
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 居合斬り
+    EN: IaiSlash
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 鷂子栽肩
+    EN: HawkShdr
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 破天の構
+    EN: SkyStnce
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 疾風の型
+    EN: GaleForm
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 昇龍の型
+    EN: DrgnForm
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 紫電の型
+    EN: ShockFrm
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 破岩の型
+    EN: RockForm
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 無双突き
+    EN: Peerless
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 無双裏拳
+    EN: Backfist
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 大地突き
+    EN: EarthJab
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [3 occ, extra nulls: 3]
+    JP: 熱血竹刀
+    EN: HotShnai
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 超バタ足
+    EN: SFlutter
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 真空斬り
+    EN: VacSlash
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 粛正の嵐
+    EN: P. Storm
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: ビンゴ表
+    EN: BingoCrd
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 視点変更
+    EN: ChngView
+
+  EN(8B) / JP(8B) / avail(11B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: マス説明
+    EN: TileInfo
+
+  EN(4B) / JP(6B) / avail(7B) = +3B spare  [3 occ, extra nulls: 1]
+    JP: 芸能科
+    EN: Arts
+
+  EN(4B) / JP(6B) / avail(7B) = +3B spare  [2 occ, extra nulls: 1]
+    JP: 鳳撃襲
+    EN: Hawk
+
+  EN(4B) / JP(6B) / avail(7B) = +3B spare  [4 occ, extra nulls: 1-3]
+    JP: 雷鋭蹴
+    EN: Bolt
+
+  EN(4B) / JP(6B) / avail(7B) = +3B spare  [4 occ, extra nulls: 1]
+    JP: 闇神楽
+    EN: Dark
+
+  EN(4B) / JP(6B) / avail(7B) = +3B spare  [2 occ, extra nulls: 1]
+    JP: 闇駆け
+    EN: Rush
+
+  EN(4B) / JP(6B) / avail(7B) = +3B spare  [2 occ, extra nulls: 1]
+    JP: 天雷斬
+    EN: Bolt
+
+  EN(4B) / JP(6B) / avail(7B) = +3B spare  [2 occ, extra nulls: 1]
+    JP: 裏裡門
+    EN: Gate
+
+  EN(4B) / JP(5B) / avail(7B) = +3B spare  [1 occ, extra nulls: 2]
+    JP: 旧技:
+    EN: Old:
+
+  EN(4B) / JP(4B) / avail(7B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: Ｄ雹
+    EN: D.HL
+
+  EN(4B) / JP(4B) / avail(7B) = +3B spare  [5 occ, extra nulls: 3]
+    JP: なし
+    EN: None
+
+  EN(4B) / JP(4B) / avail(7B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 罵倒
+    EN: Mock
+
+  EN(4B) / JP(4B) / avail(7B) = +3B spare  [3 occ, extra nulls: 3]
+    JP: 破壊
+    EN: Ruin
+
+  EN(4B) / JP(4B) / avail(7B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 放舞
+    EN: Open
+
+  EN(4B) / JP(4B) / avail(7B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 大嵐
+    EN: Rage
+
+  EN(4B) / JP(4B) / avail(7B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 触診
+    EN: Exam
+
+  EN(4B) / JP(4B) / avail(7B) = +3B spare  [3 occ, extra nulls: 3]
+    JP: 回診
+    EN: Tour
+
+  EN(4B) / JP(4B) / avail(7B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 伸身
+    EN: Flex
+
+  EN(4B) / JP(4B) / avail(7B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 殺刃
+    EN: Kill
+
+  EN(4B) / JP(4B) / avail(7B) = +3B spare  [1 occ, extra nulls: 3]
+    JP: 昇斬
+    EN: Rise
+
+  EN(4B) / JP(4B) / avail(7B) = +3B spare  [2 occ, extra nulls: 3]
+    JP: 疾駆
+    EN: Dash
+
+  EN(17B) / JP(18B) / avail(19B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 接続に失敗しました
+    EN: Connection failed
+
+  EN(17B) / JP(18B) / avail(19B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: パスワードが違うか
+    EN: Wrong password or
+
+  EN(17B) / JP(18B) / avail(19B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 回線を切断しました
+    EN: Line disconnected
+
+  EN(17B) / JP(18B) / avail(19B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: カプコンサーバーが
+    EN: Capcom server may
+
+  EN(17B) / JP(18B) / avail(19B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 忌野流　モズ落とし
+    EN: Imano Shrike Drop
+
+  EN(13B) / JP(14B) / avail(15B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 作成できません
+    EN: Cannot Create
+
+  EN(13B) / JP(14B) / avail(15B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 聖純女学院中庭
+    EN: Seijun Garden
+
+  EN(13B) / JP(14B) / avail(15B) = +2B spare  [2 occ, extra nulls: 1]
+    JP: 幻影ブレイカー
+    EN: Phantom Break
+
+  EN(13B) / JP(14B) / avail(15B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: ヘヴンズクロス
+    EN: Heavens Cross
+
+  EN(13B) / JP(14B) / avail(15B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 島津流　雷鋭蹴
+    EN: Shmz BoltKick
+
+  EN(13B) / JP(14B) / avail(15B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 熱血全開気合弾
+    EN: Hot Full Guts
+
+  EN(13B) / JP(14B) / avail(15B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 全開彗星キック
+    EN: FullCometKick
+
+  EN(13B) / JP(14B) / avail(15B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 霧幻流　闇吹雪
+    EN: Dark Blizzard
+
+  EN(13B) / JP(14B) / avail(15B) = +2B spare  [2 occ, extra nulls: 1]
+    JP: 真空天仰波動拳
+    EN: ShinkuTenHado
+
+  EN(13B) / JP(14B) / avail(15B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: メールアドレス
+    EN: Email Address
+
+  EN(13B) / JP(14B) / avail(15B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 空中螺旋炎舞脚
+    EN: Air Spin Fire
+
+  EN(13B) / JP(14B) / avail(15B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 　　完全ガード
+    EN: Perfect Guard
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: キャラ回転
+    EN: Rot. Char
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: セミオート
+    EN: Semi-Auto
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 後ろ受け身
+    EN: Back Roll
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [3 occ, extra nulls: 1]
+    JP: 全開気合弾
+    EN: Full Guts
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [3 occ, extra nulls: 1]
+    JP: 螺旋炎舞脚
+    EN: Spin Fire
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [2 occ, extra nulls: 1]
+    JP: 豪快リード
+    EN: Bold Lead
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [2 occ, extra nulls: 1]
+    JP: 天井サーブ
+    EN: Lob Serve
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [2 occ, extra nulls: 1]
+    JP: ぶちかまし
+    EN: Bull Rush
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [2 occ, extra nulls: 1]
+    JP: 雪崩落とし
+    EN: Avalanche
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 暗黒疾風斬
+    EN: Dark Wind
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [2 occ, extra nulls: 1]
+    JP: 空覇の鉄鎖
+    EN: Sky Chain
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 話し中です
+    EN: Line busy
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 開催準備中
+    EN: Preparing
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 居合い斬り
+    EN: Iai Slash
+
+  EN(9B) / JP(10B) / avail(11B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 豪快キック
+    EN: Bold Kick
+
+  EN(7B) / JP(8B) / avail(9B) = +2B spare  [3 occ, extra nulls: 1-3]
+    JP: 硬気功塊
+    EN: IronChi
+
+  EN(4B) / JP(5B) / avail(6B) = +2B spare  [2 occ, extra nulls: 1]
+    JP: はい 
+    EN: Yes 
+
+  EN(5B) / JP(6B) / avail(7B) = +2B spare  [6 occ, extra nulls: 1]
+    JP: 炎舞脚
+    EN: Flame
+
+  EN(5B) / JP(6B) / avail(7B) = +2B spare  [2 occ, extra nulls: 1]
+    JP: 連脚弾
+    EN: Kicks
+
+  EN(5B) / JP(6B) / avail(7B) = +2B spare  [7 occ, extra nulls: 1-3]
+    JP: 裏斬り
+    EN: Slash
+
+  EN(5B) / JP(6B) / avail(7B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 血祭り
+    EN: Blood
+
+  EN(5B) / JP(6B) / avail(7B) = +2B spare  [2 occ, extra nulls: 1]
+    JP: 大旋風
+    EN: Whirl
+
+  EN(5B) / JP(6B) / avail(7B) = +2B spare  [2 occ, extra nulls: 1-3]
+    JP: 噴火山
+    EN: Erupt
+
+  EN(5B) / JP(6B) / avail(7B) = +2B spare  [3 occ, extra nulls: 1]
+    JP: 夜叉車
+    EN: Wheel
+
+  EN(5B) / JP(6B) / avail(7B) = +2B spare  [3 occ, extra nulls: 1]
+    JP: 幻影蹴
+    EN: Ghost
+
+  EN(5B) / JP(6B) / avail(7B) = +2B spare  [2 occ, extra nulls: 1]
+    JP: 百裂脚
+    EN: Kicks
+
+  EN(5B) / JP(6B) / avail(7B) = +2B spare  [14 occ, extra nulls: 1]
+    JP: 波動拳
+    EN: Hadou
+
+  EN(5B) / JP(6B) / avail(7B) = +2B spare  [2 occ, extra nulls: 1]
+    JP: 咲桜拳
+    EN: Bloom
+
+  EN(5B) / JP(5B) / avail(7B) = +2B spare  [1 occ, extra nulls: 2]
+    JP: 新技:
+    EN: Tech:
+
+  EN(5B) / JP(6B) / avail(7B) = +2B spare  [1 occ, extra nulls: 1]
+    JP: 残り：
+    EN: Left:
+
+  EN(26B) / JP(26B) / avail(27B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 入室条件を満たしていません
+    EN: Entry requirements not met
+
+  EN(18B) / JP(18B) / avail(19B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: きゃらくた〜めいく
+    EN: Character Creation
+
+  EN(18B) / JP(18B) / avail(19B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 使用している本体が
+    EN: Console is not the
+
+  EN(18B) / JP(18B) / avail(19B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 接続を中断しました
+    EN: Connection aborted
+
+  EN(14B) / JP(14B) / avail(15B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: とてもよく使う
+    EN: Use Very Often
+
+  EN(14B) / JP(14B) / avail(15B) = +1B spare  [2 occ, extra nulls: 1-3]
+    JP: を登録します。
+    EN: will register.
+
+  EN(14B) / JP(14B) / avail(15B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 初期設定に戻す
+    EN: Reset Defaults
+
+  EN(14B) / JP(14B) / avail(15B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 全開流星キック
+    EN: FullMeteorKick
+
+  EN(14B) / JP(14B) / avail(15B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 必殺　電光鉄鎖
+    EN: Finl ElecChain
+
+  EN(14B) / JP(14B) / avail(15B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 落日のララバイ
+    EN: Sunset Lullaby
+
+  EN(14B) / JP(14B) / avail(15B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 真空蒼空波動拳
+    EN: ShinkuSokuHado
+
+  EN(14B) / JP(14B) / avail(15B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 先に進めません
+    EN: cannot proceed
+
+  EN(14B) / JP(14B) / avail(15B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 日月火水木金土
+    EN: SuMoTuWeThFrSa
+
+  EN(14B) / JP(14B) / avail(15B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 空中入魂サーブ
+    EN: Air Soul Serve
+
+  EN(14B) / JP(14B) / avail(15B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 空中破戒の鉄鎖
+    EN: Air Ruin Chain
+
+  EN(12B) / JP(12B) / avail(13B) = +1B spare  [2 occ, extra nulls: 1-16]
+    JP: グラウンド南
+    EN: South Ground
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 五輪ドーム
+    EN: Gorin Dome
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 完全ガード
+    EN: Full Guard
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [4 occ, extra nulls: 1]
+    JP: 流星キック
+    EN: MeteorKick
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [6 occ, extra nulls: 1-3]
+    JP: 幻影キック
+    EN: PhantomKck
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 大回転打法
+    EN: Grand Slam
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [3 occ, extra nulls: 1]
+    JP: 入魂サーブ
+    EN: Soul Serve
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 対空裏斬り
+    EN: AA BackCut
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 対空正波拳
+    EN: AAWaveFist
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 十文字斬り
+    EN: CrossSlash
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 暗黒幻影蹴
+    EN: Dark Ghost
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 暗黒幻影陣
+    EN: Dark Array
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 気合キック
+    EN: SpiritKick
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [3 occ, extra nulls: 1]
+    JP: 破戒の鉄鎖
+    EN: Ruin Chain
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 毒蛇の鉄鎖
+    EN: ViperChain
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 彗星キック
+    EN: Comet Kick
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 暗黒闇神楽
+    EN: DarkKagura
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 騎馬落とし
+    EN: Horse Drop
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 希望しない
+    EN: Don't Want
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 空中号外！
+    EN: Air Extra!
+
+  EN(10B) / JP(10B) / avail(11B) = +1B spare  [1 occ, extra nulls: 1]
+    JP: 空中裏斬り
+    EN: AirBackCut
+
+  EN(8B) / JP(8B) / avail(9B) = +1B spare  [4 occ, extra nulls: 1-3]
+    JP: 眼光蹴り
+    EN: GlareKik
+
+  EN(6B) / JP(6B) / avail(7B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 昇陽拳
+    EN: Rising
+
+  EN(6B) / JP(6B) / avail(7B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 骸裡門
+    EN: Corpse
+
+  EN(6B) / JP(6B) / avail(7B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 旋蹴舞
+    EN: Spiral
+
+  EN(6B) / JP(6B) / avail(7B) = +1B spare  [4 occ, extra nulls: 1]
+    JP: 実直拳
+    EN: Honest
+
+  EN(6B) / JP(6B) / avail(7B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 真円脚
+    EN: Circle
+
+  EN(6B) / JP(6B) / avail(7B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 桜竜斬
+    EN: Cherry
+
+  EN(6B) / JP(6B) / avail(7B) = +1B spare  [3 occ, extra nulls: 1]
+    JP: 号外！
+    EN: Extra!
+
+  EN(6B) / JP(6B) / avail(7B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 乱れ桜
+    EN: Cherry
+
+  EN(6B) / JP(6B) / avail(7B) = +1B spare  [2 occ, extra nulls: 1]
+    JP: 春一番
+    EN: Spring
+
+
+======================================================================
+FITS USING EXTRA NULLS (27 occurrences - would have been truncated before)
+======================================================================
+
+  JP(20B) EN(21B) +3B extra nulls = 23B available
+    JP: 相手は切断されました
+    EN: Opponent disconnected
+
+  JP(18B) EN(19B) +1B extra nulls = 19B available
+    JP: レバーガード操作を
+    EN: Lever guard must be
+
+  JP(18B) EN(19B) +1B extra nulls = 19B available
+    JP: 接続料がかかります
+    EN: plus connection fee
+
+  JP(16B) EN(19B) +3B extra nulls = 19B available
+    JP: 今月の予想料金が
+    EN: This month estimate
+
+  JP(14B) EN(16B) +10B extra nulls = 24B available
+    JP: 必殺技変更マス
+    EN: Change Move Tile
+
+  JP(12B) EN(13B) +3B extra nulls = 15B available
+    JP: 太陽学園屋上
+    EN: Taiyo Rooftop
+
+  JP(12B) EN(13B) +3B extra nulls = 15B available
+    JP: 青春駅前広場
+    EN: Youth Station
+
+  JP(12B) EN(15B) +3B extra nulls = 15B available
+    JP: 太陽学園教室
+    EN: Taiyo Classroom
+
+  JP(12B) EN(14B) +3B extra nulls = 15B available
+    JP: 入れて下さい
+    EN: expansion slot
+
+  JP(12B) EN(16B) +12B extra nulls = 24B available
+    JP: 国語の単位を
+    EN: Japanese credits
+
+  JP(12B) EN(13B) +12B extra nulls = 24B available
+    JP: 英語の単位を
+    EN: English creds
+
+  JP(12B) EN(13B) +12B extra nulls = 24B available
+    JP: 理科の単位を
+    EN: Science creds
+
+  JP(12B) EN(13B) +3B extra nulls = 15B available
+    JP: 空中熱血竹刀
+    EN: Air Hot Kendo
+
+  JP(10B) EN(11B) +1B extra nulls = 11B available
+    JP: 喜び・勝ち
+    EN: Joy/Victory
+
+  JP(10B) EN(11B) +1B extra nulls = 11B available
+    JP: 破天無影蹴
+    EN: Shadow Kick
+
+  JP(10B) EN(11B) +14B extra nulls = 24B available
+    JP: 　潜在能力
+    EN:  POTENTIAL 
+
+  JP(8B) EN(9B) +3B extra nulls = 11B available
+    JP: よく使う
+    EN: Often Use
+
+  JP(8B) EN(9B) +1B extra nulls = 9B available
+    JP: よく使う
+    EN: Often Use
+
+  JP(8B) EN(11B) +3B extra nulls = 11B available
+    JP: 根性神社
+    EN: Guts Shrine
+
+  JP(8B) EN(11B) +3B extra nulls = 11B available
+    JP: 敵の状態
+    EN: Enemy State
+
+  JP(8B) EN(11B) +3B extra nulls = 11B available
+    JP: 立ち投げ
+    EN: Stand Throw
+
+  JP(8B) EN(10B) +3B extra nulls = 11B available
+    JP: 登録状況
+    EN: Reg Status
+
+  JP(8B) EN(10B) +3B extra nulls = 11B available
+    JP: 空中回診
+    EN: Air Rounds
+
+  JP(8B) EN(11B) +3B extra nulls = 11B available
+    JP: 空中破壊
+    EN: Air Destroy
+
+  JP(6B) EN(7B) +6B extra nulls = 12B available
+    JP: セイギ
+    EN: Justice
+
+  JP(4B) EN(5B) +3B extra nulls = 7B available
+    JP: 響子
+    EN: Kyoko
+
+  JP(4B) EN(7B) +3B extra nulls = 7B available
+    JP: 恭介
+    EN: Kyosuke
+
+
+======================================================================
+STILL TOO LONG (47 occurrences - even with extra nulls)
+======================================================================
+
+  JP(22B) EN(25B) +1B extra nulls = 23B available | 2B over
+    JP: 相手の反応がありません
+    EN: No response from opponent
+
+  JP(18B) EN(21B) +1B extra nulls = 19B available | 2B over
+    JP: 登録が完了しました
+    EN: Registration complete
+
+  JP(18B) EN(19B) +0B extra nulls = 18B available | 1B over
+    JP: 接続料がかかります
+    EN: plus connection fee
+
+  JP(16B) EN(20B) +3B extra nulls = 19B available | 1B over
+    JP: 失格となりました
+    EN: server. Disqualified
+
+  JP(14B) EN(16B) +1B extra nulls = 15B available | 1B over
+    JP: 電源を切ったり
+    EN: Do not power off
+
+  JP(14B) EN(16B) +1B extra nulls = 15B available | 1B over
+    JP: 電源を切ったり
+    EN: Do not power off
+
+  JP(14B) EN(16B) +1B extra nulls = 15B available | 1B over
+    JP: 電源を切ったり
+    EN: Do not power off
+
+  JP(14B) EN(16B) +0B extra nulls = 14B available | 2B over
+    JP: 電源を切ったり
+    EN: Do not power off
+
+  JP(14B) EN(16B) +0B extra nulls = 14B available | 2B over
+    JP: 電源を切ったり
+    EN: Do not power off
+
+  JP(14B) EN(15B) +0B extra nulls = 14B available | 1B over
+    JP: 完全燃焼技　２
+    EN: Burning Vigor 2
+
+  JP(14B) EN(15B) +0B extra nulls = 14B available | 1B over
+    JP: 完全燃焼技　３
+    EN: Burning Vigor 3
+
+  JP(14B) EN(15B) +0B extra nulls = 14B available | 1B over
+    JP: 完全燃焼技　４
+    EN: Burning Vigor 4
+
+  JP(14B) EN(16B) +1B extra nulls = 15B available | 1B over
+    JP: 空中幻影キック
+    EN: Air Phantom Kick
+
+  JP(12B) EN(18B) +3B extra nulls = 15B available | 3B over
+    JP: 無敵時間表示
+    EN: Show Invincibility
+
+  JP(12B) EN(16B) +3B extra nulls = 15B available | 1B over
+    JP: 前起き上がり
+    EN: Forward Recovery
+
+  JP(10B) EN(12B) +1B extra nulls = 11B available | 1B over
+    JP: 場所選択：
+    EN: Select Slot:
+
+  JP(10B) EN(12B) +1B extra nulls = 11B available | 1B over
+    JP: 大和川堤防
+    EN: Yamato Levee
+
+  JP(10B) EN(15B) +1B extra nulls = 11B available | 4B over
+    JP: 勝利の足跡
+    EN: Path to Victory
+
+  JP(10B) EN(14B) +0B extra nulls = 10B available | 4B over
+    JP: 聖純女学院
+    EN: Seijun Academy
+
+  JP(10B) EN(14B) +2B extra nulls = 12B available | 2B over
+    JP: 聖純女学院
+    EN: Seijun Academy
+
+  JP(10B) EN(14B) +1B extra nulls = 11B available | 3B over
+    JP: 聖純女学院
+    EN: Seijun Academy
+
+  JP(10B) EN(14B) +0B extra nulls = 10B available | 4B over
+    JP: 聖純女学院
+    EN: Seijun Academy
+
+  JP(10B) EN(14B) +0B extra nulls = 10B available | 4B over
+    JP: 聖純女学院
+    EN: Seijun Academy
+
+  JP(10B) EN(14B) +0B extra nulls = 10B available | 4B over
+    JP: 聖純女学院
+    EN: Seijun Academy
+
+  JP(10B) EN(13B) +1B extra nulls = 11B available | 2B over
+    JP: 完全燃焼技
+    EN: Burning Vigor
+
+  JP(10B) EN(13B) +0B extra nulls = 10B available | 3B over
+    JP: 完全燃焼技
+    EN: Burning Vigor
+
+  JP(10B) EN(13B) +0B extra nulls = 10B available | 3B over
+    JP: 完全燃焼技
+    EN: Burning Vigor
+
+  JP(10B) EN(13B) +0B extra nulls = 10B available | 3B over
+    JP: 完全燃焼技
+    EN: Burning Vigor
+
+  JP(10B) EN(13B) +0B extra nulls = 10B available | 3B over
+    JP: 完全燃焼技
+    EN: Burning Vigor
+
+  JP(10B) EN(15B) +1B extra nulls = 11B available | 4B over
+    JP: 空中気合弾
+    EN: Air Spirit Ball
+
+  JP(10B) EN(13B) +1B extra nulls = 11B available | 2B over
+    JP: 空中炎舞脚
+    EN: Air Fire Kick
+
+  JP(10B) EN(13B) +1B extra nulls = 11B available | 2B over
+    JP: 空中正波拳
+    EN: Air Wave Fist
+
+  JP(10B) EN(15B) +1B extra nulls = 11B available | 4B over
+    JP: 空中夜叉車
+    EN: Air Yaksha Cart
+
+  JP(8B) EN(13B) +3B extra nulls = 11B available | 2B over
+    JP: 気合タメ
+    EN: Spirit Charge
+
+  JP(8B) EN(12B) +3B extra nulls = 11B available | 1B over
+    JP: 敵の動作
+    EN: Enemy Action
+
+  JP(8B) EN(12B) +1B extra nulls = 9B available | 3B over
+    JP: 前受け身
+    EN: Forward Roll
+
+  JP(8B) EN(10B) +0B extra nulls = 8B available | 2B over
+    JP: 登録状況
+    EN: Reg Status
+
+  JP(8B) EN(12B) +3B extra nulls = 11B available | 1B over
+    JP: 電話番号
+    EN: Phone Number
+
+  JP(8B) EN(12B) +0B extra nulls = 8B available | 4B over
+    JP: 電話番号
+    EN: Phone Number
+
+  JP(8B) EN(12B) +0B extra nulls = 8B available | 4B over
+    JP: 電話番号
+    EN: Phone Number
+
+  JP(8B) EN(12B) +0B extra nulls = 8B available | 4B over
+    JP: 電話番号
+    EN: Phone Number
+
+  JP(8B) EN(12B) +0B extra nulls = 8B available | 4B over
+    JP: 電話番号
+    EN: Phone Number
+
+  JP(8B) EN(12B) +0B extra nulls = 8B available | 4B over
+    JP: 電話番号
+    EN: Phone Number
+
+  JP(6B) EN(7B) +0B extra nulls = 6B available | 1B over
+    JP: セイギ
+    EN: Justice
+
+  JP(4B) EN(5B) +0B extra nulls = 4B available | 1B over
+    JP: 響子
+    EN: Kyoko
+
+  JP(4B) EN(5B) +0B extra nulls = 4B available | 1B over
+    JP: 雷蔵
+    EN: Raizo
+
+  JP(4B) EN(7B) +0B extra nulls = 4B available | 3B over
+    JP: 恭介
+    EN: Kyosuke
+
+
+======================================================================
+NOT FOUND IN BINARY (25 strings)
+======================================================================
+
+  ボードＧａｍｅ　用名前
+  格闘Ｇａｍｅ　用名前
+  聖純Ｆ学院
+  恭　介
+  も　も
+  九　郎
+  隼　人
+  流　　
+  　流　
+  雷　蔵
+  響　子
+  英　雄
+  ロ　イ
+  将　馬
+  ザ　キ
+  バ　ツ
+  英語室
+  国語室
+  数学室
+  社会室
+  記録
+  移動
+  雹　
+  蘭
+  兵
