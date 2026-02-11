@@ -244,6 +244,160 @@ def replace_null_terminated_strings(input_file: Path, output_file: Path, replace
     return replaced_count
 
 
+def load_translations_with_offsets(csv_path: Path) -> list:
+    """
+    Load translations from an MGDATA CSV file, including offsets.
+    
+    Returns list of dicts: [{'japanese': str, 'english': str, 'offset': int}, ...]
+    Only includes rows that have both Japanese and English text.
+    """
+    entries = []
+
+    if not csv_path.exists():
+        print(f"WARNING: Translation file not found: {csv_path}")
+        return entries
+
+    with open(csv_path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        for row in reader:
+            jp = row.get('Japanese', '')
+            en = row.get('English', '')
+            offset_str = row.get('offset', '')
+            if jp and en and offset_str:
+                offset = int(offset_str, 16)
+                entries.append({
+                    'japanese': jp,
+                    'english': en,
+                    'offset': offset,
+                })
+
+    print(f"Loaded {len(entries)} translations (with offsets) from {csv_path.name}")
+    return entries
+
+
+def replace_at_offsets(input_file: Path, output_file: Path, entries: list, pad_char=b' '):
+    """
+    Replace text in a binary file at specific offsets.
+    
+    Each entry has 'japanese', 'english', and 'offset'. Uses Shift-JIS aware
+    parsing from the offset to find the '@' terminator, determining the actual
+    byte span of the string in the binary.
+    
+    Binary layout: [text bytes] [@] [NUL padding...]
+    
+    The total span from offset through the NUL padding is preserved. If English
+    is shorter than Japanese, it's padded with pad_char before the '@'. If English
+    is longer, it can expand into trailing NUL bytes (keeping at least 1 NUL).
+    """
+    with open(input_file, 'rb') as f:
+        data = f.read()
+
+    modified = bytearray(data)
+    replaced_count = 0
+    skipped_count = 0
+
+    for entry in entries:
+        jp_text = entry['japanese']
+        en_text = entry['english']
+        offset = entry['offset']
+
+        en_bytes = en_text.encode('shift_jis')
+
+        # Find the '@' terminator from the offset using Shift-JIS aware parsing
+        at_pos = find_string_end_sjis(modified, offset)
+        if at_pos is None:
+            print(f"  NO TERMINATOR at 0x{offset:X}: skipping '{jp_text[:40]}...'")
+            skipped_count += 1
+            continue
+
+        # Verify the text at this offset matches (ignoring embedded NUL bytes)
+        actual_bytes = bytes(modified[offset:at_pos])
+        try:
+            decoded = actual_bytes.decode('shift_jis', errors='replace').replace('\x00', '')
+        except Exception:
+            decoded = ''
+
+        if decoded != jp_text:
+            print(f"  MISMATCH at 0x{offset:X}: expected '{jp_text[:40]}...', got '{decoded[:40]}...'")
+            skipped_count += 1
+            continue
+
+        jp_span = at_pos - offset  # bytes of text before '@'
+
+        # Count trailing NUL bytes after the '@'
+        null_start = at_pos + 1  # byte after '@'
+        null_count = 0
+        while null_start + null_count < len(modified) and modified[null_start + null_count] == 0x00:
+            null_count += 1
+
+        # Available space for English text (before '@'):
+        #   jp_span + null bytes we can consume (keep at least 1 NUL after '@')
+        extra_from_nulls = max(0, null_count - 1)
+        available = jp_span + extra_from_nulls
+
+        # Total span we're working with: [text] [@] [nulls]
+        total_span = jp_span + 1 + null_count  # text + '@' + nulls
+
+        if len(en_bytes) <= jp_span:
+            # English fits within original text space - pad with pad_char
+            new_text = en_bytes + pad_char * (jp_span - len(en_bytes))
+            # Reconstruct: [new_text] [@] [original nulls]
+            modified[offset:offset + jp_span] = new_text
+        elif len(en_bytes) <= available:
+            # English is longer but fits by consuming some trailing NULs
+            # New layout: [en_bytes] [@] [fewer NULs]
+            consumed = len(en_bytes) - jp_span  # extra bytes needed from NULs
+            remaining_nulls = null_count - consumed
+            new_region = en_bytes + b'\x40' + b'\x00' * remaining_nulls
+            modified[offset:offset + total_span] = new_region
+        else:
+            # Doesn't fit even with trailing NULs - truncate
+            over = len(en_bytes) - available
+            print(f"  WARNING at 0x{offset:X}: English is {over}B over available space - truncating!")
+            print(f"    JP: {jp_text[:60]}")
+            print(f"    EN: {en_text[:60]}")
+            # Truncate to available, reconstruct with '@' and 1 NUL
+            new_text = en_bytes[:available]
+            new_region = new_text + b'\x40' + b'\x00'
+            modified[offset:offset + total_span] = new_region + b'\x00' * (total_span - len(new_region))
+
+        replaced_count += 1
+
+    output_file.parent.mkdir(parents=True, exist_ok=True)
+
+    with open(output_file, 'wb') as f:
+        f.write(modified)
+
+    if skipped_count:
+        print(f"  Skipped {skipped_count} entries due to offset mismatch")
+    return replaced_count
+
+
+def find_string_end_sjis(data: bytearray, start: int) -> int | None:
+    """
+    From 'start', parse forward using Shift-JIS aware logic until we hit
+    a standalone 0x40 ('@' terminator). Returns the position of the byte
+    just before the '@', i.e. the end of the string content.
+    Returns None if no terminator found within a reasonable range.
+    """
+    pos = start
+    limit = min(start + 4096, len(data))  # don't scan too far
+
+    def is_sjis_lead(b):
+        return (0x81 <= b <= 0x9F) or (0xE0 <= b <= 0xEF)
+
+    while pos < limit:
+        b = data[pos]
+        if is_sjis_lead(b) and pos + 1 < len(data):
+            pos += 2  # skip 2-byte Shift-JIS character
+            continue
+        if b == 0x40:  # standalone '@' terminator
+            return pos
+        pos += 1
+
+    return None
+
+
 def copy_original_files():
     """Copy original files from extracted-afs to modified-afs-contents for modification."""
     files_to_copy = [
@@ -288,18 +442,18 @@ def process_mgdata():
     
     for file_num, csv_name, label in mgdata_files:
         csv_path = TRANSLATIONS_DIR / csv_name
-        translations = load_translations_from_csv(csv_path)
+        entries = load_translations_with_offsets(csv_path)
         
-        if not translations:
+        if not entries:
             print(f"No translations found for {file_num}!")
             continue
         
         print("\n" + "=" * 60)
-        print(f"Processing MGDATA/{file_num} ({label})")
+        print(f"Processing MGDATA/{file_num} ({label}) - offset-based replacement")
         print("=" * 60)
         target = MODIFIED_AFS_DIR / "MGDATA" / file_num
         if target.exists():
-            count = replace_text_in_file(target, target, translations)
+            count = replace_at_offsets(target, target, entries)
             print(f"\nReplaced {count} strings in {target.name}")
             total += count
     
