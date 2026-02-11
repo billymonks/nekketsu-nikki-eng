@@ -56,6 +56,10 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
     Replace text in a binary file using Shift-JIS encoding.
     Pads English text to match Japanese byte length.
     
+    If there are multiple consecutive null bytes after the string, the English
+    text can expand into that space (keeping at least 1 null terminator).
+    This gives extra room for longer translations before truncating.
+    
     Args:
         pad_char: Byte to use for padding. Default is space (b' ').
                   Use b'\x00' for null padding (good for menu/UI text).
@@ -66,7 +70,7 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
     with open(input_file, 'rb') as f:
         data = f.read()
     
-    modified = data
+    modified = bytearray(data)
     replaced_count = 0
     
     # Sort by Japanese text length (longest first) to prevent substring corruption
@@ -76,18 +80,52 @@ def replace_text_in_file(input_file: Path, output_file: Path, replacements: dict
         jp_bytes = jp_text.encode('shift_jis')
         en_bytes = en_text.encode('shift_jis')
         
-        if jp_bytes in modified:
-            if pad_to_length:
-                if len(en_bytes) < len(jp_bytes):
-                    padding = len(jp_bytes) - len(en_bytes)
-                    en_bytes = en_bytes + pad_char * padding
-                elif len(en_bytes) > len(jp_bytes):
-                    print(f"WARNING: English is {len(en_bytes) - len(jp_bytes)} bytes LONGER - truncating!")
-                    en_bytes = en_bytes[:len(jp_bytes)]
+        found = False
+        occurrences = 0
+        pos = 0
+        
+        while True:
+            idx = bytes(modified).find(jp_bytes, pos)
+            if idx == -1:
+                break
             
-            modified = modified.replace(jp_bytes, en_bytes)
+            # Count trailing null bytes after the Japanese text
+            text_end = idx + len(jp_bytes)
+            null_count = 0
+            while text_end + null_count < len(modified) and modified[text_end + null_count] == 0x00:
+                null_count += 1
+            
+            # Available space: JP bytes + trailing nulls minus 1 (keep at least 1 null)
+            if null_count > 0:
+                available = len(jp_bytes) + null_count - 1
+            else:
+                available = len(jp_bytes)
+            
+            if pad_to_length:
+                if len(en_bytes) <= len(jp_bytes):
+                    # English fits within original JP space - pad normally
+                    padded = en_bytes + pad_char * (len(jp_bytes) - len(en_bytes))
+                    modified[idx:idx + len(jp_bytes)] = padded
+                elif len(en_bytes) <= available:
+                    # English is longer than JP but fits using trailing nulls
+                    total_span = len(jp_bytes) + null_count
+                    remaining = total_span - len(en_bytes)
+                    padded = en_bytes + b'\x00' * remaining
+                    modified[idx:idx + total_span] = padded
+                else:
+                    # Doesn't fit even with trailing nulls - truncate
+                    print(f"WARNING: English is {len(en_bytes) - available} bytes LONGER than available space - truncating!")
+                    modified[idx:idx + len(jp_bytes)] = en_bytes[:len(jp_bytes)]
+            else:
+                modified[idx:idx + len(jp_bytes)] = en_bytes[:len(jp_bytes)]
+            
+            pos = idx + max(len(jp_bytes), len(en_bytes))
+            occurrences += 1
+            found = True
+        
+        if found:
             replaced_count += 1
-            print(f"  [{replaced_count}] {jp_text[:25]}... -> {en_text[:25]}...")
+            print(f"  [{replaced_count}] {jp_text[:25]}... -> {en_text[:25]}... ({occurrences} occurrences)")
         else:
             print(f"  NOT FOUND: {jp_text[:40]}...")
     
@@ -107,8 +145,12 @@ def replace_null_terminated_strings(input_file: Path, output_file: Path, replace
     match binary data like pointers or code. By requiring null terminators,
     we ensure we're only replacing actual string data.
     
+    If there are multiple consecutive null bytes after the string, the English
+    text can expand into that space (keeping at least 1 null terminator).
+    This gives extra room for longer translations before truncating.
+    
     Args:
-        pad_char: Byte to use for padding. Default is null (b'\x00').
+        pad_char: Byte to use for padding. Default is space (b' ').
     
     Matches patterns like:
     - \x00<text>\x00  (null on both sides - middle/end of string array)
@@ -127,55 +169,66 @@ def replace_null_terminated_strings(input_file: Path, output_file: Path, replace
         jp_bytes = jp_text.encode('shift_jis')
         en_bytes = en_text.encode('shift_jis')
         
-        if pad_to_length:
-            if len(en_bytes) < len(jp_bytes):
-                padding = len(jp_bytes) - len(en_bytes)
-                en_bytes = en_bytes + pad_char * padding
-            elif len(en_bytes) > len(jp_bytes):
-                print(f"WARNING: English is {len(en_bytes) - len(jp_bytes)} bytes LONGER - truncating!")
-                en_bytes = en_bytes[:len(jp_bytes)]
-        
         found = False
         occurrences = 0
         
-        # First pass: Replace \x00<text>\x00 pattern (null on both sides)
-        search_pattern = b'\x00' + jp_bytes + b'\x00'
-        replace_pattern = b'\x00' + en_bytes + b'\x00'
+        # Search for <text>\x00 pattern
+        search_pattern = jp_bytes + b'\x00'
         
         pos = 0
         while True:
             idx = bytes(modified).find(search_pattern, pos)
             if idx == -1:
                 break
-            modified[idx:idx + len(search_pattern)] = replace_pattern
-            pos = idx + len(replace_pattern)
+            
+            # Determine if this is a valid string location
+            prev_byte = modified[idx - 1] if idx > 0 else 0
+            is_null_preceded = (prev_byte == 0x00)
+            is_valid_start = (prev_byte < 0x80)  # ASCII or control char before
+            
+            if not is_valid_start:
+                pos = idx + 1
+                continue
+            
+            # Count trailing null bytes after the string (including the terminator)
+            text_end = idx + len(jp_bytes)
+            null_count = 0
+            while text_end + null_count < len(modified) and modified[text_end + null_count] == 0x00:
+                null_count += 1
+            
+            # Available space: the Japanese text bytes + trailing nulls minus 1 (keep at least 1 null)
+            available = len(jp_bytes) + max(0, null_count - 1)
+            
+            if pad_to_length:
+                if len(en_bytes) <= available:
+                    # Fits: pad with pad_char to fill original jp_bytes, rest stays null
+                    if len(en_bytes) < len(jp_bytes):
+                        padded = en_bytes + pad_char * (len(jp_bytes) - len(en_bytes))
+                    else:
+                        # English is longer than jp but fits in available space
+                        # Write en_bytes, then null-fill the rest up to original total span
+                        total_span = len(jp_bytes) + null_count
+                        remaining = total_span - len(en_bytes)
+                        padded = en_bytes + b'\x00' * remaining
+                        # Replace the full span (text + all nulls)
+                        modified[idx:idx + total_span] = padded
+                        pos = idx + total_span
+                        occurrences += 1
+                        found = True
+                        continue
+                    # Standard case: replace just the text portion
+                    modified[idx:idx + len(jp_bytes)] = padded
+                else:
+                    print(f"WARNING: English is {len(en_bytes) - available} bytes LONGER than available space - truncating!")
+                    en_bytes_trunc = en_bytes[:available]
+                    padded = en_bytes_trunc
+                    modified[idx:idx + len(jp_bytes)] = padded + b'\x00' * (len(jp_bytes) - len(padded))
+            else:
+                modified[idx:idx + len(jp_bytes)] = en_bytes[:len(jp_bytes)]
+            
+            pos = idx + len(jp_bytes) + null_count
             occurrences += 1
             found = True
-        
-        # Second pass: Replace <text>\x00 pattern where NOT preceded by null
-        # This catches the first item in string arrays
-        search_pattern2 = jp_bytes + b'\x00'
-        replace_pattern2 = en_bytes + b'\x00'
-        
-        pos = 0
-        while True:
-            idx = bytes(modified).find(search_pattern2, pos)
-            if idx == -1:
-                break
-            
-            # Check if preceded by null (already handled) or if this looks like a string start
-            prev_byte = modified[idx - 1] if idx > 0 else 0
-            
-            # Skip if preceded by null (would have been caught in first pass)
-            # Skip if preceded by high byte that could be part of Shift-JIS (0x80-0xFF)
-            # Allow if preceded by ASCII printable, control chars, or specific non-text bytes
-            if prev_byte != 0x00 and prev_byte < 0x80:
-                modified[idx:idx + len(search_pattern2)] = replace_pattern2
-                pos = idx + len(replace_pattern2)
-                occurrences += 1
-                found = True
-            else:
-                pos = idx + 1
         
         if found:
             replaced_count += 1
