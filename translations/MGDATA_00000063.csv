@@ -9546,7 +9546,7 @@
 "!p1800!e00まず戦闘の目的だけど、/戦闘に勝つことで、相手のプレイヤーから/!c01単位!c07や!c00友好度!c07、!c04カード!c07、!c05パートナー!c07を……、","!p1800!e00Battle purpose: by winning,/you can take !c01Credits !c07, !c00Affinity !c07, /!c04Cards !c07, !c05Partners !c07from opponent…","0x9FA18"
 "!p1800!e00奪うことができるわ。/!c01ビンゴ表!c07を揃えたり、効率よく!c00友好度!c07を/上げるには、戦闘に勝つことが重要よ。","!p1800!e00You can steal./To complete !c01Bingo !c07or raise !c00Affinity !c07/efficiently, winning battles is key.","0x9FAA9"
 "!p1800!e00戦闘は、６つのパラメータのうち、/３つを比較することで行うわ。/パラメータが重要ってことね。","!p1800!e00Battles compare /3 of 6 parameters. /Parameters are important.","0x9FB22"
-"!p1800!e00戦闘を発生させるには、３つ方法があるわ。/他のプレイヤーと同じマスに止まって/「戦闘」を選択するか……、","!p1800!e00There are 3 ways to start battles:/1. Stop on same space as another player/and select 'Battle'…","0x9FB87"
+"!p1800!e00戦闘を発生させるには、３つ方法があるわ。/他のプレイヤーと同じマスに止まって/「戦闘」を選択するか……、","!p1800!e00There are 3 ways to start battles:/1. Stop on same space as another /player and select 'Battle'…","0x9FB87"
 "!p1800!e00!c04バトルカード!c07を使うか、/誰かがとっている!c01単位マス!c07に止まって、/持ち主に戦闘をしかけるか、この３つ。","!p1800!e002. Use a !c04Battle card!c07, /or 3. land on someone's !c01Credit Space !c07/and challenge the owner to battle.","0x9FBF8"
 "!p1800!e00青いパラメータアップマスから、/戦闘をしかけると、３つのうち１つが、/そのマスのパラメータに固定されるわ。","!p1800!e00From blue parameter up spaces, /starting battles fixes one of three /to that space's parameter.","0x9FC73"
 "!p1800!e00自分のパラメータが高いマスから/戦闘をしかけると有利になるかもね……。","!p1800!e00Starting fights from spaces where /your stats are high might help …","0x9FCE6"
