@@ -9,6 +9,8 @@
 /modified-disc-files/*
 /modified-afs-contents/*
 
+/textures/*
+
 # Tools are downloaded separately
 /tools/*
 

@@ -30,19 +30,11 @@ Download these .exe files from their releases and place them in the /tools folde
 1. Name original disc "disc.gdi" and place original disc files in folder /original-disc/
 2. Use buildgdi to extract disc contents to /extracted-disc/ folder
 3. Run extract_all_afs.bat to extract contents of afs files to /extracted-afs/ folder
-4. Modify English column of CSV files: 1st_read_strings.csv, 1st_read_dangerous.csv, and files in /translations/mgdata_62_63_batches/ folder.
+4. Modify English column of CSV files: 1st_read_strings.csv, 1st_read_dangerous.csv, MGDATA_00000062.csv and MGDATA_00000063.csv.
 5. Run fix_alignment.py. This will edit translations to ensure special characters are positioned on valid bytes.
 6. Run check_lengths.py. This will ensure translations fit into byte limits defined by original Japanese text.
-7. If translations that are too long are found, a folder called "toolong_reports" will be created. Edit the CSV files in here and run apply_toolong_fixes.py. Repeat until no issues found.
-8. Run merge_batches.py. This will merge the mgdata_62_63 files into a single csv file. (mgdata/000000062 + mgdata/000000063 had so many strings, it was crashing my computer to have them all in 1 file while editing)
-9. Run replace_text.py. This will generate files in /modified-afs-contents/ and /modified-disc-files/.
-10. Run rebuild.bat. Updated disc will be placed in /translated-disc/
-
-### Helper Scripts (`scripts/`)
-
-| Script | Description |
-|--------|-------------|
-| `extract_all_afs.bat` | Batch extract all AFS archives to `extracted-afs/` |
+7. If translations that are too long are found, a folder called "toolong_reports" will be created. Edit the CSV files in here and run apply_toolong_fixes.py. Repeat until no issues found. (You can also run refresh_lengths.bat to do steps 5-7)
+8. Run rebuild.bat. Updated disc will be placed in /translated-disc/
 
 ## Resources
 
