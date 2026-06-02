@@ -11,8 +11,15 @@
 
 /textures/*
 
-# Tools are downloaded separately
+# Tools are downloaded separately (mgrepack is distributed with the project)
 /tools/*
+!/tools/mgrepack_v0.9.0/
+/tools/mgrepack_v0.9.0/extract/
+/tools/mgrepack_v0.9.0/replacement/
+
+# Extracted and modified images (large binary files)
+/extracted-images/*
+/modified-images/*
 
 # Keep directory structure
 !/**/.gitkeep

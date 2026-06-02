@@ -24,6 +24,7 @@ Download these .exe files from their releases and place them in the /tools folde
 |------|-------------|
 | `AFSPacker.exe` | [AFSPacker](https://github.com/MaikelChan/AFSPacker) - Extract and create AFS archives |
 | `buildgdi.exe` | [GDIBuilder](https://github.com/Sappharad/GDIbuilder) - Build GDI disc images from modified files |
+| `mgrepack.exe` | [mgrepack](tools/mgrepack_v0.9.0/README.md) by [@pomegd](https://github.com/pomegd) - Extract and repack textures from MGDATA.AFS (included) |
 
 ## How to Update Translation
 
@@ -36,6 +37,32 @@ Download these .exe files from their releases and place them in the /tools folde
 7. If translations that are too long are found, a folder called "toolong_reports" will be created. Edit the CSV files in here and run apply_toolong_fixes.py. Repeat until no issues found. (You can also run refresh_lengths.bat to do steps 5-7)
 8. Run rebuild.bat. Updated disc will be placed in /translated-disc/
 
+## How to Update Textures
+
+UI textures (menus, the game board, etc.) are stored in `MGDATA.AFS` and can be replaced using **mgrepack**.
+
+### Extract
+
+Run once to unpack all textures from the original disc:
+
+```sh
+tools\mgrepack_v0.9.0\mgrepack.exe extract -in extracted-disc\MGDATA.AFS -out extracted-images
+```
+
+This populates `extracted-images/` with 304 PNGs and a `log.txt` (required for repacking).
+
+### Replace
+
+Copy any PNG you want to replace into `modified-images/`, keeping the same filename as in `extracted-images/`. Edit it with your image editor of choice.
+
+### Repack
+
+```sh
+tools\mgrepack_v0.9.0\mgrepack.exe repack -extract extracted-images -replacement modified-images
+```
+
+This produces a patched `MGDATA_repacked.AFS` in `extracted-images/`. Place it in `modified-disc-files/` and run `rebuild.bat` to include it in the final disc.
+
 ## Resources
 
 - [GameFAQs Nekketsu Nikki Guide](https://gamefaqs.gamespot.com/dreamcast/377885-project-justice/faqs/10107) - Detailed mode mechanics
@@ -45,9 +72,9 @@ Download these .exe files from their releases and place them in the /tools folde
 
 - **Translation refinement** - It was difficult making text fit into the character limits, and as a result, there's a lot of awkward dialogue. There might be missing translations in places also. Testing is required to find everything.
 - **Untranslated text** - There are several text elements that I could not find anywhere in the disc contents. I believe that many of these elements are actually texture files.
-- **Texture files** - I couldn't figure out a way to extract the textures of the game to properly translate them. As a result:
-  - The board itself is untranslated (use the MAP function to see what each space does)
-  - Some menus are also untranslated (description text box shows what options do when highlighted)
+- **Texture files** - Texture extraction/repacking is now possible thanks to mgrepack. UI textures in `MGDATA.AFS` can be replaced — see the How to Update Textures section above. Some textures still need to be translated:
+  - The game board
+  - Various menus and UI elements
 
 If you can help me with any of this, please feel free to reach out or create a fork/pull request! Feel free to build off this work. Credit is appreciated but not required.
 
