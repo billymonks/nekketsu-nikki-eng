@@ -9,7 +9,6 @@ Rules:
 - ! format codes must be at even byte positions WITHIN THEIR LINE SEGMENT
 """
 import csv
-import io
 import re
 from pathlib import Path
 
@@ -94,67 +93,56 @@ def check_byte_alignment(text: str) -> list:
 def validate_csv(csv_path: Path) -> list:
     """Validate all translations in a CSV file."""
     all_issues = []
-    
+
     with open(csv_path, 'r', encoding='utf-8') as f:
-        content = f.read().replace('\x00', '')
-    
-    rows = list(csv.DictReader(io.StringIO(content)))
-    
-    for i, row in enumerate(rows, start=2):  # Start at 2 (header is line 1)
-        english = row.get('english', '')
+        reader = csv.DictReader(f)
+        rows = list(reader)
+
+    for i, row in enumerate(rows, start=2):
+        english = row.get('English', '')
         if not english:
             continue
-        
+
         issues = check_byte_alignment(english)
         if issues:
             all_issues.append({
                 'line': i,
-                'japanese': row.get('japanese', '')[:40],
+                'japanese': row.get('Japanese', '')[:40],
                 'english': english[:60],
                 'issues': issues
             })
-    
+
     return all_issues
 
-def validate_batch_dir(batch_dir: Path):
-    """Validate all batch CSV files."""
-    batch_files = sorted(batch_dir.glob("*_batch_*.csv"))
-    
+
+def validate_mgdata_files(translations_dir: Path):
+    """Validate MGDATA CSV files."""
+    target_files = [
+        translations_dir / "MGDATA_00000062.csv",
+        translations_dir / "MGDATA_00000063.csv",
+    ]
+
     total_issues = 0
-    
-    for batch_file in batch_files:
-        issues = validate_csv(batch_file)
+
+    for target_file in target_files:
+        issues = validate_csv(target_file)
         if issues:
-            #print(f"\n{'='*60}")
-            #print(f"Issues in {batch_file.name}:")
-            #print('='*60)
-            #for issue in issues:
-            #    print(f"\nLine {issue['line']}:")
-            #    print(f"  JP: {issue['japanese']}...")
-            #    print(f"  EN: {issue['english']}...")
-            #    for prob in issue['issues']:
-            #        pos_type = prob.get('position_type', 'overall')
-            #        print(f"  ❌ '{prob['code']}' at byte {prob['byte_pos']} ({pos_type}) - ODD")
-            #        print(f"     ...after: '{prob['text_before']}'")
             total_issues += len(issues)
-    
+
     if total_issues == 0:
-        print("✅ All translations pass byte alignment check!")
+        print("All translations pass byte alignment check!")
     else:
-        print(f"\n⚠️  Found {total_issues} translations with alignment issues")
-    
+        print(f"\nFound {total_issues} translations with alignment issues")
+
     return total_issues
+
 
 if __name__ == "__main__":
     project_dir = Path(__file__).parent.parent
-    batch_dir = project_dir / "translations" / "mgdata_62_63_batches"
-    
-    if not batch_dir.exists():
-        print(f"ERROR: Batch directory not found: {batch_dir}")
-        exit(1)
-    
+    translations_dir = project_dir / "translations"
+
     print("Validating byte alignment in translations...")
     print("(/ must be at EVEN overall position)")
     print("(! codes must be at EVEN position within their line)\n")
-    
-    validate_batch_dir(batch_dir)
+
+    validate_mgdata_files(translations_dir)

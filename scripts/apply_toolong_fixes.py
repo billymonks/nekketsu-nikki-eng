@@ -1,133 +1,127 @@
 #!/usr/bin/env python3
 """
-Apply shortened translations from toolong reports back to original batch files.
+Apply shortened translations from toolong reports back to MGDATA CSV files.
 
 Reads each *_toolong.csv file from translations/toolong_reports/
-and updates the corresponding batch file with the shortened English translations.
+and updates the corresponding MGDATA CSV with the shortened English translations.
 """
 import csv
-import io
 from pathlib import Path
 
 
 def load_toolong_fixes(toolong_path: Path) -> dict:
-    """Load fixes from a toolong CSV. Returns dict mapping japanese -> new english."""
+    """Load fixes from a toolong CSV. Returns dict mapping Japanese -> new English."""
     fixes = {}
-    
+
     with open(toolong_path, 'r', encoding='utf-8') as f:
-        content = f.read().replace('\x00', '')
-    
-    reader = csv.DictReader(io.StringIO(content))
-    for row in reader:
-        jp = row.get('japanese', '').strip()
-        en = row.get('english', '').strip()
-        if jp and en:
-            fixes[jp] = en
-    
+        reader = csv.DictReader(f)
+        for row in reader:
+            jp = row.get('Japanese', '')
+            en = row.get('English', '')
+            if jp and en:
+                fixes[jp] = en
+
     return fixes
 
 
-def apply_fixes_to_batch(batch_path: Path, fixes: dict) -> tuple[int, list]:
+def apply_fixes_to_csv(csv_path: Path, fixes: dict) -> tuple:
     """
-    Apply fixes to a batch file.
-    Returns (number of fixes applied, list of unmatched japanese texts).
+    Apply fixes to a MGDATA CSV file.
+    Returns (number of fixes applied, list of unmatched Japanese texts).
     """
-    # Read original batch file
-    with open(batch_path, 'r', encoding='utf-8') as f:
-        content = f.read().replace('\x00', '')
-    
-    reader = csv.DictReader(io.StringIO(content))
-    fieldnames = reader.fieldnames
-    rows = list(reader)
-    
-    # Track what we matched
+    with open(csv_path, 'r', encoding='utf-8') as f:
+        reader = csv.DictReader(f)
+        rows = list(reader)
+
     matched_jp = set()
     fixes_applied = 0
-    
-    # Apply fixes
+
     for row in rows:
-        jp = row.get('japanese', '').strip()
+        jp = row['Japanese']
         if jp in fixes:
-            old_en = row.get('english', '')
+            old_en = row['English']
             new_en = fixes[jp]
             if old_en != new_en:
-                row['english'] = new_en
+                row['English'] = new_en
                 fixes_applied += 1
             matched_jp.add(jp)
-    
-    # Find unmatched
+
     unmatched = [jp for jp in fixes.keys() if jp not in matched_jp]
-    
-    # Write back
-    with open(batch_path, 'w', encoding='utf-8', newline='') as f:
-        writer = csv.DictWriter(f, fieldnames=fieldnames, quoting=csv.QUOTE_ALL)
-        writer.writeheader()
-        writer.writerows(rows)
-    
+
+    with open(csv_path, 'w', encoding='utf-8', newline='') as f:
+        writer = csv.writer(f, quoting=csv.QUOTE_ALL, doublequote=True)
+        writer.writerow(['Japanese', 'English', 'offset'])
+        for row in rows:
+            writer.writerow([row['Japanese'], row['English'], row['offset']])
+
     return fixes_applied, unmatched
 
 
 def main():
     project_dir = Path(__file__).parent.parent
-    batch_dir = project_dir / "translations" / "mgdata_62_63_batches"
-    toolong_dir = project_dir / "translations" / "toolong_reports"
-    
+    translations_dir = project_dir / "translations"
+    toolong_dir = translations_dir / "toolong_reports"
+
+    target_files = {
+        "MGDATA_00000062_toolong.csv": translations_dir / "MGDATA_00000062.csv",
+        "MGDATA_00000063_toolong.csv": translations_dir / "MGDATA_00000063.csv",
+    }
+
     if not toolong_dir.exists():
         print(f"ERROR: Toolong reports directory not found: {toolong_dir}")
         return 1
-    
-    toolong_files = sorted(toolong_dir.glob("*_toolong.csv"))
-    
+
+    toolong_files = sorted(toolong_dir.glob("MGDATA_*_toolong.csv"))
+
     if not toolong_files:
         print("No toolong CSV files found.")
         return 0
-    
-    print(f"Found {len(toolong_files)} toolong report files")
+
+    print(f"Found {len(toolong_files)} toolong report file(s)")
     print("=" * 80)
-    
+
     total_fixes = 0
     all_unmatched = []
-    
+
     for toolong_path in toolong_files:
-        # Derive original batch filename
-        # mgdata_62_63_batch_001_toolong.csv -> mgdata_62_63_batch_001.csv
-        batch_name = toolong_path.stem.replace("_toolong", "") + ".csv"
-        batch_path = batch_dir / batch_name
-        
-        if not batch_path.exists():
-            print(f"WARNING: Original batch not found: {batch_path}")
+        csv_path = target_files.get(toolong_path.name)
+        if csv_path is None:
+            # Derive from name: MGDATA_00000062_toolong.csv -> MGDATA_00000062.csv
+            csv_name = toolong_path.stem.replace("_toolong", "") + ".csv"
+            csv_path = translations_dir / csv_name
+
+        if not csv_path.exists():
+            print(f"WARNING: Target CSV not found: {csv_path}")
             continue
-        
-        # Load fixes
+
         fixes = load_toolong_fixes(toolong_path)
-        
+
         if not fixes:
             continue
-        
-        # Apply fixes
-        fixes_applied, unmatched = apply_fixes_to_batch(batch_path, fixes)
-        
+
+        fixes_applied, unmatched = apply_fixes_to_csv(csv_path, fixes)
+
         if fixes_applied > 0 or unmatched:
-            print(f"{batch_name}: {fixes_applied} fixes applied", end="")
+            print(f"  {csv_path.name}: {fixes_applied} fixes applied", end="")
             if unmatched:
                 print(f", {len(unmatched)} unmatched")
                 for jp in unmatched:
-                    all_unmatched.append((batch_name, jp))
+                    all_unmatched.append((csv_path.name, jp))
             else:
                 print()
-        
+
         total_fixes += fixes_applied
-    
+
     print("=" * 80)
     print(f"Total fixes applied: {total_fixes}")
-    
+
     if all_unmatched:
-        print(f"\n⚠️  {len(all_unmatched)} Japanese texts not found in original batches:")
-        for batch_name, jp in all_unmatched:
-            print(f"  [{batch_name}] {jp[:60]}{'...' if len(jp) > 60 else ''}")
+        print(f"\n{len(all_unmatched)} Japanese texts not found in target CSVs:")
+        for csv_name, jp in all_unmatched:
+            print(f"  [{csv_name}] {jp[:60]}{'...' if len(jp) > 60 else ''}")
     else:
-        print("\n✅ All Japanese texts matched successfully!")
-    
+        print("\nAll Japanese texts matched successfully!")
+
     return 0
 
 
