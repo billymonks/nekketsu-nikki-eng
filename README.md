@@ -72,7 +72,7 @@ This produces a patched `MGDATA_repacked.AFS` in `extracted-images/`. Place it i
 
 - **Translation refinement** - It was difficult making text fit into the character limits, and as a result, there's a lot of awkward dialogue. There might be missing translations in places also. Testing is required to find everything.
 - **Untranslated text** - There are several text elements that I could not find anywhere in the disc contents. I believe that many of these elements are actually texture files.
-- **Texture files** - Texture extraction/repacking is now possible thanks to mgrepack. UI textures in `MGDATA.AFS` can be replaced — see the How to Update Textures section above. Some textures still need to be translated:
+- **Texture files** - Texture extraction/repacking is now possible thanks to mgrepack by @pomegd. UI textures in `MGDATA.AFS` can be replaced — see the How to Update Textures section above. Some textures still need to be translated:
   - The game board
   - Various menus and UI elements
 
