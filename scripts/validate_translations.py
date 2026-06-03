@@ -115,6 +115,74 @@ def validate_csv(csv_path: Path) -> list:
     return all_issues
 
 
+def validate_at_terminators(translations_dir: Path) -> int:
+    """
+    Validate the implicit '@' (0x40) message terminator of every MGDATA string.
+
+    The game only treats '@' as a terminator when it lands on an EVEN byte
+    position (counting from the last space or '/'). Japanese text is all 2-byte
+    glyphs so it is always even, but single-byte English can leave an odd final
+    segment. When that happens the '@' is drawn literally and the text bleeds
+    into the next string.
+
+    A string is only truly broken when the English exactly fills its slot AND the
+    final segment is odd AND there is no trailing NUL for replace_text.py to slip
+    a space before the '@'. (Shorter English is padded with a space before '@', so
+    it is always safe; a spare NUL lets the patcher rescue an exact fit.)
+
+    Needs the untouched binaries in extracted-afs/. Returns the broken count, or
+    -1 if the binaries are unavailable (check skipped).
+    """
+    from replace_text import find_string_end_sjis, at_render_position
+
+    project_dir = translations_dir.parent
+    pairs = [
+        ("MGDATA_00000062.csv", project_dir / "extracted-afs" / "MGDATA" / "00000062"),
+        ("MGDATA_00000063.csv", project_dir / "extracted-afs" / "MGDATA" / "00000063"),
+    ]
+
+    broken = []
+    for csv_name, bin_path in pairs:
+        csv_path = translations_dir / csv_name
+        if not csv_path.exists() or not bin_path.exists():
+            print(f"  (skipping '@' check for {csv_name}: missing CSV or extracted binary)")
+            return -1
+        data = bytearray(bin_path.read_bytes())
+        with open(csv_path, "r", encoding="utf-8") as f:
+            rows = list(csv.DictReader(f))
+        for line_no, row in enumerate(rows, start=2):
+            offset = row.get("offset", "")
+            english = row.get("English", "")
+            if not offset or not english:
+                continue
+            o = int(offset, 16)
+            at = find_string_end_sjis(data, o)
+            if at is None:
+                continue
+            jp_span = at - o
+            nulls = 0
+            while at + 1 + nulls < len(data) and data[at + 1 + nulls] == 0x00:
+                nulls += 1
+            enc = english.encode("shift_jis", errors="replace")
+            # Shorter than the slot -> padded with a space before '@' -> safe.
+            if len(enc) < jp_span:
+                continue
+            # Longer is a length/truncation problem, reported elsewhere.
+            if len(enc) > jp_span:
+                continue
+            # Exact fit: '@' abuts the text. Odd final segment + no spare NUL = broken.
+            if at_render_position(enc) % 2 == 1 and nulls == 0:
+                broken.append((csv_name, line_no, offset, english[:60]))
+
+    if not broken:
+        print("All strings pass the '@' terminator check!")
+    else:
+        print(f"\nFound {len(broken)} strings where '@' would render literally:")
+        for csv_name, line_no, offset, text in broken:
+            print(f"  {csv_name} line {line_no} ({offset}): {text}")
+    return len(broken)
+
+
 def validate_mgdata_files(translations_dir: Path):
     """Validate MGDATA CSV files."""
     target_files = [
@@ -133,6 +201,8 @@ def validate_mgdata_files(translations_dir: Path):
         print("All translations pass byte alignment check!")
     else:
         print(f"\nFound {total_issues} translations with alignment issues")
+
+    validate_at_terminators(translations_dir)
 
     return total_issues
 

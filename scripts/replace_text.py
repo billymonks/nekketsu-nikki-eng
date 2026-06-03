@@ -389,6 +389,24 @@ def write_issue_report(report_path: Path, issues: list) -> None:
             ])
 
 
+def at_render_position(en_bytes: bytes) -> int:
+    """
+    Number of bytes since the last position-reset character (ASCII space 0x20 or
+    slash 0x2F). This is where the implicit '@' terminator would render.
+
+    The game's renderer resets its line-position counter on space and '/'. It
+    only accepts '@' as a terminator/break when '@' lands on an even position
+    relative to that reset; on an odd position the '@' is drawn literally and the
+    text runs into the following string. Japanese text never hits this because
+    every glyph is 2 bytes, but single-byte English can produce odd segments.
+
+    0x20 and 0x2F are never valid Shift-JIS trail bytes, so a raw byte scan is
+    safe even with multi-byte characters present.
+    """
+    last = max(en_bytes.rfind(0x20), en_bytes.rfind(0x2F))
+    return len(en_bytes) if last == -1 else len(en_bytes) - 1 - last
+
+
 def replace_at_offsets(input_file: Path, output_file: Path, entries: list, pad_char=b' '):
     """
     Replace text in a binary file at specific offsets.
@@ -483,18 +501,36 @@ def replace_at_offsets(input_file: Path, output_file: Path, entries: list, pad_c
         # Total span we're working with: [text] [@] [nulls]
         total_span = jp_span + 1 + null_count  # text + '@' + nulls
 
-        if len(en_bytes) <= jp_span:
+        if len(en_bytes) < jp_span:
             # English fits within original text space - pad with pad_char.
-            # The '@' terminator and original NULs are left untouched.
+            # The trailing pad space sits right before '@', so '@' lands on an
+            # even (reset) position and is always recognised as a terminator.
             new_text = en_bytes + pad_char * (jp_span - len(en_bytes))
             new_region = new_text
             span = jp_span
+        elif len(en_bytes) == jp_span:
+            # English exactly fills the slot, so '@' directly abuts the text.
+            # The game only treats '@' as a terminator when it lands on an even
+            # byte position (counting from the last space/'/'). If the final
+            # segment is odd, insert a space before '@' (consuming one trailing
+            # NUL) so the '@' shifts to an even position and renders as a break.
+            if at_render_position(en_bytes) % 2 == 1 and null_count >= 1:
+                new_region = en_bytes + b'\x20' + b'\x40' + b'\x00' * (null_count - 1)
+                span = total_span
+            else:
+                new_region = en_bytes
+                span = jp_span
         elif len(en_bytes) <= available:
             # English is longer but fits by consuming some trailing NULs.
             # New layout: [en_bytes] [@] [fewer NULs] - always exactly total_span.
             consumed = len(en_bytes) - jp_span  # extra bytes needed from NULs
             remaining_nulls = null_count - consumed
-            new_region = en_bytes + b'\x40' + b'\x00' * remaining_nulls
+            # Same odd-'@' guard as the exact-fit case: if the final segment is
+            # odd and we still have a NUL to spare, slip a space before the '@'.
+            if at_render_position(en_bytes) % 2 == 1 and remaining_nulls >= 1:
+                new_region = en_bytes + b'\x20' + b'\x40' + b'\x00' * (remaining_nulls - 1)
+            else:
+                new_region = en_bytes + b'\x40' + b'\x00' * remaining_nulls
             span = total_span
         else:
             # Doesn't fit even with trailing NULs - truncate to fit.
