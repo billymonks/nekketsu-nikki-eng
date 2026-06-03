@@ -1,4 +1,4 @@
-# mgrepack v0.9.0 @pomegd
+# mgrepack v0.9.1 @pomegd
 
 A tool to extract and rebuild textures and other assets from `MGDATA.AFS` of
 Project Justice (Dreamcast).
