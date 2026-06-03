@@ -46,7 +46,7 @@ UI textures (menus, the game board, etc.) are stored in `MGDATA.AFS` and can be 
 Run once to unpack all textures from the original disc:
 
 ```sh
-tools\mgrepack_v0.9.0\mgrepack.exe extract -in extracted-disc\MGDATA.AFS -out extracted-images
+tools\mgrepack\mgrepack.exe extract -in extracted-disc\MGDATA.AFS -out extracted-images
 ```
 
 This populates `extracted-images/` with 304 PNGs and a `log.txt` (required for repacking).
@@ -58,7 +58,7 @@ Copy any PNG you want to replace into `modified-images/`, keeping the same filen
 ### Repack
 
 ```sh
-tools\mgrepack_v0.9.0\mgrepack.exe repack -extract extracted-images -replacement modified-images
+tools\mgrepack\mgrepack.exe repack -extract extracted-images -replacement modified-images
 ```
 
 This produces a patched `MGDATA_repacked.AFS` in `extracted-images/`. Place it in `modified-disc-files/` and run `rebuild.bat` to include it in the final disc.
